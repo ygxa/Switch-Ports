@@ -101,5 +101,5 @@ if (surface_exists(mysurf))
 
 draw_set_halign(fa_left)
 draw_set_valign(fa_top)
-scribble(string("[pNPC][wave]{0}", text)).starting_format(font_get_name(global.npcfont), 0).align(0, 0).wrap(800).draw(wave_x + 80, boxy + 16)
+scribble(string("[pNPC][wave]" + text)).starting_format(font_get_name(global.npcfont), 0).align(0, 0).wrap(800).draw(wave_x + 80, boxy + 16)
 draw_set_color(c_white)

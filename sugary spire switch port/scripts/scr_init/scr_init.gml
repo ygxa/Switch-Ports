@@ -2,7 +2,7 @@ global.scribble_saved_profile = "[pPrompt]"
 
 function scribble_quick_button(arg0)
 {
-	return string("[c_white]{0}{1}", get_control_sprite(arg0), global.scribble_saved_profile);
+	return string("[c_white]" + get_control_sprite(arg0) + global.scribble_saved_profile);
 }
 
 global.DefaultCursor = 0

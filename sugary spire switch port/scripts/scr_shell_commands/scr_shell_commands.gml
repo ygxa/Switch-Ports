@@ -20,7 +20,7 @@ function scr_parseBool(arg0, arg1)
 	}
 	else
 	{
-		show_debug_message(string("SHELL WARNING: Couldn't parse {0} as a string, using default value of {1}.", arg0, arg1))
+		show_debug_message(string("SHELL WARNING: Couldn't parse {0} as a string, using default value"))
 		return arg1;
 	}
 }
@@ -79,8 +79,8 @@ function sh_character(arg0)
 	
 	switch (arg0[1])
 	{
-		default:
-			show_debug_message(string("SHELL WARNING: [{0}] is not a valid character. Defaulting to Pizzelle.", arg0[1]))
+		//default:
+			//show_debug_message(string("SHELL WARNING: [{0}] is not a valid character. Defaulting to Pizzelle.", arg0[1]))
 		
 		case "Pizzelle":
 			choosen_character = Characters.Pizzelle
@@ -150,7 +150,7 @@ function sh_unlock(arg0)
 				if (!ini_read_real("Misc", "lapunlockall", false))
 				{
 					ini_write_real("Misc", "lapunlockall", true)
-					scr_queueToolTipPrompt(string("[promptfont]{0}", lang_get("prompt_lap_unlockall")))
+					scr_queueToolTipPrompt(string("[promptfont]" + ", " + lang_get("prompt_lap_unlockall")))
 				}
 			}
 			

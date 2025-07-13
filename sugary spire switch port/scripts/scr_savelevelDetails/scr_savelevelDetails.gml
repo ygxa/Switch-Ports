@@ -34,7 +34,7 @@ function scr_savelevelDetails(arg0 = true)
 	}
 	
 	ini_open(global.SaveFileName)
-	ini_update_stat("Game", string("damage_{0}", scr_getCharacterPrefix(global.playerCharacter)), global.HurtCounter)
+	ini_update_stat("Game", string("damage_" + scr_getCharacterPrefix(global.playerCharacter)), global.HurtCounter)
 	global.HurtMilestone = global.HurtCounter
 	ini_update_stat("Time", string(global.InternalLevelName), level_sec, true)
 	

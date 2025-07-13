@@ -431,7 +431,7 @@ function scr_playerstate()
 			break
 	}
 	
-	stateName = string("State : {0}", state)
+	stateName = string("State : " + state)
 	
 	if (!is_undefined(state_function))
 	{

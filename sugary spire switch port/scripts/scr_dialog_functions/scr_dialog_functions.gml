@@ -46,7 +46,7 @@ function queue_choices(arg0, arg1)
 		msg_text = arg1
 	
 	global.dialogchoices = arg0
-	show_debug_message(string("Dialogue Choices: {0}", global.dialogchoices))
+	show_debug_message(string("Dialogue Choices: "+ global.dialogchoices))
 }
 
 function text_wrap(arg0, arg1, arg2, arg3)

@@ -100,17 +100,20 @@ function scr_getinput()
 
 function input_check(arg0)
 {
-	return input_get(arg0).held || input_get(string("{0}C", arg0)).held;
+    return input_get(arg0).held
+        || input_get(arg0 + "C").held;
 }
 
 function input_check_pressed(arg0)
 {
-	return input_get(arg0).pressed || input_get(string("{0}C", arg0)).pressed;
+    return input_get(arg0).pressed
+        || input_get(arg0 + "C").pressed;
 }
 
 function input_check_released(arg0)
 {
-	return input_get(arg0).released || input_get(string("{0}C", arg0)).released;
+    return input_get(arg0).released
+        || input_get(arg0 + "C").released;
 }
 
 function any_input_check()

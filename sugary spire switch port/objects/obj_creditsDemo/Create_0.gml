@@ -44,7 +44,7 @@ creditEntry = function() constructor
 	
 	static activate = function()
 	{
-		trace(string("Activated Credit ({0}, {1}): {2}", obj_creditsDemo.currentCategory, index, name))
+		trace(string("Activated Credit (" + obj_creditsDemo.currentCategory + ", " + index) + "):" + name)
 		active = true
 		activated = true
 		visible = true
@@ -133,7 +133,7 @@ creditEntry = function() constructor
 		}
 		
 		draw_set_color(image_blend)
-		draw_text_scribble(x, y, string("[fa_center][fa_top][smallfont]{0}", string_upper(name)))
+		draw_text_scribble(x, y, string("[fa_center][fa_top][smallfont]" + string_upper(name)))
 	}
 	
 	static addPaintTopper = function(arg0)

@@ -22,7 +22,7 @@ if (disconnectScreen)
 	if (disconnectScreen || !device_found)
 		_prefix = "controller_disconnect"
 	
-	_tex = string("{0} - {1} - ", lang_get(_prefix), lang_get("controller_prompt", ["start"]))
+	_tex = string(lang_get(_prefix) + " - " + lang_get("controller_prompt", ["start"]) + " - ")
 	_tex = string_upper(_tex)
 	draw_set_font(global.fontDefault)
 	var _height = string_height("A")

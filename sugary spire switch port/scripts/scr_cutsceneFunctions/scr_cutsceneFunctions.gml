@@ -6,12 +6,12 @@ function cutscene_create(arg0)
 	{
 		show_debug_message("Cutscene Manager: QUEUED FUNCTIONS")
 		Event = arg0[0]
-		show_debug_message(string("Cutscene Manager: [{0}], [Event: 0]", arg0[0]))
+		//show_debug_message(string("Cutscene Manager: [{0}], [Event: 0]", arg0[0]))
 		
 		for (var i = 1; i < array_length(arg0); i++)
 		{
 			ds_queue_enqueue(Cutscene, arg0[i])
-			show_debug_message(string("Cutscene Manager: [{0}], [Event: {1}]", arg0[i], i))
+			//show_debug_message(string("Cutscene Manager: [{0}], [Event: {1}]", arg0[i], i))
 		}
 	}
 	

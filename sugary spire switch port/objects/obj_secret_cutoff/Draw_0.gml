@@ -12,6 +12,6 @@ for (var i = 0; i < trueYscale; i++)
 	if (global.DebugVisuals == 1)
 	{
 		draw_set_font(font_console)
-		draw_text_color(_x, _y, string("Index: {0}; Show: {1}", imageIndexArray[i], showCutoff[i]), c_white, c_white, c_white, c_white, 1)
+		draw_text_color(_x, _y, string("Index: " + imageIndexArray[i] + "; Show: " + showCutoff[i]), c_white, c_white, c_white, c_white, 1)
 	}
 }

@@ -32,4 +32,4 @@ if (can_bumpX && can_bumpY)
 	_c = 32768
 
 draw_rectangle_color(x + x_adj, y + y_adj, x + (sprite_width / 2) + x_adj, y + (sprite_height / 2) + y_adj, _c, _c, _c, _c, false)
-draw_text(x, y - 32, string("{0}, {1}, CHECKS {2}, {3}", _xscl, _yscl, can_bumpX, can_bumpY))
+//draw_text(x, y - 32, string("{0}, {1}, CHECKS {2}, {3}", _xscl, _yscl, can_bumpX, can_bumpY))

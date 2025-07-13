@@ -98,7 +98,7 @@ switch (optionMenu)
 		var res = []
 		
 		for (var i = 0; i < array_length(global.resolutions); i++)
-			array_push(res, string("{0}X{1}", global.resolutions[i][0], global.resolutions[i][1]))
+			array_push(res, string(global.resolutions[i][0] + "X" + global.resolutions[i][1]))
 		
 		var letterbox_option = ["opt_off", "opt_vid_letterbox_simple", "opt_vid_letterbox_doodle", "opt_vid_letterbox_dynamic"]
 		options = [toMainPage, new option_button("opt_vid_windowmode", function()

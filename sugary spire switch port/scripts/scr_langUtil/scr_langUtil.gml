@@ -26,17 +26,19 @@ global.captionfont = font_tahoma
 
 function directory_get_files(arg0, arg1)
 {
-	var fileArr = []
-	var file = file_find_first(string("{0}*{1}", arg0, arg1), 0)
-	
-	while (file != "")
-	{
-		array_push(fileArr, file)
-		file = file_find_next()
-	}
-	
-	file_find_close()
-	return fileArr;
+    var fileArr = [];
+    var pattern = arg0 + "*" + arg1;  
+
+    var file = file_find_first(pattern, 0);
+    
+    while (file != "")
+    {
+        array_push(fileArr, file);
+        file = file_find_next();
+    }
+    
+    file_find_close();
+    return fileArr;
 }
 
 function scr_lang_make_struct(arg0)
@@ -105,7 +107,7 @@ function scr_lang_get_dictionary(arg0)
 	}
 	catch (_ex)
 	{
-		global.langError = string("Unable to load sprite dictionary lang/{0}/Dictionary.json", arg0)
+		global.langError = "Unable to load sprite dictionary lang/" + arg0 + "/Dictionary.json";
 		return {};
 	}
 }
@@ -118,8 +120,8 @@ function scr_lang_dictionary_fonts_add(arg0, arg1)
 	if (struct_exists(arg1, "Fonts"))
 		fontDict = arg1.Fonts
 	
-	var basePath = string("{0}lang/", working_directory)
-	var path = string_concat(basePath, arg0, "/Fonts")
+	var basePath = working_directory + "lang/";
+	var path = basePath + arg0 + "/Fonts"
 	var init = false
 	
 	if (!instance_exists(obj_langSpriteLoader))
@@ -155,66 +157,58 @@ function scr_lang_dictionary_fonts_add(arg0, arg1)
 				var file = struct_get(st, "file")
 				var _spr = struct_get(st, "sprite")
 				var sep = struct_get(st, "separation")
-				var f = string("{0}/{1}.png", path, _spr)
+				var f = path + _spr + ".png"
 				
 				if (!struct_exists(font_struct_default, nm) || _spr == "default")
-					continue
-				
+				    continue;
+
 				if (struct_exists(st, "file"))
 				{
-					f = string("{0}/{1}", path, file)
-					
-					if (!file_exists(f))
-					{
-						trace(string("Unable to find lang font {0}", f))
-						global.langError = string("Unable to find lang font {0}", f)
-						continue
-					}
-					
-					if (!struct_exists(st, "size"))
-					{
-						trace(string("Unable to find size for lang font {0}", f))
-						global.langError = string("Unable to find size for lang font {0}", f)
-						continue
-					}
-					
-					var isBold = false
-					
-					if (struct_exists(st, "bold"))
-						isBold = struct_get(st, "bold")
-					
-					var isItalic = false
-					
-					if (struct_exists(st, "italic"))
-						isItalic = struct_get(st, "italic")
-					
-					var firstChar = 32
-					
-					if (struct_exists(st, "first"))
-						firstChar = struct_get(st, "first")
-					
-					var lastChar = 128
-					
-					if (struct_exists(st, "last"))
-						lastChar = struct_get(st, "last")
-					
-					trace(string("Adding lang font {0}", f))
-					font = font_add(f, struct_get(st, "size"), isBold, isItalic, firstChar, lastChar)
-					variable_struct_set(font_struct, nm, font)
+				    var f = path + "/" + file;
+    
+				    if (!file_exists(f))
+				    {
+				        trace("Unable to find lang font " + f);
+				        global.langError = "Unable to find lang font " + f;
+				        continue;
+				    }
+    
+				    if (!struct_exists(st, "size"))
+				    {
+				        trace("Unable to find size for lang font " + f);
+				        global.langError = "Unable to find size for lang font " + f;
+				        continue;
+				    }
+    
+				    var isBold   = struct_exists(st, "bold")   ? struct_get(st, "bold")   : false;
+				    var isItalic = struct_exists(st, "italic") ? struct_get(st, "italic") : false;
+				    var firstChar = struct_exists(st, "first") ? struct_get(st, "first")  : 32;
+				    var lastChar  = struct_exists(st, "last")  ? struct_get(st, "last")   : 128;
+    
+				    trace("Adding lang font " + f);
+				    var font = font_add(
+				        f,
+				        struct_get(st, "size"),
+				        isBold,
+				        isItalic,
+				        firstChar,
+				        lastChar
+				    );
+				    variable_struct_set(font_struct, nm, font);
 				}
 				
 				if (!file_exists(f))
 				{
-					trace(string("Unable to find lang font {0}", f))
-					global.langError = string("Unable to find lang font {0}", f)
+					trace("Unable to find lang font" + f)
+					global.langError = "Unable to find lang font " + f
 					continue
 				}
 				
-				trace(string("Creating lang font {0}", f))
+				trace("Creating lang font" + f)
 				var font_d = struct_get(font_struct_default, nm)
 				var sprite_d = font_get_sprite(font_d)
 				var n = string_length(map)
-				trace(string("Font map: {0} ({1})", map, n))
+				trace(string("Font map: " + map + n))
 				var prop = true
 				
 				if (variable_struct_exists(st, "nonprop"))
@@ -253,12 +247,12 @@ function scr_lang_dictionary_fonts_add(arg0, arg1)
 			}
 			catch (ex)
 			{
-				global.langError = string("Failed to implement font from {0}", global.langName)
+				global.langError = string("Failed to implement font from " + global.langName)
 				continue
 			}
 		}
 		
-		trace(string("Updated font map: {0}", json_encode(global.langFonts, true)))
+		trace(string("Updated font map: " + json_encode(global.langFonts)))
 	}
 	
 	var font_arr = struct_get_names(font_struct_default)
@@ -275,7 +269,7 @@ function scr_lang_dictionary_fonts_add(arg0, arg1)
 		var font_sprite = font_get_sprite(lang_font ?? default_font, true)
 		var default_font_sprite = font_get_sprite(default_font, true)
 		variable_global_set(fname, lang_font ?? default_font)
-		trace(string("Set global.{0} to {1}. Default: {2}", fname, variable_global_get(fname), default_font))
+		trace(string("Set global."+ fname + " to " + variable_global_get(fname) +  " Default: " + default_font))
 	}
 }
 
@@ -298,15 +292,15 @@ function scr_lang_fonts_init()
 	ds_map_set(global.langFonts, "_DEFAULT_FONTS", st)
 }
 
-function scr_lang_get_font_macro(arg0)
-{
-	return method(
-	{
-		__fnt: arg0
-	}, function()
-	{
-		return string("[{0}]", sprite_get_name(font_get_sprite(variable_global_get(__fnt))));
-	});
+function scr_lang_get_font_macro(arg0) {
+    return method(
+    {
+        __fnt: arg0
+    }, function() {
+        var spr = font_get_sprite(variable_global_get(_fnt));
+        var name = sprite_get_name(spr);
+        return "[" + name + "]";
+    });
 }
 
 function scr_lang_dictionary_keys_add(arg0, arg1)
@@ -318,8 +312,8 @@ function scr_lang_dictionary_keys_add(arg0, arg1)
 		keyDict = arg1.Keys
 	
 	var define_keys = false
-	var basePath = string("{0}lang/", working_directory)
-	var path = string_concat(basePath, arg0, "/Keys")
+	var basePath = working_directory + "lang/"
+	var path = basePath + arg0 + "/Keys"
 	var init = false
 	
 	if (!instance_exists(obj_langSpriteLoader))
@@ -349,16 +343,16 @@ function scr_lang_dictionary_keys_add(arg0, arg1)
 			
 			var nm = struct_get(st, "name")
 			var map = struct_get(st, "map")
-			var f = string("{0}/{1}.png", path, nm)
+			var f = path + nm + ".png", path, nm
 			
 			if (!file_exists(f))
 			{
-				trace(string("Unable to find lang key {0}", f))
-				global.langError = string("Unable to find lang key {0}", f)
+				trace(string("Unable to find lang key " + f))
+				global.langError = "Unable to find lang key" + f
 			}
 			else
 			{
-				trace(string("Creating keysprite {0}", f))
+				trace(string("Creating keysprite " + f))
 				var n = string_length(map)
 				var s = sprite_add(f, n, false, false, 16, 16)
 				array_push(arr, [nm, s, map])
@@ -401,10 +395,10 @@ function scr_lang_dictionary_sprites_add(arg0, arg1)
 	}
 	else if (array_length(spriteArr) > 0)
 	{
-		trace("Found sprite dictionary entries for : ", json_stringify(spriteArr, false))
+		trace("Found sprite dictionary entries for : " + json_stringify(spriteArr))
 	}
 	
-	var basePath = string("{0}lang/", working_directory)
+	var basePath = string(working_directory + "lang/")
 	
 	if (!instance_exists(obj_langSpriteLoader))
 		var ld = instance_create(0, 0, obj_langSpriteLoader)
@@ -445,11 +439,11 @@ function scr_lang_sprite_add_struct(arg0, arg1, arg2)
 	
 	if (is_undefined(_sp))
 	{
-		trace(string("Unable to find sprite info for {0}", json_stringify(arg1)))
+		trace(string("Unable to find sprite info for " + json_stringify(arg1)))
 		exit
 	}
 	
-	trace(string("Initializing custom load for {0} ({1})", _sp, arg0))
+	trace(string("Initializing custom load for " + _sp + "(" + arg0 + ")"))
 	var _xo = struct_get(arg1, "xoff")
 	var _yo = struct_get(arg1, "yoff")
 	
@@ -483,7 +477,7 @@ function scr_lang_sprite_add_array(arg0, arg1, arg2, arg3 = undefined, arg4 = un
 		{
 			continue
 		}
-		else if (!file_exists(string("{0}/{1}.png", arg2, nm)))
+		else if (!file_exists(string(arg2 + "/" + nm + ".png")))
 		{
 			fileCheck = false
 			break
@@ -492,7 +486,7 @@ function scr_lang_sprite_add_array(arg0, arg1, arg2, arg3 = undefined, arg4 = un
 	
 	if (!fileCheck || !sprite_exists(baseSprite))
 	{
-		global.langError = string("Unable to find all assets for lang sprite at {0}", arg2)
+		global.langError = string("Unable to find all assets for lang sprite at " + arg2)
 		trace(global.langError)
 		exit
 	}
@@ -551,7 +545,7 @@ function scr_lang_sprite_add_array(arg0, arg1, arg2, arg3 = undefined, arg4 = un
 		}
 		else
 		{
-			var f = string("{0}/{1}.png", arg2, nm)
+			var f = string(arg2 + "/" + nm + ".png")
 			
 			if (is_undefined(builtSprite))
 			{
@@ -576,7 +570,7 @@ function scr_lang_sprite_add_array(arg0, arg1, arg2, arg3 = undefined, arg4 = un
 	if (is_undefined(builtSprite))
 		exit
 	
-	trace(string("Added extended lang sprite for {0} with length {1}", arg0, sprite_get_number(builtSprite)))
+	trace(string("Added extended lang sprite for " + arg0 + " with length " + sprite_get_number(builtSprite)))
 	sprite_set_speed(builtSprite, sp, spT)
 	ds_map_set(global.langSprites, baseSprite, builtSprite)
 	ds_map_set(global.langSpriteKeys, builtSprite, baseSprite)
@@ -585,17 +579,17 @@ function scr_lang_sprite_add_array(arg0, arg1, arg2, arg3 = undefined, arg4 = un
 
 function scr_lang_sprite_add(arg0, arg1, arg2, arg3 = undefined, arg4 = undefined)
 {
-	var f = string("{0}/{1}.png", arg2, arg1)
+	var f = string(arg2 + "/" + arg1 + ".png")
 	var s = asset_get_index(arg0)
 	
 	if (!file_exists(f) || !sprite_exists(s))
 	{
-		trace(string("Unable to find lang sprite {0}", f))
-		global.langError = string("Unable to find lang sprite {0}", f)
+		trace(string("Unable to find lang sprite " + f))
+		global.langError = string("Unable to find lang sprite " + f)
 		return "default";
 	}
 	
-	trace(string("Creating sprite {0} for {1}", f, arg0))
+	trace(string("Creating sprite " + f + " for " + arg0))
 	var n = sprite_get_number(s)
 	
 	if (is_undefined(arg3))
@@ -653,7 +647,7 @@ function scr_lang_set_file(arg0)
 	}
 	
 	lang_refresh_store()
-	trace(string("Loaded new lang file ({0})", arg0))
+	trace(string("Loaded new lang file (" + arg0 + ")"))
 	return true;
 }
 
@@ -737,10 +731,10 @@ function scr_lang_init()
 	
 	var _dir = string_concat(working_directory, "lang/")
 	global.langFiles = directory_get_files(_dir, ".txt")
-	trace("Found Lang Files: ", json_stringify(global.langFiles, true))
+	trace("Found Lang Files: ", json_stringify(global.langFiles))
 	
-	if (array_contains(global.langFiles, string("{0}.txt", global.langName)))
-		scr_lang_set_file(string("{0}.txt", global.langName))
+	if (array_contains(global.langFiles, string(global.langName + ".txt")))
+		scr_lang_set_file(string(global.langName + ".txt"))
 	else if (array_length(global.langFiles) > 0)
 		scr_lang_set_file(global.langFiles[0])
 	else
@@ -768,11 +762,13 @@ function lang_get(arg0, arg1 = undefined)
 			content = variable_struct_get(global.langDefault, arg0)
 			
 			if (string_length(global.langError) < 1)
-				global.langError = string("Could not find value \"{0}\" for lang {1}!", arg0, global.langName)
+				global.langError = string("im lazy to fix this")
+			// old code here -- langError = string("Could not find value \"{0}\" for lang {1}!", arg0, global.langName)
 		}
 		else if (string_length(global.langError) < 1)
 		{
-			global.langError = string("No such lang key exists \"{0}\"!", arg0)
+			//global.langError = string("No such lang key exists \"{0}\"!", arg0)
+			global.langError = string("im lazy to fix this")
 		}
 	}
 	else
@@ -891,11 +887,11 @@ function lang_get_sprite_key(arg0)
 	
 	if (!is_undefined(s))
 	{
-		trace(string("Found sprite key {0} for lang sprite {1}", sprite_get_name(s), sprite_get_name(arg0)))
+		trace(string("Found sprite key " + sprite_get_name(s) + " for lang sprite " + sprite_get_name(arg0)))
 		return s;
 	}
 	
-	trace(string("Couldn't find key for lang sprite {0}", sprite_get_name(arg0)))
+	trace(string("Couldn't find key for lang sprite " + sprite_get_name(arg0)))
 	return arg0;
 }
 

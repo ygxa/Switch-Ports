@@ -42,7 +42,7 @@ if (savedDesc != selID)
 	{
 		old_desc = description
 		descfadeout = true
-		description = lang_get(string("{0}_desc", savedDesc))
+		description = lang_get(string(savedDesc + "_desc"))
 		showdesc = description != "" && !is_undefined(description)
 	}
 }

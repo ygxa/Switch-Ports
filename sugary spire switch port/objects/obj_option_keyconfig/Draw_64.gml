@@ -56,9 +56,9 @@ else
 	draw_set_alpha(1)
 	var ty = 415
 	var menu_text = [lang_get("opt_keyconfig_bind"), lang_get("opt_keyconfig_clear"), lang_get("opt_keyconfig_reset")]
-	menu_text[0] += string(": [c_white]{0}", get_control_sprite(gamepad ? "menuconfirmC" : "menuconfirm"))
-	menu_text[1] += string(": [c_white]{0}", get_control_sprite(gamepad ? "menudeleteC" : "menudelete"))
+	menu_text[0] += string(": [c_white]" + get_control_sprite(gamepad ? "menuconfirmC" : "menuconfirm"))
+	menu_text[1] += string(": [c_white]" + get_control_sprite(gamepad ? "menudeleteC" : "menudelete"))
 	menu_text[2] += ": [c_white][spr_key_empty][keyDrawFont][offset,-23,0]F1[offsetPop]"
-	var final_text = string("{0}\n{1}\n{2}", menu_text[0], menu_text[1], menu_text[2])
+	var final_text = string(menu_text[0] + "\n" + menu_text[1] + "\n" + menu_text[2])
 	scribble(final_text).starting_format(font_get_name(global.fontDefault), 16777215).align(0, 1).line_spacing(gamepad ? "125%" : "150%").draw(25, ty)
 }

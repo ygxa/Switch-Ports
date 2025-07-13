@@ -7,7 +7,7 @@ for (var i = -1; i < gamepad_get_device_count(); i++)
 		showtext = false
 		global.PlayerInputDevice = _index
 		scr_setTransfoTip(global.TransfoState)
-		show_debug_message(string("Changed Device to Index {0}", _index))
+		//show_debug_message(string("Changed Device to Index {0}", _index))
 		
 		for (var j = 0; j < gamepad_get_device_count(); j++)
 		{

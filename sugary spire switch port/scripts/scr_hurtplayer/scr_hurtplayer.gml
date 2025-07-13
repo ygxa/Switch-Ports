@@ -64,8 +64,8 @@ function scr_hurtplayer(arg0 = obj_parent_player, arg1)
 				
 				if ((global.LocalHurtCounter % 10) == 0 && global.LocalHurtCounter >= 10)
 				{
-					var _string = lang_get("prompt_hurt", [lang_get(string("prompt_{0}", scr_getCharacterPrefix(global.playerCharacter))), global.LocalHurtCounter])
-					scr_queueToolTipPrompt(string("[shake]{0}", _string))
+					var _string = lang_get("prompt_hurt", [lang_get(string("prompt_" + scr_getCharacterPrefix(global.playerCharacter))), global.LocalHurtCounter])
+					scr_queueToolTipPrompt(string("[shake]" + _string))
 					scr_queueTVAnimation(randomize_animations(global.TvSprPlayer_HurtExp))
 				}
 				else

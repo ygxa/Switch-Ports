@@ -64,4 +64,4 @@ if (global.gamePauseState == 1)
 }
 
 if (global.gamePauseState && round(borderscale) >= 1)
-	scribble(string("[pPrompt][wave]{0}", lang_get(global.TransfoPrompt))).align(1, 1).draw(480, 500)
+	scribble(string("[pPrompt][wave]" + lang_get(global.TransfoPrompt))).align(1, 1).draw(480, 500)

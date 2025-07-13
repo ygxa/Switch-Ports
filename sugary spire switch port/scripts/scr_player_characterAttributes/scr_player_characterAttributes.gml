@@ -8,18 +8,18 @@ function scr_getCharacterSprite(arg0, arg1 = "spr_player_", arg2 = global.player
 {
 	var prefix_length = string_length(arg1)
 	var sprite_name = string_delete(sprite_get_name(arg0), 1, prefix_length + 3)
-	var asset_string = string("{0}{1}_{2}", arg1, scr_getCharacterPrefix(arg2), sprite_name)
+	var asset_string = string(arg1 + scr_getCharacterPrefix(arg2) + sprite_name)
 	
 	if (asset_get_index(asset_string) <= -1)
 	{
-		if (global.DebugVisuals)
-			show_debug_message(string("'{0}' cannot be found. Using '{1}'.", asset_string, sprite_get_name(arg0)))
+		//if (global.DebugVisuals)
+			//show_debug_message(string("'{0}' cannot be found. Using '{1}'.", asset_string, sprite_get_name(arg0)))
 		
 		return arg0;
 	}
 	
-	if (global.DebugVisuals)
-		show_debug_message(string("'{0}' found.", asset_string))
+	//if (global.DebugVisuals)
+		//show_debug_message(string("'{0}' found.", asset_string))
 	
 	return asset_get_index(asset_string);
 }

@@ -2,7 +2,7 @@ depth = -500
 x = 480
 y = 270
 inputBuffer = 2
-optionSelectionH = array_get_index(global.langFiles, string("{0}.txt", global.langName))
+optionSelectionH = array_get_index(global.langFiles, string(global.langName + ".txt"))
 oldOptionSelectionH = optionSelectionH
 
 if (optionSelectionH == -1)

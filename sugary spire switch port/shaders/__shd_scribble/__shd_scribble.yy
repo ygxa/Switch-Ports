@@ -2,9 +2,9 @@
   "resourceType": "GMShader",
   "resourceVersion": "1.0",
   "name": "__shd_scribble",
-  "parent": {
-    "name": "Shaders",
-    "path": "folders/Scribble/(System - don't call these functions)/Shaders.yy",
-  },
   "type": 1,
+  "parent": {
+    "name": "sugary spire switch port",
+    "path": "sugary spire switch port.yyp",
+  },
 }

@@ -159,11 +159,11 @@ function init_option()
 	var cur_version = ini_read_real("FileFormat", "version", 0)
 	
 	if (cur_version > 1)
-		show_debug_message(string("WARNING: optionData.ini Version: {0} is higher than game's expected optionData.ini version: {1}. Tomfoolery afoot.", cur_version, 1))
+		show_debug_message(string("WARNING: optionData.ini Version: {0} is higher than game's expected optionData.ini version: " + cur_version + ". Tomfoolery afoot."))
 	
 	if (!ini_section_exists("FileFormat") || !ini_key_exists("FileFormat", "version") || cur_version < 1)
 	{
-		show_debug_message(string("ALERT: Updating optionData.ini version... {0} to {1}", cur_version, 1))
+		show_debug_message("ALERT: Updating optionData.ini version...")
 		ini_write_real("FileFormat", "version", 1)
 		update_option_format(cur_version, 1)
 	}

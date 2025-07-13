@@ -60,7 +60,8 @@ with (textbubble)
 	}
 	else
 	{
-		text = lang_get(string("democritic_{0}_{1}", array_get_index(other.criticArr, other.sprite_index) + 1, found_rank))
+		var ass = array_get_index(other.criticArr, other.sprite_index) + 1
+		text = lang_get(string("democritic_" + ass + "_" + found_rank))
 		image_xscale = -other.image_xscale
 	}
 }

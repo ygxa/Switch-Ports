@@ -26,7 +26,7 @@ if (fadealpha > 1 && load_finished && !fadein)
 		else
 		{
 			room_goto_fixed(rm_missing)
-			show_debug_message("Room \"" + string("{0}", string(target_room)) + "\" does not exist. Sent Player to \"rm_missing\"")
+			//show_debug_message("Room \"" + string("{0}", string(target_room)) + "\" does not exist. Sent Player to \"rm_missing\"")
 		}
 	}
 	

@@ -15,7 +15,7 @@ function ChefTask(arg0, arg1, arg2, arg3, arg4) constructor
 	return self;
 }
 
-function OutfitTask(arg0, arg1, arg2, arg3) : ChefTask(arg0, arg2, lang_get_sprite(spr_paletteUnlock), 0, arg3) constructor
+function OutfitTask(arg0, arg1, arg2, arg3) constructor
 {
 	taskCharacter = arg1
 }
@@ -60,7 +60,7 @@ function scr_award_chef_task(arg0, arg1, arg2)
 	if (!prevUnlocked)
 		ds_queue_enqueue(obj_achievementTracker.chefUnlockQueue, [arg1, arg0, ConditionType.InLevel, arg2])
 	
-	show_debug_message(string("Chef Task Unlocked: {0}", arg0))
+	show_debug_message(string("Chef Task Unlocked"))//: {0}", arg0))
 }
 
 function scr_award_palette(arg0, arg1)
@@ -79,7 +79,7 @@ function scr_award_palette(arg0, arg1)
 			event_perform(ev_create, 0)
 	}
 	
-	show_debug_message(string("Chef Task Unlocked: {0}", arg0))
+	show_debug_message(string("Chef Task Unlocked: " + arg0))
 }
 
 function scr_check_end_level_chef_tasks()
@@ -155,7 +155,7 @@ function scr_task_notify(arg0, arg1 = [])
 	if (is_undefined(task))
 		exit
 	
-	trace(string("Task Notified: {0}", arg0))
+	trace(string("Task Notified: " + arg0))
 	
 	with (obj_achievementTracker)
 	{
@@ -275,8 +275,8 @@ function scr_get_chef_tasks(arg0, arg1 = true)
 					if (breakables_still_present <= 0)
 					{
 						array_delete(obj_achievementTracker.constructionBreakablesRooms, room_list_index, 1)
-						show_debug_message(string("Cleared room {0} of destroyables!", room_get_name(room)))
-						show_debug_message(string("{0} more rooms to clear.", array_length(obj_achievementTracker.constructionBreakablesRooms)))
+						//show_debug_message(string("Cleared room {0} of destroyables!", room_get_name(room)))
+						//show_debug_message(string("{0} more rooms to clear.", array_length(obj_achievementTracker.constructionBreakablesRooms)))
 					}
 				}
 				
@@ -314,8 +314,8 @@ function scr_get_chef_tasks(arg0, arg1 = true)
 					if (!instance_exists(obj_cottonwitch))
 					{
 						array_delete(obj_achievementTracker.cottonWitchRooms, room_list_index, 1)
-						show_debug_message(string("Cleared room {0} of cottonwitches!", room_get_name(room)))
-						show_debug_message(string("{0} more rooms to clear.", array_length(obj_achievementTracker.cottonWitchRooms)))
+						//show_debug_message(string("Cleared room {0} of cottonwitches!", room_get_name(room)))
+						//show_debug_message(string("{0} more rooms to clear.", array_length(obj_achievementTracker.cottonWitchRooms)))
 					}
 				}
 				
@@ -334,7 +334,7 @@ function scr_get_chef_tasks(arg0, arg1 = true)
 							if (room != steamy_secret_1 && room != steamy_secret_2 && room != steamy_secret_3)
 							{
 								obj_achievementTracker.cottonBlocksUsed++
-								show_debug_message(string("Increasing total to {0} cotton blocks drilled through.", obj_achievementTracker.cottonBlocksUsed))
+								//show_debug_message(string("Increasing total to {0} cotton blocks drilled through.", obj_achievementTracker.cottonBlocksUsed))
 							}
 							else
 							{
@@ -380,8 +380,8 @@ function scr_get_chef_tasks(arg0, arg1 = true)
 					if (all_miners_used)
 					{
 						array_delete(obj_achievementTracker.gnomeMinerRooms, room_list_index, 1)
-						show_debug_message(string("All gnomes in {0} have been satisfied!", room_get_name(room)))
-						show_debug_message(string("{0} more rooms to clear.", array_length(obj_achievementTracker.gnomeMinerRooms)))
+						//show_debug_message(string("All gnomes in {0} have been satisfied!", room_get_name(room)))
+						//show_debug_message(string("{0} more rooms to clear.", array_length(obj_achievementTracker.gnomeMinerRooms)))
 					}
 				}
 				
@@ -416,8 +416,8 @@ function scr_get_chef_tasks(arg0, arg1 = true)
 					if (all_geysers_activated)
 					{
 						array_delete(obj_achievementTracker.geyserSpawnerRooms, room_list_index, 1)
-						show_debug_message(string("All geysers {0} have been activated!", room_get_name(room)))
-						show_debug_message(string("{0} more rooms to clear.", array_length(obj_achievementTracker.geyserSpawnerRooms)))
+						//show_debug_message(string("All geysers {0} have been activated!", room_get_name(room)))
+						//show_debug_message(string("{0} more rooms to clear.", array_length(obj_achievementTracker.geyserSpawnerRooms)))
 					}
 				}
 				

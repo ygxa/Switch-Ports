@@ -34,7 +34,7 @@ if (deleteFileBuffer >= deleteFileBufferMax)
 		if (file_exists(save_path[i]))
 		{
 			ini_open(save_path[i])
-			ini_key_delete("Misc", string("playerPaletteIndex_{0}", scr_getCharacterPrefix(Characters.Pizzelle)))
+			ini_key_delete("Misc", string("playerPaletteIndex_" + scr_getCharacterPrefix(Characters.Pizzelle)))
 			ini_close()
 			
 			with (obj_mainfileselect)

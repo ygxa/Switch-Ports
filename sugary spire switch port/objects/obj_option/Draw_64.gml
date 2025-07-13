@@ -38,7 +38,7 @@ for (var i = 0; i < _optLength; i++)
 				_optStr = _option.translate_opt ? lang_get(_option.options[_option.value]) : _option.options[_option.value]
 			
 			if (alignCenter && array_length(_option.options))
-				_finalStr = string("{0} {1}", _finalStr, _optStr)
+				_finalStr = string(_finalStr + " " + _optStr)
 			
 			_finalStr = string_upper(_finalStr)
 			var _max_length = 490
@@ -116,7 +116,7 @@ for (var i = 0; i < _optLength; i++)
 			{
 				draw_set_font(global.smallfont)
 				draw_set_halign(fa_right)
-				draw_text_color(bar_start_x - barPad, _yy, string("{0}%", _option.value), _iColor, _iColor, _iColor, _iColor, 1)
+				draw_text_color(bar_start_x - barPad, _yy, string(_option.value + "%"), _iColor, _iColor, _iColor, _iColor, 1)
 			}
 			
 			draw_set_halign(old_halign)

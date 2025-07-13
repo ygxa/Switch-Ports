@@ -9,5 +9,5 @@ for (var i = 0; i < ds_list_size(collectSecretList); i++)
 	b.platformIndex += 0.35
 }
 
-if (global.DebugVisuals)
-	show_debug_message(string("Collectible List Size: {0}", ds_list_size(collectSecretList)))
+//if (global.DebugVisuals)
+	//show_debug_message(string("Collectible List Size: {0}", ds_list_size(collectSecretList)))

@@ -12,6 +12,6 @@ if (deleteFileBuffer > 0)
 if (deleteFileBuffer > (deleteFileBufferMax / 2))
 	_sprite = spr_fileDelete
 
-var circle_visual = string("[{0},{1}]", sprite_get_name(spr_holdCircle), (deleteFileBuffer / deleteFileBufferMax) * sprite_get_number(spr_holdCircle))
-var selection_string = string("\n\n[{0}]{1}{2}         [{3}]{4}", (optionSelection == 1) ? "c_gray" : "c_white", lang_get("main_menu_yes"), circle_visual, (optionSelection == 0) ? "c_gray" : "c_white", lang_get("main_menu_no"))
-draw_text_scribble(480, 270, string_concat(string("[c_white][{0},{1}][fa_middle][fa_center][fontDefault]", sprite_get_name(_sprite), image_index), "[c_red]", lang_get("reset_clothes_confirm"), "[c_white]", string("[{0},{1}]", sprite_get_name(_sprite), image_index), selection_string))
+//var circle_visual = string("[{0},{1}]", sprite_get_name(spr_holdCircle), (deleteFileBuffer / deleteFileBufferMax) * sprite_get_number(spr_holdCircle))
+//var selection_string = string("\n\n[{0}]{1}{2}         [{3}]{4}", (optionSelection == 1) ? "c_gray" : "c_white", lang_get("main_menu_yes"), circle_visual, (optionSelection == 0) ? "c_gray" : "c_white", lang_get("main_menu_no"))
+//draw_text_scribble(480, 270, string_concat(string("[c_white][{0},{1}][fa_middle][fa_center][fontDefault]", sprite_get_name(_sprite), image_index), "[c_red]", lang_get("reset_clothes_confirm"), "[c_white]", string("[{0},{1}]", sprite_get_name(_sprite), image_index), selection_string))

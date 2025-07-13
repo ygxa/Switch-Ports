@@ -150,7 +150,7 @@ function input_save(arg0)
 		arg0.gpLen = array_length(arg0.gpInputs)
 	}
 	
-	trace(string("Trace input_save: {0} = {1}", arg0.name, str))
+	trace(string("Trace input_save: " + arg0.name + " = " + str))
 	ini_open("optionData.ini")
 	ini_write_string("Control", arg0.name, str)
 	ini_close()
@@ -179,7 +179,7 @@ function scr_input_ini_read(arg0, arg1, arg2, arg3 = false, arg4 = false)
 			array_push(inputs, real(inputStrings[i]))
 	}
 	
-	show_debug_message(string("loaded input {0}: {1}", arg0, inputs))
+	//show_debug_message(string("loaded input {0}: {1}", arg0, inputs))
 	scr_input_add(arg0, new Input(arg0, arg1 ? [] : inputs, arg1 ? inputs : [], arg3, arg4))
 }
 

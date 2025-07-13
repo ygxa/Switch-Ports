@@ -110,8 +110,9 @@ addLevel = function(arg0, arg1, arg2 = true, arg3 = true, arg4 = true, arg5 = tr
 	
 	if (arg2)
 	{
+		var fuck = i + 1
 		for (var i = 0; i < array_length(p.confectiArr); i++)
-			p.confectiArr[i] = ini_read_real("Confecti", string("{0}{1}", arg0, i + 1), false)
+			p.confectiArr[i] = ini_read_real("Confecti", string(arg0 + fuck), false)
 	}
 	
 	if (arg3)

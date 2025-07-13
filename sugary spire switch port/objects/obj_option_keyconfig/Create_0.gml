@@ -45,7 +45,7 @@ function inputDisplay(arg0, arg1) constructor
 		
 		for (var i = 0; i < iconLen; i++)
 		{
-			txt += string("[{0},{1}]", sprite_get_name(inputIcons[i][0]), inputIcons[i][1])
+			txt += string("[" + sprite_get_name(inputIcons[i][0]) + "," + inputIcons[i][1] + "]")
 			var ii = i + 1
 			
 			if ((ii % 3) == 0)
@@ -83,7 +83,7 @@ function inputDisplay(arg0, arg1) constructor
 	displayname = arg0
 	name = arg0
 	iconIndex = arg1
-	text = string_upper(lang_get(string("opt_keyconfig_{0}", arg0)))
+	text = string_upper(lang_get(string("opt_keyconfig_" + arg0)))
 	lineCount = 1
 	isGP = false
 	inputText = ""

@@ -19,13 +19,13 @@ for (var i = 0; i < rowTotal; i++)
 	var nm = ""
 	
 	if (array_contains(floorArr, levelArr[i]))
-		nm = string_upper(lang_get(string("floor_{0}", levelArr[i])))
+		nm = string_upper(lang_get(string("floor_" + levelArr[i])))
 	else
-		nm = string_upper(lang_get(string("level_{0}", levelArr[i])))
+		nm = string_upper(lang_get(string("level_" + levelArr[i])))
 	
 	draw_set_font(global.fontDefault)
 	draw_set_color(rowSelected ? c_white : c_dkgray)
-	draw_text_scribble(camera_get_view_width(view_camera[0]) / 2, rowY - string_height("A") - 32, string("[fa_bottom][fa_center]{0}", nm))
+	draw_text_scribble(camera_get_view_width(view_camera[0]) / 2, rowY - string_height("A") - 32, string("[fa_bottom][fa_center]" + nm))
 	var len = array_length(taskArr)
 	
 	for (var j = 0; j < len; j++)
@@ -62,7 +62,7 @@ for (var i = 0; i < rowTotal; i++)
 		if (isSelected)
 		{
 			array_push(textArr, lang_get(task.get("taskKey")))
-			array_push(textArr, lang_get(string("{0}_desc", task.get("taskKey"))))
+			array_push(textArr, lang_get(string(task.get("taskKey") + "_desc")))
 		}
 	}
 }
@@ -76,7 +76,7 @@ for (var i = 1; i <= array_length(outfitArr); i++)
 	draw_set_font(global.fontDefault)
 	
 	if (i == 1)
-		draw_text_scribble(camera_get_view_width(view_camera[0]) / 2, rowY - string_height("A") - 24, string("[fa_bottom][fa_center]{0}", lang_get("menutask_clothes")))
+		draw_text_scribble(camera_get_view_width(view_camera[0]) / 2, rowY - string_height("A") - 24, string("[fa_bottom][fa_center]" + lang_get("menutask_clothes")))
 	
 	var rowSelected = (currentRow + rowTotal) == selectV
 	draw_set_color(rowSelected ? c_white : c_dkgray)
@@ -182,12 +182,12 @@ for (var i = 1; i <= array_length(outfitArr); i++)
 		if (task.isCompleted)
 		{
 			array_push(textArr, lang_get(task.get("taskKey")))
-			array_push(textArr, lang_get(string("{0}_desc", task.get("taskKey"))))
+			array_push(textArr, lang_get(string(task.get("taskKey") + "_desc")))
 		}
 		else
 		{
 			array_push(textArr, lang_get("menutask_unknown"))
-			array_push(textArr, lang_get(string("{0}_hint", task.get("taskKey"))))
+			array_push(textArr, lang_get(string(task.get("taskKey") + "_hint")))
 		}
 	}
 }
@@ -201,7 +201,7 @@ if (array_length(textArr) > 0)
 	var txt = "[fa_middle][promptfont][fa_center]"
 	
 	for (var i = 0; i < array_length(textArr); i++)
-		txt += string("{0}\n", textArr[i])
+		txt += string(textArr[i] + "\n")
 	
 	var scrib = scribble(txt)
 	scrib.wrap(camera_get_view_width(view_camera[0]) - 200)

@@ -7,7 +7,7 @@ function palette_as_player(arg0 = sprite_index, arg1 = image_index, arg2 = globa
 	
 	if (!number_in_range(arg3, 0, array_length(global.CharacterPalette[arg2].palettes) - 1))
 	{
-		show_debug_message(string("WARNING: PALETTE INDEX {0} IS OUT OF RANGE 0-{1}. DEFAULTING TO 0", arg3, array_length(global.CharacterPalette[arg2].palettes) - 1))
+		show_debug_message(string("WARNING: PALETTE INDEX {0} IS OUT OF RANGE 0-{1}. DEFAULTING TO 0"))
 		arg3 = 0
 	}
 	

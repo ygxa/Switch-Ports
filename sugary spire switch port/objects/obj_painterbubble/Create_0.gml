@@ -13,9 +13,9 @@ typist = scribble_typist()
 typist.pause()
 typist.in(0.25, 1)
 
-for (var k = 1; lang_key_exists(string("demopainter_idlethought_{0}", k)); k++)
+for (var k = 1; lang_key_exists(string("demopainter_idlethought_" + k)); k++)
 {
-	var dg = lang_get(string("demopainter_idlethought_{0}", k))
+	var dg = lang_get(string("demopainter_idlethought_" + k))
 	array_push(idleThoughts, dg)
 }
 
@@ -24,5 +24,5 @@ var palette_array = global.CharacterPalette[global.playerCharacter].palettes
 for (var i = 0; i < array_length(palette_array); i++)
 {
 	var key = palette_array[i].palName
-	array_push(paletteThoughts, lang_get(string("{0}_thought", key)))
+	array_push(paletteThoughts, lang_get(string(key + "_thought")))
 }

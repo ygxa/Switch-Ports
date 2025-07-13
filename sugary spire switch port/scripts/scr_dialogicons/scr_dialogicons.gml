@@ -54,5 +54,5 @@ function scr_getDialogIcon(arg0, arg1 = "c_white", arg2 = "c_black")
 			break
 	}
 	
-	return string("[{0}][{1}, {2}][{3}]", arg1, spr, ind, arg2);
+	return string("[" + arg1 + "][" + spr + ind + "][" + arg2 + "]");
 }

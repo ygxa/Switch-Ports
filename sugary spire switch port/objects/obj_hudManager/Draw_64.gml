@@ -65,7 +65,7 @@ if (!(is_hub() || is_tutorial() || !scr_roomcheck() || room == mineshaft_elevato
 		var _yy = (_y - border_sprite.yoffset) + _fillYstart
 		draw_surface(comboSurface, _xx, _yy)
 		draw_sprite_ext(sprite_index, image_index, _x, _y, 1, 1, 0, c_white, 1)
-		draw_text_scribble(_x - 17, _y + 26, string("[fa_right][fa_top][combofont]{0}", comboDisplay))
+		draw_text_scribble(_x - 17, _y + 26, string("[fa_right][fa_top][combofont]" + comboDisplay))
 	}
 	
 	with (HUDObject_TV)
@@ -107,7 +107,7 @@ if (!(is_hub() || is_tutorial() || !scr_roomcheck() || room == mineshaft_elevato
 			if (secs < 10)
 				secs = "0" + string(secs)
 			
-			var timer_string = string("[fa_center][fa_top][promptfont][c_white]{0}:{1}", mins, secs)
+			var timer_string = string("[fa_center][fa_top][promptfont][c_white]" + mins + ":" + secs)
 			draw_text_scribble(x, y, timer_string)
 			draw_sprite_ext(spr_clockTimer, elm_clockTimer.image_index, (x - string_width_scribble(timer_string)) + 16, y + 16, 1, 1, 0, c_white, 1)
 		}
@@ -137,6 +137,6 @@ if (!(is_hub() || is_tutorial() || !scr_roomcheck() || room == mineshaft_elevato
 
 if (!global.gamePauseState)
 {
-	scribble(string("[wave][pPrompt]{0}", global.TooltipPrompt)).blend(16777215, HUDObject_tooltipPrompts.image_alpha).align(1, 1).draw(HUDObject_tooltipPrompts.x, HUDObject_tooltipPrompts.y)
+	scribble(string("[wave][pPrompt]" + global.TooltipPrompt)).blend(16777215, HUDObject_tooltipPrompts.image_alpha).align(1, 1).draw(HUDObject_tooltipPrompts.x, HUDObject_tooltipPrompts.y)
 	draw_set_alpha(1)
 }

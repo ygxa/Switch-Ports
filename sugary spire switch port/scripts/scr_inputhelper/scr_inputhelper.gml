@@ -110,7 +110,7 @@ function scr_input_icon_add(arg0, arg1, arg2)
 	{
 		var input = arg0[i]
 		ds_map_set(global.input_icons, input, [arg1, arg2])
-		trace("Added ", sprite_get_name(arg1), string(" (frame: {0}) to input icon map for {1}.", arg2, input))
+		trace("Added ", sprite_get_name(arg1), string(" (frame: " + arg2 + ") to input icon map for " + arg2 + "."))
 	}
 }
 
@@ -195,10 +195,10 @@ function get_control_sprite(arg0, arg1 = false)
 	if (arg1)
 		return icon;
 	
-	var str = string("[{0}]", sprite_get_name(icon[0]) + ", " + string(floor(icon[1])))
+	var str = "[" + sprite_get_name(icon[0]) + ", " + string(floor(icon[1])) + "]"
 	
 	if (icon[0] == spr_key_empty)
-		str += string("[keyDrawFont]{0}", scr_keyname(icon[2]))
+		str += string("[keyDrawFont]" + scr_keyname(icon[2]))
 	
 	return str;
 }
@@ -206,7 +206,7 @@ function get_control_sprite(arg0, arg1 = false)
 function draw_control_sprite(arg0, arg1, arg2)
 {
 	var icon = get_control_sprite(arg0, true)
-	var base = scribble(string("[{0}, {1}]", sprite_get_name(icon[0]), floor(icon[1]))).align(1, 1).blend(draw_get_color(), draw_get_alpha()).draw(arg1, arg2)
+	var base = scribble(string("[" + sprite_get_name(icon[0]) + "," + floor(icon[1]) + "]")).align(1, 1).blend(draw_get_color(), draw_get_alpha()).draw(arg1, arg2)
 	
 	if (icon[0] == spr_key_empty)
 		scribble(string_copy(scr_keyname(icon[2]), 1, 3)).starting_format(font_get_name(global.keyDrawFont), 0).align(1, 1).blend(draw_get_color(), draw_get_alpha()).draw(arg1 + 16, arg2)

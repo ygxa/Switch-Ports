@@ -28,7 +28,7 @@ if (optionSelectionH != oldOptionSelectionH)
 	oldOptionSelectionH = optionSelectionH
 	var f = global.langFiles[optionSelectionH]
 	
-	if (f != string("{0}.txt", global.langName))
+	if (f != string(global.langName + ".txt"))
 	{
 		scr_lang_set_file(f)
 		

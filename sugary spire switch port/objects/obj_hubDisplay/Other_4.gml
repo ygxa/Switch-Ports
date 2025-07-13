@@ -43,7 +43,7 @@ for (var i = 0; i < array_length(realLevels); i++)
 	
 	for (var c = 1; c <= 5; c++)
 	{
-		p.confCount += ini_read_real("Confecti", string("{0}{1}", lv, c), 0)
+		p.confCount += ini_read_real("Confecti", string(lv + c), 0)
 		p.confMax++
 	}
 }

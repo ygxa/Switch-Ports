@@ -5,4 +5,4 @@ draw_set_alpha(1)
 draw_set_color(c_white)
 
 if (loading_text && !loaded)
-	draw_text_scribble(952, 532, string("[fa_right][fa_bottom][c_white][fontDefault]{0}", lang_get("loadingGeneric")))
+	draw_text_scribble(952, 532, string("[fa_right][fa_bottom][c_white][fontDefault]" + lang_get("loadingGeneric")))

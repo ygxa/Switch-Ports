@@ -21,7 +21,7 @@ function scr_judgment_assign()
 	
 	ini_write_string("Game", "Judgment", j)
 	ini_close()
-	trace(string("Save File Judgment: {0}", j))
+	trace(string("Save File Judgment: " + j))
 	return scr_judgment_get(j);
 }
 
@@ -66,12 +66,12 @@ function saveJudgment() constructor
 function add_judgment(arg0, arg1)
 {
 	var j = new saveJudgment().setProperties(arg1)
-	j.properties.title = lang_get(string("judgment_title_{0}", arg0))
+	j.properties.title = lang_get(string("judgment_title_" + arg0))
 	j.properties.dialog = [lang_get("judgmentinfo_default")]
 	
-	for (var i = 1; lang_key_exists(string("judgmentinfo_{0}_{1}", arg0, i)); i++)
+	for (var i = 1; lang_key_exists(string("judgmentinfo_" + arg0 + "_" + i)); i++)
 	{
-		var dg = lang_get(string("judgmentinfo_{0}_{1}", arg0, i))
+		var dg = lang_get(string("judgmentinfo_" + arg0 + i))
 		array_push(j.properties.dialog, dg)
 	}
 	
