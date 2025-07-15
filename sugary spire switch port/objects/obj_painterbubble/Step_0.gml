@@ -1,3 +1,4 @@
+/*
 image_alpha = fade
 
 if (global.PlayerPaletteIndex != savedPaletteIndex)

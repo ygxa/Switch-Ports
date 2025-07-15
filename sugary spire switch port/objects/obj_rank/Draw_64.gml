@@ -37,14 +37,14 @@ if (event <= 0)
 
 draw_sprite_ext(lang_get_sprite(spr_rankclipboard), 0, 716, 271 + clipboardY, 1, 1, 0, c_white, 1)
 var i = 0
-var _text_scribble = "[c_red][fa_middle][fa_center][dialogfont]"
+//var _text_scribble = "[c_red][fa_middle][fa_center][dialogfont]"
 
 if (combo_shown)
 {
 	var _cx = 894
 	var _cy = 68 + clipboardY
 	draw_sprite_ext(spr_rankclipboard_stamp, 0, _cx, _cy, 1, 1, 0, c_white, 1)
-	draw_text_scribble(_cx, _cy, string(_text_scribble + global.HighestCombo))
+	//draw_text_scribble(_cx, _cy, string(_text_scribble + global.HighestCombo))
 }
 
 if (damage_shown)
@@ -52,7 +52,7 @@ if (damage_shown)
 	var _dx = 894
 	var _dy = 142 + clipboardY
 	draw_sprite_ext(spr_rankclipboard_stamp, 1, _dx, _dy, 1, 1, 0, c_white, 1)
-	draw_text_scribble(_dx, _dy, string(_text_scribble + global.LocalHurtCounter))
+	//draw_text_scribble(_dx, _dy, string(_text_scribble + global.LocalHurtCounter))
 }
 
 draw_set_color(c_white)

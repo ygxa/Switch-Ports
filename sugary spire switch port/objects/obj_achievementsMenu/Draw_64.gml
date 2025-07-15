@@ -25,7 +25,7 @@ for (var i = 0; i < rowTotal; i++)
 	
 	draw_set_font(global.fontDefault)
 	draw_set_color(rowSelected ? c_white : c_dkgray)
-	draw_text_scribble(camera_get_view_width(view_camera[0]) / 2, rowY - string_height("A") - 32, string("[fa_bottom][fa_center]" + nm))
+	//draw_text_scribble(camera_get_view_width(view_camera[0]) / 2, rowY - string_height("A") - 32, string("[fa_bottom][fa_center]" + nm))
 	var len = array_length(taskArr)
 	
 	for (var j = 0; j < len; j++)
@@ -75,8 +75,8 @@ for (var i = 1; i <= array_length(outfitArr); i++)
 	var rowY = by + (currentRow * taskPadY)
 	draw_set_font(global.fontDefault)
 	
-	if (i == 1)
-		draw_text_scribble(camera_get_view_width(view_camera[0]) / 2, rowY - string_height("A") - 24, string("[fa_bottom][fa_center]" + lang_get("menutask_clothes")))
+	//if (i == 1)
+		//draw_text_scribble(camera_get_view_width(view_camera[0]) / 2, rowY - string_height("A") - 24, string("[fa_bottom][fa_center]" + lang_get("menutask_clothes")))
 	
 	var rowSelected = (currentRow + rowTotal) == selectV
 	draw_set_color(rowSelected ? c_white : c_dkgray)
@@ -203,7 +203,7 @@ if (array_length(textArr) > 0)
 	for (var i = 0; i < array_length(textArr); i++)
 		txt += string(textArr[i] + "\n")
 	
-	var scrib = scribble(txt)
-	scrib.wrap(camera_get_view_width(view_camera[0]) - 200)
-	scrib.draw(camera_get_view_width(view_camera[0]) / 2, camera_get_view_height(view_camera[0]) * 0.85)
+	//var scrib = scribble(txt)
+	//scrib.wrap(camera_get_view_width(view_camera[0]) - 200)
+	//scrib.draw(camera_get_view_width(view_camera[0]) / 2, camera_get_view_height(view_camera[0]) * 0.85)
 }

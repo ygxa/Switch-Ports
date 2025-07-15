@@ -1,3 +1,4 @@
+/*
 draw_self()
 draw_set_font(global.npcsmallfont)
 var txt = ""

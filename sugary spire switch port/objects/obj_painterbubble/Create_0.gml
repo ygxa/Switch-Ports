@@ -9,15 +9,15 @@ paletteThoughts = []
 savedPaletteIndex = global.PlayerPaletteIndex
 buffering = false
 bufferCooldown = 0
-typist = scribble_typist()
-typist.pause()
-typist.in(0.25, 1)
+//typist = scribble_typist()
+//typist.pause()
+//typist.in(0.25, 1)
 
-for (var k = 1; lang_key_exists(string("demopainter_idlethought_" + k)); k++)
-{
-	var dg = lang_get(string("demopainter_idlethought_" + k))
-	array_push(idleThoughts, dg)
-}
+//for (var k = 1; lang_key_exists(string("demopainter_idlethought_" + k)); k++)
+//{
+//	var dg = lang_get(string("demopainter_idlethought_" + k))
+//	array_push(idleThoughts, dg)
+//}
 
 var palette_array = global.CharacterPalette[global.playerCharacter].palettes
 

@@ -64,6 +64,7 @@ function scr_checkgroundpound()
 	return (disabled && key_down2) || key_groundpound;
 }
 
+/*
 function scr_input_init_sprites()
 {
 	if (!variable_global_exists("input_icons"))
@@ -114,6 +115,8 @@ function scr_input_icon_add(arg0, arg1, arg2)
 	}
 }
 
+*/
+
 function scr_input_get_actions(arg0)
 {
 	var inputArr = []
@@ -140,6 +143,7 @@ function scr_input_get_actions(arg0)
 
 function scr_input_get_icon(arg0, arg1 = false)
 {
+	/*
 	var result = []
 	var inputArr = scr_input_get_actions(arg0)
 	var length = arg1 ? array_length(inputArr) : 1
@@ -163,6 +167,7 @@ function scr_input_get_icon(arg0, arg1 = false)
 	}
 	
 	return arg1 ? result : result[0];
+	*/
 }
 
 function get_control_sprite(arg0, arg1 = false)
@@ -205,11 +210,11 @@ function get_control_sprite(arg0, arg1 = false)
 
 function draw_control_sprite(arg0, arg1, arg2)
 {
-	var icon = get_control_sprite(arg0, true)
-	var base = scribble(string("[" + sprite_get_name(icon[0]) + "," + floor(icon[1]) + "]")).align(1, 1).blend(draw_get_color(), draw_get_alpha()).draw(arg1, arg2)
+	//var icon = get_control_sprite(arg0, true)
+	//var base = scribble(string("[" + sprite_get_name(icon[0]) + "," + floor(icon[1]) + "]")).align(1, 1).blend(draw_get_color(), draw_get_alpha()).draw(arg1, arg2)
 	
-	if (icon[0] == spr_key_empty)
-		scribble(string_copy(scr_keyname(icon[2]), 1, 3)).starting_format(font_get_name(global.keyDrawFont), 0).align(1, 1).blend(draw_get_color(), draw_get_alpha()).draw(arg1 + 16, arg2)
+	//if (icon[0] == spr_key_empty)
+		//scribble(string_copy(scr_keyname(icon[2]), 1, 3)).starting_format(font_get_name(global.keyDrawFont), 0).align(1, 1).blend(draw_get_color(), draw_get_alpha()).draw(arg1 + 16, arg2)
 	
-	return base;
+	//return base;
 }

@@ -101,7 +101,7 @@ makeString = function(arg0, arg1, arg2)
 	s_real = s_real % 60
 	
 	if (s_real < 10)
-		s_str = string("0" + s_real)
+		s_str = "0" + string(s_real)
 	else
 		s_str = string(s_real)
 	
@@ -109,7 +109,7 @@ makeString = function(arg0, arg1, arg2)
 	arg0 %= 60
 	
 	if (arg0 < 10)
-		m_str = string("0" + arg0)
+		m_str = "0" + string(arg0)
 	else
 		m_str = string(arg0)
 	
@@ -117,7 +117,7 @@ makeString = function(arg0, arg1, arg2)
 	hours = hours % 24
 	
 	if (hours < 10)
-		hours = string("0" + hours)
+		hours = "0" + string(hours)
 	else
 		hours = string(hours)
 	

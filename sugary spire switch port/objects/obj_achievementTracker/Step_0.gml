@@ -19,14 +19,11 @@ while (i >= 0)
 {
 	var current_task = activeExhibitionNightSecretTasks[i]
 	
-	with (activeExhibitionNightSecretTasks[i])
-	{
-		if (conditionType == ConditionType.InLevel && taskCondition())
-		{
-			scr_award_palette(current_task.taskKey, current_task.taskCharacter)
-			array_delete(other.activeExhibitionNightSecretTasks, i, 1)
-		}
-	}
+	//if (current_task.conditionType == ConditionType.InLevel && current_task.taskCondition())
+	//{
+		//scr_award_palette(current_task.taskKey, current_task.taskCharacter)
+		//array_delete(activeExhibitionNightSecretTasks, i, 1)
+	//}
 	
 	i--
 }

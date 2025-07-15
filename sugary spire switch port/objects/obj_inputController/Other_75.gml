@@ -1,6 +1,6 @@
 var ev = ds_map_find_value(async_load, "event_type")
 var gp = ds_map_find_value(async_load, "pad_index")
-trace(string(ev + " for gamepad " + gp))
+//trace(string(ev + " for gamepad " + gp))
 
 switch (ev)
 {

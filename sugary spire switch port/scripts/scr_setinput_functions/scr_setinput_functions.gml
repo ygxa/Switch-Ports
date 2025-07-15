@@ -193,7 +193,7 @@ function scr_setinput_init()
 	global.deadzones[Deadzones.SJump] = ini_read_real("Settings", "deadzoneSJump", 0.8)
 	global.deadzones[Deadzones.Crouch] = ini_read_real("Settings", "deadzoneCrouch", 0.65)
 	ini_close()
-	scr_input_init_sprites()
+	//scr_input_init_sprites()
 }
 
 function scr_gpinput_isaxis(arg0)

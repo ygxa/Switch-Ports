@@ -431,14 +431,14 @@ function scr_playerstate()
 			break
 	}
 	
-	stateName = string("State : " + state)
+	//stateName = string("State : " + state)
 	
 	if (!is_undefined(state_function))
 	{
 		state_function()
 		
-		if (global.DebugMode)
-			stateName = "PlayerState." + string_extract(script_get_name(state_function), "_", 1) + string_extract(script_get_name(state_function), "_", 3)
+		//if (global.DebugMode)
+			//stateName = "PlayerState." + string_extract(script_get_name(state_function), "_", 1) + string_extract(script_get_name(state_function), "_", 3)
 	}
 }
 

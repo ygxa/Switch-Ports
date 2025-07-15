@@ -14,8 +14,8 @@ if (!is_undefined(global.RoomMusic))
 
 if (global.panic)
 {
-	fmod_studio_event_instance_set_paused(global.EscapeMusicInst, false)
-	fmod_studio_event_instance_set_callback(global.EscapeMusicInst, FMOD_STUDIO_EVENT_CALLBACK.NESTED_TIMELINE_BEAT)
+	//fmod_studio_event_instance_set_paused(global.EscapeMusicInst, false)
+	//fmod_studio_event_instance_set_callback(global.EscapeMusicInst, FMOD_STUDIO_EVENT_CALLBACK.NESTED_TIMELINE_BEAT)
 }
 
 currentSecretStatus = false

@@ -133,7 +133,7 @@ creditEntry = function() constructor
 		}
 		
 		draw_set_color(image_blend)
-		draw_text_scribble(x, y, string("[fa_center][fa_top][smallfont]" + string_upper(name)))
+		//draw_text_scribble(x, y, string("[fa_center][fa_top][smallfont]" + string_upper(name)))
 	}
 	
 	static addPaintTopper = function(arg0)

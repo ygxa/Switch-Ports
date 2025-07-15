@@ -1,3 +1,4 @@
+/*
 global.fontDefault = __scribble_font_add_sprite_ext(spr_font, "AÁÀÂÃBCÇDEÉÊFGHIÍJKLMNÑOÓÔÕPQRSTUÚVWXYZ!¡.,1234567890:?¿_-�", 1, 0)
 global.promptfont = __scribble_font_add_sprite_ext(spr_promptfont, "AÁÀÂÃBCÇDEÉÊFGHIÍJKLMNÑOÓÔÕPQRSTUÚVWXYZaáàâãbcçdeéêfghiíjklmnñoóôõpqrstuúvwxyz.,:!¡0123456789?¿'\"\\�_-[]▼()&#风雨廊桥전태양*яиБжидГзвбнль", 1, 0)
 global.smallfont = __scribble_font_add_sprite_ext(spr_smallfont, "AÁÀÂÃBCÇDEÉÊFGHIÍJKLMNÑOÓÔÕPQRSTUÚVWXYZ.?!¡1234567890\"-:_�", 1, 0)
@@ -23,6 +24,33 @@ global.keyDrawFont = __scribble_font_add_sprite_ext(spr_keyDrawFont, "ABCDEFGHIJ
 global.MoneyFont = __scribble_font_add_sprite_ext(spr_moneyFont, "0123456789$-", true, 0)
 global.smallnumberfont = __scribble_font_add_sprite_ext(spr_smallnumber, "1234567890-+", true, 0)
 global.captionfont = font_tahoma
+*/
+
+global.fontDefault = font_dialog
+global.promptfont = font_dialog
+global.smallfont = font_dialog
+global.npcfont = font_dialog
+global.npcsmallfont = font_dialog
+global.SoundTestFont = font_dialog
+global.smalltimerfont = font_dialog
+global.creditsfont = font_dialog
+global.collectfont = font_dialog
+global.candlefont = font_dialog
+global.candleBigFont = font_dialog
+global.rankcombofont = font_dialog
+global.bubblefont = font_dialog
+global.timerfont = font_dialog
+global.combofont = font_dialog
+global.lapfont = font_dialog
+global.dialogfont = font_dialog
+global.percentageFont = font_dialog
+global.buttonfont = font_dialog
+global.cafefont = font_dialog
+global.cafefontsmall = font_dialog
+global.keyDrawFont = font_dialog
+global.MoneyFont = font_dialog
+global.smallnumberfont = font_dialog
+global.captionfont = font_tahoma
 
 function directory_get_files(arg0, arg1)
 {
@@ -41,55 +69,37 @@ function directory_get_files(arg0, arg1)
     return fileArr;
 }
 
-function scr_lang_make_struct(arg0)
-{
-	var filePath = string_concat(working_directory, "lang/", arg0)
-	var b = buffer_load(filePath)
-	var text = string_split(buffer_read(b, buffer_text), "\n", true)
-	buffer_delete(b)
-	var json = "{\n"
-	
-	for (var i = 0; i < array_length(text); i++)
-	{
-		var l = text[i]
-		var c = 1
-		
-		while (string_char_at(l, c) == "\t")
-			c++
-		
-		if (string_char_at(l, c) != "#")
-		{
-			if (string_pos(":", l) != 0)
-				l = string_replace(l, "\r", ",\n")
-			
-			json += l
-		}
-	}
-	
-	json += "\n}"
-	var res = undefined
-	
-	try
-	{
-		res = json_parse(json)
-	}
-	catch (_exception)
-	{
-		trace("Failed to parse lang json! :: \n", json)
-		global.langError = "Could not parse lang file!"
-		res = undefined
-	}
-	
-	if (!is_undefined(res))
-	{
-		if (variable_struct_exists(res, "langFolder"))
-			res.langDictionary = scr_lang_get_dictionary(res.langFolder)
-		else
-			res.langDictionary = {}
-	}
-	
-	return res;
+function scr_lang_make_struct(arg0) {
+    var filePath = string_concat(working_directory, "lang/", arg0);
+    var b = buffer_load(filePath);
+    if (b < 0) return undefined;
+    var text = string_split(b, "\n");
+    var json = "{\n";
+    for (var i = 0; i < array_length(text); i++) {
+        var l = text[i];
+        var c = 1;
+        while (string_char_at(l, c) == "\t") c++;
+        if (string_char_at(l, c) != "#") {
+            if (string_pos(":", l) != 0) l = string_replace(l, "\r", ",\n");
+            json += l;
+        }
+    }
+    json += "\n}";
+    var res;
+    try {
+        res = json_parse(json);
+    } catch (_exception) {
+        trace("Failed to parse lang json! :: \n", json);
+        global.langError = "Could not parse lang file!";
+        res = undefined;
+    }
+    if (!is_undefined(res)) {
+        if (variable_struct_exists(res, "langFolder")) res.langDictionary = scr_lang_get_dictionary(res.langFolder);
+        else res.langDictionary = {};
+    }
+    return res;
 }
+
 
 function scr_lang_get_dictionary(arg0)
 {
@@ -242,8 +252,9 @@ function scr_lang_dictionary_fonts_add(arg0, arg1)
 				
 				var s = sprite_add(f, n, false, false, xo, yo)
 				sprite_collision_mask(s, true, 0, 0, 0, 0, 0, 0, 0)
-				var font = __scribble_font_add_sprite_ext(s, map, prop, sep)
-				variable_struct_set(font_struct, nm, font)
+				//var font = __scribble_font_add_sprite_ext(s, map, prop, sep)
+				//variable_struct_set(font_struct, nm, font)
+				var font = font_dialog
 			}
 			catch (ex)
 			{
@@ -286,7 +297,7 @@ function scr_lang_fonts_init()
 			continue
 		
 		variable_struct_set(st, font_name, variable_global_get(font_name))
-		scribble_add_macro(font_name, scr_lang_get_font_macro(font_name))
+		//scribble_add_macro(font_name, scr_lang_get_font_macro(font_name))
 	}
 	
 	ds_map_set(global.langFonts, "_DEFAULT_FONTS", st)
@@ -745,10 +756,11 @@ function scr_lang_init()
 
 function lang_key_exists(arg0)
 {
-	if (is_undefined(global.langDefault) || !variable_struct_exists(global.langDefault, arg0))
-		return false;
 	
-	return true;
+	//if (is_undefined(global.langDefault) || !variable_struct_exists(global.langDefault, arg0))
+		//return false;
+	
+	return false; // make this true when fixing later
 }
 
 function lang_get(arg0, arg1 = undefined)
@@ -863,7 +875,7 @@ function lang_get_sprite(arg0)
 {
 	if (!variable_struct_exists(global.langStruct, "langDictionary"))
 	{
-		trace("Requested sprite from a language with no dictionary!")
+		//trace("Requested sprite from a language with no dictionary!")
 		return arg0;
 	}
 	
@@ -879,7 +891,7 @@ function lang_get_sprite_key(arg0)
 {
 	if (!variable_struct_exists(global.langStruct, "langDictionary"))
 	{
-		trace("Requested sprite from a language with no dictionary!")
+		//trace("Requested sprite from a language with no dictionary!")
 		return arg0;
 	}
 	

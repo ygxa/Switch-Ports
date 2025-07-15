@@ -1,7 +1,7 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "instance_create",
+  "name": "gm_new_scripts",
   "isDnD": false,
   "isCompatibility": false,
   "parent": {

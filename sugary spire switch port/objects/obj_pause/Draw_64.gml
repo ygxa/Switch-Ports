@@ -63,5 +63,5 @@ if (global.gamePauseState == 1)
 	draw_player_sprite_ext(playerPauseSprite, playerPauseIndex, 107 - pauseslidein, 411 + pauseslidein, 1, 1, 0, c_white, 1)
 }
 
-if (global.gamePauseState && round(borderscale) >= 1)
-	scribble(string("[pPrompt][wave]" + lang_get(global.TransfoPrompt))).align(1, 1).draw(480, 500)
+//if (global.gamePauseState && round(borderscale) >= 1)
+	//scribble(string("[pPrompt][wave]" + lang_get(global.TransfoPrompt))).align(1, 1).draw(480, 500)

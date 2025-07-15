@@ -29,7 +29,7 @@ if (!global.panic)
 				if (!is_undefined(musicFunc))
 					musicFunc(room, musicInst, secretMusicInst)
 				
-				fmod_studio_event_instance_set_callback(musicInst, FMOD_STUDIO_EVENT_CALLBACK.TIMELINE_BEAT)
+				//fmod_studio_event_instance_set_callback(musicInst, FMOD_STUDIO_EVENT_CALLBACK.TIMELINE_BEAT)
 			}
 		}
 	}
@@ -63,8 +63,8 @@ if (global.RoomIsSecret)
 	
 	if (global.panic)
 	{
-		fmod_studio_event_instance_set_paused(global.EscapeMusicInst, true)
-		fmod_studio_event_instance_set_callback(global.EscapeMusicInst, FMOD_STUDIO_EVENT_CALLBACK.NESTED_TIMELINE_BEAT)
+		//fmod_studio_event_instance_set_paused(global.EscapeMusicInst, true)
+		//fmod_studio_event_instance_set_callback(global.EscapeMusicInst, FMOD_STUDIO_EVENT_CALLBACK.NESTED_TIMELINE_BEAT)
 	}
 }
 

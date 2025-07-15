@@ -112,7 +112,6 @@ switch (optionMenu)
 			if (!global.fullscreen)
 			{
 				set_resolution_option(global.selectedResolution)
-				gameframe_restore()
 			}
 		}, global.selectedResolution, false), new option_normal("opt_vid_letterbox", letterbox_option, function(arg0)
 		{

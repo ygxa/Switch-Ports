@@ -69,11 +69,11 @@ function add_judgment(arg0, arg1)
 	j.properties.title = lang_get(string("judgment_title_" + arg0))
 	j.properties.dialog = [lang_get("judgmentinfo_default")]
 	
-	for (var i = 1; lang_key_exists(string("judgmentinfo_" + arg0 + "_" + i)); i++)
-	{
-		var dg = lang_get(string("judgmentinfo_" + arg0 + i))
-		array_push(j.properties.dialog, dg)
-	}
+	//for (var i = 1; lang_key_exists(string("judgmentinfo_" + arg0 + "_" + i)); i++)
+	//{
+		//var dg = lang_get(string("judgmentinfo_" + arg0 + i))
+		//array_push(j.properties.dialog, dg)
+	//}
 	
 	array_push(j.properties.dialog, lang_get("judgmentinfo_ending"))
 	ds_map_set(global.judgment_map, arg0, j)

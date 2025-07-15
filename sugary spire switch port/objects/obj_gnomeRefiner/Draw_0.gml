@@ -6,7 +6,7 @@ if (gemsRefined < 4)
 	draw_set_valign(fa_middle)
 	
 	var shit = 4 - gemsRefined
-	draw_text_scribble(x + 10, y - 35, string("[c_black]" + shit))
+	//draw_text_scribble(x + 10, y - 35, string("[c_black]" + shit))
 }
 
 pal_swap_set(pal_gnome, colorID, false)

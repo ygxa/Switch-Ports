@@ -70,13 +70,13 @@ function inputDisplay(arg0, arg1) constructor
 					x: xx - 16,
 					y: -yy
 				})
-				var keytext = scribble(keyName).align(1, 1).starting_format(font_get_name(global.keyDrawFont), 0)
-				array_push(keyname_arr, keytext)
+				//var keytext = scribble(keyName).align(1, 1).starting_format(font_get_name(global.keyDrawFont), 0)
+				//array_push(keyname_arr, keytext)
 			}
 		}
 		
 		var lh = isGP ? 48 : 32
-		inputText = scribble(txt).align(2, 0).origin(0, 16).line_height(lh, lh)
+		//inputText = scribble(txt).align(2, 0).origin(0, 16).line_height(lh, lh)
 		return self;
 	}
 	

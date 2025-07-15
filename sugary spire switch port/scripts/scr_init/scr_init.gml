@@ -1,11 +1,15 @@
-global.scribble_saved_profile = "[pPrompt]"
+//global.scribble_saved_profile = "[pPrompt]"
 
+/*
 function scribble_quick_button(arg0)
 {
 	return string("[c_white]" + get_control_sprite(arg0) + global.scribble_saved_profile);
 }
+*/
 
 global.DefaultCursor = 0
+
+/*
 scribble_add_macro("kL", function()
 {
 	return scribble_quick_button("left");
@@ -84,6 +88,8 @@ scribble_add_macro("iFf", function()
 {
 	return scr_getDialogIcon("FLINGFROG", "c_white", "c_white");
 })
+*/
+
 global.allTexturePages = ["Default", "Player", "Baddies", "HUD", "Backgrounds", "Unused", "Devs", "Entryway", "Cottontown", "Mines", "Molasses", "Hub", "Structure", "Cafe", "Fudgetop", "Sucrose", "geyserwaves", "effectsGroup", "titleGroup", "testingGroup"]
 global.MainMenuRefresh = false
 global.langUpdated = false

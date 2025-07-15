@@ -241,6 +241,7 @@ function scr_get_palettes(arg0 = true)
 		ini_open("optionData.ini")
 		var _palettes = array_filter(pals, function(arg0, arg1)
 		{
+			arg0.taskKey = 0
 			return !ini_read_real("Palettes", arg0.taskKey, false);
 		})
 		ini_close()
