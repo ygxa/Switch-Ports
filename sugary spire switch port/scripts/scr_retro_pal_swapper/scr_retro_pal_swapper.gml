@@ -35,8 +35,8 @@ function pal_swap_init_system(arg0, arg1, arg2)
 	{
 		if (arg1 == undefined || arg2 == undefined)
 		{
-			show_message("Must provide pal_swap_init_system() with 2 additional arguments for HTML5 Compatible Sprite and Surface Shaders")
-			game_end()
+			//show_message("Must provide pal_swap_init_system() with 2 additional arguments for HTML5 Compatible Sprite and Surface Shaders")
+			//game_end()
 		}
 		
 		swapper.html5_sprite = arg1
