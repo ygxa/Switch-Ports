@@ -2817,7 +2817,6 @@
     {"name":"Main","path":"options/main/options_main.yy",},
     {"name":"tvOS","path":"options/tvos/options_tvos.yy",},
     {"name":"Windows","path":"options/windows/options_windows.yy",},
-    {"name":"Switch","path":"options/switch/options_switch.yy",},
     {"name":"operagx","path":"options/operagx/options_operagx.yy",},
   ],
   "defaultScriptType": 1,
