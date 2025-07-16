@@ -165,7 +165,7 @@ function scr_input_add(arg0, arg1)
 
 function scr_input_ini_read(arg0, arg1, arg2, arg3 = false, arg4 = false)
 {
-	var _inp = ini_read_string("Control", arg0, "")
+	var _inp = "" //deafult: ini_read_string("Control", arg0, "")
 	var inputs = []
 	var inputStrings = string_split(_inp, ",")
 	
@@ -185,14 +185,14 @@ function scr_input_ini_read(arg0, arg1, arg2, arg3 = false, arg4 = false)
 
 function scr_setinput_init()
 {
-	ini_open("optionData.ini")
-	global.deadzones[Deadzones.Master] = ini_read_real("Settings", "deadzoneMaster", 0.4)
-	global.deadzones[Deadzones.Vertical] = ini_read_real("Settings", "deadzoneVertical", 0.5)
-	global.deadzones[Deadzones.Horizontal] = ini_read_real("Settings", "deadzoneHorizontal", 0.5)
-	global.deadzones[Deadzones.Press] = ini_read_real("Settings", "deadzonePress", 0.5)
-	global.deadzones[Deadzones.SJump] = ini_read_real("Settings", "deadzoneSJump", 0.8)
-	global.deadzones[Deadzones.Crouch] = ini_read_real("Settings", "deadzoneCrouch", 0.65)
-	ini_close()
+	//ini_open("optionData.ini")
+	global.deadzones[Deadzones.Master]    = 0.4;
+	global.deadzones[Deadzones.Vertical]  = 0.5;
+	global.deadzones[Deadzones.Horizontal]= 0.5;
+	global.deadzones[Deadzones.Press]     = 0.5;
+	global.deadzones[Deadzones.SJump]     = 0.8;
+	global.deadzones[Deadzones.Crouch]    = 0.65;
+	//ini_close()
 	//scr_input_init_sprites()
 }
 

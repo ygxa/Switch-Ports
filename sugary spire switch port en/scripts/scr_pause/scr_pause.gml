@@ -1,10 +1,10 @@
 function scr_pause_instances(arg0 = false)
 {
 	var dont_pause = [obj_pause, obj_music, obj_screen, obj_localizer, obj_gametimer, obj_inputController]
-	musicReverb = fmod_studio_system_get_parameter_by_name("musicReverb").final_value
-	sfxReverb = fmod_studio_system_get_parameter_by_name("sfxReverb").final_value
-	fmod_studio_system_set_parameter_by_name("musicReverb", false, true)
-	fmod_studio_system_set_parameter_by_name("sfxReverb", false, true)
+	//musicReverb = fmod_studio_system_get_parameter_by_name("musicReverb").final_value
+	//sfxReverb = fmod_studio_system_get_parameter_by_name("sfxReverb").final_value
+	//fmod_studio_system_set_parameter_by_name("musicReverb", false, true)
+	//fmod_studio_system_set_parameter_by_name("sfxReverb", false, true)
 	
 	if (arg0)
 	{

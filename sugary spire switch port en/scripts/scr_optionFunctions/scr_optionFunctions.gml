@@ -125,37 +125,37 @@ function update_option_format(arg0, arg1)
 
 function init_option()
 {
-	ini_open("optionData.ini")
-	global.fullscreen = ini_read_real("Settings", "fullscrn", 0)
-	global.selectedResolution = ini_read_real("Settings", "opt_resolution", 2)
-	global.Letterbox = ini_read_real("Settings", "letterbox", 0)
-	global.smoothcam = false
-	global.hitstunEnabled = true
-	global.Vsync = ini_read_real("Settings", "vsync", 1)
-	global.ShowHUD = ini_read_real("Settings", "ShowHUD", 1)
-	global.screentilt = false
-	global.playerrotate = false
-	global.ScreenShake = ini_read_real("Settings", "screenshake", 1)
-	global.tvmessages = false
-	global.lowperformance = false
-	global.TextureFiltering = ini_read_real("Settings", "TextureFiltering", 0)
-	global.unfocusedMute = ini_read_real("Settings", "unfocusmute", 1)
-	global.musicAttenuation = ini_read_real("Settings", "musicAttenuation", 0)
-	global.toggleTimer = 1
-	global.controllerVibration = ini_read_real("Settings", "vibration", 1)
-	global.musicVolume = ini_read_real("Settings", "musicvol", 0.9)
-	global.dialogueVolume = ini_read_real("Settings", "dialoguevol", 1)
-	global.soundVolume = ini_read_real("Settings", "soundvol", 1)
-	global.masterVolume = ini_read_real("Settings", "mastervol", 1)
-	global.speakerOption = ini_read_real("Settings", "speaker", 1)
-	global.option_sjump_key = ini_read_real("Settings", "dsjumpkey", 1)
-	global.option_sjump_gp = ini_read_real("Settings", "dsjumpgp", 1)
-	global.option_groundpound_key = ini_read_real("Settings", "dgroundpoundkey", 1)
-	global.option_groundpound_gp = ini_read_real("Settings", "dgroundpoundgp", 1)
-	global.option_speedrun_timer = ini_read_real("Settings", "timerspeedrun", 0)
-	global.option_timer_type = ini_read_real("Settings", "opt_timerType", 3)
-	global.option_livesplit_enabled = ini_read_real("Settings", "livesplit", 0)
-	var cur_version = ini_read_real("FileFormat", "version", 0)
+	global.fullscreen = 0;
+	global.selectedResolution = 2;
+	global.Letterbox = 0;
+	global.smoothcam = false;
+	global.hitstunEnabled = true;
+	global.Vsync = 1;
+	global.ShowHUD = 1;
+	global.screentilt = false;
+	global.playerrotate = false;
+	global.ScreenShake = 1;
+	global.tvmessages = false;
+	global.lowperformance = false;
+	global.TextureFiltering = 0;
+	global.unfocusedMute = 1;
+	global.musicAttenuation = 0;
+	global.toggleTimer = 1;
+	global.controllerVibration = 1;
+	global.musicVolume = 0.9;
+	global.dialogueVolume = 1;
+	global.soundVolume = 1;
+	global.masterVolume = 1;
+	global.speakerOption = 1;
+	global.option_sjump_key = 1;
+	global.option_sjump_gp = 1;
+	global.option_groundpound_key = 1;
+	global.option_groundpound_gp = 1;
+	global.option_speedrun_timer = 0;
+	global.option_timer_type = 3;
+	global.option_livesplit_enabled = 0;
+	var cur_version = 0;
+
 	
 	//if (cur_version > 1)
 		//show_debug_message(string("WARNING: optionData.ini Version: {0} is higher than game's expected optionData.ini version: " + cur_version + ". Tomfoolery afoot."))
@@ -167,10 +167,13 @@ function init_option()
 		//update_option_format(cur_version, 1)
 	//}
 	
-	ini_close()
+	//ini_close()
 	scr_setinput_init()
 	scr_input_create()
-	scr_lang_init()
+	//scr_lang_init()
+	global.langStruct = {}
+	global.langFiles = []
+	global.langError = ""
 	//display_reset(0, global.Vsync)
 	//set_resolution_option(global.selectedResolution)
 	
