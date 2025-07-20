@@ -1,5 +1,5 @@
 if (array_length(global.secret_layers) <= 0)
-	return
+	exit;
 
 var _badtouch = false
 

@@ -114,6 +114,14 @@ if (!(is_hub() || is_tutorial() || !scr_roomcheck() || room == mineshaft_elevato
 			//var timer_string = string("[fa_center][fa_top][promptfont][c_white]" + mins + ":" + secs)
 			//draw_text_scribble(x, y, timer_string)
 			//draw_sprite_ext(spr_clockTimer, elm_clockTimer.image_index, (x - string_width_scribble(timer_string)) + 16, y + 16, 1, 1, 0, c_white, 1)
+			
+			var timer_string = string(mins) + ":" + string(secs)
+			draw_set_halign(fa_center)
+			draw_set_valign(fa_top)
+			draw_set_font(global.promptfont)
+			draw_set_color(c_white)
+			draw_text(x, y, timer_string)
+			draw_sprite_ext(spr_clockTimer, elm_clockTimer.image_index, (x - string_width(timer_string)) + 16, y + 16, 1, 1, 0, c_white, 1)
 		}
 		else
 		{

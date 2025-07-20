@@ -103,19 +103,19 @@ function scr_roomnames(arg0 = room)
 	switch (arg0)
 	{
 		case rm_missing:
-			room_name = "romname_missing"
+			room_name = "MISSING ROOM? THEN GO FIND IT!"
 			break
 		
 		case hub_paintstudio:
-			room_name = "romname_mainhub"
+			room_name = "Beautiful Mystical Gallery"
 			break
 		
 		case hub_demohallway:
-			room_name = "romname_hallway"
+			room_name = "Exhibition Night"
 			break
 		
 		case hub_molasses:
-			room_name = "romname_molasses"
+			room_name = "Weird Mystical Painting"
 			break
 		
 		default:

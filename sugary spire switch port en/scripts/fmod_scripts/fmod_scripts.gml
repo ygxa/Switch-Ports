@@ -52,6 +52,9 @@ function event_instance_isplaying(sound){
 }
 
 function fmod_studio_event_instance_stop(sound, nofade){
+	if is_undefined(nofade)
+		nofade = true
+		
 	if !is_undefined(sound){
 		if is_string(sound){
 			if nofade

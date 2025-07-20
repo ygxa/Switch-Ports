@@ -1,5 +1,5 @@
 if (!global.showtiles || array_length(global.secret_layers) <= 0)
-	return
+	exit;
 
 shader_set(shd_secretwall)
 var alp = shader_get_uniform(shd_secretwall, "alpha")

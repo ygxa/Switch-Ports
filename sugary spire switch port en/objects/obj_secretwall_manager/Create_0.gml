@@ -5,7 +5,7 @@ if (instance_number(object_index) > 1)
 	if (id != first)
 	{
 		instance_destroy()
-		return
+		exit;
 	}
 }
 
