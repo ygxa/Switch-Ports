@@ -5,7 +5,7 @@ with (other.id)
 	x = other.playerPosX
 	y = other.playerPosY
 	
-	if (!instance_exists(obj_fadeoutTransition))
+	if !instance_exists(obj_fadeoutTransition)
 	{
 		if (other.ResetSaveroom)
 		{

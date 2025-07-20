@@ -1,7 +1,7 @@
 handle_savedoption()
 kill_sounds([activeSFX])
-var onOffToggle = ["opt_off", "opt_on"]
-var toMainPage = new option_button("opt_back", function()
+var onOffToggle = ["OFF", "ON"]
+var toMainPage = new option_button("BACK", function()
 {
 	event_play_oneshot("event:/SFX/ui/menuBack")
 	option_goto(backMenu, backOption)
@@ -13,20 +13,21 @@ switch (optionMenu)
 		alignCenter = true
 		backMenu = -4
 		backOption = 0
-		options = [new option_button("opt_audio", function()
+		options = [new option_button("AUDIO", function()
 		{
 			option_goto(OptionMenu.Audio)
-		}).add_icon(spr_newpause_icons, 5), new option_button("opt_video", function()
+		}).add_icon(spr_newpause_icons, 5), new option_button("VIDEO", function()
 		{
 			option_goto(OptionMenu.Video)
-		}).add_icon(spr_newpause_icons, 6), new option_button("opt_game", function()
+		}).add_icon(spr_newpause_icons, 6), new option_button("GAME", function()
 		{
 			option_goto(OptionMenu.Game)
-		}).add_icon(spr_newpause_icons, 8), new option_button("opt_controls", function()
+		}).add_icon(spr_newpause_icons, 8), new option_button("CONTROLS", function()
 		{
 			option_goto(OptionMenu.Controls)
 		}).add_icon(spr_newpause_icons, 7)]
 		
+		/*
 		if (room == rm_mainmenu)
 		{
 			var lang_menu = new option_button("opt_language", function()
@@ -38,6 +39,7 @@ switch (optionMenu)
 			lang_menu.add_icon(spr_newpause_icons, 9)
 			array_push(options, lang_menu)
 		}
+		*/
 		
 		break
 	
@@ -97,23 +99,8 @@ switch (optionMenu)
 		alignCenter = false
 		var res = []
 		
-		for (var i = 0; i < array_length(global.resolutions); i++)
-			array_push(res, string(global.resolutions[i][0] + "X" + global.resolutions[i][1]))
-		
-		var letterbox_option = ["opt_off", "opt_vid_letterbox_simple", "opt_vid_letterbox_doodle", "opt_vid_letterbox_dynamic"]
-		options = [toMainPage, new option_button("opt_vid_windowmode", function()
-		{
-			option_goto(OptionMenu.Window)
-		}), new option_normal("opt_vid_resolution", res, function(arg0)
-		{
-			quick_write_option("Settings", "opt_resolution", arg0)
-			global.selectedResolution = arg0
-			
-			if (!global.fullscreen)
-			{
-				set_resolution_option(global.selectedResolution)
-			}
-		}, global.selectedResolution, false), new option_normal("opt_vid_letterbox", letterbox_option, function(arg0)
+		var letterbox_option = ["OFF", "SIMPLE", "DOODLE", "DYNAMIC"]
+		options = [toMainPage, new option_normal("LETTERBOX", letterbox_option, function(arg0)
 		{
 			quick_write_option("Settings", "letterbox", arg0)
 			global.Letterbox = arg0

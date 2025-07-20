@@ -3,7 +3,7 @@ var load_finished = loaded && unloaded && lang_flushed
 if (fadealpha > 1 && load_finished && !fadein)
 {
 	fadein = 1
-	var _hub_return = false
+	var _hub_exit = false
 	var _id = id
 	
 	if (instance_exists(obj_parent_player))
@@ -15,7 +15,7 @@ if (fadealpha > 1 && load_finished && !fadein)
 			global.InternalLevelName = "none"
 			target_room = obj_parent_player.hubRoom
 			obj_parent_player.hubTransition = true
-			_hub_return = !global.CompletedLevel
+			_hub_exit = !global.CompletedLevel
 		}
 		
 		if (room_exists(target_room))
@@ -39,7 +39,7 @@ if (fadealpha > 1 && load_finished && !fadein)
 	if (secretRoom)
 		global.RoomIsSecret = true
 	
-	if (_hub_return)
+	if (_hub_exit)
 	{
 	}
 }

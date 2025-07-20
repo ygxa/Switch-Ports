@@ -2,15 +2,15 @@ var old = draw_get_font()
 var wave_x = wave(-5, 5, 5, 20)
 draw_set_font(global.npcfont)
 var msg = text
-//var textheight = string_height_scribble_ext("[wave][c_black][npcfont]" + text, 800)
-//var total_lines = round(textheight / 32)
-//var my_height = (total_lines + 1) * 32
+var textheight = string_height(text)
+var total_lines = round(textheight / 32)
+var my_height = (total_lines + 1) * 32
 var tgty = 1
 
-//if (total_lines == 1)
-	//tgty = max(my_height, 96)
-//else
-	//tgty = max(my_height, 128)
+if (total_lines == 1)
+	tgty = max(my_height, 96)
+else
+	tgty = max(my_height, 128)
 
 var active = speaking
 draw_set_font(old)
@@ -102,4 +102,7 @@ if (surface_exists(mysurf))
 draw_set_halign(fa_left)
 draw_set_valign(fa_top)
 //scribble(string("[pNPC][wave]" + text)).starting_format(font_get_name(global.npcfont), 0).align(0, 0).wrap(800).draw(wave_x + 80, boxy + 16)
+draw_set_font(global.npcfont)
+draw_set_color(c_black)
+draw_text(wave_x + 80, boxy + 16, string(text))
 draw_set_color(c_white)

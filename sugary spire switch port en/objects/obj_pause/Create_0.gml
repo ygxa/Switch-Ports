@@ -17,7 +17,7 @@ custompal = 0
 pal = 1
 bgTileX = 0
 bgTileY = 0
-pauseBorder = lang_get_sprite(spr_newpause_border)
+pauseBorder = spr_newpause_border
 pauseMusic = fmod_createEventInstance("event:/music/pause")
 pauseSurface = -1
 pausedSprite = undefined
@@ -25,12 +25,12 @@ playerPauseSprite = spr_pizzelle_pause
 playerPauseIndex = 0
 pausecount = -1
 pause_map = ds_map_create()
-ds_map_set(pause_map, "pause_resume", 0)
-ds_map_set(pause_map, "pause_options", 1)
-ds_map_set(pause_map, "pause_retry", 2)
-ds_map_set(pause_map, "pause_tasks", 3)
-ds_map_set(pause_map, "pause_return", 4)
-ds_map_set(pause_map, "pause_menu", 4)
+ds_map_set(pause_map, "RESUME", 0)
+ds_map_set(pause_map, "OPTIONS", 1)
+ds_map_set(pause_map, "RETRY", 2)
+ds_map_set(pause_map, "TASKS", 3)
+ds_map_set(pause_map, "EXIT", 4)
+ds_map_set(pause_map, "MAIN MENU", 4)
 inputBufferDown = 0
 inputBufferUp = 0
 roomMusicPause = false

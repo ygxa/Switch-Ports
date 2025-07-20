@@ -2433,6 +2433,7 @@
     {"id":{"name":"obj_machDustEffect","path":"objects/obj_machDustEffect/obj_machDustEffect.yy",},"order":267,},
     {"id":{"name":"spr_player_PZ_minecart_crouchend","path":"sprites/spr_player_PZ_minecart_crouchend/spr_player_PZ_minecart_crouchend.yy",},"order":1409,},
     {"id":{"name":"ts_entrywayclouds","path":"tilesets/ts_entrywayclouds/ts_entrywayclouds.yy",},"order":10,},
+    {"id":{"name":"sfx_mach1","path":"sounds/sfx_mach1/sfx_mach1.yy",},"order":0,},
     {"id":{"name":"spr_player_PZ_frostburn_doubleJump_intro","path":"sprites/spr_player_PZ_frostburn_doubleJump_intro/spr_player_PZ_frostburn_doubleJump_intro.yy",},"order":1317,},
     {"id":{"name":"obj_mintsplosion","path":"objects/obj_mintsplosion/obj_mintsplosion.yy",},"order":292,},
     {"id":{"name":"bg_mines1para2_escape","path":"sprites/bg_mines1para2_escape/bg_mines1para2_escape.yy",},"order":148,},

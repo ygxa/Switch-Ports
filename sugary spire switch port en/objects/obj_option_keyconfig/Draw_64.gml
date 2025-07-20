@@ -5,7 +5,7 @@ draw_set_valign(fa_middle)
 draw_set_color(c_white)
 var s = selected
 var c_hover = (s == -1) ? 16777215 : 8421504
-draw_text_color(32, 50, lang_get("opt_back"), c_hover, c_hover, c_hover, c_hover, 1)
+draw_text_color(32, 50, "BACK", c_hover, c_hover, c_hover, c_hover, 1)
 var dx = 352
 var pady = 0
 var target_scroll = 0
@@ -42,23 +42,27 @@ if (reading || returning)
 	
 	if (reading)
 	{
-		draw_text_color(480, 270, lang_get("opt_keyconfig_inputprompt"), c_white, c_white, c_white, c_white, 1)
+		draw_text_color(480, 270, "PRESS ANY BUTTON", c_white, c_white, c_white, c_white, 1)
 	}
 	else
 	{
 		//scribble(lang_get("opt_keyconfig_cancel")).starting_format(font_get_name(global.fontDefault), (select2 == 0) ? 16777215 : 8421504).align(1, 1).draw(480, 135)
+		draw_text_color(480, 135, "CANCEL", (select2 == 0) ? 16777215 : 8421504, (select2 == 0) ? 16777215 : 8421504, (select2 == 0) ? 16777215 : 8421504, (select2 == 0) ? 16777215 : 8421504, 1)
 		//scribble(lang_get("opt_keyconfig_deny")).starting_format(font_get_name(global.fontDefault), (select2 == 1) ? 16777215 : 8421504).align(1, 1).draw(480, 270)
+		draw_text_color(480, 270, "EXIT WITHOUT SAVING", (select2 == 0) ? 16777215 : 8421504, (select2 == 1) ? 16777215 : 8421504, (select2 == 0) ? 16777215 : 8421504, (select2 == 0) ? 16777215 : 8421504, 1)
 		//scribble(lang_get("opt_keyconfig_save")).starting_format(font_get_name(global.fontDefault), (select2 == 2) ? 16777215 : 8421504).align(1, 1).draw(480, 405)
+		draw_text_color(480, 405, "SAVE CHANGES", (select2 == 0) ? 16777215 : 8421504, (select2 == 2) ? 16777215 : 8421504, (select2 == 0) ? 16777215 : 8421504, (select2 == 0) ? 16777215 : 8421504, 1)
 	}
 }
 else
 {
 	draw_set_alpha(1)
 	var ty = 415
-	var menu_text = [lang_get("opt_keyconfig_bind"), lang_get("opt_keyconfig_clear"), lang_get("opt_keyconfig_reset")]
+	var menu_text = ["BIND", "CLEAR", "RESET"]
 	menu_text[0] += string(": [c_white]" + get_control_sprite(gamepad ? "menuconfirmC" : "menuconfirm"))
 	menu_text[1] += string(": [c_white]" + get_control_sprite(gamepad ? "menudeleteC" : "menudelete"))
 	menu_text[2] += ": [c_white][spr_key_empty][keyDrawFont][offset,-23,0]F1[offsetPop]"
 	var final_text = string(menu_text[0] + "\n" + menu_text[1] + "\n" + menu_text[2])
 	//scribble(final_text).starting_format(font_get_name(global.fontDefault), 16777215).align(0, 1).line_spacing(gamepad ? "125%" : "150%").draw(25, ty)
+	draw_text_color(25, ty, final_text, 16777215, 16777215, 16777215, 16777215, 1)
 }

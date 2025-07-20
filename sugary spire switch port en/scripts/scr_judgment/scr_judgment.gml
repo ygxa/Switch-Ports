@@ -9,7 +9,7 @@ function scr_judgment_assign()
 		j = "perfect"
 	else if (per >= 50)
 		j = "fine"
-	
+	{}
 	if (global.SaveMinutes < 20)
 		j = "fast"
 	
@@ -21,7 +21,7 @@ function scr_judgment_assign()
 	
 	ini_write_string("Game", "Judgment", j)
 	ini_close()
-	trace(string("Save File Judgment: " + j))
+	//trace(string("Save File Judgment: {0}", j))
 	return scr_judgment_get(j);
 }
 
@@ -33,13 +33,13 @@ function scr_judgment_get(arg0)
 
 function scr_judgment_read(arg0)
 {
-	//if (!file_exists(arg0))
-		//return scr_judgment_get("none");
-	return scr_judgment_get("none"); //remove this later
-	//ini_open(arg0)
-	//var p = ini_read_string("Game", "Judgment", "none")
-	//ini_close()
-	//return scr_judgment_get(p);
+	if (!file_exists(arg0))
+		return scr_judgment_get("none");
+	
+	ini_open(arg0)
+	var p = ini_read_string("Game", "Judgment", "none")
+	ini_close()
+	return scr_judgment_get(p);
 }
 
 function saveJudgment() constructor

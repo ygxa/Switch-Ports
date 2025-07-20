@@ -36,7 +36,7 @@ function inputDisplay(arg0, arg1) constructor
 	static update = function()
 	{
 		currentInputs = isGP ? parentInput.gpInputs : parentInput.keyInputs
-		inputIcons = scr_input_get_icon(name, true)
+		//inputIcons = scr_input_get_icon(name, true)
 		lineCount = floor((array_length(inputIcons) - 1) / 3) + 1
 		inputOffsets = []
 		var txt = ""

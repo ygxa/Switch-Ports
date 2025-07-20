@@ -8,7 +8,7 @@ if (array_length(global.loadedTextures) < 1)
 {
 	show_debug_message("Flushed Loaded Textures")
 	unloaded = true
-	return
+	exit
 }
 
 alarm[1] = 1

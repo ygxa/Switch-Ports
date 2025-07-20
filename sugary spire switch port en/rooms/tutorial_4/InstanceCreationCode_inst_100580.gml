@@ -1,1 +1,1 @@
-text = lang_get("icepop_tut_8", [scr_getDialogIcon("RUDY")])
+text = "Oh, I just remembered! If you ever see /1 Rudy, go and say hi to him for me! He's got keys for all the locked doors around here, I'm sure he'll letcha in if you ask nicely. I know how much you youngsters love collecting trinkets and such..."

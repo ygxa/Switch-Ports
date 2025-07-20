@@ -37,21 +37,27 @@ function particle_init(arg0, arg1, arg2)
 	})
 }
 
-function create_particle(arg0, arg1, arg2, arg3 = 0, arg4 = 1, arg5 = 1, arg6 = {})
-{
-	var particle_id = instance_create(arg0 + irandom_range(-arg3, arg3), arg1 + irandom_range(-arg3, arg3), obj_fade_particle, arg6)
-	particle_id.sprite_index = arg2
-	particle_id.particle_scale(arg4, arg5)
-	var _Map = ds_map_find_value(global.particlesMap, arg2)
-	
-	if (!is_undefined(_Map))
-	{
-		particle_id.particle_depth(_Map.depth)
-		particle_id.particle_imgspd(_Map.image_speed)
-	}
-	
-	return particle_id;
+function create_particle(x,y,spr,jitter=0,sx=1,sy=1,init){
+    var xx        = x + irandom_range(-jitter,jitter),
+        yy        = y + irandom_range(-jitter,jitter),
+        depth_val = 0,
+        imgspd    = undefined,
+        cfg;
+    if(ds_exists(global.particlesMap,ds_type_map) && ds_map_exists(global.particlesMap,spr)){
+        cfg = ds_map_find_value(global.particlesMap,spr);
+        if(ds_map_exists(cfg,"depth"))       depth_val = cfg[?"depth"];
+        if(ds_map_exists(cfg,"image_speed")) imgspd    = cfg[?"image_speed"];
+    }
+    if(argument_count >= 7 && is_struct(init)){
+        if(variable_struct_exists(init,"depth"))       depth_val = init.depth;
+        if(variable_struct_exists(init,"image_speed")) imgspd    = init.image_speed;
+    }
+    var part = instance_create_depth(xx,yy,depth_val,obj_fade_particle);
+    part.sprite_index = spr; part.image_xscale = sx; part.image_yscale = sy;
+    if(imgspd != undefined) part.image_speed = imgspd;
+    return part;
 }
+
 
 function create_radiating_particle(arg0, arg1, arg2, arg3 = 0.25, arg4 = true, arg5 = 2, arg6 = 5, arg7 = -1)
 {

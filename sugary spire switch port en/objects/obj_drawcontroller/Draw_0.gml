@@ -10,7 +10,7 @@ with (obj_parent_enemy)
 		if (global.DebugVisuals)
 		{
 			draw_set_font(font_dev)
-			draw_text(x, y - 50, string("State: " + state))
+			//draw_text(x, y - 50, string("State: {0}", state))
 			//draw_text(x, y - 150, string("hsp: {0}, vsp: {1}, Movespeed: {2}", hsp, vsp, movespeed))
 			var m_id = mask_index
 			

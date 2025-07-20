@@ -29,7 +29,7 @@ function scr_input_varinit()
 function scr_getinput_menu()
 {
 	if (global.shellactivate)
-		return
+		exit
 	
 	key_up = input_check("menuup")
 	key_up2 = input_check_pressed("menuup")
@@ -66,7 +66,7 @@ function scr_getinput()
 	scr_input_varinit()
 	
 	if (global.shellactivate)
-		return
+		exit
 	
 	key_up = input_check("up")
 	key_up2 = input_check_pressed("up")
@@ -100,20 +100,17 @@ function scr_getinput()
 
 function input_check(arg0)
 {
-    return input_get(arg0).held
-        || input_get(arg0 + "C").held;
+    return input_get(arg0).held || input_get(arg0 + "C").held;
 }
 
 function input_check_pressed(arg0)
 {
-    return input_get(arg0).pressed
-        || input_get(arg0 + "C").pressed;
+    return input_get(arg0).pressed || input_get(arg0 + "C").pressed;
 }
 
 function input_check_released(arg0)
 {
-    return input_get(arg0).released
-        || input_get(arg0 + "C").released;
+    return input_get(arg0).released || input_get(arg0 + "C").released;
 }
 
 function any_input_check()

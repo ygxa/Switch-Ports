@@ -24,17 +24,17 @@ fmod_studio_event_instance_set_paused(pauseMusic, false)
 fmod_studio_event_instance_set_parameter_by_name(pauseMusic, "state", 0, false)
 canmove = true
 alarm[0] = 1
-var opt_arr = ["pause_resume", "pause_options"]
+var opt_arr = ["RESUME", "OPTIONS"]
 
 if (global.InternalLevelName != "none")
-	array_push(opt_arr, "pause_retry")
+	array_push(opt_arr, "RETRY")
 
-array_push(opt_arr, "pause_tasks")
+array_push(opt_arr, "TASKS")
 
 if (global.InternalLevelName != "none")
-	array_push(opt_arr, "pause_return")
+	array_push(opt_arr, "EXIT")
 else
-	array_push(opt_arr, "pause_menu")
+	array_push(opt_arr, "MAIN MENU")
 
 pause_options = opt_arr
 pausecount = 29

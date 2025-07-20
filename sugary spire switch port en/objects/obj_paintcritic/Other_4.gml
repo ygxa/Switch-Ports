@@ -55,13 +55,13 @@ with (textbubble)
 {
 	if (lv == "tutorial")
 	{
-		text = lang_get("democritic_icepop")
+		text = "FUCKKK IM SHITTINGGGGG FUCKCKKKK"
 		image_xscale = -other.image_xscale
 	}
 	else
 	{
 		var ass = array_get_index(other.criticArr, other.sprite_index) + 1
-		text = lang_get(string("democritic_" + ass + "_" + found_rank))
+		text = string("democritic_" + string(ass) + "_" + string(found_rank))
 		image_xscale = -other.image_xscale
 	}
 }

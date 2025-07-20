@@ -9,7 +9,7 @@ if (escapeBlockedDoor && global.panic)
 	if (!place_meeting(x, y, obj_doorblocked))
 		instance_create(x, y, obj_doorblocked)
 	
-	return
+	exit;
 }
 
 with (obj_parent_player)

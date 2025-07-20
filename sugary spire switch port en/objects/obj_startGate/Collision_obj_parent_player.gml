@@ -1,5 +1,5 @@
 if (instance_exists(obj_titlecard))
-	return
+	exit;
 
 var enter_gate = false
 

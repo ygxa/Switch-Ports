@@ -11,7 +11,7 @@ propdex += 0.35
 propdex %= 3
 
 if (global.panic)
-	text = lang_get("icepop_default_escape")
+	text = "HOLY MOLY!!"
 
 var thought_fade = distance_to_object(obj_parent_player) / 125
 

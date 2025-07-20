@@ -2,10 +2,6 @@ function event_play_oneshot(sound,_x,_y){
 
 }
 
-function fmod_studio_event_instance_stop(sound){
-
-}
-
 function fmod_studio_event_instance_start(sound){
 
 }
@@ -27,6 +23,10 @@ function fmod_studio_system_set_parameter_by_name(sound, reverb, noidea, noidea2
 }
 
 function event_instance_isplaying(sound){
+	
+}
+
+function fmod_studio_event_instance_stop(sound, noidea){
 	
 }
 
@@ -59,5 +59,25 @@ function fmod_studio_event_instance_set_callback(sound, noidea){ //no idea var m
 }
 
 function fmod_event_set3DPosition(sound, _x, _y, noidea){
+	
+}
+
+function fmod_studio_event_instance_get_paused(sound){
+	
+}
+
+function fmod_event_setPause_all(value){
+	
+}
+
+function fmod_event_stop_all(value){
+	
+}
+
+function kill_sounds(sound){
+	
+}
+
+function fmod_quick3D(sound){
 	
 }

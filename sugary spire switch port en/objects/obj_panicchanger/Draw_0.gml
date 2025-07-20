@@ -6,5 +6,6 @@ draw_set_alpha(1)
 with (obj_parent_player)
 	draw_player_sprite_ext(sprite_index, image_index, x, y, xscale * scale, yscale * scale, draw_angle, c_white, image_alpha)
 
+/*
 with (obj_harrydead)
 	event_perform(ev_draw, ev_draw_normal)

@@ -12,7 +12,7 @@ optionBG[OptionMenu.Deadzones] = 4
 handle_savedoption = function()
 {
 	if (!is_struct(savedSliderOption))
-		return
+		exit
 	
 	if (activeSFX != -4)
 		kill_sounds([activeSFX])
@@ -43,7 +43,7 @@ sliderSprite = spr_optionslide_bar
 sliderIcon = spr_optionslide_end
 bgx = 0
 bgy = 0
-depth = -99
+depth = -999
 old_desc = ""
 descfadeout = false
 description = ""

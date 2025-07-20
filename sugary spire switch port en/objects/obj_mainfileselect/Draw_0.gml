@@ -37,6 +37,8 @@ for (var i = 0; i < array_length(fileSelectHeightRatio); i++)
 	{
 		draw_set_alpha(fileSelectHeightRatio[i])
 		//draw_text_scribble(235 + (210 * i), 380 - (75 * fileSelectHeightRatio[i]), "[spr_fontPercentage][fa_center][fa_top]" + string(fileDisplayPercent) + "%")
+		draw_set_font(global.percentageFont)
+		draw_text(235 + (210 * i), 380 - (75 * fileSelectHeightRatio[i]), string(fileDisplayPercent) + "%")
 	}
 }
 
@@ -45,7 +47,7 @@ draw_player_sprite_ext(saves_sprite, saves_index, pizzyX, pizzyY, 1, 1, 0, c_whi
 draw_set_alpha(hudAlpha)
 draw_set_halign(fa_center)
 draw_set_valign(fa_middle)
-draw_sprite(lang_get_sprite(spr_exit_exhib), 0, 16, 32)
+//draw_sprite(lang_get_sprite(spr_exit_exhib), 0, 16, 32)
 draw_control_sprite("menuback", 126, 60)
 draw_control_sprite("menudelete", 136, 444)
 draw_control_sprite("start", 600, 470)

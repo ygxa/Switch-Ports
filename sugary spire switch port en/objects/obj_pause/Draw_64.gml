@@ -24,7 +24,7 @@ draw_set_valign(fa_middle)
 draw_set_color(c_white)
 var bar_x_offsets = [507, 495, 478, 460, 443]
 var bar_y_offsets = [103, 177, 249, 324, 396]
-var bar_text = [lang_get("pause_resume"), lang_get("pause_options"), lang_get("pause_retry"), lang_get("pause_tasks"), lang_get("pause_return")]
+var bar_text = ["RESUME", "OPTIONS", "RETRY", "TASKS", "MAIN MENU"]
 var bar_sprite = asset_get_index("spr_newpause_bars" + string(selected + 1))
 var _length = array_length(pause_options)
 
@@ -35,7 +35,7 @@ for (var i = 0; i < _length; i++)
 	var y_pos = ((camera_get_view_height(view_camera[0]) / 2) - round((y_pad * (_length - 1)) / 2)) + (y_pad * i)
 	var current_bar_chosen = selected == i
 	var current_bar_x = x_pos - (pauseslidein * (2 + (i / 2)))
-	var _txt = lang_get(pause_options[i])
+	var _txt = pause_options[i]
 	draw_sprite_ext(bar_sprite, current_bar_chosen, current_bar_x, y_pos + (shake * current_bar_chosen), 1, 1, 0, c_white, 1)
 	var entry = pause_options[selected]
 	var mapentry = ds_map_find_value(pause_map, entry)

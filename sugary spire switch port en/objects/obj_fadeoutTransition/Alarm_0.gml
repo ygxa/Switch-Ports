@@ -1,5 +1,5 @@
 if (loaded)
-	return
+	exit
 
 if (array_length(groupArr) < 1)
 	loaded = true
@@ -7,13 +7,13 @@ if (array_length(groupArr) < 1)
 if (fadealpha < 1 && !titleCard)
 {
 	alarm[0] = 1
-	return
+	exit
 }
 
 var texArr = array_pop(groupArr)
 
 if (texArr == undefined)
-	return
+	exit
 
 loading_text = true
 

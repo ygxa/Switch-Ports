@@ -4,7 +4,7 @@ for (var i = 0; i < array_length(bg_alpha); i++)
 	draw_sprite_tiled_ext(bg_options, i, bgx, bgy, 1, 1, c_white, bg_alpha[i])
 
 if (instance_exists(obj_option_keyconfig) || instance_exists(obj_option_confirm) || instance_exists(obj_option_lang) || instance_exists(obj_langSpriteLoader))
-	return
+	exit
 
 draw_set_font(global.fontDefault)
 draw_set_halign(fa_left)
@@ -30,12 +30,12 @@ for (var i = 0; i < _optLength; i++)
 	switch (_option.type)
 	{
 		default:
-			var _finalStr = _option.translate_name ? lang_get(_option.id) : _option.id
+			var _finalStr = _option.id
 			var _optStr = ""
 			var _old_font = draw_get_font()
 			
 			if (array_length(_option.options))
-				_optStr = _option.translate_opt ? lang_get(_option.options[_option.value]) : _option.options[_option.value]
+				_optStr = _option.options[_option.value]
 			
 			if (alignCenter && array_length(_option.options))
 				_finalStr = string(_finalStr + " " + _optStr)
@@ -46,7 +46,7 @@ for (var i = 0; i < _optLength; i++)
 			
 			for (var z = 0; z < array_length(_option.options); z++)
 			{
-				var _string = lang_get(_option.options[z])
+				var _string = _option.options[z]
 				_option_max_length = max(_option_max_length, string_width(_string))
 			}
 			
@@ -86,7 +86,7 @@ for (var i = 0; i < _optLength; i++)
 			var old_halign = draw_get_halign()
 			_xx = 150
 			draw_set_halign(fa_left)
-			var _finalStr = _option.translate_name ? lang_get(_option.id) : _option.id
+			var _finalStr = _option.id
 			draw_text_color(_xx, _yy, _finalStr, _iColor, _iColor, _iColor, _iColor, 1)
 			var _ov = _option.value / 100
 			var bar_start_x, barPad

@@ -1,6 +1,6 @@
 surface_reset_target()
-var res_w = 1280
-var res_h = 720
+var res_w = window_get_width()
+var res_h = window_get_height()
 var res_scale = min(res_w / 16, res_h / 9)
 res_w = 16 * res_scale
 res_h = 9 * res_scale

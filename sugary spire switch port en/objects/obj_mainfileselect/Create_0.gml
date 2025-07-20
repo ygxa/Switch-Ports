@@ -1,4 +1,5 @@
 depth = 10
+video_close()
 selectedFile = 0
 activated = false
 fileSelectHeightRatio = [0, 0, 0]
@@ -19,24 +20,24 @@ fileOpened = []
 
 for (var i = 0; i < 3; i++)
 {
-	//if (file_exists(savePath[i]))
-	//{
-	//	ini_open(savePath[i])
-	//	filePalette[i] = ini_read_real("Misc", string("playerPaletteIndex_" + scr_getCharacterPrefix(Characters.Pizzelle)), 2)
-	//	fileOpened[i] = ini_read_real("Game", "seconds", 0) != 0 || ini_read_real("Game", "minutes", 0) != 0
-	//	ini_close()
-	//	filePercentage[i] = scr_completion_percent(savePath[i])
-	//	filePresent[i] = true
-	//	fileJudgment[i] = scr_judgment_read(savePath[i])
-	//}
-	//else
-	//{
+	if (file_exists(savePath[i]))
+	{
+		ini_open(savePath[i])
+		filePalette[i] = ini_read_real("Misc", string("playerPaletteIndex_" + scr_getCharacterPrefix(Characters.Pizzelle)), 2)
+		fileOpened[i] = ini_read_real("Game", "seconds", 0) != 0 || ini_read_real("Game", "minutes", 0) != 0
+		ini_close()
+		filePercentage[i] = scr_completion_percent(savePath[i])
+		filePresent[i] = true
+		fileJudgment[i] = scr_judgment_read(savePath[i])
+	}
+	else
+	{
 		filePalette[i] = 2
 		filePercentage[i] = 0
 		filePresent[i] = false
 		fileJudgment[i] = scr_judgment_get("none")
 		fileOpened[i] = false
-	//}
+	}
 }
 
 fileDisplayPercent = 0

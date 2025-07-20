@@ -1,3 +1,6 @@
+if (!instance_exists(obj_parent_player))
+	exit
+
 if (obj_parent_player.state == PlayerState.titlescreen)
 {
 	obj_parent_player.vsp = 5

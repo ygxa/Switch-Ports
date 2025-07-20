@@ -1,1 +1,1 @@
-return;
+draw_self()

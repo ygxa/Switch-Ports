@@ -2,7 +2,7 @@ var letterbox_spr = spr_letterboxBg_simple
 var letterbox_ind = 0
 
 if (room == rm_preinitializer || room == rm_initializer)
-	return
+	exit
 
 switch (global.Letterbox)
 {

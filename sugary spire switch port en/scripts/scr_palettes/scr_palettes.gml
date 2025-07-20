@@ -29,7 +29,7 @@ function draw_player_sprite(arg0, arg1, arg2, arg3, arg4 = global.playerCharacte
 function draw_player_sprite_ext(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9 = global.playerCharacter, arg10 = global.PlayerPaletteIndex)
 {
 	if (!sprite_exists(arg0))
-		return;
+		exit;
 	
 	palette_as_player(arg0, arg1, arg9, arg10, arg2, arg3, arg4, arg5)
 	draw_sprite_ext(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8)

@@ -34,8 +34,14 @@ function array_contains(arr, val) {
     return false;
 }
 
-function is_callable(value){
-	return script_exists(value)
+function is_callable(value) {
+	if (value == undefined) 
+		return false;
+		
+	if (is_real(value))
+		return script_exists(value);
+
+	return true;
 }
 
 function array_filter(arr, predicate) {
@@ -53,4 +59,49 @@ function array_get_index(arr, val) {
         if (arr[i] == val) return i;
     }
     return -1;
+}
+
+function struct_exists(_struct) {
+    return !is_undefined(_struct) && is_struct(_struct);
+}
+
+function variable_clone(src) {
+    // 1) DS‑List?
+    if ( ds_exists(src, ds_type_list) ) {
+        var newList = ds_list_create();
+        var len     = ds_list_size(src);
+        for (var i = 0; i < len; i++) {
+            var v = ds_list_get(src, i);
+            ds_list_add(newList, variable_clone(v));
+        }
+        return newList;
+    }
+    // 2) DS‑Map?
+    else if ( ds_exists(src, ds_type_map) ) {
+        var newMap = ds_map_create();
+        // grab all keys into a temporary list
+        var keys   = ds_map_keys(src);
+        var kcount = ds_list_size(keys);
+        for (var i = 0; i < kcount; i++) {
+            var key = ds_list_get(keys, i);
+            var val = ds_map_find_value(src, key);
+            ds_map_add(newMap, key, variable_clone(val));
+        }
+        ds_list_destroy(keys);
+        return newMap;
+    }
+    // 3) GML struct (built‑in or user‑made)?
+    else if ( is_struct(src) ) {
+        var out   = {};
+        var names = variable_struct_get_names(src);
+        for (var i = 0; i < array_length(names); i++) {
+            var f = names[i];
+            out[f] = variable_clone(src[f]);
+        }
+        return out;
+    }
+    // 4) Primitive (number, string, asset id…)
+    else {
+        return src;
+    }
 }

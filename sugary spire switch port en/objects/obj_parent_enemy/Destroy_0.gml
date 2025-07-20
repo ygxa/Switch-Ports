@@ -1,5 +1,5 @@
 if (ds_list_find_index(global.BaddieRoom, id) != -1)
-	return
+	exit
 
 enemyDeath_SpawnDeathFX()
 enemyDeath_awardPoints(importantEnemy)

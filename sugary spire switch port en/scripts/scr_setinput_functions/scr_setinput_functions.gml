@@ -165,7 +165,7 @@ function scr_input_add(arg0, arg1)
 
 function scr_input_ini_read(arg0, arg1, arg2, arg3 = false, arg4 = false)
 {
-	var _inp = "" //deafult: ini_read_string("Control", arg0, "")
+	var _inp = ini_read_string("Control", arg0, "")
 	var inputs = []
 	var inputStrings = string_split(_inp, ",")
 	
@@ -185,14 +185,14 @@ function scr_input_ini_read(arg0, arg1, arg2, arg3 = false, arg4 = false)
 
 function scr_setinput_init()
 {
-	//ini_open("optionData.ini")
-	global.deadzones[Deadzones.Master]    = 0.4;
-	global.deadzones[Deadzones.Vertical]  = 0.5;
-	global.deadzones[Deadzones.Horizontal]= 0.5;
-	global.deadzones[Deadzones.Press]     = 0.5;
-	global.deadzones[Deadzones.SJump]     = 0.8;
-	global.deadzones[Deadzones.Crouch]    = 0.65;
-	//ini_close()
+	ini_open("optionData.ini")
+	global.deadzones[Deadzones.Master] = ini_read_real("Settings", "deadzoneMaster", 0.4)
+	global.deadzones[Deadzones.Vertical] = ini_read_real("Settings", "deadzoneVertical", 0.5)
+	global.deadzones[Deadzones.Horizontal] = ini_read_real("Settings", "deadzoneHorizontal", 0.5)
+	global.deadzones[Deadzones.Press] = ini_read_real("Settings", "deadzonePress", 0.5)
+	global.deadzones[Deadzones.SJump] = ini_read_real("Settings", "deadzoneSJump", 0.8)
+	global.deadzones[Deadzones.Crouch] = ini_read_real("Settings", "deadzoneCrouch", 0.65)
+	ini_close()
 	//scr_input_init_sprites()
 }
 
@@ -314,7 +314,7 @@ function Input(arg0, arg1, arg2, arg3 = 0, arg4 = false) constructor
 			if (keyboard_check(keyInputs[i]))
 			{
 				held = true
-				return
+				exit
 			}
 		}
 		
@@ -332,13 +332,13 @@ function Input(arg0, arg1, arg2, arg3 = 0, arg4 = false) constructor
 				if ((!gpAxisInvert && gamepad_axis_value(global.PlayerInputDevice, gpInputs[i]) >= dz) || (gpAxisInvert && gamepad_axis_value(global.PlayerInputDevice, gpInputs[i]) <= -dz))
 				{
 					held = true
-					return
+					exit
 				}
 			}
 			else if (gamepad_button_check(global.PlayerInputDevice, gpInputs[i]))
 			{
 				held = true
-				return
+				exit
 			}
 		}
 		
@@ -355,7 +355,7 @@ function Input(arg0, arg1, arg2, arg3 = 0, arg4 = false) constructor
 			if (keyboard_check_pressed(keyInputs[i]))
 			{
 				pressed = true
-				return
+				exit
 			}
 		}
 		
@@ -379,13 +379,13 @@ function Input(arg0, arg1, arg2, arg3 = 0, arg4 = false) constructor
 				{
 					pressed = true
 					ds_map_set(global.stickpressed, stickstr, StickPressed.JustPressed)
-					return
+					exit
 				}
 			}
 			else if (gamepad_button_check_pressed(global.PlayerInputDevice, gpInputs[i]))
 			{
 				pressed = true
-				return
+				exit
 			}
 		}
 		
@@ -399,7 +399,7 @@ function Input(arg0, arg1, arg2, arg3 = 0, arg4 = false) constructor
 			if (keyboard_check_released(keyInputs[i]))
 			{
 				released = true
-				return
+				exit
 			}
 		}
 		
@@ -422,13 +422,13 @@ function Input(arg0, arg1, arg2, arg3 = 0, arg4 = false) constructor
 				if ((!gpAxisInvert && !scr_input_stickpressed(stickstr) && gamepad_axis_value(global.PlayerInputDevice, gpInputs[i]) <= dz) || (gpAxisInvert && gamepad_axis_value(global.PlayerInputDevice, gpInputs[i]) >= -dz))
 				{
 					released = true
-					return
+					exit
 				}
 			}
 			else if (gamepad_button_check_released(global.PlayerInputDevice, gpInputs[i]))
 			{
 				released = true
-				return
+				exit
 			}
 		}
 		

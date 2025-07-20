@@ -18,7 +18,7 @@ if (global.panic)
 			}
 			
 			scr_savelevelDetails(use_music)
-			scr_check_end_level_chef_tasks()
+			//scr_check_end_level_chef_tasks()
 			global.CompletedLevel = true
 			
 			if (state != PlayerState.door)

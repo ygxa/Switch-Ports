@@ -53,7 +53,7 @@ for (var i = 0; i < 3; i++)
 		with (secretCanvas[i])
 		{
 			if (sprite_index == spr_null)
-				return
+				exit;
 			
 			visible = other.secretcanspit
 			

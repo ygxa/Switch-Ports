@@ -188,7 +188,5 @@ if (jumpedFromBlock && vsp >= 0 && grounded && invincibleBaddie)
 	jumpedFromBlock = false
 }
 
-if (((grounded && vsp > 0) || isFlyingEnemy) && sprite_index == baddieSpriteWalk && sprite_animation_end() && sign(hsp) == sign(image_xscale))
-	create_particle(x - (image_xscale * 20), y + 43, spr_cloudEffect)
 
 scr_enemySounds_update()

@@ -12,5 +12,4 @@ if (!number_in_range(_my_pal_index, 0, array_length(global.CharacterPalette[glob
 var lang_key = global.CharacterPalette[global.playerCharacter].palettes[_my_pal_index].palName
 var lang_key_desc = lang_get(string(lang_key + "_desc"))
 //var scrib = scribble(string("[fa_center][promptfont][fa_bottom][alpha,{0}]{1}\n{2}", alpha, lang_get(lang_key), lang_key_desc))
-scrib.wrap(camera_get_view_width(view_camera[0]) - 200)
-scrib.draw(480, 524)
+draw_text(480, 524,string(alpha) + string(lang_key) + string(lang_key_desc))

@@ -15,7 +15,7 @@ function scr_parallaxbg_init()
 	}
 	
 	if (!layernum)
-		return
+		exit
 	
 	var _f = function(arg0, arg1)
 	{

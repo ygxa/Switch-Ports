@@ -95,7 +95,7 @@ enemyDeath_awardPoints = function(arg0 = importantEnemy)
 	global.ComboTime = 60
 	
 	if (arg0)
-		return
+		exit
 	
 	obj_parent_player.superTauntBuffer++
 	global.Combo++

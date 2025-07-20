@@ -30,7 +30,7 @@ if (saveAlpha)
 }
 
 if (!global.ShowHUD)
-	return
+	exit;
 
 if (!(is_hub() || is_tutorial() || !scr_roomcheck() || room == mineshaft_elevator))
 {
@@ -66,6 +66,10 @@ if (!(is_hub() || is_tutorial() || !scr_roomcheck() || room == mineshaft_elevato
 		draw_surface(comboSurface, _xx, _yy)
 		draw_sprite_ext(sprite_index, image_index, _x, _y, 1, 1, 0, c_white, 1)
 		//draw_text_scribble(_x - 17, _y + 26, string("[fa_right][fa_top][combofont]" + comboDisplay))
+		draw_set_halign(fa_right)
+		draw_set_valign(fa_top)
+		draw_set_font(global.combofont)
+		draw_text(_x - 17, _y + 26, string(comboDisplay))
 	}
 	
 	with (HUDObject_TV)
@@ -107,7 +111,7 @@ if (!(is_hub() || is_tutorial() || !scr_roomcheck() || room == mineshaft_elevato
 			if (secs < 10)
 				secs = "0" + string(secs)
 			
-			var timer_string = string("[fa_center][fa_top][promptfont][c_white]" + mins + ":" + secs)
+			//var timer_string = string("[fa_center][fa_top][promptfont][c_white]" + mins + ":" + secs)
 			//draw_text_scribble(x, y, timer_string)
 			//draw_sprite_ext(spr_clockTimer, elm_clockTimer.image_index, (x - string_width_scribble(timer_string)) + 16, y + 16, 1, 1, 0, c_white, 1)
 		}

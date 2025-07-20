@@ -1,5 +1,5 @@
 if (!loaded)
-	return
+	exit
 
 var _percent = filePercentage[selectedFile]
 var _mag = floor(abs(fileDisplayPercent - _percent) / 10)
@@ -156,13 +156,13 @@ if (abletomove && !blockedInputs && !activated)
 		{
 			blockedInputs = true
 			instance_create(0, 0, obj_option)
-			return
+			exit
 		}
 		else if (key_slap2)
 		{
 			blockedInputs = true
 			instance_create(0, 0, obj_exitGame)
-			return
+			exit
 		}
 		else if (key_taunt2 && filePresent[selectedFile])
 		{
@@ -171,7 +171,7 @@ if (abletomove && !blockedInputs && !activated)
 			{
 				selectedFile: selectedFile
 			})
-			return
+			exit
 		}
 	}
 	
@@ -212,10 +212,10 @@ for (var i = 0; i < array_length(fileDoodleSurf); i++)
 			{
 				draw_circle_color(_xx, _yy, lineWidth, _color, _color, false)
 				
-				//if (!buffer_exists(fileDoodleBuffer[i]))
-					//fileDoodleBuffer[i] = buffer_create(fileDoodleW * fileDoodleH * 4, buffer_fixed, 1)
+				if (!buffer_exists(fileDoodleBuffer[i]))
+					fileDoodleBuffer[i] = buffer_create(fileDoodleW * fileDoodleH * 4, buffer_fixed, 1)
 				
-				//buffer_get_surface(fileDoodleBuffer[i], fileDoodleSurf[i], 0)
+				buffer_get_surface(fileDoodleBuffer[i], fileDoodleSurf[i], 0)
 			}
 		}
 		

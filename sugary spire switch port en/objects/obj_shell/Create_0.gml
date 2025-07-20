@@ -155,7 +155,7 @@ function _update_filtered_suggestions() {
 	inputArray = self._input_string_split(input_string);
 	
 	// Return if we have nothing to parse
-	if (string_length(input_string) <= 0 || array_length(inputArray) <= 0) { return; }
+	if (string_length(input_string) <= 0 || array_length(inputArray) <= 0) { exit; }
 	
 	// Set font for string_width calculation
 	draw_set_font(consoleFont);

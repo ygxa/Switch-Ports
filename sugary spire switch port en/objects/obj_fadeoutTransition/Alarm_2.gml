@@ -1,13 +1,13 @@
 if (!((variable_global_exists("langSpritesTemp") && array_length(global.langSpritesTemp) > 0) && (titleCard || goToHub)))
 {
 	lang_flushed = true
-	return
+	exit
 }
 
 if (fadealpha < 1 && !titleCard)
 {
 	alarm[2] = 1
-	return
+	exit
 }
 
 loading_text = true
@@ -25,7 +25,7 @@ if (array_length(global.langSpritesTemp) < 1)
 {
 	show_debug_message("Flushed Old Lang Textures")
 	lang_flushed = true
-	return
+	exit
 }
 
 alarm[2] = 1

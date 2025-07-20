@@ -1,1 +1,1 @@
-image_alpha = fade
+visible = 1

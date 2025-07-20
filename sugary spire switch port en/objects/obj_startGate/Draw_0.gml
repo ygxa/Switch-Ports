@@ -4,7 +4,7 @@ draw_sprite(sprite_index, 2, x, y)
 scr_startgate_draw_normal()
 
 if (hideDetails)
-	return
+	exit;
 
 for (var i = 0; i < array_length(secretCanvas); i++)
 {
@@ -13,7 +13,7 @@ for (var i = 0; i < array_length(secretCanvas); i++)
 }
 
 if (rank == "none")
-	return
+	exit;
 
 if (gatePointDisplay.visible)
 {

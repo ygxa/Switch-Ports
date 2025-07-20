@@ -56,7 +56,7 @@ savedPaintSprite = undefined
 saveSurfaceSprite = function()
 {
 	if (!surface_exists(surf))
-		return
+		exit;
 	
 	var sp = sprite_create_from_surface(surf, 0, 0, sprite_width, sprite_height, false, false, 0, 0)
 	

@@ -1,5 +1,5 @@
 if (global.DebugMode == DebugType.None)
-    return;
+    exit;
 
 if (obj_parent_player.state != PlayerState.noclip)
     obj_parent_player.state = PlayerState.noclip;
