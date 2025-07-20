@@ -9,6 +9,7 @@ function stop_music(arg0 = true)
 {
 	if (!is_undefined(global.RoomMusic))
 	{
+		//show_message(global.RoomMusic.musicInst)
 		fmod_studio_event_instance_stop(global.RoomMusic.musicInst, arg0)
 		fmod_studio_event_instance_stop(global.RoomMusic.secretMusicInst, arg0)
 	}

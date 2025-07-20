@@ -11,7 +11,7 @@ if (!global.panic)
 		
 		if (is_undefined(previous_room_music) || previous_room_music.eventName != target_room_music.eventName)
 		{
-			fmod_studio_event_instance_start(target_room_music.musicInst)
+			fmod_studio_event_instance_start(target_room_music.musicInst, true)
 			fmod_studio_event_instance_set_paused(target_room_music.musicInst, false)
 			
 			if (!is_undefined(previous_room_music))
