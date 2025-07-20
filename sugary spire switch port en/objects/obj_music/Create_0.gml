@@ -57,13 +57,13 @@ addRoomMusic(rm_credits, "event:/music/credits", undefined, undefined)
 addRoomMusic(rm_devroom, "event:/music/devroom", undefined, undefined)
 addRoomMusic(tutorial_1, "event:/music/tutorial", undefined, undefined)
 addRoomMusic(hub_paintstudio, mu_hub1,  undefined, undefined)
-addRoomMusic(hub_soundTest, undefined, undefined, undefined)
 addRoomMusic(hub_demohallway, mu_hub1,  undefined, undefined)
+addRoomMusic(hub_molasses, mu_hub1,  undefined, undefined)
+addRoomMusic(hub_soundTest, undefined, undefined, undefined)
 addRoomMusic(hub_mindpalace, "event:/music/painterBrain", undefined, undefined)
 addRoomMusic(hub_mindvault, "event:/music/harry", undefined, undefined)
-addRoomMusic(hub_molasses, mu_hub1,  undefined, undefined)
 addRoomMusic(entryway_1, mu_entryway, "event:/music/w1/entryway_secret", undefined)
-addRoomMusic(steamy_1, "event:/music/w1/cottontown", "event:/music/w1/cottontown_secret", function(arg0, arg1, arg2)
+addRoomMusic(steamy_1, mu_steamy, "event:/music/w1/cottontown_secret", function(arg0, arg1, arg2)
 {
 	var event_state = undefined
 	
