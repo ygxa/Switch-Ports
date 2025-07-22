@@ -3,7 +3,7 @@ alpha = 0
 savedIndex = global.PlayerPaletteIndex
 lockedPalettes = []
 ini_open("optionData.ini")
-ini_write_real("Palettes", "palette_PZ_exhibition", true)
+ini_write_real("Palettes", "Exhibition Duds", true)
 var locked_palettes = array_filter(scr_get_palettes(false), function(arg0, arg1)
 {
 	arg0.taskKey = 0

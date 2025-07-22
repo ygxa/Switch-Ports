@@ -12,4 +12,8 @@ if (!number_in_range(_my_pal_index, 0, array_length(global.CharacterPalette[glob
 var lang_key = global.CharacterPalette[global.playerCharacter].palettes[_my_pal_index].palName
 var lang_key_desc = lang_get(string(lang_key + "_desc"))
 //var scrib = scribble(string("[fa_center][promptfont][fa_bottom][alpha,{0}]{1}\n{2}", alpha, lang_get(lang_key), lang_key_desc))
-draw_text(480, 524,string(alpha) + string(lang_key) + string(lang_key_desc))
+draw_set_halign(fa_center)
+draw_set_font(global.promptfont)
+draw_set_valign(fa_bottom)
+draw_set_alpha(alpha)
+draw_text(480, 524,string(lang_key))// + string(lang_key_desc))
