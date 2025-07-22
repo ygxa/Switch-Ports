@@ -26,7 +26,7 @@ function scr_ghostcollectible(arg0 = false, arg1 = undefined, arg2 = undefined)
 			usePalette: !is_undefined(arg1),
 			platformIndex: 0
 		}
-		show_debug_message(string("Ghost Collectable created: " + q + " (Struct)"))
+		//show_debug_message(string("Ghost Collectable created: " + q + " (Struct)"))
 		ds_list_add(collectSecretList, q)
 	}
 	

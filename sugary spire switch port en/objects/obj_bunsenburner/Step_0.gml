@@ -1,5 +1,5 @@
 if (sprite_index == candleBurn || global.freezeframe)
-	return
+	exit
 
 var touched = false
 
@@ -8,7 +8,7 @@ if (place_meeting(x, y, obj_parent_player))
 	with (obj_parent_player)
 	{
 		if (state == PlayerState.noclip || state == PlayerState.frozen)
-			return
+			exit
 		
 		if (state == PlayerState.doughmount || state == PlayerState.doughmountspin)
 		{

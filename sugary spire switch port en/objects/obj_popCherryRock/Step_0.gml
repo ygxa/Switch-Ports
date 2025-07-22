@@ -1,5 +1,5 @@
 if (global.freezeframe)
-	return
+	exit
 
 if (activated == true)
 {

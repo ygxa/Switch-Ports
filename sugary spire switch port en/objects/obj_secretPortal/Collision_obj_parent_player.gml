@@ -1,4 +1,4 @@
-if (secretActivated && visible && !place_meeting(x, y, obj_secretPortalreturn))
+if (secretActivated && visible && !place_meeting(x, y, obj_secretPortalexit))
 {
 	if (other.state != PlayerState.actor && sprite_index == spr_secretPortal)
 	{

@@ -1,5 +1,5 @@
 if (!global.ShowHUD)
-	return
+	exit
 
 var _my_pal_index = global.PlayerPaletteIndex
 

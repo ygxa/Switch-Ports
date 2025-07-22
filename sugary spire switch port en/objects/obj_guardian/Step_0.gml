@@ -1,5 +1,5 @@
 if (!global.panic && ds_list_size(global.KeyFollowerList) <= 0)
-	return
+	exit
 
 var target_player = get_nearestPlayer()
 
@@ -21,7 +21,7 @@ switch (state)
 		}
 		
 		if (((target_player.cutscene || target_player.state == PlayerState.gotkey) && !awoken) || offended)
-			return
+			exit
 		
 		if (!playedSound && !awoken)
 		{
@@ -209,7 +209,7 @@ switch (state)
 }
 
 if (state == PlayerState.frozen)
-	return
+	exit
 
 var player_supertaunt = false
 

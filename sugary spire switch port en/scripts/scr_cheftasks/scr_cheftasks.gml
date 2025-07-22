@@ -134,7 +134,7 @@ function scr_task_notify(arg0, arg1 = [])
 	var palette = false
 	
 	if (!instance_exists(obj_achievementTracker))
-		return
+		exit
 	
 	for (var a = 0; a < array_length(arrays); a++)
 	{
@@ -153,7 +153,7 @@ function scr_task_notify(arg0, arg1 = [])
 	}
 	
 	if (is_undefined(task))
-		return
+		exit
 	
 	trace(string("Task Notified: " + arg0))
 	

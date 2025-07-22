@@ -26,7 +26,7 @@ with (HUDObject_tooltipPrompts)
 }
 
 if (is_hub() || !scr_roomcheck() || room == mineshaft_elevator)
-	return
+	exit
 
 var target_player = get_primaryPlayer()
 

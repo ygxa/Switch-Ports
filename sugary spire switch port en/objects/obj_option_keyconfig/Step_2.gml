@@ -6,7 +6,7 @@ if (returning)
 	if (key_slap2 || key_start2)
 	{
 		returning = false
-		return
+		exit
 	}
 	
 	if (key_jump)
@@ -15,7 +15,7 @@ if (returning)
 		{
 			case 0:
 				returning = false
-				return
+				exit
 			
 			case 1:
 				restore_inputs()
@@ -25,7 +25,7 @@ if (returning)
 					instance_destroy()
 				
 				event_play_oneshot("event:/SFX/ui/confirm")
-				return
+				exit
 		}
 	}
 	
@@ -36,7 +36,7 @@ if (returning)
 	else if (select2 > 2)
 		select2 = 0
 	
-	return
+	exit
 }
 
 var input_is_valid = number_in_range(selected, 0, array_length(inputs) - 1)
@@ -56,7 +56,7 @@ if (selected == -2)
 	
 	selected = -1
 	reading = false
-	return
+	exit
 }
 else if (!reading)
 {
@@ -93,7 +93,7 @@ else if (!reading)
 				instance_destroy()
 			
 			event_play_oneshot("event:/SFX/ui/confirm")
-			return
+			exit
 		}
 		else
 		{
@@ -102,7 +102,7 @@ else if (!reading)
 			returning = true
 		}
 		
-		return
+		exit
 	}
 	
 	if (key_taunt2)
@@ -151,7 +151,7 @@ else
 	if (!input_is_valid)
 	{
 		reading = false
-		return
+		exit
 	}
 	
 	var inp = inputs[selected].parentInput
@@ -185,7 +185,7 @@ else
 		if (keyboard_check_pressed(vk_anykey))
 		{
 			reading = false
-			return
+			exit
 		}
 		
 		var gpinput = scr_checkanygamepad(global.PlayerInputDevice)

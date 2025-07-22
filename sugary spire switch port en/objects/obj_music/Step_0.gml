@@ -1,5 +1,5 @@
 if (global.gamePauseState)
-	return
+	exit
 
 if (event_instance_isplaying(global.RankMusicInst) && room != rank_room && !instance_exists(obj_endlevelfade) && !instance_exists(obj_rank))
 	fmod_studio_event_instance_stop(global.RankMusicInst, true)
@@ -10,10 +10,10 @@ if (global.panic)
 	{
 		panicStart = true
 		fmod_studio_event_instance_start(global.EscapeMusicInst)
-		fmod_studio_event_instance_set_paused(global.EscapeMusicInst, false)
-		fmod_studio_event_instance_set_parameter_by_name(global.EscapeMusicInst, "state", 0, true)
-		fmod_studio_system_set_parameter_by_name("pillarfade", 0, true)
-		fmod_studio_event_instance_stop(global.HarryMusicInst, true)
+		//fmod_studio_event_instance_set_paused(global.EscapeMusicInst, false)
+		//fmod_studio_event_instance_set_parameter_by_name(global.EscapeMusicInst, "state", 0, true)
+		//fmod_studio_system_set_parameter_by_name("pillarfade", 0, true)
+		//fmod_studio_event_instance_stop(global.HarryMusicInst, true)
 		
 		if (!is_undefined(global.RoomMusic))
 		{

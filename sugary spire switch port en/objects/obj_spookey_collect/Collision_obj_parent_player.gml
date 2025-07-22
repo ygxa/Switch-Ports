@@ -1,5 +1,5 @@
 if (!scr_player_check_normal(other))
-	return
+	exit
 
 if (ds_list_find_index(global.SaveRoom, id) == -1)
 {

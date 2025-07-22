@@ -294,7 +294,7 @@ function scr_levelSet()
 		}
 	}
 	
-	stop_music(true)
+	//stop_music(true)
 	fmod_studio_system_set_parameter_by_name("transfo", false, true)
 	fmod_studio_system_set_parameter_by_name("musicFade", 0, true)
 	global.MenuNoteArraySelect = 0

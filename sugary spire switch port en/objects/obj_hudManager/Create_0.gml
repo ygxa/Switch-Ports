@@ -105,7 +105,7 @@ with (HUDObject_TV)
 				tvNormalStates = true
 				
 				if ((queuedSprite == global.TvSprPlayer_IdleAnim1 || queuedSprite == global.TvSprPlayer_IdleAnim2) && !sprite_animation_end(undefined, undefined, sprite_image_number))
-					return
+					exit
 				
 				if (array_contains(from_transition, sprite_index))
 					tvForceTransition = true

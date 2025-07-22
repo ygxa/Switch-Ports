@@ -3,11 +3,11 @@ global.Palette_PatternUniform = shader_get_uniform(shd_pal_swapper, "pattern_ena
 function palette_as_player(arg0 = sprite_index, arg1 = image_index, arg2 = global.playerCharacter, arg3 = global.PlayerPaletteIndex, arg4 = 0, arg5 = 0, arg6 = 1, arg7 = 1)
 {
 	if (!sprite_exists(arg0))
-		return
+		exit
 	
 	if (!number_in_range(arg3, 0, array_length(global.CharacterPalette[arg2].palettes) - 1))
 	{
-		show_debug_message(string("WARNING: PALETTE INDEX {0} IS OUT OF RANGE 0-{1}. DEFAULTING TO 0"))
+		//show_debug_message(string("WARNING: PALETTE INDEX {0} IS OUT OF RANGE 0-{1}. DEFAULTING TO 0"))
 		arg3 = 0
 	}
 	

@@ -1,7 +1,7 @@
 var deadID = string(id + "Killed")
 
 if (ds_list_find_index(global.SaveRoom, deadID) != -1)
-	return
+	exit
 
 repeat (3)
 {

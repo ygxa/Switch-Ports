@@ -1,8 +1,8 @@
 if (!DrawHUD)
-	return
+	exit
 
 if (!global.ShowHUD)
-	return
+	exit
 
 var collectable_shake_x = pointCollectShake * random_range(-1, 1)
 var collectable_shake_y = pointCollectShake * random_range(-1, 1)

@@ -4,11 +4,11 @@ while (i >= 0)
 {
 	var current_task = activeChefTasks[i]
 	
-	if (current_task.conditionType == ConditionType.InLevel && current_task.taskCondition())
-	{
-		scr_award_chef_task(current_task.taskKey, current_task.taskSprite, current_task.taskIndex)
-		array_delete(activeChefTasks, i, 1)
-	}
+	//if (current_task.conditionType == ConditionType.InLevel && current_task.taskCondition())
+	//{
+		//scr_award_chef_task(current_task.taskKey, current_task.taskSprite, current_task.taskIndex)
+		//array_delete(activeChefTasks, i, 1)
+	//}
 	
 	i--
 }

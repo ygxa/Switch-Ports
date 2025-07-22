@@ -1,10 +1,10 @@
 function scr_finishingBlow(arg0, arg1)
 {
 	if (!instance_exists(arg0))
-		return
+		exit
 	
 	if (arg0.state == PlayerState.climbwall)
-		return
+		exit
 	
 	with (arg0)
 	{
@@ -47,10 +47,10 @@ function scr_finishingBlow(arg0, arg1)
 function scr_instakillEnemy(arg0, arg1)
 {
 	if (!instance_exists(arg0))
-		return
+		exit
 	
 	if (arg0.state == PlayerState.climbwall)
-		return
+		exit
 	
 	with (arg0)
 	{
@@ -142,7 +142,7 @@ function baddieOnPlayerCollisions()
 			}
 			
 			scr_sleep()
-			return
+			exit
 		}
 		
 		if (baddieInvincibilityBuffer <= 0 && state != PlayerState.climbwall && (player_object.state == PlayerState.mach2 || player_object.state == PlayerState.mach3 || player_object.state == PlayerState.run || player_object.state == PlayerState.machroll))
@@ -170,7 +170,7 @@ function baddieOnPlayerCollisions()
 				instance_create(x, y, obj_baddieGibs)
 			}
 			
-			return
+			exit
 		}
 		
 		if (baddieInvincibilityBuffer <= 0 && player_object.state == PlayerState.cotton && player_object.sprite_index == spr_player_PZ_werecotton_drill_h)
@@ -179,7 +179,7 @@ function baddieOnPlayerCollisions()
 			event_play_oneshot("event:/SFX/enemies/killingblow", x, y)
 			camera_shake_add(5, 20)
 			scr_finishingBlow(id, player_object)
-			return
+			exit
 		}
 		
 		if (canBeStomped && vsp >= 0 && (player_object.state == PlayerState.jump || player_object.state == PlayerState.grab) && player_object.vsp > 0 && player_object.y < y && player_object.sprite_index != player_object.spr_stompprep)
@@ -214,7 +214,7 @@ function baddieOnPlayerCollisions()
 				vsp = key_jump2 ? -14 : -9
 			}
 			
-			return
+			exit
 		}
 		
 		if (canBeGrabbed && player_object.state == PlayerState.grabdash)
@@ -257,7 +257,7 @@ function baddieOnPlayerCollisions()
 				}
 			}
 			
-			return
+			exit
 		}
 		
 		if (canBeGrabbed && player_object.state == PlayerState.machtumble)
@@ -287,24 +287,24 @@ function baddieOnPlayerCollisions()
 			if (object_get_parent(object_index) == obj_parent_boss)
 				scr_grab_boss(player_object)
 			
-			return
+			exit
 		}
 	}
 	
-	return
+	exit
 }
 
 function baddieOnBaddieCollisions()
 {
 	if (state != PlayerState.climbwall || !place_meeting(x, y, obj_parent_enemy))
-		return
+		exit
 	
 	with (instance_place(x, y, obj_parent_enemy))
 	{
 		if (!invincibleBaddie && state != PlayerState.stun)
 		{
 			instance_destroy()
-			return
+			exit
 		}
 	}
 }
@@ -312,14 +312,14 @@ function baddieOnBaddieCollisions()
 function baddieOnEscapeRosetteCollisions()
 {
 	if (!place_meeting(x, y, obj_escaperosette))
-		return
+		exit
 	
 	with (instance_place(x, y, obj_escaperosette))
 	{
 		if (state == 1)
 		{
 			instance_destroy(other.id)
-			return
+			exit
 		}
 	}
 }
@@ -327,12 +327,12 @@ function baddieOnEscapeRosetteCollisions()
 function baddieOnSwingCollisions()
 {
 	if (baddieInvincibilityBuffer > 0 || invincibleBaddie || !place_meeting(x, y, obj_swinghitbox))
-		return
+		exit
 	
 	var player_object = instance_place(x, y, obj_swinghitbox).playerID
 	
 	if (!instance_exists(player_object))
-		return
+		exit
 	
 	event_play_oneshot("event:/SFX/player/punch", x, y)
 	scr_sleep()
@@ -368,7 +368,7 @@ function baddieOnSwingCollisions()
 function baddieOnInstakillHitboxCollisions()
 {
 	if (baddieInvincibilityBuffer > 0 || invincibleBaddie || state == PlayerState.stun || !place_meeting(x, y, obj_instakillHitbox))
-		return
+		exit
 	
 	var player_object = instance_place(x, y, obj_instakillHitbox).playerID
 	scr_instakillEnemy(id, player_object)

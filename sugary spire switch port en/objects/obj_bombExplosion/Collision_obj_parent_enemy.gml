@@ -1,7 +1,7 @@
 if (image_index > 9 || !hurtBaddies)
-	return
+	exit
 
 if (hurtOwner && ownerID == other.id)
-	return
+	exit
 
 instance_destroy(other.id)

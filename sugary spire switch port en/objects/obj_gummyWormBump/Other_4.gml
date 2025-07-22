@@ -5,7 +5,7 @@ if (ds_list_find_index(global.SaveRoom, id) != -1)
 }
 
 if (linkedWorm != -4)
-	return
+	exit
 
 var x_component = -sign(image_xscale) * dcos(image_angle + ((sign(image_yscale) == -1) ? 270 : 90))
 var y_component = sign(image_yscale) * dsin(image_angle + ((sign(image_yscale) == -1) ? 270 : 90))

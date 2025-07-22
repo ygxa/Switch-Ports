@@ -1,3 +1,7 @@
+if gamepad_button_check_pressed(global.PlayerInputDevice,gp_select){
+	global.showcollisions = !global.showcollisions;
+	toggle_collision_function();
+}
 // feather disable all
 // feather ignore all
 if (saveHistory) {

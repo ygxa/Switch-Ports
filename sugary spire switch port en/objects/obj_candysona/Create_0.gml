@@ -14,7 +14,7 @@ image_speed = 0.35
 gotowardsPlayer = false
 var _ind = 1
 
-while (sprite_exists(asset_get_index(string("spr_candysona_idle" + _ind + 1))))
+while (sprite_exists(asset_get_index("spr_candysona_idle" + string(_ind+ 1))))
 	_ind++
 
 var my_sona = irandom_range(1, _ind)

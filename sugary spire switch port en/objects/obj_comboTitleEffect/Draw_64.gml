@@ -1,5 +1,5 @@
 if (!global.ShowHUD || is_tutorial())
-	return
+	exit
 
 var img_ind = floor(title_cur + title_index)
 draw_sprite(lang_get_sprite(spr_comboTitles), img_ind, x, y + 10)

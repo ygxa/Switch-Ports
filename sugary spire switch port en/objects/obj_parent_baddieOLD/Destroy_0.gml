@@ -1,5 +1,5 @@
 if (ds_list_find_index(global.BaddieRoom, id) != -1 && !importantEnemy)
-	return
+	exit
 
 repeat (3)
 {
@@ -22,7 +22,7 @@ event_play_oneshot("event:/SFX/enemies/kill", x, y)
 global.ComboTime = 60
 
 if (importantEnemy)
-	return
+	exit
 
 if (giveScore)
 {

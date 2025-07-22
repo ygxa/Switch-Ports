@@ -1,4 +1,4 @@
-function event_play_oneshot(sound, _x, _y){
+function event_play_oneshot(sound, _x = x, _y = y, loop = false){
     if is_undefined(_x) 
 		_x = x;
 		
@@ -7,13 +7,13 @@ function event_play_oneshot(sound, _x, _y){
 	
 	if !is_undefined(sound){
 		if is_string(sound)
-			audio_play_sound_at(asset_get_index(sound), _x, _y, 0, 100, 300, 1, false, 1)
+			audio_play_sound_at(asset_get_index(sound), _x, _y, 0, 100, 300, 1, loop, 1)
 		else
-			audio_play_sound_at(sound, _x, _y, 0, 100, 300, 1, false, 1)
+			audio_play_sound_at(sound, _x, _y, 0, 100, 300, 1, loop, 1)
 	}
 }
 
-function fmod_studio_event_instance_start(sound,loop){
+function fmod_studio_event_instance_start(sound,loop = false){
 	if is_undefined(loop)
 		loop = false;
 		
@@ -32,15 +32,26 @@ function fmod_studio_event_instance_set_parameter_by_name(music, state, noidea, 
 
 }
 
-function fmod_studio_event_instance_set_paused(music, noidea){
-
+function fmod_studio_event_instance_set_paused(music, value){
+	/*
+	if !is_undefined(music){
+		if is_string(music){
+			if audio_is_playing(asset_get_index(music))
+				audio_pause_sound(asset_get_index(music))
+				
+		}else{
+			if audio_is_playing(music)
+				audio_pause_sound(music)
+		}
+	}
+	*/
 }
 
 function fmod_createEventInstance(sound){
 
 }
 
-function fmod_studio_system_set_parameter_by_name(sound, reverb, noidea, noidea2){
+function fmod_studio_system_set_parameter_by_name(sound, reverb = false, noidea = false, noidea2 = false){
 	
 }
 
@@ -79,7 +90,11 @@ function FMOD_STUDIO_EVENT_CALLBACK(){
 	
 }
 
-function event_play_multiple(sound){
+function TIMELINE_BEAT(){
+	
+}
+
+function event_play_multiple(sound, _x = x, _y = y){
 	
 }
 
@@ -91,7 +106,7 @@ function FMOD_STUDIO_STOP_MODE(){
 	
 }
 
-function fmod_studio_event_instance_release(){
+function fmod_studio_event_instance_release(sound){
 	
 }
 
@@ -99,7 +114,7 @@ function fmod_studio_event_instance_set_callback(sound, noidea){ //no idea might
 	
 }
 
-function fmod_event_set3DPosition(sound, _x, _y, noidea){
+function fmod_event_set3DPosition(sound, _x, _y, noidea = false){
 	
 }
 
@@ -123,6 +138,6 @@ function kill_sounds(sound){
 	
 }
 
-function fmod_quick3D(sound){
+function fmod_quick3D(sound, _x = x, _y = y){
 	
 }

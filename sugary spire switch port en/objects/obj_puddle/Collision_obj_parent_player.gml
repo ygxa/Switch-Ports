@@ -1,7 +1,7 @@
 if (sprite_index == spr_juicepuddledone && other.grounded)
 {
 	if (player_complete_invulnerability(other.id))
-		return
+		exit
 	
 	with (other)
 	{

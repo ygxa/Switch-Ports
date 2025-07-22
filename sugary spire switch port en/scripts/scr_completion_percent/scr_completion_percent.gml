@@ -1,6 +1,5 @@
 function scr_completion_percent(arg0)
 {
-	/*
 	if (file_exists(arg0))
 	{
 		ini_open(arg0)
@@ -87,7 +86,6 @@ function scr_completion_percent(arg0)
 	{
 		return 0;
 	}
-	*/
 	return 0;
 }
 

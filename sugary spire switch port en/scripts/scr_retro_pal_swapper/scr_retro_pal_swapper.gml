@@ -62,7 +62,7 @@ function pal_swap_set(arg0, arg1, arg2)
 	var swapper = global.retro_pal_swapper
 	
 	if (arg1 == 0)
-		return
+		exit
 	
 	var mode = 0
 	
@@ -134,7 +134,7 @@ function pal_swap_set_layer(arg0, arg1, arg2, arg3)
 	var data = ds_map_find_value(global.retro_pal_swapper.layer_map, arg2)
 	
 	if (data == undefined)
-		return
+		exit
 	
 	ds_map_set(global.retro_pal_swapper.layer_map, _layer_index, 
 	{
@@ -147,7 +147,7 @@ function pal_swap_set_layer(arg0, arg1, arg2, arg3)
 function pal_swap_enable_layer(arg0)
 {
 	if (!layer_exists(arg0))
-		return
+		exit
 	
 	var data = 
 	{
@@ -163,7 +163,7 @@ function pal_swap_enable_layer(arg0)
 			var data = ds_map_find_value(global.retro_pal_swapper.layer_map, layer_id)
 			
 			if (data == "<undefined>")
-				return
+				exit
 			
 			pal_swap_set(data.sprite, data.index, data.is_surf)
 			ds_priority_add(global.retro_pal_swapper.layer_temp_priority, layer_id, layer_get_depth(layer_id))

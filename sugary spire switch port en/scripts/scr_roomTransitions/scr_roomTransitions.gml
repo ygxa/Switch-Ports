@@ -1,7 +1,7 @@
 function scr_roomStart_SetPosition_player(arg0 = obj_player1)
 {
 	if (instance_exists(obj_cutsceneManager) && obj_cutsceneManager.returnLevelCustcene)
-		return
+		exit
 	
 	with (arg0)
 	{
@@ -265,8 +265,8 @@ function cutscene_secretPortal_preend()
 		
 		if (!instance_exists(obj_fadeoutTransition))
 		{
-			portal = instance_create(x, y + 14, obj_secretPortalreturn)
-			cutscene_declare_actor(portal, "returnPORTAL")
+			portal = instance_create(x, y + 14, obj_secretPortalexit)
+			cutscene_declare_actor(portal, "EIXTPORTAL")
 			cutscene_event_end()
 			return
 		}
@@ -277,7 +277,7 @@ function cutscene_secretPortal_end()
 {
 	static wait_timer = 0
 	
-	var portal = cutscene_get_actor("returnPORTAL")
+	var portal = cutscene_get_actor("EIXTPORTAL")
 	var finished = false
 	global.ComboFreeze = 2
 	
@@ -350,7 +350,7 @@ function cutscene_secretPortal_end()
 	
 	with (portal)
 	{
-		if (sprite_index != spr_secretPortal_returnopen)
+		if (sprite_index != spr_secretPortal_exitopen)
 		{
 			wait_timer += 0.1
 			obj_parent_player.image_index = 0

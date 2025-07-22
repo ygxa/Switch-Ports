@@ -1,7 +1,7 @@
 function create_afterimage(arg0, arg1 = image_xscale, arg2 = false)
 {
 	if (!instance_exists(id))
-		return
+		exit
 	
 	var parent = object_index
 	var afterimage_id = id

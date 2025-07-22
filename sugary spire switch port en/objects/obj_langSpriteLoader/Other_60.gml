@@ -4,7 +4,7 @@ trace(string("Async Image Load :: " + sID + " for " + sDict))
 ds_map_delete(global.langSpritesAsync, sID)
 
 if (is_undefined(sDict))
-	return
+	exit
 
 var s = asset_get_index(sDict)
 var sp = sprite_get_speed(s)

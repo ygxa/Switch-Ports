@@ -1,5 +1,5 @@
 if (place_meeting(x, y, obj_parryhitbox) || global.freezeframe)
-	return
+	exit
 
 with (other.id)
 {

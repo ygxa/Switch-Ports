@@ -5,7 +5,7 @@ for (var i = 0; i < ds_list_size(global.afterimage_list); i++)
 	with (b)
 	{
 		if (instance_exists(identity) && object_is_ancestor(identity.object_index, obj_parent_player) && (identity.isInSecretPortal || identity.isInLapPortal))
-			return
+			exit
 		
 		if (visible)
 		{

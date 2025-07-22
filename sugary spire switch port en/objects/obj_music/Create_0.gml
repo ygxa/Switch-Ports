@@ -35,7 +35,7 @@ addRoomMusic = function(arg0, arg1, arg2, arg3)
 }
 
 global.RoomMusicMap = ds_map_create()
-global.EscapeMusicInst = fmod_createEventInstance("event:/music/escape")
+global.EscapeMusicInst = mu_escape
 global.RankMusicInst = fmod_createEventInstance("event:/music/rank")
 global.HarryMusicInst = fmod_createEventInstance("event:/music/harry")
 global.RoomMusic = undefined
@@ -43,7 +43,7 @@ global.RoomIsSecret = false
 panicStart = false
 currentSecretStatus = false
 global.CurrentBeat = 0
-addRoomMusic(rm_mainmenu, "event:/music/titlescreen_demo", undefined, function(arg0, arg1, arg2)
+addRoomMusic(rm_mainmenu, mu_titlescreen, undefined, function(arg0, arg1, arg2)
 {
 	var event_state = 0
 	
@@ -86,7 +86,7 @@ addRoomMusic(steamy_1, mu_steamy, "event:/music/w1/cottontown_secret", function(
 	if (!is_undefined(event_state))
 		fmod_studio_event_instance_set_parameter_by_name(arg1, "state", event_state, true)
 })
-addRoomMusic(molasses_1, "event:/music/w2/molasses", "event:/music/w2/molasses_secret", function(arg0, arg1, arg2)
+addRoomMusic(molasses_1, mu_molasses, "event:/music/w2/molasses_secret", function(arg0, arg1, arg2)
 {
 	var event_state = undefined
 	
@@ -150,4 +150,5 @@ addRoomMusic(mountain_intro, "event:/music/w2/mountain", "event:/music/w2/mounta
 	if (!is_undefined(event_state))
 		fmod_studio_event_instance_set_parameter_by_name(arg1, "state", event_state, false)
 })
-addRoomMusic(cafe_1, "event:/music/w2/cafe", "event:/music/w2/cafe_secret", undefined)
+addRoomMusic(cafe_1, mu_cafe, "event:/music/w2/cafe_secret", undefined)
+addRoomMusic(mountain_1, mu_fudgetop, "event:/music/w2/cafe_secret", undefined)

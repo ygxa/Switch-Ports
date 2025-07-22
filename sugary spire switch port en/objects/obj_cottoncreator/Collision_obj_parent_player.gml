@@ -1,5 +1,5 @@
 if (global.freezeframe)
-	return
+	exit
 
 with (other)
 {
