@@ -1752,6 +1752,7 @@
     {"id":{"name":"spr_eyescreamsandwich_divestart","path":"sprites/spr_eyescreamsandwich_divestart/spr_eyescreamsandwich_divestart.yy",},"order":778,},
     {"id":{"name":"spr_sluggy_jumpstart","path":"sprites/spr_sluggy_jumpstart/spr_sluggy_jumpstart.yy",},"order":1625,},
     {"id":{"name":"obj_dialogue","path":"objects/obj_dialogue/obj_dialogue.yy",},"order":141,},
+    {"id":{"name":"spr_player_PZ_frostburn_jumpstart","path":"sprites/spr_player_PZ_frostburn_jumpstart/spr_player_PZ_frostburn_jumpstart.yy",},"order":1925,},
     {"id":{"name":"spr_player_PZ_minecart_fall","path":"sprites/spr_player_PZ_minecart_fall/spr_player_PZ_minecart_fall.yy",},"order":1411,},
     {"id":{"name":"spr_cottoncard_title","path":"sprites/spr_cottoncard_title/spr_cottoncard_title.yy",},"order":613,},
     {"id":{"name":"spr_player_PZ_mach2_longJump_intro","path":"sprites/spr_player_PZ_mach2_longJump_intro/spr_player_PZ_mach2_longJump_intro.yy",},"order":1385,},

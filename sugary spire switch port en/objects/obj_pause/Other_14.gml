@@ -3,7 +3,7 @@ pausecount = -1
 if (room != rank_room && !is_hub())
 {
 	global.gamePauseState = 0
-	fmod_event_setPause_all(false)
+	audio_resume_all()
 	scr_unpause_instances(true)
 	fmod_event_stop_all(true)
 	room_goto_fixed(rm_void)
@@ -25,7 +25,7 @@ if (room != rank_room && !is_hub())
 else if (is_hub())
 {
 	global.gamePauseState = 0
-	fmod_event_setPause_all(false)
+	audio_resume_all()
 	scr_unpause_instances(true)
 	fmod_event_stop_all(true)
 	

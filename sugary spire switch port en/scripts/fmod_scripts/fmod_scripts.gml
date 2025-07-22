@@ -131,7 +131,7 @@ function fmod_event_setPause_all(value){
 }
 
 function fmod_event_stop_all(value){
-	audio_stop_all()
+	//audio_stop_all()
 }
 
 function kill_sounds(sound){

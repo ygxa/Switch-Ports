@@ -4,7 +4,7 @@ if (global.freezeframe)
 if (!instance_exists(hookStopID))
 {
 	//show_debug_message(string("Hook ({0}) at ({1}, {2}) didn't find stop", id, x, y))
-	instance_destroy()
+	//instance_destroy()
 }
 
 switch (state)

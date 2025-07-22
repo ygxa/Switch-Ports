@@ -151,4 +151,4 @@ addRoomMusic(mountain_intro, "event:/music/w2/mountain", "event:/music/w2/mounta
 		fmod_studio_event_instance_set_parameter_by_name(arg1, "state", event_state, false)
 })
 addRoomMusic(cafe_1, mu_cafe, "event:/music/w2/cafe_secret", undefined)
-addRoomMusic(mountain_1, mu_fudgetop, "event:/music/w2/cafe_secret", undefined)
+addRoomMusic(mountain_intro, mu_fudgetop, "event:/music/w2/cafe_secret", undefined)
