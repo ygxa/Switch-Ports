@@ -55,7 +55,7 @@ with (textbubble)
 {
 	if (lv == "tutorial")
 	{
-		text = "FUCKKK IM SHITTINGGGGG FUCKCKKKK"
+		text = "GRAMAP GO BOOM"
 		image_xscale = -other.image_xscale
 	}
 	else
