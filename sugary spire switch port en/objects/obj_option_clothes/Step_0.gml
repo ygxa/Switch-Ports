@@ -20,9 +20,9 @@ if (optionSelection != old_selection)
 if (deleteFileBuffer >= deleteFileBufferMax)
 {
 	event_play_oneshot("event:/SFX/general/explosion", 480, 270)
-	ini_open("optionData.ini")
+	eas_ini_open("optionData.ini")
 	ini_section_delete("Palettes")
-	ini_close()
+	eas_ini_close()
 	
 	with (obj_option)
 		changedAnyOption = true
@@ -31,11 +31,11 @@ if (deleteFileBuffer >= deleteFileBufferMax)
 	
 	//for (var i = 0; i < 3; i++)
 	//{
-		//if (file_exists(save_path[i]))
+		//if (eas_file_exists(save_path[i]))
 		//{
-			//ini_open(save_path[i])
+			//eas_ini_open(save_path[i])
 			//ini_key_delete("Misc", string("playerPaletteIndex_" + scr_getCharacterPrefix(Characters.Pizzelle)))
-			//ini_close()
+			//eas_ini_close()
 			
 			//with (obj_mainfileselect)
 				//filePalette[i] = 2

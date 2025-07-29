@@ -10,9 +10,9 @@ for (var i = 0; i < array_length(fileSelectHeightRatio); i++)
 	if (jd != scr_judgment_get("none") && is_struct(jd) && struct_exists(jd, "properties"))
 		draw_sprite(fart, jd.properties.fileindex, 135 + (210 * i), 125 - (60 * fileSelectHeightRatio[i]))
 	else
-		draw_sprite(lang_get_sprite(spr_file_exhib), i + (3 * startedandstuff), 135 + (210 * i), 125 - (60 * fileSelectHeightRatio[i]))
+		draw_sprite(lang_get_sprite(spr_eas_file_exhib), i + (3 * startedandstuff), 135 + (210 * i), 125 - (60 * fileSelectHeightRatio[i]))
 	
-	var fuuck = "spr_file_exhibchoose" + string(selectedFile + 1)
+	var fuuck = "spr_eas_file_exhibchoose" + string(selectedFile + 1)
 	var thingmabob = asset_get_index(fuuck)
 	
 	if (activated)
@@ -24,7 +24,7 @@ for (var i = 0; i < array_length(fileSelectHeightRatio); i++)
 		draw_surface(fileDoodleSurf[i], fileDoodlePos[i][0], fileDoodlePos[i][1])
 	
 	shader_reset()
-	draw_sprite_ext(lang_get_sprite(spr_file_exhibframe), i, 135 + (210 * i), 125 - (60 * fileSelectHeightRatio[i]), 1, 1, 0, c_white, 1)
+	draw_sprite_ext(lang_get_sprite(spr_eas_file_exhibframe), i, 135 + (210 * i), 125 - (60 * fileSelectHeightRatio[i]), 1, 1, 0, c_white, 1)
 	
 	if (abletomove && !blockedInputs && !activated)
 	{

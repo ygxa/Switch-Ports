@@ -124,7 +124,7 @@ function sh_unlock(arg0)
 	if (type == "all" || type == "levels")
 	{
 		var levels = ["tutorial", "entryway", "steamy", "mineshaft", "molasses"]
-		ini_open(global.SaveFileName)
+		eas_ini_open(global.SaveFileName)
 		
 		for (var i = 0; i < array_length(levels); i++)
 		{
@@ -157,24 +157,24 @@ function sh_unlock(arg0)
 			ini_write_string("Ranks", string(int_level), "p")
 		}
 		
-		ini_close()
+		eas_ini_close()
 	}
 	
 	if (type == "all" || type == "clothes")
 	{
-		ini_open("optionData.ini")
+		eas_ini_open("optionData.ini")
 		var clothes_info = scr_get_palettes(false)
 		
 		for (var i = 0; i < array_length(clothes_info); i++)
 			ini_write_real("Palettes", clothes_info[i].taskKey, true)
 		
-		ini_close()
+		eas_ini_close()
 	}
 	
 	if (type == "all" || type == "achievements")
 	{
 		var levels = ["demoEN", "entryway", "steamy", "mineshaft", "molasses"]
-		ini_open(global.SaveFileName)
+		eas_ini_open(global.SaveFileName)
 		
 		for (var z = 0; z < array_length(levels); z++)
 		{
@@ -184,7 +184,7 @@ function sh_unlock(arg0)
 				ini_write_real("ChefTasks", cheftask_info[i].taskKey, true)
 		}
 		
-		ini_close()
+		eas_ini_close()
 	}
 }
 

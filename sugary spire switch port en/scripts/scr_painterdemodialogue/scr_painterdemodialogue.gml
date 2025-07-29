@@ -3,7 +3,7 @@ function scr_painterdemodialogue()
 	var secret_count = 0
 	var levels = ["entryway", "steamy", "mineshaft", "molasses"]
 	var molasses_secrets = 0
-	ini_open(global.SaveFileName)
+	eas_ini_open(global.SaveFileName)
 	
 	for (var i = 0; i < array_length(levels); i++)
 	{
@@ -17,7 +17,7 @@ function scr_painterdemodialogue()
 		}
 	}
 	
-	ini_close()
+	eas_ini_close()
 	var info_arr = []
 	talk_sound = "event:/SFX/hub/painterThink"
 	var dialogue_key

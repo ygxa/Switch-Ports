@@ -49,7 +49,7 @@ defineMusic("event:/music/Soundtest/glucosegetaway", "Sugar Rush", "RodMod, Cabl
 defineMusic("event:/music/Soundtest/sweetrelease", "Sweet Release of Death", "RodMod")
 defineMusic("event:/music/Soundtest/results", "Results!", "PaperKitty", "AWFUL Mix")
 defineMusic("event:/music/Soundtest/credits", "Toodle-oo!", "PaperKitty")
-ini_open(global.SaveFileName)
+eas_ini_open(global.SaveFileName)
 
 if (ini_read_string("Game", "Judgment", "none") != "none")
 	defineMusic("event:/music/Soundtest/painterBrain", "Painter's Brain", "Stewart Keller")
@@ -67,4 +67,4 @@ if (ini_read_string("Treasure", "mindpalace", "0") != "0")
 	defineMusic("event:/music/Soundtest/stinky", "What's that Smell? (Bonus)", "PaperKitty")
 }
 
-ini_close()
+eas_ini_close()

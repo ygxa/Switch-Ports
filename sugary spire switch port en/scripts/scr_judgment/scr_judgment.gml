@@ -1,7 +1,7 @@
 function scr_judgment_assign()
 {
 	var per = scr_completion_percent(global.SaveFileName)
-	ini_open(global.SaveFileName)
+	eas_ini_open(global.SaveFileName)
 	var j = "disappointing"
 	var judgement = ini_read_string("Game", "Judgment", "noone")
 	
@@ -20,7 +20,7 @@ function scr_judgment_assign()
 		j = "holyshit"
 	
 	ini_write_string("Game", "Judgment", j)
-	ini_close()
+	eas_ini_close()
 	//trace(string("Save File Judgment: {0}", j))
 	return scr_judgment_get(j);
 }
@@ -33,12 +33,12 @@ function scr_judgment_get(arg0)
 
 function scr_judgment_read(arg0)
 {
-	if (!file_exists(arg0))
+	if (!eas_file_exists(arg0))
 		return scr_judgment_get("none");
 	
-	ini_open(arg0)
+	eas_ini_open(arg0)
 	var p = ini_read_string("Game", "Judgment", "none")
-	ini_close()
+	eas_ini_close()
 	return scr_judgment_get(p);
 }
 

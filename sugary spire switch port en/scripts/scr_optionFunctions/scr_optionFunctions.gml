@@ -125,7 +125,7 @@ function update_option_format(arg0, arg1)
 
 function init_option()
 {
-	ini_open("optionData.ini")
+	eas_ini_open("optionData.ini")
 	global.fullscreen = ini_read_real("Settings", "fullscrn", 0)
 	global.selectedResolution = ini_read_real("Settings", "opt_resolution", 2)
 	global.Letterbox = ini_read_real("Settings", "letterbox", 0)
@@ -169,7 +169,7 @@ function init_option()
 		//update_option_format(cur_version, 1)
 	//}
 	
-	ini_close()
+	eas_ini_close()
 	scr_setinput_init()
 	scr_input_create()
 	//scr_lang_init()
@@ -187,14 +187,14 @@ function init_option()
 
 function quick_write_option(arg0, arg1, arg2)
 {
-	ini_open("optionData.ini")
+	eas_ini_open("optionData.ini")
 	
 	if (is_string(arg2))
 		ini_write_string(arg0, arg1, arg2)
 	else
 		ini_write_real(arg0, arg1, arg2)
 	
-	ini_close()
+	eas_ini_close()
 	
 	with (obj_option)
 		changedAnyOption = true

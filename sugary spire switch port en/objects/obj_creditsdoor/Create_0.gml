@@ -1,10 +1,10 @@
 DoorUnlock = false
-ini_open(global.SaveFileName)
+eas_ini_open(global.SaveFileName)
 var entrywayrank = ini_read_string("Ranks", "entryway", "none")
 var cottonrank = ini_read_string("Ranks", "steamy", "none")
 var moleassrank = ini_read_string("Ranks", "molasses", "none")
 var minesrank = ini_read_string("Ranks", "mines", "none")
-ini_close()
+eas_ini_close()
 DoorUnlock = entrywayrank != "none" && cottonrank != "none" && moleassrank != "none" && minesrank != "none"
 event_inherited()
 

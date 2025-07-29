@@ -30,7 +30,7 @@ function scr_resetinput()
 	deadzoneSettings[Deadzones.Press] = ["deadzonePress", 0.5]
 	deadzoneSettings[Deadzones.SJump] = ["deadzoneSJump", 0.8]
 	deadzoneSettings[Deadzones.Crouch] = ["deadzoneCrouch", 0.65]
-	ini_open("optionData.ini")
+	eas_ini_open("optionData.ini")
 	ini_section_delete("Control")
 	
 	for (var i = 0; i < array_length(deadzoneSettings); i++)
@@ -40,7 +40,7 @@ function scr_resetinput()
 		global.deadzones[i] = set[1]
 	}
 	
-	ini_close()
+	eas_ini_close()
 	scr_input_create()
 }
 
@@ -66,7 +66,7 @@ function scr_input_create()
 		}
 	}
 	
-	ini_open("optionData.ini")
+	eas_ini_open("optionData.ini")
 	scr_input_ini_read("up", false, [38])
 	scr_input_ini_read("down", false, [40])
 	scr_input_ini_read("left", false, [37])
@@ -107,7 +107,7 @@ function scr_input_create()
 	scr_input_ini_read("menuconfirmC", true, [gp_face1], true)
 	scr_input_ini_read("menubackC", true, [gp_face3, gp_face2], true)
 	scr_input_ini_read("menudeleteC", true, [gp_face4], true)
-	ini_close()
+	eas_ini_close()
 }
 
 function input_get(arg0)
@@ -151,9 +151,9 @@ function input_save(arg0)
 	}
 	
 	trace(string("Trace input_save: " + arg0.name + " = " + str))
-	ini_open("optionData.ini")
+	eas_ini_open("optionData.ini")
 	ini_write_string("Control", arg0.name, str)
-	ini_close()
+	eas_ini_close()
 }
 
 function scr_input_add(arg0, arg1)
@@ -185,14 +185,14 @@ function scr_input_ini_read(arg0, arg1, arg2, arg3 = false, arg4 = false)
 
 function scr_setinput_init()
 {
-	ini_open("optionData.ini")
+	eas_ini_open("optionData.ini")
 	global.deadzones[Deadzones.Master] = ini_read_real("Settings", "deadzoneMaster", 0.4)
 	global.deadzones[Deadzones.Vertical] = ini_read_real("Settings", "deadzoneVertical", 0.5)
 	global.deadzones[Deadzones.Horizontal] = ini_read_real("Settings", "deadzoneHorizontal", 0.5)
 	global.deadzones[Deadzones.Press] = ini_read_real("Settings", "deadzonePress", 0.5)
 	global.deadzones[Deadzones.SJump] = ini_read_real("Settings", "deadzoneSJump", 0.8)
 	global.deadzones[Deadzones.Crouch] = ini_read_real("Settings", "deadzoneCrouch", 0.65)
-	ini_close()
+	eas_ini_close()
 	//scr_input_init_sprites()
 }
 

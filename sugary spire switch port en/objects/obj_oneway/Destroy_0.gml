@@ -21,6 +21,6 @@ if (instance_exists(solidid))
 }
 
 
-ini_open(global.SaveFileName)
+eas_ini_open(global.SaveFileName)
 ini_write_string("PlantBlocks", "Block" + string(onewayRank), 1)
-ini_close()
+eas_ini_close()

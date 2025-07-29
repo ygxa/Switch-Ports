@@ -57,15 +57,15 @@ global.captionfont = font_tahoma
    // var fileArr = [];
    // var pattern = arg0 + "*" + arg1;  
 
-   // var file = file_find_first(pattern, 0);
+   // var file = eas_file_find_first(pattern, 0);
     
     //while (file != "")
    // {
     //    array_push(fileArr, file);
-     //   file = file_find_next();
+     //   file = eas_file_find_next();
     //}
     
-    //file_find_close();
+    //eas_file_find_close();
    // return fileArr;
 //}
 
@@ -106,7 +106,7 @@ function scr_lang_get_dictionary(arg0)
 	/*
 	var filePath = string_concat(working_directory, "lang/", arg0, "/", "Dictionary.json")
 	
-	//if (!file_exists(filePath))
+	//if (!eas_file_exists(filePath))
 		return {};
 	
 	var b = buffer_load(filePath)
@@ -178,7 +178,7 @@ function scr_lang_dictionary_fonts_add(arg0, arg1)
 				{
 				    var f = path + "/" + file;
     
-				    //if (!file_exists(f))
+				    //if (!eas_file_exists(f))
 				    //{
 				        //trace("Unable to find lang font " + f);
 				       // global.langError = "Unable to find lang font " + f;
@@ -209,7 +209,7 @@ function scr_lang_dictionary_fonts_add(arg0, arg1)
 				    variable_struct_set(font_struct, nm, font);
 				}
 				
-				// (!file_exists(f))
+				// (!eas_file_exists(f))
 				//{
 				//	trace("Unable to find lang font" + f)
 				//	global.langError = "Unable to find lang font " + f
@@ -358,7 +358,7 @@ function scr_lang_dictionary_keys_add(arg0, arg1)
 			var map = struct_get(st, "map")
 			var f = path + nm + ".png", path, nm
 			
-			//if (!file_exists(f))
+			//if (!eas_file_exists(f))
 			//{
 			//	trace(string("Unable to find lang key " + f))
 			//	global.langError = "Unable to find lang key" + f
@@ -490,7 +490,7 @@ function scr_lang_sprite_add_array(arg0, arg1, arg2, arg3 = undefined, arg4 = un
 		{
 			continue
 		}
-		//else if (!file_exists(string(arg2 + "/" + nm + ".png")))
+		//else if (!eas_file_exists(string(arg2 + "/" + nm + ".png")))
 		//{
 			//fileCheck = false
 			//break
@@ -596,7 +596,7 @@ function scr_lang_sprite_add(arg0, arg1, arg2, arg3 = undefined, arg4 = undefine
 	var f = string(arg2 + "/" + arg1 + ".png")
 	var s = asset_get_index(arg0)
 	
-	if (!file_exists(f) || !sprite_exists(s))
+	if (!eas_file_exists(f) || !sprite_exists(s))
 	{
 		trace(string("Unable to find lang sprite " + f))
 		global.langError = string("Unable to find lang sprite " + f)
@@ -705,9 +705,9 @@ function scr_lang_init()
 		global.langDefault = {}
 	
 	scr_lang_initvals()
-	ini_open("optionData.ini")
+	eas_ini_open("optionData.ini")
 	global.langName = ini_read_string("Settings", "lang", "none")
-	ini_close()
+	eas_ini_close()
 	
 	if (global.langName == "none")
 	{

@@ -2,14 +2,14 @@ depth = 4
 alpha = 0
 savedIndex = global.PlayerPaletteIndex
 lockedPalettes = []
-ini_open("optionData.ini")
+eas_ini_open("optionData.ini")
 ini_write_real("Palettes", "Exhibition Duds", true)
 var locked_palettes = array_filter(scr_get_palettes(false), function(arg0, arg1)
 {
 	arg0.taskKey = 0
 	return !ini_read_real("Palettes", arg0.taskKey, false);
 })
-ini_close()
+eas_ini_close()
 script_UpArrow = -4
 
 for (var i = 0; i < array_length(locked_palettes); i++)

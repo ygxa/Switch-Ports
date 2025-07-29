@@ -1,3 +1,3 @@
-ini_open(global.SaveFileName)
+eas_ini_open(global.SaveFileName)
 ini_write_real("Game", "FUN", 0)
-ini_close()
+eas_ini_close()

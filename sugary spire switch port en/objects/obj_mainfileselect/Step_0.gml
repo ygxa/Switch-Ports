@@ -111,14 +111,14 @@ if (array_contains(saves_left, saves_sprite) || array_contains(saves_right, save
 	}
 }
 
-var play_emptyfile_sound = false
+var play_emptyeas_file_sound = false
 var _stepsDynamic, old_mouseX, old_mouseY
 
 if (abletomove && !blockedInputs && !activated)
 {
 	if (!instance_exists(obj_option) && !instance_exists(obj_fileDeleter) && !instance_exists(obj_exitGame))
 	{
-		play_emptyfile_sound = !fileOpened[selectedFile]
+		play_emptyeas_file_sound = !fileOpened[selectedFile]
 		selectedFile += (key_right2 + key_left2)
 		
 		if (selectedFile < 0)
@@ -240,7 +240,7 @@ for (var i = 0; i < array_length(fileDoodleSurf); i++)
 	}
 }
 
-if (play_emptyfile_sound)
+if (play_emptyeas_file_sound)
 {
 	if (!event_instance_isplaying(sndEmpty))
 		fmod_studio_event_instance_start(sndEmpty)

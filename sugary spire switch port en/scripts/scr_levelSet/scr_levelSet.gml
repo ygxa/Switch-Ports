@@ -131,9 +131,9 @@ function scr_levelSet()
 		cameraLock = false
 	}
 	
-	ini_open(global.SaveFileName)
+	eas_ini_open(global.SaveFileName)
 	var pre_check = ini_read_string("Game", "Judgment", "none") == "none" && scr_check_completion()
-	ini_close()
+	eas_ini_close()
 	
 	with (obj_parent_player)
 	{

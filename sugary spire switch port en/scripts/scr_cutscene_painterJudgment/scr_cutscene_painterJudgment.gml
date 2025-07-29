@@ -51,12 +51,12 @@ function cutscene_judgment_start()
 		{
 			givenJudgment = scr_judgment_assign()
 			var d = array_clone(givenJudgment.properties.dialog)
-			ini_open(global.SaveFileName)
+			eas_ini_open(global.SaveFileName)
 			
 			if (ini_read_real("Treasure", "mindpalace", 0) > 0)
 				array_push(d, lang_get("judgmentinfo_additional"))
 			
-			ini_close()
+			eas_ini_close()
 			
 			//for (var i = 0; i < array_length(d); i++)
 			//{
@@ -145,9 +145,9 @@ function cutscene_judgment_end()
 function cutscene_mindpalacedoor_prestart()
 {
 	var _seenCutscene = false
-	ini_open(global.SaveFileName)
+	eas_ini_open(global.SaveFileName)
 	_seenCutscene = ini_read_real("Game", "mindpalace_door_cutscene", false)
-	ini_close()
+	eas_ini_close()
 	
 	if (_seenCutscene)
 	{
@@ -231,8 +231,8 @@ function cutscene_mindpalacedoor_end()
 	with (obj_door)
 		visible = true
 	
-	ini_open(global.SaveFileName)
+	eas_ini_open(global.SaveFileName)
 	ini_write_real("Game", "mindpalace_door_cutscene", true)
-	ini_close()
+	eas_ini_close()
 	cutscene_event_end()
 }

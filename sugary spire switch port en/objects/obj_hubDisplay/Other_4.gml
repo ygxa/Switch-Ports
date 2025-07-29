@@ -28,7 +28,7 @@ e.properties =
 }
 var realLevels = ["entryway", "steamy", "mineshaft", "molasses"]
 var p = e.properties
-ini_open(global.SaveFileName)
+eas_ini_open(global.SaveFileName)
 
 for (var i = 0; i < array_length(realLevels); i++)
 {
@@ -61,8 +61,8 @@ for (var i = 0; i < array_length(taskedAreas); i++)
 	}
 }
 
-ini_close()
-ini_open("optionData.ini")
+eas_ini_close()
+eas_ini_open("optionData.ini")
 var pal = scr_get_palettes(false)
 
 for (var i = 0; i < array_length(pal); i++)
@@ -71,6 +71,6 @@ for (var i = 0; i < array_length(pal); i++)
 	p.palMax++
 }
 
-ini_close()
+eas_ini_close()
 array_push(pg.contentArr, e)
 lastPage = array_length(displayPages) - 1

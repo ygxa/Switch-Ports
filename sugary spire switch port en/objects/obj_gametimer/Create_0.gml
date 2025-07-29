@@ -72,11 +72,11 @@ livesplitInit = function()
 
 saveTime = function(arg0 = global.SaveFileName)
 {
-	ini_open(arg0)
+	eas_ini_open(arg0)
 	ini_write_real("Game", "frames", global.SaveFrames)
 	ini_write_real("Game", "seconds", global.SaveSeconds)
 	ini_write_real("Game", "minutes", global.SaveMinutes)
-	ini_close()
+	eas_ini_close()
 }
 
 makeString = function(arg0, arg1, arg2)

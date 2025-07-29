@@ -9,12 +9,12 @@ with (instance_place(x, y, obj_parent_doortrigger))
 	other.targetDoor = id_door
 
 image_alpha = 0.5
-ini_open(global.SaveFileName)
+eas_ini_open(global.SaveFileName)
 
 if (ini_read_string("Ranks", string(global.InternalLevelName), "none") == "none" && !ini_read_real("Misc", "lapunlockall", false))
 	sprite_index = spr_lappingportal_inactive
 
-ini_close()
+eas_ini_close()
 
 if (global.panic && sprite_index != spr_lappingportal_inactive)
 {

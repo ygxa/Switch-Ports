@@ -1,4 +1,4 @@
-ini_open(global.SaveFileName)
+eas_ini_open(global.SaveFileName)
 rank = ini_read_string("Ranks", level, "none")
 var _rank = rank
 highscore = ini_read_string("Highscore", level, "0")
@@ -77,4 +77,4 @@ with (gateRankBubble)
 	}
 }
 
-ini_close()
+eas_ini_close()

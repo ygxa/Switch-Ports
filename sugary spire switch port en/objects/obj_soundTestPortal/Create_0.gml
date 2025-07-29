@@ -1,6 +1,6 @@
 event_inherited()
 secretActivated = true
-ini_open(global.SaveFileName)
+eas_ini_open(global.SaveFileName)
 var level_array = ["entryway", "steamy", "mineshaft", "molasses"]
 
 for (var i = 0; i < array_length(level_array); i++)
@@ -26,4 +26,4 @@ if (secretActivated && ini_read_string("Treasure", "mindpalace", "0") == "1" && 
 	ini_write_real("Game", "mixtape_prompt", true)
 }
 
-ini_close()
+eas_ini_close()

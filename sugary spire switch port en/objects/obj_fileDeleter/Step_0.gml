@@ -18,7 +18,7 @@ if (deleteFileBuffer >= deleteFileBufferMax)
 	
 	with (obj_mainfileselect)
 	{
-		//file_delete(savePath[other.selectedFile])
+		//eas_file_delete(savePath[other.selectedFile])
 		fileOpened[other.selectedFile] = false
 		filePalette[other.selectedFile] = 2
 		filePresent[other.selectedFile] = false

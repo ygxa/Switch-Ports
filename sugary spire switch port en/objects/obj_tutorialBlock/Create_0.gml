@@ -1,5 +1,5 @@
 shakealil = 0
-ini_open(global.SaveFileName)
+eas_ini_open(global.SaveFileName)
 
 if (ini_read_string("Misc", "TutorialBlock", "0") != "0")
 {
@@ -11,5 +11,5 @@ else if (ini_read_string("Ranks", "tutorial", "none") != "none")
 	alarm[0] = 80
 }
 
-ini_close()
+eas_ini_close()
 depth = 4

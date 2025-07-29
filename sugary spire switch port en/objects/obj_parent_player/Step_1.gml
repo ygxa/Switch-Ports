@@ -45,7 +45,7 @@ scr_setTransfoTip(_state)
 if (oldPromptText != global.TransfoPrompt)
 {
 	oldPromptText = global.TransfoPrompt
-	ini_open(global.SaveFileName)
+	eas_ini_open(global.SaveFileName)
 	var _seen_prompt = ini_read_real("Tip", global.TransfoPrompt, false)
 	
 	if (global.TransfoPrompt != "" && !_seen_prompt)
@@ -54,7 +54,7 @@ if (oldPromptText != global.TransfoPrompt)
 		ini_write_real("Tip", global.TransfoPrompt, true)
 	}
 	
-	ini_close()
+	eas_ini_close()
 }
 
 scr_playersounds()

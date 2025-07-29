@@ -1,8 +1,8 @@
 function scr_completion_percent(arg0)
 {
-	if (file_exists(arg0))
+	if (eas_file_exists(arg0))
 	{
-		ini_open(arg0)
+		eas_ini_open(arg0)
 		var levels = ["entryway", "steamy", "mineshaft", "molasses"]
 		var ranks = ["d", "c", "b", "a", "s"]
 		var levels_count = 0
@@ -52,7 +52,7 @@ function scr_completion_percent(arg0)
 			}
 		}
 		
-		ini_close()
+		eas_ini_close()
 		var completion = 0
 		completion += (1 * completed_tutorial)
 		completion += ((9 * levels_count) / 4)
@@ -93,7 +93,7 @@ function scr_check_completion(arg0 = global.SaveFileName)
 {
 	var levels = ["entryway", "steamy", "mineshaft", "molasses"]
 	var count = 0
-	ini_open(arg0)
+	eas_ini_open(arg0)
 	
 	for (var i = 0; i < array_length(levels); i++)
 	{
@@ -103,6 +103,6 @@ function scr_check_completion(arg0 = global.SaveFileName)
 			count++
 	}
 	
-	ini_close()
+	eas_ini_close()
 	return count >= array_length(levels);
 }

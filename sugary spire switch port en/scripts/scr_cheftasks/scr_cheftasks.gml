@@ -28,7 +28,7 @@ function ExhibitionNightSecretTask(arg0, arg1, arg2) : OutfitTask(arg0, arg1, Co
 	{
 		var _levels = ["entryway", "steamy", "mineshaft", "molasses"]
 		var _secrets = 0
-		ini_open(global.SaveFileName)
+		eas_ini_open(global.SaveFileName)
 		
 		for (var i = 0; i < array_length(_levels); i++)
 		{
@@ -38,23 +38,23 @@ function ExhibitionNightSecretTask(arg0, arg1, arg2) : OutfitTask(arg0, arg1, Co
 				
 				if (_secrets >= neededSecrets)
 				{
-					ini_close()
+					eas_ini_close()
 					return true;
 				}
 			}
 		}
 		
-		ini_close()
+		eas_ini_close()
 		return false;
 	}
 }
 
 function scr_award_chef_task(arg0, arg1, arg2)
 {
-	ini_open(global.SaveFileName)
+	eas_ini_open(global.SaveFileName)
 	var prevUnlocked = ini_read_real("ChefTasks", arg0, false)
 	ini_write_real("ChefTasks", arg0, 1)
-	ini_close()
+	eas_ini_close()
 	obj_hudManager.saveAlpha = 10
 	
 	if (!prevUnlocked)
@@ -65,10 +65,10 @@ function scr_award_chef_task(arg0, arg1, arg2)
 
 function scr_award_palette(arg0, arg1)
 {
-	ini_open("optionData.ini")
+	eas_ini_open("optionData.ini")
 	var prevUnlocked = ini_read_real("Palettes", arg0, false)
 	ini_write_real("Palettes", arg0, 1)
-	ini_close()
+	eas_ini_close()
 	obj_hudManager.saveAlpha = 10
 	
 	if (!prevUnlocked)
@@ -177,15 +177,15 @@ function scr_get_palettes(arg0 = true)
 {
 	var pals = [new ExhibitionNightSecretTask("palette_PZ_exhibitionred", Characters.Pizzelle, 3), new ExhibitionNightSecretTask("palette_PZ_exhibitionblack", Characters.Pizzelle, 6), new ExhibitionNightSecretTask("palette_PZ_exhibitionpurple", Characters.Pizzelle, 9), new ExhibitionNightSecretTask("palette_PZ_noise", Characters.Pizzelle, 12), new OutfitTask("palette_PZ_exhibitionbrain", Characters.Pizzelle, ConditionType.OnCheck, function()
 	{
-		ini_open(global.SaveFileName)
+		eas_ini_open(global.SaveFileName)
 		var judge = ini_read_string("Game", "Judgment", "none")
-		ini_close()
+		eas_ini_close()
 		return judge != "none";
 	}), new OutfitTask("palette_PZ_exhibitionbraingold", Characters.Pizzelle, ConditionType.OnCheck, function()
 	{
-		ini_open(global.SaveFileName)
+		eas_ini_open(global.SaveFileName)
 		var judge = ini_read_string("Game", "Judgment", "none")
-		ini_close()
+		eas_ini_close()
 		return judge == "perfect" || judge == "holyshit";
 	}), new OutfitTask("palette_PZ_exhibitionpaper", Characters.Pizzelle, ConditionType.InLevel, function()
 	{
@@ -238,13 +238,13 @@ function scr_get_palettes(arg0 = true)
 	
 	if (arg0)
 	{
-		ini_open("optionData.ini")
+		eas_ini_open("optionData.ini")
 		var _palettes = array_filter(pals, function(arg0, arg1)
 		{
 			arg0.taskKey = 0
 			return !ini_read_real("Palettes", arg0.taskKey, false);
 		})
-		ini_close()
+		eas_ini_close()
 		obj_achievementTracker.activeExhibitionNightSecretTasks = _palettes
 	}
 	
@@ -451,7 +451,7 @@ function scr_get_chef_tasks(arg0, arg1 = true)
 			{
 				var lvlArr = ["entryway", "steamy", "mineshaft", "molasses"]
 				var res = true
-				ini_open(global.SaveFileName)
+				eas_ini_open(global.SaveFileName)
 				
 				for (var i = 0; i < array_length(lvlArr); i++)
 				{
@@ -465,14 +465,14 @@ function scr_get_chef_tasks(arg0, arg1 = true)
 					}
 				}
 				
-				ini_close()
+				eas_ini_close()
 				return res;
 			}).setPersistent(true)
 			tasks[1] = new ChefTask("task_en_all_p", ConditionType.EndLevel, spr_bakertasks_en_ranks, 1, function()
 			{
 				var lvlArr = ["entryway", "steamy", "mineshaft", "molasses"]
 				var res = true
-				ini_open(global.SaveFileName)
+				eas_ini_open(global.SaveFileName)
 				
 				for (var i = 0; i < array_length(lvlArr); i++)
 				{
@@ -486,7 +486,7 @@ function scr_get_chef_tasks(arg0, arg1 = true)
 					}
 				}
 				
-				ini_close()
+				eas_ini_close()
 				return res;
 			}).setPersistent(true)
 			break
@@ -494,7 +494,7 @@ function scr_get_chef_tasks(arg0, arg1 = true)
 	
 	if (arg1)
 	{
-		ini_open(global.SaveFileName)
+		eas_ini_open(global.SaveFileName)
 		
 		for (var i = 0; i < array_length(tasks); i++)
 		{
@@ -507,7 +507,7 @@ function scr_get_chef_tasks(arg0, arg1 = true)
 			}
 		}
 		
-		ini_close()
+		eas_ini_close()
 	}
 	
 	return tasks;
