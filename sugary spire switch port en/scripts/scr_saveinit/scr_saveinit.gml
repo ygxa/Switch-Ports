@@ -26,7 +26,7 @@ function scr_saveinit()
 	}
 	
 	eas_ini_close()
-	
+	//eas_save(scr_easyasync_callback)
 	with (obj_achievementTracker)
 		event_user(0)
 }

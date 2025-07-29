@@ -78,3 +78,4 @@ with (gateRankBubble)
 }
 
 eas_ini_close()
+//eas_save(scr_easyasync_callback)

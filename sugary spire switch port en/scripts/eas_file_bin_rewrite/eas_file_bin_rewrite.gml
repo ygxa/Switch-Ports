@@ -1,7 +1,7 @@
 /// @description eas_file_bin_rewrite(binfile)
 /// @param binfile
 function eas_file_bin_rewrite(argument0) {
-	if (!global.EAS_needasync) return eas_file_bin_rewrite(argument0);
+	if (!global.EAS_needasync) return file_bin_rewrite(argument0);
 
 	if (!eas_bin_is_write(argument0)) eas_error("FILE IS NOT OPENED FOR WRITING.");
 

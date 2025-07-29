@@ -1,7 +1,7 @@
 /// @description eas_file_text_open_read(fname)
 /// @param fname
 function eas_file_text_open_read(argument0) {
-	if (!global.EAS_needasync) return eas_file_text_open_read(argument0);
+	if (!global.EAS_needasync) return file_text_open_read(argument0);
 
 	var _fname = eas_safe_path(argument0);
 

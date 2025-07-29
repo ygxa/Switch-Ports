@@ -12,4 +12,5 @@ else if (ini_read_string("Ranks", "tutorial", "none") != "none")
 }
 
 eas_ini_close()
+//eas_save(scr_easyasync_callback)
 depth = 4

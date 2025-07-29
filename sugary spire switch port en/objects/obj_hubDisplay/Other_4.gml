@@ -62,6 +62,7 @@ for (var i = 0; i < array_length(taskedAreas); i++)
 }
 
 eas_ini_close()
+//eas_save(scr_easyasync_callback)
 eas_ini_open("optionData.ini")
 var pal = scr_get_palettes(false)
 
@@ -72,5 +73,6 @@ for (var i = 0; i < array_length(pal); i++)
 }
 
 eas_ini_close()
+//eas_save(scr_easyasync_callback)
 array_push(pg.contentArr, e)
 lastPage = array_length(displayPages) - 1

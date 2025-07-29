@@ -18,6 +18,7 @@ function scr_painterdemodialogue()
 	}
 	
 	eas_ini_close()
+	//eas_save(scr_easyasync_callback)
 	var info_arr = []
 	talk_sound = "event:/SFX/hub/painterThink"
 	var dialogue_key

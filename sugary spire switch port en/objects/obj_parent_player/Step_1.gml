@@ -55,6 +55,7 @@ if (oldPromptText != global.TransfoPrompt)
 	}
 	
 	eas_ini_close()
+	//eas_save(scr_easyasync_callback)
 }
 
 scr_playersounds()

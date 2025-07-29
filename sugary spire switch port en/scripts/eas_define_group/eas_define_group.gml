@@ -1,10 +1,10 @@
 /// @description eas_define_group()
 function eas_define_group() {
-	//Used in eas_save and eas_load to define a buffer group.
+	//Used in //eas_save and eas_load to define a buffer group.
 
 	buffer_async_group_begin(global.EAS_foldername);
 	buffer_async_group_option("showdialog", global.EAS_showdialog);
-	buffer_async_group_option("savepadindex", global.EAS_savepadindex);
+	buffer_async_group_option("savepadindex", global.eas_savepadindex);
 	buffer_async_group_option("slottitle", global.EAS_slottitle);
 	buffer_async_group_option("subtitle", global.EAS_subtitle);
 

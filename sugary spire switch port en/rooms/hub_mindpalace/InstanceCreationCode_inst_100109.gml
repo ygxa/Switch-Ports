@@ -2,7 +2,7 @@ flags.do_once = false
 eas_ini_open(global.SaveFileName)
 flags.saved_info = ini_read_string("Game", "Judgment", "none")
 eas_ini_close()
-
+//eas_save(scr_easyasync_callback)
 condition = function()
 {
 	return place_meeting(x, y, obj_parent_player) && flags.saved_info != "cutscene";

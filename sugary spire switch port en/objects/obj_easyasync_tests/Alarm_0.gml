@@ -48,6 +48,6 @@ eas_file_bin_close(f);
 arr = undefined;
 
 show_debug_message("Tests done!");
-eas_save(scr_easyasync_callback); // this will call scr_easyasync_callback script when saving finished.
+//eas_save(scr_easyasync_callback); // this will call scr_easyasync_callback script when saving finished.
 instance_destroy();
 

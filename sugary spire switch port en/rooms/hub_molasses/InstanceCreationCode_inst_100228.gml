@@ -10,3 +10,4 @@ if (ini_read_string("Game", "Judgment", "none") != "none")
 	instance_destroy()
 
 eas_ini_close()
+//eas_save(scr_easyasync_callback)

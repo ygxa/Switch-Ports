@@ -158,6 +158,7 @@ function sh_unlock(arg0)
 		}
 		
 		eas_ini_close()
+		//eas_save(scr_easyasync_callback)
 	}
 	
 	if (type == "all" || type == "clothes")
@@ -169,6 +170,7 @@ function sh_unlock(arg0)
 			ini_write_real("Palettes", clothes_info[i].taskKey, true)
 		
 		eas_ini_close()
+		//eas_save(scr_easyasync_callback)
 	}
 	
 	if (type == "all" || type == "achievements")
@@ -185,6 +187,7 @@ function sh_unlock(arg0)
 		}
 		
 		eas_ini_close()
+		//eas_save(scr_easyasync_callback)
 	}
 }
 

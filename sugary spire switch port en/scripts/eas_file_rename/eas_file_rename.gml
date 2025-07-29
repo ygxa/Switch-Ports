@@ -2,7 +2,7 @@
 /// @param filename
 /// @param  new_filename
 function eas_file_rename(argument0, argument1) {
-	if (!global.EAS_needasync) return eas_file_rename(argument0, argument1);
+	if (!global.EAS_needasync) return file_rename(argument0, argument1);
 
 	if (!eas_file_exists(argument0) || eas_file_exists(argument1)) return false;
 	else

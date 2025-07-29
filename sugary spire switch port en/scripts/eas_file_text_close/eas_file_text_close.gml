@@ -1,7 +1,7 @@
 /// @description eas_file_text_close(handle)
 /// @param handle
 function eas_file_text_close(argument0) {
-	if (!global.EAS_needasync) return eas_file_text_close(argument0);
+	if (!global.EAS_needasync) return file_text_close(argument0);
 
 	if (eas_file_is_read(argument0))
 	{

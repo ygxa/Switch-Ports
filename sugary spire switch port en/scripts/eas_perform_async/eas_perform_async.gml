@@ -53,7 +53,7 @@ function eas_perform_async() {
 	            switch_save_data_commit(); // uncomment me if you're using this extension in GMS2!!!
 	            // ^ uncomment the line above in GMS2!!!
 	            if (script_exists(global.EAS_callbackscript)) script_execute(global.EAS_callbackscript, _ident, _err);
-	            else eas_log("MSG: Invalid script or it was not passed to eas_save() (it's not an error or a warning!)");
+	            else eas_log("MSG: Invalid script or it was not passed to //eas_save() (it's not an error or a warning!)");
             
 	            global.EAS_state = EASYASYNC_STATE.IDLE;
 	            eas_log("Save event OK");

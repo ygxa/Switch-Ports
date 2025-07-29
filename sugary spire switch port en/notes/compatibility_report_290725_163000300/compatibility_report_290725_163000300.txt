@@ -1,8 +1,8 @@
 Converting GML script: ${project_dir}\scripts\eas_init\eas_init.gml
 Converted description /// @description eas_init()
 
-Converting GML script: ${project_dir}\scripts\eas_save\eas_save.gml
-Converted description /// @description eas_save([callback])/// @param [callback]
+Converting GML script: ${project_dir}\scripts\//eas_save\//eas_save.gml
+Converted description /// @description //eas_save([callback])/// @param [callback]
 
 Converting GML script: ${project_dir}\scripts\eas_load\eas_load.gml
 Converted description /// @description eas_load([callback])/// @param [callback]

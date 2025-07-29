@@ -4,7 +4,7 @@ function eas_ini_open(argument0) {
 
 	if (!global.EAS_needasync)
 	{
-	    eas_ini_open(argument0); // eas_ini_open returns nothing (void), YYC fix.
+	    ini_open(argument0); // eas_ini_open returns nothing (void), YYC fix.
 	    return 0;
 	}
 
@@ -22,7 +22,7 @@ function eas_ini_open(argument0) {
 	    else
 	        global.EAS_inidata = ds_map_find_value(global.EAS_map, global.EAS_ininame); // the ini already exists.
         
-	    eas_ini_open_from_string(global.EAS_inidata);
+	    ini_open_from_string(global.EAS_inidata);
 	    eas_log("Opened INI " + global.EAS_ininame);
 	}
 

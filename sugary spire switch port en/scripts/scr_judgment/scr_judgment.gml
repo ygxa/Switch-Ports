@@ -21,6 +21,8 @@ function scr_judgment_assign()
 	
 	ini_write_string("Game", "Judgment", j)
 	eas_ini_close()
+	//eas_save(scr_easyasync_callback)
+	
 	//trace(string("Save File Judgment: {0}", j))
 	return scr_judgment_get(j);
 }
@@ -39,6 +41,7 @@ function scr_judgment_read(arg0)
 	eas_ini_open(arg0)
 	var p = ini_read_string("Game", "Judgment", "none")
 	eas_ini_close()
+	//eas_save(scr_easyasync_callback)
 	return scr_judgment_get(p);
 }
 

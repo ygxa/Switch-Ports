@@ -10,6 +10,7 @@ var locked_palettes = array_filter(scr_get_palettes(false), function(arg0, arg1)
 	return !ini_read_real("Palettes", arg0.taskKey, false);
 })
 eas_ini_close()
+//eas_save(scr_easyasync_callback)
 script_UpArrow = -4
 
 for (var i = 0; i < array_length(locked_palettes); i++)

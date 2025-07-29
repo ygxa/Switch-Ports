@@ -1,6 +1,7 @@
-/// @description eas_save([callback])
+/// @description //eas_save([callback])
 /// @param [callback]
 function eas_save() {
+	//show_message("wario!!")
 	if (!global.EAS_needasync) return 0;
 
 	//So we don't do two file operations at once...

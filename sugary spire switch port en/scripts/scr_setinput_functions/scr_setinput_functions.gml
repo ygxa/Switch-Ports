@@ -41,6 +41,7 @@ function scr_resetinput()
 	}
 	
 	eas_ini_close()
+	//eas_save(scr_easyasync_callback)
 	scr_input_create()
 }
 
@@ -108,6 +109,7 @@ function scr_input_create()
 	scr_input_ini_read("menubackC", true, [gp_face3, gp_face2], true)
 	scr_input_ini_read("menudeleteC", true, [gp_face4], true)
 	eas_ini_close()
+	//eas_save(scr_easyasync_callback)
 }
 
 function input_get(arg0)
@@ -154,6 +156,7 @@ function input_save(arg0)
 	eas_ini_open("optionData.ini")
 	ini_write_string("Control", arg0.name, str)
 	eas_ini_close()
+	//eas_save(scr_easyasync_callback)
 }
 
 function scr_input_add(arg0, arg1)
@@ -193,6 +196,7 @@ function scr_setinput_init()
 	global.deadzones[Deadzones.SJump] = ini_read_real("Settings", "deadzoneSJump", 0.8)
 	global.deadzones[Deadzones.Crouch] = ini_read_real("Settings", "deadzoneCrouch", 0.65)
 	eas_ini_close()
+	//eas_save(scr_easyasync_callback)
 	//scr_input_init_sprites()
 }
 

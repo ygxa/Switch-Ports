@@ -5,6 +5,7 @@ collectedTreasure = false
 eas_ini_open(global.SaveFileName)
 collectedTreasure = ini_read_string("Treasure", level, 0) != "0"
 eas_ini_close()
+//eas_save(scr_easyasync_callback)
 treasureSprite = spr_treasure_entryway
 var sprite_name = string("spr_treasure_" + level)
 var asset_index = asset_get_index(sprite_name)

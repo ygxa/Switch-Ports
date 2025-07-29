@@ -27,3 +27,4 @@ if (secretActivated && ini_read_string("Treasure", "mindpalace", "0") == "1" && 
 }
 
 eas_ini_close()
+//eas_save(scr_easyasync_callback)

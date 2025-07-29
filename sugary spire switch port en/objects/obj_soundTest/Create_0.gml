@@ -68,3 +68,4 @@ if (ini_read_string("Treasure", "mindpalace", "0") != "0")
 }
 
 eas_ini_close()
+//eas_save(scr_easyasync_callback)

@@ -15,6 +15,7 @@ if (ini_read_string("Ranks", string(global.InternalLevelName), "none") == "none"
 	sprite_index = spr_lappingportal_inactive
 
 eas_ini_close()
+//eas_save(scr_easyasync_callback)
 
 if (global.panic && sprite_index != spr_lappingportal_inactive)
 {

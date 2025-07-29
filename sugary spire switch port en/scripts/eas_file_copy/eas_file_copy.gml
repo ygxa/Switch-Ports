@@ -2,7 +2,7 @@
 /// @param filename
 /// @param  new_filename
 function eas_file_copy(argument0, argument1) {
-	if (!global.EAS_needasync) return eas_file_copy(argument0, argument1);
+	if (!global.EAS_needasync) return file_copy(argument0, argument1);
 
 	if (!eas_file_exists(argument0)) return false;
 	else

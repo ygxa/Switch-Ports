@@ -708,6 +708,7 @@ function scr_lang_init()
 	eas_ini_open("optionData.ini")
 	global.langName = ini_read_string("Settings", "lang", "none")
 	eas_ini_close()
+	//eas_save(scr_easyasync_callback)
 	
 	if (global.langName == "none")
 	{

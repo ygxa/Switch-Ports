@@ -13,7 +13,7 @@ function eas_init() {
 	global.EAS_slottitle = "EasyAsyncSavefile"; // Slot title. (CAN'T CONTAIN SPACES ON PLAYSTATION 4!)
 	global.EAS_subtitle = "EasyAsync Savefile"; // Sub title in Console UI.
 	global.EAS_showdialog = false; // Show slot selection dialog? (only valid for PlayStation?)
-	global.EAS_savepadindex = 0; // Force writing to slot 0. (Although you can write to slot 1, 2, 3 just fine,
+	global.eas_savepadindex = 0; // Force writing to slot 0. (Although you can write to slot 1, 2, 3 just fine,
 	//but it's recommended to enable EAS_showdialog if you want to write to a slot that's not 0)
 	global.EAS_foldername = "EasyAsyncFolder";
 	//(only valid for PC) name of the folder where files will be saved to. (example: %LOCALAPPDATA%\{project_name}\{EAS_foldername}\{EAS_filename})
@@ -45,8 +45,4 @@ function eas_init() {
 
 	//If this message appears then all went fine.
 	eas_log("EasyAsync version 2.2 initialized!");
-	
-	global.EAS_needasync = true
-
-
 }

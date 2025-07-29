@@ -12,3 +12,4 @@ if (ini_read_string("Game", "Judgment", "none") != "none")
 	sprite_index = spr_door_mindpalace2
 
 eas_ini_close()
+//eas_save(scr_easyasync_callback)

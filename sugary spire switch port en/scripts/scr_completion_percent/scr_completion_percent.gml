@@ -53,6 +53,7 @@ function scr_completion_percent(arg0)
 		}
 		
 		eas_ini_close()
+		//eas_save(scr_easyasync_callback)
 		var completion = 0
 		completion += (1 * completed_tutorial)
 		completion += ((9 * levels_count) / 4)
@@ -104,5 +105,6 @@ function scr_check_completion(arg0 = global.SaveFileName)
 	}
 	
 	eas_ini_close()
+	//eas_save(scr_easyasync_callback)
 	return count >= array_length(levels);
 }

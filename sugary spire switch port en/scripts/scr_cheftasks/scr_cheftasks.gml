@@ -39,12 +39,14 @@ function ExhibitionNightSecretTask(arg0, arg1, arg2) : OutfitTask(arg0, arg1, Co
 				if (_secrets >= neededSecrets)
 				{
 					eas_ini_close()
+					//eas_save(scr_easyasync_callback)
 					return true;
 				}
 			}
 		}
 		
 		eas_ini_close()
+		//eas_save(scr_easyasync_callback)
 		return false;
 	}
 }
@@ -55,6 +57,7 @@ function scr_award_chef_task(arg0, arg1, arg2)
 	var prevUnlocked = ini_read_real("ChefTasks", arg0, false)
 	ini_write_real("ChefTasks", arg0, 1)
 	eas_ini_close()
+	//eas_save(scr_easyasync_callback)
 	obj_hudManager.saveAlpha = 10
 	
 	if (!prevUnlocked)
@@ -180,12 +183,14 @@ function scr_get_palettes(arg0 = true)
 		eas_ini_open(global.SaveFileName)
 		var judge = ini_read_string("Game", "Judgment", "none")
 		eas_ini_close()
+		//eas_save(scr_easyasync_callback)
 		return judge != "none";
 	}), new OutfitTask("palette_PZ_exhibitionbraingold", Characters.Pizzelle, ConditionType.OnCheck, function()
 	{
 		eas_ini_open(global.SaveFileName)
 		var judge = ini_read_string("Game", "Judgment", "none")
 		eas_ini_close()
+		//eas_save(scr_easyasync_callback)
 		return judge == "perfect" || judge == "holyshit";
 	}), new OutfitTask("palette_PZ_exhibitionpaper", Characters.Pizzelle, ConditionType.InLevel, function()
 	{
@@ -245,6 +250,7 @@ function scr_get_palettes(arg0 = true)
 			return !ini_read_real("Palettes", arg0.taskKey, false);
 		})
 		eas_ini_close()
+		//eas_save(scr_easyasync_callback)
 		obj_achievementTracker.activeExhibitionNightSecretTasks = _palettes
 	}
 	
@@ -466,6 +472,7 @@ function scr_get_chef_tasks(arg0, arg1 = true)
 				}
 				
 				eas_ini_close()
+				//eas_save(scr_easyasync_callback)
 				return res;
 			}).setPersistent(true)
 			tasks[1] = new ChefTask("task_en_all_p", ConditionType.EndLevel, spr_bakertasks_en_ranks, 1, function()
@@ -487,6 +494,7 @@ function scr_get_chef_tasks(arg0, arg1 = true)
 				}
 				
 				eas_ini_close()
+				//eas_save(scr_easyasync_callback)
 				return res;
 			}).setPersistent(true)
 			break
@@ -508,6 +516,7 @@ function scr_get_chef_tasks(arg0, arg1 = true)
 		}
 		
 		eas_ini_close()
+		//eas_save(scr_easyasync_callback)
 	}
 	
 	return tasks;

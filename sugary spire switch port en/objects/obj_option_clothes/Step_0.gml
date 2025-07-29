@@ -23,24 +23,25 @@ if (deleteFileBuffer >= deleteFileBufferMax)
 	eas_ini_open("optionData.ini")
 	ini_section_delete("Palettes")
 	eas_ini_close()
-	
+	//eas_save(scr_easyasync_callback)
 	with (obj_option)
 		changedAnyOption = true
 	
 	var save_path = ["saveData1_EN.ini", "saveData2_EN.ini", "saveData3_EN.ini"]
 	
-	//for (var i = 0; i < 3; i++)
-	//{
-		//if (eas_file_exists(save_path[i]))
-		//{
-			//eas_ini_open(save_path[i])
-			//ini_key_delete("Misc", string("playerPaletteIndex_" + scr_getCharacterPrefix(Characters.Pizzelle)))
-			//eas_ini_close()
+	for (var i = 0; i < 3; i++)
+	{
+		if (eas_file_exists(save_path[i]))
+		{
+			eas_ini_open(save_path[i])
+			ini_key_delete("Misc", string("playerPaletteIndex_" + scr_getCharacterPrefix(Characters.Pizzelle)))
+			eas_ini_close()
+			//eas_save(scr_easyasync_callback)
 			
-			//with (obj_mainfileselect)
-				//filePalette[i] = 2
-		//}
-	//}
+			with (obj_mainfileselect)
+				filePalette[i] = 2
+		}
+	}
 	
 	instance_destroy()
 	return

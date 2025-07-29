@@ -2,7 +2,7 @@
 /// @param binfile
 /// @param  byte
 function eas_file_bin_write_byte(argument0, argument1) {
-	if (!global.EAS_needasync) return eas_file_bin_write_byte(argument0, argument1);
+	if (!global.EAS_needasync) return file_bin_write_byte(argument0, argument1);
 
 	if (eas_bin_is_write(argument0))
 	{

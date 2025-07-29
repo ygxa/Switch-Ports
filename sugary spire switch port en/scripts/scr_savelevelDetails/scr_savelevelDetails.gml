@@ -72,6 +72,7 @@ function scr_savelevelDetails(arg0 = true)
 		ini_write_string("Ranks", string(global.InternalLevelName), global.rank)
 	
 	eas_ini_close()
+	//eas_save(scr_easyasync_callback)
 	obj_hudManager.saveAlpha = 10
 	
 	if (arg0)
@@ -113,5 +114,6 @@ function confecti_count_level(arg0)
 	}
 	
 	eas_ini_close()
+	//eas_save(scr_easyasync_callback)
 	return confecti_count;
 }

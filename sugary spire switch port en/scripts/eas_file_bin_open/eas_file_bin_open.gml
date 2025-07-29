@@ -2,7 +2,7 @@
 /// @param fname
 /// @param  mode
 function eas_file_bin_open(argument0, argument1) {
-	if (!global.EAS_needasync) return eas_file_bin_open(argument0, argument1);
+	if (!global.EAS_needasync) return file_bin_open(argument0, argument1);
 
 	var _fname = eas_safe_path(argument0);
 

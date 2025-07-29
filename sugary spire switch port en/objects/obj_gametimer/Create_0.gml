@@ -77,6 +77,7 @@ saveTime = function(arg0 = global.SaveFileName)
 	ini_write_real("Game", "seconds", global.SaveSeconds)
 	ini_write_real("Game", "minutes", global.SaveMinutes)
 	eas_ini_close()
+	//eas_save(scr_easyasync_callback)
 }
 
 makeString = function(arg0, arg1, arg2)

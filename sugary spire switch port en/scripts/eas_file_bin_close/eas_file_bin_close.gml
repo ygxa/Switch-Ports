@@ -1,7 +1,7 @@
 /// @description eas_file_bin_close(binfile)
 /// @param binfile
 function eas_file_bin_close(argument0) {
-	if (!global.EAS_needasync) return eas_file_bin_close(argument0);
+	if (!global.EAS_needasync) return file_bin_close(argument0);
 
 	var _buffer = ds_map_find_value(argument0, "buffer");
 	buffer_seek(_buffer, buffer_seek_start, 0);

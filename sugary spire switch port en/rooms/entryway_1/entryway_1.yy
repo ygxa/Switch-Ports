@@ -119,7 +119,7 @@
     {"resourceType":"GMRBackgroundLayer","resourceVersion":"1.0","name":"Backgrounds_still","spriteId":{"name":"bg_entryway1_sky","path":"sprites/bg_entryway1_sky/bg_entryway1_sky.yy",},"colour":4294967295,"x":0,"y":0,"htiled":true,"vtiled":false,"hspeed":0.0,"vspeed":0.0,"stretch":false,"animationFPS":0.35,"animationSpeedType":1,"userdefinedAnimFPS":true,"visible":true,"depth":1000,"userdefinedDepth":true,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":16,"gridY":16,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],},
   ],
   "inheritLayers": false,
-  "creationCodeFile": "rooms/entryway_1/RoomCreationCode.gml",
+  "creationCodeFile": "${project_dir}/rooms/entryway_1/RoomCreationCode.gml",
   "inheritCode": false,
   "instanceCreationOrder": [
     {"name":"inst_100724","path":"rooms/entryway_1/entryway_1.yy",},

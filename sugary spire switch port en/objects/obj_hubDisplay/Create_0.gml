@@ -131,6 +131,7 @@ addLevel = function(arg0, arg1, arg2 = true, arg3 = true, arg4 = true, arg5 = tr
 	}
 	
 	eas_ini_close()
+	//eas_save(scr_easyasync_callback)
 	array_push(pg.contentArr, l)
 	return l;
 }

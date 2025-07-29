@@ -18,6 +18,7 @@ for (var i = 0; i < array_length(levelArr); i++)
 }
 
 eas_ini_close()
+//eas_save(scr_easyasync_callback)
 eas_ini_open("optionData.ini")
 var palArr = scr_get_palettes(false)
 
@@ -29,4 +30,5 @@ for (var i = 0; i < array_length(palArr); i++)
 }
 
 eas_ini_close()
+//eas_save(scr_easyasync_callback)
 outfitRows = ceil(array_length(outfitArr) / 3)

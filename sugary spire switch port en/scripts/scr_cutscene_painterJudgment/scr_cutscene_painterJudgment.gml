@@ -57,7 +57,7 @@ function cutscene_judgment_start()
 				array_push(d, lang_get("judgmentinfo_additional"))
 			
 			eas_ini_close()
-			
+			//eas_save(scr_easyasync_callback)
 			//for (var i = 0; i < array_length(d); i++)
 			//{
 				//var s = scribble(d[i]).wrap(sprite_get_width(spr_dialobox_temp) - 80).line_spacing(30).starting_format(font_get_sprite(global.npcfont, true)).align(0, 0)
@@ -148,6 +148,7 @@ function cutscene_mindpalacedoor_prestart()
 	eas_ini_open(global.SaveFileName)
 	_seenCutscene = ini_read_real("Game", "mindpalace_door_cutscene", false)
 	eas_ini_close()
+	//eas_save(scr_easyasync_callback)
 	
 	if (_seenCutscene)
 	{
@@ -234,5 +235,6 @@ function cutscene_mindpalacedoor_end()
 	eas_ini_open(global.SaveFileName)
 	ini_write_real("Game", "mindpalace_door_cutscene", true)
 	eas_ini_close()
+	//eas_save(scr_easyasync_callback)
 	cutscene_event_end()
 }

@@ -31,7 +31,7 @@ with (instance_nearest(x, y, obj_startGate))
 eas_ini_open(global.SaveFileName)
 var found_rank = string_lower(ini_read_string("Ranks", lv, ""))
 eas_ini_close()
-
+//eas_save(scr_easyasync_callback)
 if (found_rank == "" || instance_exists(obj_tutorialBlock))
 	instance_destroy()
 
