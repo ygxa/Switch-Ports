@@ -1,0 +1,11 @@
+cam = view_camera[0];
+follow = O_Player_1;
+view_w_half = camera_get_view_width(cam) * 0.5;
+view_h_half = camera_get_view_height(cam) * 0.5;
+xTo = xstart;
+yTo = ystart;
+super = 0;
+shakelength = 0;
+shakeMagnitude = 0;
+shake_remain = 0;
+buff = 32;

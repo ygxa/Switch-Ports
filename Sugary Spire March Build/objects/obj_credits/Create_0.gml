@@ -1,0 +1,108 @@
+can_goUp = true;
+sceneBackground = bg_thumbnail_entryway;
+DrawX = 0;
+DrawY = 0;
+DrawHspeed = 0;
+DrawVspeed = 0;
+flash = false;
+//To DO: check if missing credits 96 ...and
+//Really Lazy with figuring out a sort of emoji system so....
+creditsText = (@"
+SUGARY SPIRE DEMO CREDITS
+
+
+@ Directors #
+^ Sarge 
+% Pitchmaster
+) Rodmod
+
+$ Programmers %
+Core
+` Mr. Unown
+Zetare
+^ Lerp
+Mineken
+Marioket
+
+^ Artists &
+` Orca
+` Foushe
+% Ching 
+Ufra
+Andrer
+902
+Joniton
+Sappy
+Pizza Crust
+
+* Quality Assurance Guy (
+LOSTMAN
+
+) Musicians {
+Rodmod
+Jessie Productions
+PaperKitty
+H.
+
+} Voicework [
+Ebrey
+
+] Extra Help |
+@ FrozenCowJuice
+^ Baphalopod
+^ JuniPinPan
+^ The_Spooky_Dong
+Porky
+^ DanDoesThings
+Randy.
+PierRoulette
+^ Ollenpac
+) RedTV
+Kyoobot
+^ MiaPaisano
+Fuzzy_Cactus
+ScrapHat
+^ Somniac
+
+: Playtesting ;
+@ FrozenCowJuice
+Luigio
+The Consul
+Cray
+Randy
+TheSpookyDong
+Dylfinedas
+Bluemycool
+DanDoesThings
+Ninja Scrufftuna
+Oni
+RetroDiskette
+OSP
+FulsomeFrog
+Swanky
+
+' The Pizza Tower Crew /
+Pizza Tower Guy 
+Sertif
+Mr. Sauceman
+Frostix
+
+
+
+
+
+
+
+
+
+
+
+...And you for playing the demo!
+
+
+
+Press jump to go back
+
+
+
+");

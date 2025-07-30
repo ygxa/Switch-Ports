@@ -1,0 +1,11 @@
+map = R_Test;
+randomize();
+selected = 0;
+pointed = 0;
+alarm[0] = 1;
+y -= 20;
+appearbuffertimer = 0;
+image_alpha = 0;
+dorandomize = false;
+Scr_SelectRandomMap();
+map_prev = 0;

@@ -1,0 +1,34 @@
+/// @description Blinking Trails
+global.BlinkTrail = !global.BlinkTrail;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

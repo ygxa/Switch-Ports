@@ -1,0 +1,9 @@
+offsetsaved = -4;
+sprsaved = sprite_index;
+sprite_index = s_cs_falltv;
+image_speed = 0;
+image_index = 0;
+y -= 600;
+vsp = 0;
+global.player1 = 0;
+global.player = 0;

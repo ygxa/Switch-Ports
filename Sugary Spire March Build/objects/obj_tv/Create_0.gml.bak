@@ -1,0 +1,45 @@
+image_speed = 0.35
+chose = 0
+message = ""
+showtext = 0
+tvsprite = spr_tvoff
+noisesprite = 42
+xi = 500
+yi = 600
+imageindexstore = 0;
+chooseOnecomboend = false;
+comboendImage = 0;
+once = 0
+global.hurtcounter = 0
+global.hurtmilestone = 3
+global.mallowfollow = 0
+global.crackfollow = 0
+alpha = 1
+shownranka = 0
+shownrankb = 0
+shownrankc = 0
+global.erank = 0
+global.srank = 0
+global.arank = 0
+global.brank = 0
+global.crank = 0
+character = "PIZZELLE"
+//funnysurface = surface_create(139, 30)
+tvcount = 500
+draw_combo = 0;
+combofade = 0
+invsprite = spr_invempty
+scr_pal_swap_init_system(shd_pal_swapper);
+staticdraw = 0
+statictimer = 20
+ChannelState = 0;
+OLDChannelState = 0;
+playerstate = obj_player.state
+<<<<<<< HEAD
+tvlength = 0
+global.newhudtvanim = ds_queue_create();
+
+alarm[1] = 1
+=======
+DrawY = 0;
+>>>>>>> ching-funny-moments

@@ -1,0 +1,5 @@
+if scaledraw = true
+scale = approach(scale,0,.2)
+alpha = approach(alpha,0,.2)
+if scale <= 0 && alpha <= 0
+instance_destroy()

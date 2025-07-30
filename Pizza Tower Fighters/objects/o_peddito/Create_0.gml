@@ -1,0 +1,12 @@
+hsp = 0;
+vsp = 0;
+facing = 1;
+float_by = 2.75;
+vspfloat = 2.75;
+float_by_accel = 0.01;
+damagenull = false;
+target = o_player_doise;
+damagemeter = 0;
+damagemetermax = 0;
+unparry = false;
+timertilldeath = 750;

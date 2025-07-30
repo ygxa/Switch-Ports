@@ -1,0 +1,9 @@
+TOGGLE_PAUSE = 0;
+PAUSE = false;
+paused_surf = -1;
+setting = 0;
+paused_sprite = -4;
+axis_left_prev = false;
+axis_right_prev = false;
+axis_up_prev = false;
+axis_down_prev = false;

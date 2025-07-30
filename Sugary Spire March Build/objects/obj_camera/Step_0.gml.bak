@@ -1,0 +1,97 @@
+if ((room == rank_room) || ((room == timesuproom)))
+    visible = 0;
+else
+    visible = 1;
+if (global.panic == 1) timestop = 0;
+if global.panic = 0 timestop = 1;
+
+if (global.seconds <= 0 && global.minutes <= 0) {
+    alarm[1] = -1;
+    alarm[2] = 3;
+}
+if (global.seconds < 0) {
+    global.seconds = 59;
+    global.minutes -= 1;
+}
+if (global.seconds > 59) {
+    global.minutes += 1;
+    global.seconds -= 59;
+}
+if (global.playseconds > 59) {
+    global.playminutes += 1;
+    global.playseconds -= 59;
+}
+if ((global.panic == 1 && global.minutes < 1) || obj_player.sprite_index == spr_player_timeup) {
+    shake_mag = 2;
+    shake_mag_acc = (3 / room_speed);
+}
+else if (global.panic == 1 && basement == 0) {
+    shake_mag = 2;
+    shake_mag_acc = (3 / room_speed);
+}
+if (shake_mag > 0) {
+    shake_mag -= shake_mag_acc;
+    if (shake_mag < 0) shake_mag = 0;
+}
+//Camera Position Stuff
+if instance_exists(obj_player) && (obj_player.state != 29 && obj_player.state != 48)
+{
+	var target = obj_player;
+	var _cam_x = target.x - camera_get_view_width(view_camera[0]) / 2;
+	var _cam_y = target.y - camera_get_view_height(view_camera[0]) / 2;
+	
+	#region Chargecamera
+	if (obj_player.state == states.mach3 || obj_player.state == states.machroll) {
+        if (chargecamera > (obj_player.xscale * 100)) 
+			chargecamera -= 2;
+        if (chargecamera < (obj_player.xscale * 100)) 
+			chargecamera += 2;
+        _cam_x += chargecamera;
+    } else {
+        if (chargecamera > 0) 
+			chargecamera -= 2;
+        if (chargecamera < 0) 
+			chargecamera += 2;
+        _cam_x += chargecamera;
+    }
+	#endregion
+	
+	//Clamp the Position to within the room
+	_cam_x = clamp(_cam_x, 0, room_width - camera_get_view_width(view_camera[0]));
+	_cam_y = clamp(_cam_y, 0, room_height - camera_get_view_height(view_camera[0]));
+	
+	//Shake
+	if (shake_mag != 0) {
+		_cam_x += irandom_range((-shake_mag), shake_mag)
+        _cam_y += irandom_range((-shake_mag), shake_mag)
+    }
+	
+	camera_set_view_pos(view_camera[0], _cam_x, _cam_y);
+}
+#region Old Camera
+/*
+if (instance_exists(obj_player) && obj_player.state != 29 && obj_player.state != 48) {
+    var target = obj_player;
+
+    __view_set(0, 0, clamp(__view_get(0, 0), 0, (room_width - __view_get(2, 0))));
+    __view_set(1, 0, (target.y - (__view_get(3, 0) / 2)));
+    __view_set(1, 0, clamp(__view_get(1, 0), 0, (room_height - __view_get(3, 0))));
+    if (shake_mag != 0) {
+        __view_set(0, 0, ((target.x - (__view_get(2, 0) / 2)) + chargecamera));
+        __view_set(0, 0, clamp(__view_get(0, 0), 0, (room_width - __view_get(2, 0))));
+        __view_set(1, 0, ((target.y - (__view_get(3, 0) / 2)) + irandom_range((-shake_mag), shake_mag)));
+        __view_set(1, 0, clamp(__view_get(1, 0), (0 + irandom_range((-shake_mag), shake_mag)), ((room_height - __view_get(3, 0)) + irandom_range((-shake_mag), shake_mag))));
+    }
+}
+*/
+#endregion
+//if ((global.login = 0) && (room != rm_login) && (room != hub_public)) game_end();
+
+if ((global.panic = 1) && (global.minutes = 0) && (global.seconds = 0) && room != timesuproom) {
+	if !instance_exists(obj_coneball) instance_create(0, 0, obj_coneball);
+}
+
+
+//Panic Bg Update
+if global.panicbg = true && global.panic == true
+	global.wave = clamp(clamp(global.wave + (60/room_speed),0,(global.maxwave - (((global.minutes * 60) + global.seconds) * 60))),0,global.maxwave)

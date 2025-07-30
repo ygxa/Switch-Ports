@@ -1,0 +1,1 @@
+targetRoom = bee_secret_3

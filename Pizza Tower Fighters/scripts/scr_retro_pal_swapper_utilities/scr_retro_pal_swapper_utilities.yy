@@ -1,0 +1,11 @@
+{
+  "isDnd": false,
+  "isCompatibility": false,
+  "resourceType": "GMScript",
+  "resourceVersion": "1.0",
+  "name": "scr_retro_pal_swapper_utilities",
+  "parent": {
+    "name": "Scripts",
+    "path": "folders/Scripts.yy"
+  }
+}

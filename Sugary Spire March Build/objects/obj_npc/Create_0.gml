@@ -1,0 +1,27 @@
+image_speed = 0.35
+speaking = false
+idle = spr_grandpop
+speak = spr_grandpop_speak
+
+
+
+mytex = spr_icepopbg
+text = "I'll give you my cigar, if I can have yours!"
+speaking = false
+
+
+boxy = -99999999999999999999
+boxvsp = 0
+boxstate = 0
+
+mytex = spr_icepopbg
+
+mytex_x = 0
+mytex_y = 0
+mysurf = noone
+mycut = noone
+
+propdex = 0
+
+
+

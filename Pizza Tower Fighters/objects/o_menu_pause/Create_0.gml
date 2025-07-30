@@ -1,0 +1,17 @@
+menu[0] = "RESUME";
+menu[1] = "BACK TO MENU";
+cursorLevitate = 0;
+s_cursor = s_mnu_multiplayer;
+cursorTime = 0;
+leviRate = 1.5;
+selected = 0;
+selectLerp = 0;
+lerpAmt = 0.2;
+spacing = 50;
+selectedCol = 16777215;
+notSelectedCol = 8421504;
+titleCol = 16777215;
+upButt = global.keyboardp1up;
+downButt = global.keyboardp1down;
+confirmButt = global.keyboardp1key_jump;
+leaveButt = global.keyboardp1key_tilt;
