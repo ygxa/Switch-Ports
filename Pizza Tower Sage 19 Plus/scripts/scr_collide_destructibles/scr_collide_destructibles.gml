@@ -4,41 +4,31 @@ function scr_destroy_horizontal(argument0, argument1 = 0)
     {
         var _hitblock = false;
         var _arr = [obj_destructibles, obj_onewaybigblock, obj_smbitembox, -4, -4, -4, -4, -4, -4];
-        
-        if (argument1 & (32 << 0))
-            _arr[0] = -4;
-        
-        if (argument1 & (64 << 0))
-            _arr[1] = -4;
-        
-        if (argument1 & (128 << 0))
-            _arr[2] = -4;
-        
-        if (argument1 & (1 << 0))
-            _arr[3] = obj_metalblock;
-        
+        if (argument1 & (32 << 0)) _arr[0] = -4;
+        if (argument1 & (64 << 0)) _arr[1] = -4;
+        if (argument1 & (128 << 0)) _arr[2] = -4;
+        if (argument1 & (1 << 0)) _arr[3] = obj_metalblock;
         _arr[4] = obj_mrcar;
-        
-        if (argument1 & (2 << 0))
-            _arr[5] = obj_ballblock;
-        
-        if (argument1 & (4 << 0))
-            _arr[6] = obj_tntblock;
-        
-        if (argument1 & (8 << 0))
-            _arr[7] = obj_breakableice;
-        
-        if (argument1 & (16 << 0))
-            _arr[8] = obj_ratblock;
-        
-        var _inst = instance_place(x + argument0, y, _arr);
+        if (argument1 & (2 << 0)) _arr[5] = obj_ballblock;
+        if (argument1 & (4 << 0)) _arr[6] = obj_tntblock;
+        if (argument1 & (8 << 0)) _arr[7] = obj_breakableice;
+        if (argument1 & (16 << 0)) _arr[8] = obj_ratblock;
+
+        var _inst = noone;
+        for (var i = 0; i < array_length(_arr); i++) {
+            if (_arr[i] != -4) {
+                _inst = instance_place(x + argument0, y, _arr[i]);
+                if (_inst != noone) break;
+            }
+        }
+
         var _dest = [];
-        
-        while (_inst)
+
+        while (_inst != noone)
         {
             _hitblock = true;
             _dest[object_index] = 1;
-            
+
             with (_inst)
             {
                 switch (object_index)
@@ -49,60 +39,58 @@ function scr_destroy_horizontal(argument0, argument1 = 0)
                         instance_destroy();
                         gamepadvibrate(0.4, 0, 8);
                         break;
-                    
+
                     case obj_mrcar:
                         var _player = other;
                         instance_destroy();
                         instance_create_depth(_player.x, _player.y, 0, obj_bangeffect);
                         scr_fmod_soundeffectONESHOT("event:/sfx/misc/mrcarhit", x, y);
                         camera_shake(3, 3);
-                        
-                        with (instance_create_depth(x, y, 0, obj_mrcardead))
-                        {
+                        with (instance_create_depth(x, y, 0, obj_mrcardead)) {
                             hsp = _player.movespeed * _player.xscale;
                             vsp = -11;
                             image_xscale = other.image_xscale;
                         }
-                        
                         gamepadvibrate(1, 0, 12);
-                        
-                        with (_player)
-                            do_hitstun(7);
-                        
+                        with (_player) do_hitstun(7);
                         restore_combo();
                         break;
-                    
+
                     case obj_onewaybigblock:
                         if (sign(argument0) == -sign(image_xscale))
                             instance_destroy();
-                        
                         gamepadvibrate(0.4, 0, 8);
                         break;
-                    
+
                     case obj_smbitembox:
                         event_user(0);
                         break;
-                    
+
                     case obj_metalblock:
                         instance_create_depth(x + 32, y + 32, -100, obj_genericpoofeffect);
                         gamepadvibrate(1, 0, 8);
-                    
+
                     default:
                         if (argument1 & (256 << 0) && (object_index == obj_bigdestructibles || object_is_ancestor(object_index, obj_bigdestructibles)))
                             instance_create_depth(other.x + (4 * other.xscale), other.y, -10, obj_bangeffect);
-                        
                         instance_destroy();
                         gamepadvibrate(0.4, 0, 8);
                         break;
                 }
             }
-            
-            _inst = instance_place(x + argument0, y, _arr);
+
+            _inst = noone;
+            for (var i = 0; i < array_length(_arr); i++) {
+                if (_arr[i] != -4) {
+                    _inst = instance_place(x + argument0, y, _arr[i]);
+                    if (_inst != noone) break;
+                }
+            }
         }
-        
+
         if (_hitblock)
             push_notif((7 << 0), _dest);
-        
+
         return _hitblock;
     }
 }
@@ -113,33 +101,28 @@ function scr_destroy_vertical(argument0, argument1 = 0)
     {
         var _hitblock = false;
         var _arr = [obj_destructibles, obj_smbitembox, -4, -4, -4, -4];
-        
-        if (argument1 & (32 << 0))
-            _arr[0] = -4;
-        
-        if (argument1 & (128 << 0))
-            _arr[1] = -4;
-        
-        if (argument1 & (1 << 0))
-            _arr[2] = obj_metalblock;
-        
-        if (argument1 & (4 << 0))
-            _arr[3] = obj_tntblock;
-        
-        if (argument1 & (8 << 0))
-            _arr[4] = obj_breakableice;
-        
-        if (argument1 & (16 << 0))
-            _arr[5] = obj_ratblock;
-        
-        var _inst = instance_place(x, y + argument0, _arr);
+        if (argument1 & (32 << 0)) _arr[0] = -4;
+        if (argument1 & (128 << 0)) _arr[1] = -4;
+        if (argument1 & (1 << 0)) _arr[2] = obj_metalblock;
+        if (argument1 & (4 << 0)) _arr[3] = obj_tntblock;
+        if (argument1 & (8 << 0)) _arr[4] = obj_breakableice;
+        if (argument1 & (16 << 0)) _arr[5] = obj_ratblock;
+
+        var _inst = noone;
+        for (var i = 0; i < array_length(_arr); i++) {
+            if (_arr[i] != -4) {
+                _inst = instance_place(x, y + argument0, _arr[i]);
+                if (_inst != noone) break;
+            }
+        }
+
         var _dest = [];
-        
-        while (_inst)
+
+        while (_inst != noone)
         {
             _hitblock = true;
             _dest[object_index] = 1;
-            
+
             with (_inst)
             {
                 switch (object_index)
@@ -150,27 +133,33 @@ function scr_destroy_vertical(argument0, argument1 = 0)
                         instance_destroy();
                         gamepadvibrate(0.4, 0, 8);
                         break;
-                    
+
                     case obj_smbitembox:
                         event_user(0);
                         break;
-                    
+
                     case obj_metalblock:
                         instance_create_depth(x + 32, y + 32, -100, obj_genericpoofeffect);
-                    
+
                     default:
                         instance_destroy();
                         gamepadvibrate(0.2, 0, 8);
                         break;
                 }
             }
-            
-            _inst = instance_place(x, y + argument0, _arr);
+
+            _inst = noone;
+            for (var i = 0; i < array_length(_arr); i++) {
+                if (_arr[i] != -4) {
+                    _inst = instance_place(x, y + argument0, _arr[i]);
+                    if (_inst != noone) break;
+                }
+            }
         }
-        
+
         if (_hitblock)
             push_notif((7 << 0), _dest);
-        
+
         return _hitblock;
     }
 }
@@ -248,12 +237,23 @@ function scr_enemy_destructibles(argument0, argument1)
 {
     if (thrown || parried || pummelled != -4)
     {
-        var _i = instance_place(x + argument0, y + argument1, [obj_destructibles, obj_enemyblock]);
-        
-        while (_i != -4)
+        var _list = [obj_destructibles, obj_enemyblock];
+        var _i = noone;
+
+        for (var j = 0; j < array_length(_list); j++) {
+            _i = instance_place(x + argument0, y + argument1, _list[j]);
+            if (_i != noone) break;
+        }
+
+        while (_i != noone)
         {
             instance_destroy(_i);
-            _i = instance_place(x + argument0, y + argument1, [obj_destructibles, obj_enemyblock]);
+
+            _i = noone;
+            for (var j = 0; j < array_length(_list); j++) {
+                _i = instance_place(x + argument0, y + argument1, _list[j]);
+                if (_i != noone) break;
+            }
         }
     }
 }

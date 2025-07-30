@@ -151,3 +151,17 @@ function string_starts_with(s, prefix) {
 function array_foreach(arr, fn) {
     for (var i = 0, n = array_length(arr); i < n; i++) fn(arr[i], i);
 }
+
+function array_shift(arr) {
+    var len = array_length(arr);
+    if (len == 0) return undefined;
+
+    var first = arr[0];
+    var new_arr = array_create(len - 1);
+
+    for (var i = 1; i < len; i++) {
+        new_arr[i - 1] = arr[i];
+    }
+	
+    return [first, new_arr];
+}

@@ -32,8 +32,13 @@ function scr_player_comingoutdoor()
         image_blend = c_white;
         doorblend = 1;
     }
-    
-    if (place_meeting(x, y, [obj_door, obj_keydoor, obj_doorblocked, obj_exitgate, obj_startgate, obj_geromedoor]))
+	
+	var fuck = [obj_door, obj_keydoor, obj_doorblocked, obj_exitgate, obj_startgate, obj_geromedoor]
+    var ass = 0;
+	for (var _i = 0; _i < array_length(fuck); _i++) {
+	    ass += place_meeting(x, y, fuck[_i]);
+	}
+    if (place_meeting(x, y, ass))
         sprite_index = spr_walkfront;
     else
         state = (0 << 0);

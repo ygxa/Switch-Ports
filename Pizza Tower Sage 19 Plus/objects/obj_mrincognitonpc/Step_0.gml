@@ -1,3 +1,4 @@
+/*
 event_inherited();
 
 if (sign(image_xscale) == -1)

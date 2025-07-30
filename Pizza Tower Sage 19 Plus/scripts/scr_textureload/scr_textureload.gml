@@ -35,17 +35,17 @@ function scr_textureload(argument0 = global.levelname)
     {
         if (argument0 != groups[i])
         {
-            t = texturegroup_get_textures(groups[i]);
+            //t = texturegroup_get_textures(groups[i]);
             
-            for (var l = 0; l < array_length(t); l++)
-                texture_flush(t[l]);
+            //for (var l = 0; l < array_length(t); l++)
+                //texture_flush(t[l]);
         }
     }
     
-    var t = texturegroup_get_textures(t);
+    //var t = texturegroup_get_textures(t);
     
-    for (var l = 0; l < array_length(t); l++)
-        texture_prefetch(t[l]);
+    //for (var l = 0; l < array_length(t); l++)
+        //texture_prefetch(t[l]);
     
     prevtex = argument0;
 }

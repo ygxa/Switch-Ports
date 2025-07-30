@@ -1,3 +1,4 @@
+/*
 event_inherited();
 levelcount = 0;
 save_open();

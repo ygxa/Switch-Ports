@@ -1,5 +1,10 @@
-if (magnetized == -4)
-    visible = !place_meeting(x, y, [obj_destructibles, obj_metalblock]);
+if (magnetized == -4){
+	if place_meeting(x,y,obj_destructibles) || place_meeting(x,y,obj_metalblock)
+		visible = false
+	
+	if !place_meeting(x,y,obj_destructibles) && !place_meeting(x,y,obj_metalblock)
+		visible = true
+}
 else
     visible = true;
 
