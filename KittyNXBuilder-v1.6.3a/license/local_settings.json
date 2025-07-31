@@ -1,0 +1,11 @@
+{
+    "machine.Object Editor.defaultcomment": "/// @description Insert description here\\r\\n// You can write your code in this editor\\r\\n",
+    "machine.Platform Settings.Windows.visual_studio_path": "D:\\Progs\\VS15\\VC\\bin\\vcvars32.bat",
+    "machine.Platform Settings.Windows.choice": 2,
+    "machine.Platform Settings.Switch.sdk_dir": "D:\\SDK\\NX_SDK_NEW\\NintendoSDK",
+    "machine.Platform Settings.Switch.visual_studio_path": "D:\\Progs\\VS\\2019\\Common7\\Tools\\VsDevCmd.bat",
+    "cloud.General Settings.Compiling.ShowVerboseCommands": true,
+    "cloud.General Settings.Compiling.UseSubstForDrivePaths": false,
+    "machine.Object Editor.defaultcomment": "/// @description Insert description here\\r\\n// You can write your code in this editor\\r\\n",
+    "machine.Script Editor.defaultcomment": "// Script assets have changed for v2.3.0 see\\r\\n// https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information"
+}
