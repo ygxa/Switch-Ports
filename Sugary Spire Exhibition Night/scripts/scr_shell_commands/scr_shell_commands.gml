@@ -82,8 +82,12 @@ function sh_character(arg0)
 		//default:
 			//show_debug_message(string("SHELL WARNING: [{0}] is not a valid character. Defaulting to Pizzelle.", arg0[1]))
 		
-		case "Pizzelle":
+		case "PZ":
 			choosen_character = Characters.Pizzelle
+			break
+		
+		case "PN":
+			choosen_character = Characters.Pizzano
 			break
 	}
 	
@@ -96,7 +100,7 @@ function meta_character()
 	{
 		description: "Change the character you're currently playing as.",
 		arguments: ["<character>"],
-		suggestions: [["Pizzelle"]],
+		suggestions: [["PZ", "PN"]],
 		argumentDescriptions: ["The character to switch to."]
 	};
 }

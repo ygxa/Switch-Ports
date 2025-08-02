@@ -278,3 +278,60 @@ function snap_to_ledge(arg0 = xscale, arg1 = 32)
 	
 	return _ledge;
 }
+
+function try_solid(argument0, argument1, argument2, argument3)
+{
+    var old_x = x;
+    var old_y = y;
+    var n = -1;
+    var i = 0;
+    
+    while (i < argument3)
+    {
+        x += argument0;
+        y += argument1;
+        
+        if (!scr_solid(x, y))
+        {
+            n = i + 1;
+            break;
+        }
+        else
+        {
+            i++;
+        }
+    }
+    
+    x = old_x;
+    y = old_y;
+    return n;
+}
+
+function ledge_bump(argument0, argument1 = 4)
+{
+    var old_x = x;
+    var old_y = y;
+    x += (xscale * argument1);
+    var ty = try_solid(0, -1, obj_solid, argument0);
+    x = old_x;
+    
+    if (ty != -1)
+    {
+        y -= ty;
+        x += xscale;
+        
+        if (scr_solid(x, y))
+        {
+            x = old_x;
+            y = old_y;
+            return true;
+        }
+        
+        with (obj_camera)
+            cameraYOffset += ty;
+        
+        return false;
+    }
+    
+    return true;
+}

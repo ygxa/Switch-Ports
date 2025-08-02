@@ -8,7 +8,6 @@ function state_player_machroll()
     machSlideAnim = true;
     move = key_right + key_left;
     mask_index = spr_crouchmask;
-    
     if (!instance_exists(obj_puffEffect) && grounded)
         instance_create(x, y + 43, obj_puffEffect);
     

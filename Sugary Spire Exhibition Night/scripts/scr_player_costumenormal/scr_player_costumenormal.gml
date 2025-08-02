@@ -73,7 +73,7 @@ function state_player_costumenormal()
             });
             sprite_index = spr_player_PN_divejump_start;
             image_index = 0;
-            state = UnknownEnum.Value_32;
+            state = PlayerState.mach3;
             vsp = -10;
             noglider = 1;
             inputBufferJump = 0;
@@ -98,7 +98,7 @@ function state_player_costumenormal()
     if (key_down && !place_meeting(x, y, obj_dashpad))
     {
         flash = false;
-        state = UnknownEnum.Value_12;
+        state = PlayerState.machroll;
         
         if (movespeed < 6)
             movespeed = 6;
@@ -133,7 +133,7 @@ function state_player_costumenormal()
                 spinminus++;
                 wallbuffer = 0;
                 sprite_index = spr_player_PN_wallBounce;
-                state = UnknownEnum.Value_79;
+                state = PlayerState.costumebreeze;
                 xscale *= -1;
                 
                 if (spinminus < 8)
@@ -153,7 +153,7 @@ function state_player_costumenormal()
                     event_play_oneshot("event:/SFX/player/groundpound", x, y);
                     vsp = -14;
                     sprite_index = spr_player_PN_fall_outOfControl;
-                    state = UnknownEnum.Value_24;
+                    state = PlayerState.jump;
                     
                     if (scr_solid(x + 1, y, true))
                         create_particle(x + 15, y, spr_bangEffect);
@@ -169,7 +169,7 @@ function state_player_costumenormal()
                     
                     grabClimbBuffer = 0;
                     inputBufferJump = 0;
-                    state = UnknownEnum.Value_6;
+                    state = PlayerState.climbwall;
                 }
             }
         }
@@ -198,7 +198,7 @@ function state_player_costumenormal()
                 flash = false;
                 combo = 0;
                 sprite_index = spr_mach3hitwall;
-                state = UnknownEnum.Value_35;
+                state = PlayerState.bump;
                 hsp = -6 * xscale;
                 vsp = -6;
                 machTwo = 0;
@@ -231,7 +231,7 @@ function state_player_costumenormal()
     
     if (afterimage_timer <= 0)
     {
-        with (create_afterimage(UnknownEnum.Value_0, xscale, 0))
+        with (create_afterimage(AfterImageType.plain, xscale, 0))
         {
             image_index = max(other.image_index - 1, 0);
             vanish = true;
@@ -243,6 +243,6 @@ function state_player_costumenormal()
         afterimage_timer = 2;
     }
     
-    do_grab(UnknownEnum.Value_77);
-    do_taunt(UnknownEnum.Value_77);
+    do_grab(PlayerState.costumenormal);
+    do_taunt(PlayerState.costumenormal);
 }

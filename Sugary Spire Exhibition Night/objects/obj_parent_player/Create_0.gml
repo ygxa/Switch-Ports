@@ -220,6 +220,8 @@ bumpCounter = 0
 fire_afterimagetimer = 0
 global.rocketLauncher = false
 global.tempRocketLauncher = false
+
+
 buffedpoundcancel = 0;
 spinminus = 0;
 hammerAfterimage = 3;

@@ -66,7 +66,6 @@ function struct_exists(_struct) {
 }
 
 function variable_clone(src) {
-    // 1) DS‑List?
     if ( ds_exists(src, ds_type_list) ) {
         var newList = ds_list_create();
         var len     = ds_list_size(src);
@@ -76,10 +75,8 @@ function variable_clone(src) {
         }
         return newList;
     }
-    // 2) DS‑Map?
     else if ( ds_exists(src, ds_type_map) ) {
         var newMap = ds_map_create();
-        // grab all keys into a temporary list
         var keys   = ds_map_keys(src);
         var kcount = ds_list_size(keys);
         for (var i = 0; i < kcount; i++) {
@@ -90,7 +87,6 @@ function variable_clone(src) {
         ds_list_destroy(keys);
         return newMap;
     }
-    // 3) GML struct (built‑in or user‑made)?
     else if ( is_struct(src) ) {
         var out   = {};
         var names = variable_struct_get_names(src);
@@ -100,7 +96,6 @@ function variable_clone(src) {
         }
         return out;
     }
-    // 4) Primitive (number, string, asset id…)
     else {
         return src;
     }
