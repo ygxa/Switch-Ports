@@ -1,3 +1,4 @@
+nodivejump = 1;
 var a = instance_place(x, y, obj_secretwall);
 secretArray = (a != -4) ? a.layerArray : [];
 

@@ -11,3 +11,10 @@ if (wetTimer)
 
 if (place_meeting(x, y, obj_cottonsolid) && obj_parent_player.savedCottonSolid)
 	gpu_set_fog(false, c_black, 0, 0)
+
+if object_index = obj_swapmodefollow{
+	if global.playerCharacter = Characters.Pizzano
+		draw_player_sprite_ext(sprite_index, -1, x, y, drawxscale * scale * abs(image_xscale), image_yscale * scale, image_angle, image_blend, image_alpha, Characters.Pizzelle)
+	if global.playerCharacter = Characters.Pizzelle
+		draw_player_sprite_ext(sprite_index, -1, x, y, drawxscale * scale * abs(image_xscale), image_yscale * scale, image_angle, image_blend, image_alpha, Characters.Pizzano)
+}

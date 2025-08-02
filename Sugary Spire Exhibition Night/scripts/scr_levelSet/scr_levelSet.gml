@@ -146,7 +146,6 @@ function scr_levelSet()
 		oldPromptText = ""
 		floatyGrab = 18
 		conveyorHsp = 0
-		global.playerCharacter = mainPlayerCharacter
 		previousCharacter = mainPlayerCharacter
 		slamHurt = 0
 		minesGemCount = 0

@@ -77,7 +77,7 @@ function state_player_grabdash()
     momentum = true;
     dir = xscale;
     
-    if (move != xscale && move != 0 && global.playerCharacter == Characters.Pizzelle)
+    if (move != xscale && move != 0)
     {
         state = PlayerState.jump;
         image_index = 0;

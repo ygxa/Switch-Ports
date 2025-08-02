@@ -158,12 +158,6 @@ if (abletomove && !blockedInputs && !activated)
             instance_create(0, 0, obj_option);
             exit;
         }
-        else if (key_slap2)
-        {
-            blockedInputs = true;
-            instance_create(0, 0, obj_exitGame);
-            exit;
-        }
         else if (key_taunt2 && filePresent[selectedFile])
         {
             blockedInputs = true;

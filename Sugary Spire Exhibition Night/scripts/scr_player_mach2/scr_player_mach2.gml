@@ -355,8 +355,8 @@ function state_player_mach2()
     if (sprite_index == spr_player_PN_divejump_fall_start && sprite_animation_end())
         sprite_index = spr_player_PN_divejump_fall;
     
-    do_grab(PlayerState.mach3);
-    do_taunt(PlayerState.mach3);
+    do_grab(PlayerState.mach2);
+    do_taunt(PlayerState.mach2);
     
     if (sprite_index == spr_rollgetup || sprite_index == spr_longJump_intro || sprite_index == spr_longJump || sprite_index == spr_player_PN_kungfu_air_1 || sprite_index == spr_player_PN_kungfu_air_2 || sprite_index == spr_player_PN_kungfu_air_3 || sprite_index == spr_player_PN_kungfu_air_1 || sprite_index == spr_player_PN_kungfu_air_2 || sprite_index == spr_player_PN_kungfu_air_3)
         image_speed = 0.4;

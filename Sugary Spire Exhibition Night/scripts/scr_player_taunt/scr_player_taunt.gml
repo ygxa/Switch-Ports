@@ -143,6 +143,10 @@ function state_player_taunt()
 		}
 	}
 	
+	if key_down2 && global.swapmode{
+		instance_create(x,y,obj_swapmodeeffect)
+	}
+	
 	if (sprite_animation_end())
 	{
 		if (sprite_index == spr_petdog || sprite_index == spr_Timesup)

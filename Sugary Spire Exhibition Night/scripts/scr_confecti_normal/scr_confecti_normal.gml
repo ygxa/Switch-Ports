@@ -89,6 +89,8 @@ function scr_confecti_normal()
 		}
 		else if (obj_parent_player.sprite_index == obj_parent_player.spr_taunt)
 		{
+			if object_index = obj_swapmodefollow && !global.swapmode
+				exit;
 			instance_create(x, y, obj_confectitaunt, 
 			{
 				o_id: id,

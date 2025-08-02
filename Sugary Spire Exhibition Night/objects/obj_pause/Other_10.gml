@@ -14,6 +14,9 @@ for (var i = 0; i < array_length(inputSilenceArr); i++)
 
 with (obj_parent_player)
 {
+	if !global.swapmode
+		global.playerCharacter = mainPlayerCharacter
+	scr_characterSprite()
 	key_jump = false
 	key_jump2 = false
 	inputBufferJump = 0

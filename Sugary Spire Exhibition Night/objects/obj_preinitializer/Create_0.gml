@@ -135,7 +135,8 @@ enum OptionMenu
 	Controls,
 	Keyboard,
 	Gamepad,
-	Deadzones
+	Deadzones,
+	Modded
 }
 
 enum OldOptionType

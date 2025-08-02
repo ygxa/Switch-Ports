@@ -8,6 +8,7 @@ optionBG[OptionMenu.Controls] = 4
 optionBG[OptionMenu.Keyboard] = 4
 optionBG[OptionMenu.Gamepad] = 4
 optionBG[OptionMenu.Deadzones] = 4
+optionBG[OptionMenu.Modded] = 5
 
 handle_savedoption = function()
 {

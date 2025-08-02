@@ -131,5 +131,5 @@ draw_set_valign(fa_middle)
 var _desc_str = (descfadeout || !showdesc) ? old_desc : description
 var _desc_yy = camera_get_view_height(view_camera[0]) - 48
 var _desc_width = string_width(_desc_str) + 16
-draw_sprite_ext(spr_optionSubtitle, 0, camera_get_view_width(view_camera[0]) / 2, _desc_yy, _desc_width / 32, 1, 0, c_white, descalp)
-draw_text_color(camera_get_view_width(view_camera[0]) / 2, _desc_yy, _desc_str, c_white, c_white, c_white, c_white, descalp)
+//draw_sprite_ext(spr_optionSubtitle, 0, camera_get_view_width(view_camera[0]) / 2, _desc_yy, _desc_width / 32, 1, 0, c_white, descalp)
+//draw_text_color(camera_get_view_width(view_camera[0]) / 2, _desc_yy, _desc_str, c_white, c_white, c_white, c_white, descalp)

@@ -25,7 +25,10 @@ switch (optionMenu)
 		}).add_icon(spr_newpause_icons, 8), new option_button("CONTROLS", function()
 		{
 			option_goto(OptionMenu.Controls)
-		}).add_icon(spr_newpause_icons, 7)]
+		}).add_icon(spr_newpause_icons, 7), new option_button("MODDED", function()
+		{
+			option_goto(OptionMenu.Modded)
+		}).add_icon(spr_newpause_icons, 4)]
 		
 		/*
 		if (room == rm_mainmenu)
@@ -169,6 +172,18 @@ switch (optionMenu)
 				instance_create(0, 0, obj_option_clothes)
 			}))
 		}
+		
+		break
+
+	case OptionMenu.Modded:
+		backMenu = OptionMenu.Base
+		backOption = 4
+		alignCenter = false
+		options = [toMainPage, new option_normal("swapmode", onOffToggle, function(arg0)
+		{
+			quick_write_option("Settings", "swapmode", arg0)
+			global.swapmode = arg0
+		}, global.swapmode)]
 		
 		break
 	
