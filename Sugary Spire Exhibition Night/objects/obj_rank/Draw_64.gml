@@ -33,18 +33,22 @@ draw_rectangle(0, 0, 960, 540, false)
 draw_set_alpha(1)
 
 if (event <= 0)
-	return
+	exit;
 
-draw_sprite_ext(lang_get_sprite(spr_rankclipboard), 0, 716, 271 + clipboardY, 1, 1, 0, c_white, 1)
 var i = 0
-//var _text_scribble = "[c_red][fa_middle][fa_center][dialogfont]"
 
+
+draw_set_font(global.dialogfont)
+draw_set_color(c_red)
+draw_set_halign(fa_middle)
+draw_set_valign(fa_center)
+draw_sprite_ext(spr_rankclipboard, 0, 716, 271 + clipboardY, 1, 1, 0, c_white, 1)
 if (combo_shown)
 {
 	var _cx = 894
 	var _cy = 68 + clipboardY
 	draw_sprite_ext(spr_rankclipboard_stamp, 0, _cx, _cy, 1, 1, 0, c_white, 1)
-	//draw_text_scribble(_cx, _cy, string(_text_scribble + global.HighestCombo))
+	draw_text(_cx, _cy, string(global.HighestCombo))
 }
 
 if (damage_shown)
@@ -52,7 +56,7 @@ if (damage_shown)
 	var _dx = 894
 	var _dy = 142 + clipboardY
 	draw_sprite_ext(spr_rankclipboard_stamp, 1, _dx, _dy, 1, 1, 0, c_white, 1)
-	//draw_text_scribble(_dx, _dy, string(_text_scribble + global.LocalHurtCounter))
+	draw_text(_dx, _dy, string(global.LocalHurtCounter))
 }
 
 draw_set_color(c_white)
@@ -75,7 +79,7 @@ for (var s = 0; s < array_length(secrets_collected_visual); s++)
 	secrets_shake[s] = approach(secrets_shake[s], 0, 0.1)
 }
 
-var _janx = 558
+//var _janx = 558
 draw_sprite_ext(spr_rankcake, score_cake_index, 500, 440 + clipboardY, 1, 1, 0, c_white, 1)
 i = 0
 var _string = string(round(score_total_visual))
@@ -109,3 +113,4 @@ draw_sprite_ext(spr_rankletter, rankdex + 1, 725, 108 + clipboardY, 1, 1, 0, c_w
 
 if (score_total_visual == score_total && global.NewHighScore)
 	draw_sprite_ext(spr_highscore, score_highscore_index, 886, 450 + clipboardY, 1, 1, 0, c_white, 1)
+

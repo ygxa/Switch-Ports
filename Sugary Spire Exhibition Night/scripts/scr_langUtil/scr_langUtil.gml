@@ -879,17 +879,6 @@ function lang_transform_string(arg0)
 
 function lang_get_sprite(arg0)
 {
-	if (!variable_struct_exists(global.langStruct, "langDictionary"))
-	{
-		//trace("Requested sprite from a language with no dictionary!")
-		return arg0;
-	}
-	
-	var s = ds_map_find_value(global.langSprites, arg0)
-	
-	if (!is_undefined(s))
-		return s;
-	
 	return arg0;
 }
 

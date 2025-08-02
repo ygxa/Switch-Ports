@@ -87,6 +87,7 @@ function scr_award_palette(arg0, arg1)
 
 function scr_check_end_level_chef_tasks()
 {
+	/*
 	with (obj_achievementTracker)
 	{
 		for (var i = 0; i < array_length(activeChefTasks); i++)
@@ -121,6 +122,7 @@ function scr_check_end_level_chef_tasks()
 			}
 		}
 	}
+	*/
 }
 
 function scr_reset_achievement_tracker()

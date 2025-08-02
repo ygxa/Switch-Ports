@@ -8,7 +8,7 @@ if (global.InternalLevelName == "tutorial")
 	})
 	alarm[0] = -1
 	instance_destroy()
-	return
+	exit;
 }
 
 instance_create_depth(PlayerX, PlayerY, -6, obj_rank)

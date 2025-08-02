@@ -217,4 +217,5 @@ function scr_gameInit()
 	global.afterimage_list = ds_list_create()
 	global.doorindex = 0
 	global.swapmode = false
+	global.SecretsFound = []
 }
