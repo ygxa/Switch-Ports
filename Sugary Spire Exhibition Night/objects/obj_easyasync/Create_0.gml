@@ -6,4 +6,4 @@ eas_load(scr_easyasync_callback); //the script argument is optional.
 
 // Oh and this object doesn't need to be visible. Because this is just a handler object.
 
-alarm[0] = 200
+alarm[0] = 1

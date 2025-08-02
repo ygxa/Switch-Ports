@@ -233,6 +233,7 @@ paulscale = 1;
 dashbuffer = 0;
 //prevpaulsprite = spr_paulHDremaster;
 paulxscale = 1;
+global.blast_switchcontrols = false
 global.blastmode = false
 global.paul = false
 xplus = 0;
@@ -262,3 +263,69 @@ fastincrease = 0;
 blastcode = "";
 workinprogress = 0;
 workinprogressbuffer = 100;
+blastunlock = function()
+{
+    switch (keyboard_lastkey)
+    {
+        case ord("B"):
+            blastcode += "B";
+            break;
+        
+        case ord("L"):
+            blastcode += "L";
+            break;
+        
+        case ord("A"):
+            blastcode += "A";
+            break;
+        
+        case ord("S"):
+            blastcode += "S";
+            break;
+        
+        case ord("T"):
+            blastcode += "T";
+            break;
+    }
+    
+    if (blastcode != "" && string_copy("BLAST", 1, string_length(blastcode)) != blastcode)
+        blastcode = "";
+    
+    if (blastcode == "BLAST" && !global.blastmode)
+    {
+        with (instance_create_depth(x, y + 5, obj_parent_player.depth - 1, obj_bombExplosionPlayer))
+        {
+            sprite_index = sp_explosion_giga;
+            image_speed = 0.35;
+        }
+        
+        ini_open("optionData.ini");
+        
+        if (ini_read_string("Modded", "blast_options", "0") == "0")
+        {
+            scr_queueToolTipPrompt(lang_get("blast_optionstip"));
+            ini_write_string("Modded", "blast_options", "1");
+        }
+        
+        ini_close();
+        trace("blasted");
+        global.blastmode = true;
+        global.paul = true;
+        blastcode = "";
+    }
+    
+    if (blastcode == "BLAST" && global.blastmode)
+    {
+        with (instance_create_depth(x, y + 5, obj_parent_player.depth - 1, obj_bombExplosionPlayer))
+        {
+            sprite_index = sp_explosion_giga;
+            image_speed = 0.35;
+        }
+        
+        global.blastmode = false;
+        global.paul = false;
+        blastcode = "";
+    }
+    
+    keyboard_lastkey = -1;
+};

@@ -1,4 +1,3 @@
-/*
 var _data = video_draw()
 var _status = _data[0]
 

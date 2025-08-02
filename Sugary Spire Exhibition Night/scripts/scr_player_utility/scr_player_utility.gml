@@ -34,7 +34,7 @@ function do_taunt(arg0 = state)
 	static superTauntEffect = 0
 	
 	if (arg0 != state)
-		return
+		exit;
 	
 	if (superTauntCharged && room != rank_room)
 	{
@@ -104,110 +104,163 @@ function do_taunt(arg0 = state)
 	return false;
 }
 
-function do_grab(arg0 = state)
+function do_grab(argument0 = state)
 {
-	if (arg0 != state)
-		return
-	
-	if (inputBufferSlap > 0)
-	{
-		inputBufferSlap = 0
-		
-		if (key_up || key_up2)
-		{
-			do_uppercut()
-		}
-		else if (global.rocketLauncher || global.tempRocketLauncher)
-		{
-			state = PlayerState.rocketlauncher
-			image_index = 0
-			global.tempRocketLauncher = false
-			
-			with (instance_create(x, y, obj_rocket))
-			{
-				image_xscale = other.xscale
-				frog = true
-			}
-		}
-		else if (global.Donutfollow)
-		{
-			if (!instance_exists(obj_donurang))
-			{
-				with (instance_create(x + (8 * sign(xscale)), y + 16, obj_donurang))
-				{
-					throwbuffer = 12
-					var _hspcarry = other.hsp + (other.xscale * 28)
-					hsp = clamp(hsp, min(_hspcarry, 28 * other.xscale), max(_hspcarry, 28 * other.xscale))
-					image_xscale = 2 * sign(other.xscale)
-					image_yscale = 2
-					player = other.id
-				}
-			}
-			else
-			{
-				with (obj_donurang)
-				{
-					if (player == other.id)
-						hurry = 3
-				}
-			}
-		}
-		else if (global.playerCharacter == Characters.Pizzelle && sprite_index != spr_player_PZ_suplexDash_bump)
-		{
-			if (floatyGrab > 0)
-			{
-				instance_create(x, y, obj_crazyRunHoopEffect, 
-				{
-					playerID: id
-				})
-				sprite_index = spr_suplexdashIntro
-			}
-			else
-			{
-				sprite_index = spr_suplexdashFallIntro
-			}
-			
-			instance_create(x, y, obj_slaphitbox)
-			flash = (floatyGrab > 0) ? true : false
-			vsp = 0
-			instance_create(x, y, obj_jumpdust)
-			image_index = 0
-			
-			if (state == PlayerState.normal || state == PlayerState.jump)
-				movespeed = 8
-			else
-				movespeed = max(movespeed, 5)
-			
-			state = PlayerState.grabdash
-			fmod_studio_event_instance_start(sndSuplex)
-			
-			if (key_down)
-			{
-				vsp = max(vsp, 6)
-				floatyGrab = 0
-				
-				if (grounded)
-				{
-					grav = 0.5
-					sprite_index = spr_crouchslipintro
-					image_index = 0
-					fmod_studio_event_instance_start(sndCrouchslide)
-					state = PlayerState.machroll
-					
-					with (instance_create(x, y, obj_jumpdust))
-						image_xscale = other.xscale
-					
-					movespeed = 11
-					crouchSlipBuffer = 25
-					crouchSlipAntiBuffer = 0
-				}
-			}
-		}
-		
-		return true;
-	}
-	
-	return false;
+    if (argument0 != state)
+        exit;
+    
+    if (inputBufferSlap > 0)
+    {
+        inputBufferSlap = 0;
+        
+        if (key_up || key_up2)
+        {
+            do_uppercut();
+        }
+        else if (global.rocketLauncher || global.tempRocketLauncher)
+        {
+            state = PlayerState.rocketlauncher;
+            image_index = 0;
+            global.tempRocketLauncher = false;
+            
+            with (instance_create(x, y, obj_rocket))
+            {
+                image_xscale = other.xscale;
+                frog = true;
+            }
+        }
+        else if (global.Donutfollow)
+        {
+            if (!instance_exists(obj_donurang))
+            {
+                with (instance_create(x + (8 * sign(xscale)), y + 16, obj_donurang))
+                {
+                    throwbuffer = 12;
+                    var _hspcarry = other.hsp + (other.xscale * 28);
+                    hsp = clamp(hsp, min(_hspcarry, 28 * other.xscale), max(_hspcarry, 28 * other.xscale));
+                    image_xscale = 2 * sign(other.xscale);
+                    image_yscale = 2;
+                    player = other.id;
+                }
+            }
+            else
+            {
+                with (obj_donurang)
+                {
+                    if (player == other.id)
+                        hurry = 3;
+                }
+            }
+        }
+        else if (sprite_index != spr_player_PZ_suplexDash_bump && global.playerCharacter == Characters.Pizzelle)
+        {
+            if (floatyGrab > 0)
+            {
+                instance_create(x, y, obj_crazyRunHoopEffect, 
+                {
+                    playerID: id
+                });
+                sprite_index = spr_suplexdashIntro;
+            }
+            else
+            {
+                sprite_index = spr_suplexdashFallIntro;
+            }
+            
+            instance_create(x, y, obj_slaphitbox);
+            flash = (floatyGrab > 0) ? true : false;
+            vsp = 0;
+            instance_create(x, y, obj_jumpdust);
+            image_index = 0;
+            
+            if (state == PlayerState.normal || state == PlayerState.jump)
+                movespeed = 8;
+            else
+                movespeed = max(movespeed, 5);
+            
+            state = PlayerState.grabdash;
+            fmod_studio_event_instance_start(sndSuplex);
+            
+            if (key_down)
+            {
+                vsp = max(vsp, 6);
+                floatyGrab = 0;
+                
+                if (grounded)
+                {
+                    grav = 0.5;
+                    sprite_index = spr_crouchslipintro;
+                    image_index = 0;
+                    fmod_studio_event_instance_start(sndCrouchslide);
+                    state = PlayerState.machroll;
+                    
+                    with (instance_create(x, y, obj_jumpdust))
+                        image_xscale = other.xscale;
+                    
+                    movespeed = 11;
+                    crouchSlipBuffer = 25;
+                    crouchSlipAntiBuffer = 0;
+                }
+            }
+        }
+        else if (global.playerCharacter == Characters.Pizzano)
+        {
+            if (state == PlayerState.costumegrab)
+            {
+                if (move != 0)
+                {
+                    if (xscale != move || movespeed < 10)
+                        movespeed = 10;
+                    
+                    xscale = move;
+                }
+            }
+            
+            if (state == PlayerState.mach2 && (sprite_index == spr_player_PN_kungfu_air_1_start || sprite_index == spr_player_PN_kungfu_air_2_start || sprite_index == spr_player_PN_kungfu_air_3_start || sprite_index == spr_player_PN_kungfu_air_1 || sprite_index == spr_player_PN_kungfu_air_2 || sprite_index == spr_player_PN_kungfu_air_3))
+            {
+                if (move != 0)
+                {
+                    if (xscale != move || movespeed < 10)
+                        movespeed = 10;
+                    
+                    xscale = move;
+                }
+                else if (move == 0)
+                {
+                    if (movespeed < 0)
+                    {
+                        movespeed *= -1;
+                        xscale *= -1;
+                        movespeed = 10;
+                    }
+                    
+                    if (movespeed >= 0 && movespeed < 10)
+                        movespeed = 10;
+                }
+            }
+            
+            if (!grounded)
+                sprite_index = choose(spr_player_PN_kungfu_air_1_start, spr_player_PN_kungfu_air_2_start, spr_player_PN_kungfu_air_3_start);
+            else
+                sprite_index = choose(spr_player_PN_kungfu_1, spr_player_PN_kungfu_2, spr_player_PN_kungfu_3, spr_player_PN_kungfu_4, spr_player_PN_kungfu_5);
+            
+            state = PlayerState.grabdash;
+            event_play_oneshot("event:/SFX/player/kungfu", x, y);
+            
+            if (movespeed < 10)
+                movespeed = 10;
+            
+            image_index = 0;
+            instance_create(x, y, obj_crazyRunHoopEffect, 
+            {
+                playerID: id
+            });
+        }
+        
+        return true;
+    }
+    
+    return false;
 }
 
 function do_uppercut()
