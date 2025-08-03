@@ -11,8 +11,8 @@ with (instance_place(x, y, obj_parent_doortrigger))
 image_alpha = 0.5
 eas_ini_open(global.SaveFileName)
 
-if (ini_read_string("Ranks", string(global.InternalLevelName), "none") == "none" && !ini_read_real("Misc", "lapunlockall", false))
-	sprite_index = spr_lappingportal_inactive
+//if (ini_read_string("Ranks", string(global.InternalLevelName), "none") == "none" && !ini_read_real("Misc", "lapunlockall", false))
+	//sprite_index = spr_lappingportal_inactive
 
 eas_ini_close()
 //eas_save(scr_easyasync_callback)

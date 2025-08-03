@@ -36,7 +36,7 @@ addRoomMusic = function(arg0, arg1, arg2, arg3)
 
 global.RoomMusicMap = ds_map_create()
 global.EscapeMusicInst = mu_escape
-global.RankMusicInst = fmod_createEventInstance("event:/music/rank")
+global.RankMusicInst = rank_loop
 global.HarryMusicInst = fmod_createEventInstance("event:/music/harry")
 global.RoomMusic = undefined
 global.RoomIsSecret = false
@@ -123,7 +123,7 @@ addRoomMusic(molasses_1, mu_molasses, "event:/music/w2/molasses_secret", functio
 	
 	fmod_studio_event_instance_set_parameter_by_name(arg1, "frog", frog, false)
 })
-addRoomMusic(mineshaft_1, "event:/music/w1/mines", "event:/music/w1/mines_secret", function(arg0, arg1, arg2)
+addRoomMusic(mineshaft_1, mu_mineshaft1, "event:/music/w1/mines_secret", function(arg0, arg1, arg2)
 {
 	var event_state = global.minesProgress
 	
@@ -151,4 +151,5 @@ addRoomMusic(mountain_intro, "event:/music/w2/mountain", "event:/music/w2/mounta
 		fmod_studio_event_instance_set_parameter_by_name(arg1, "state", event_state, false)
 })
 addRoomMusic(cafe_1, mu_cafe, "event:/music/w2/cafe_secret", undefined)
+addRoomMusic(random_entrance, mu_random, "event:/music/w2/cafe_secret", undefined)
 addRoomMusic(mountain_intro, mu_fudgetop, "event:/music/w2/cafe_secret", undefined)

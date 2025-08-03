@@ -77,7 +77,10 @@ function scr_savelevelDetails(arg0 = true)
 	
 	if (arg0)
 	{
-		fmod_studio_event_instance_start(global.RankMusicInst)
+		//if global.rank = "b" or global.rank = "a" or global.rank = "s"
+			fmod_studio_event_instance_start(mu_ranknormal, false)
+
+
 		fmod_studio_event_instance_set_paused(global.RankMusicInst, false)
 		var rank_as_num = clamp(5 - rank_checker(), 0, 5)
 		fmod_studio_event_instance_set_parameter_by_name(global.RankMusicInst, "state", rank_as_num, true)

@@ -19,7 +19,6 @@ if (room != rank_room && !is_hub())
 		goToHub: true
 	}))
 		fadealpha = 1
-	
 	global.UseOfftopic = true
 }
 else if (is_hub())

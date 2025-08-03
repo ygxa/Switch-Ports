@@ -1,7 +1,10 @@
 accel = 0
 canleave = 0
 image_speed = 0
-sprite_index = spr_player_PZ_enter
+if global.playerCharacter = Characters.Pizzelle
+	sprite_index = spr_player_PZ_enter
+else
+	sprite_index = spr_player_PN_enter
 image_index = image_number - 1
 total_time = 400
 alarm[3] = 180

@@ -1,4 +1,3 @@
-fmod_studio_event_instance_stop(global.RankMusicInst, false)
 global.InternalLevelName = "none"
 instance_create(x, y, obj_fadeoutTransition, 
 {

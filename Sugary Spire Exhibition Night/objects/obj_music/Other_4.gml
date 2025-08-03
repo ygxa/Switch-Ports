@@ -1,6 +1,5 @@
 var sfxreverb_rooms = [hub_mindpalace, hub_mindvault]
 fmod_studio_system_set_parameter_by_name("sfxReverb", array_contains(sfxreverb_rooms, room), false)
-
 if (!global.panic)
 {
 	var target_room_music = ds_map_find_value(global.RoomMusicMap, room)
@@ -11,6 +10,14 @@ if (!global.panic)
 		
 		if (is_undefined(previous_room_music) || previous_room_music.eventName != target_room_music.eventName)
 		{
+			//show_message(target_room_music.musicInst)
+			if target_room_music.musicInst != mu_random && global.randomroom = true
+				exit;
+
+			//show_message(target_room_music.musicInst)
+			if target_room_music.musicInst = mu_entryway && room = entryway_1 && global.playerCharacter = Characters.Pizzano
+				exit;
+				
 			fmod_studio_event_instance_start(target_room_music.musicInst, true)
 			fmod_studio_event_instance_set_paused(target_room_music.musicInst, false)
 			
