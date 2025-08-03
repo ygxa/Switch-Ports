@@ -1,0 +1,2 @@
+setImageSpeed = false;
+criticalHit = false;

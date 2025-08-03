@@ -1,0 +1,10 @@
+depth = -4000;
+setImageSpeed = false;
+image_speed = 0.5;
+alarm[1] = 5;
+image_xscale = 2;
+image_yscale = 2;
+shotNum = 0;
+criticalHit = false;
+sfx_play(snd_gunshot, 80, 0);
+alarm[3] = 20;

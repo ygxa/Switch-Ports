@@ -1,0 +1,41 @@
+event_inherited();
+depth = -5;
+journalId = 10;
+var bn = "battles.butchy.";
+normalSprite = -1;
+hurtSprite = -1;
+dustFilename = "rh_b";
+name = dxd_raw(bn + "name");
+image_speed = 0;
+image_xscale = 2;
+image_yscale = 2;
+bt_add_act(bn, "act0");
+bt_add_act(bn, "act1");
+bt_add_act(bn, "act2");
+maxHp = 60;
+hp = maxHp;
+defense = 4;
+attack = 5;
+xpReward = 5;
+goldReward = 3;
+mercyResistance = 25;
+flavorColor = make_color_rgb(62 + (irandom(15) * choose(-1, 1)), 51 + (irandom(15) * choose(-1, 1)), 221 + (irandom(15) * choose(-1, 1)));
+
+if (global.flavor_sprites)
+    image_blend = flavorColor;
+
+vrevup = 0;
+vpunk = 0;
+vrevupdid = false;
+vpunkdid = false;
+siner = 0;
+offsetUiX = 80;
+headShake = 0;
+attackType = -1;
+attackTime = 0;
+attackStage = 0;
+headlightAlpha = 0;
+horzSiner = 0;
+xOff = array_create(4, 0);
+spareTimer = 0;
+shaking = false;

@@ -1,0 +1,14 @@
+state = (stage == 0) ? (3 << 0) : (2 << 0);
+grav = 0.5;
+partx[0] = normpartx[0];
+party[0] = normparty[0];
+partrot[0] = -rot;
+partx[1] = normpartx[1];
+party[1] = normparty[1] + (rot * 0.25);
+partrot[1] = rot * 0.5;
+partx[2] = normpartx[2];
+party[2] = normparty[2];
+partrot[2] = rot / 3;
+partx[3] = normpartx[3] + (-rot / 3);
+party[3] = normparty[3] + (rot / 3);
+partrot[3] = rot;

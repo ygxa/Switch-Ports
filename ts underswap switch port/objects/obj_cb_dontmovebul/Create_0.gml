@@ -1,0 +1,10 @@
+event_inherited();
+scaleSpeed = 0.2;
+fadingState = 0;
+image_xscale = 1;
+image_yscale = 1;
+image_xscale = choose(-1, 1);
+image_speed = 0;
+vspeed = 13;
+image_blend = #14A9FF;
+bulletType = (1 << 0);

@@ -1,0 +1,12 @@
+event_inherited();
+propAlpha = 1;
+wickIndex = 0;
+wickY = 29;
+pitch = 1;
+lineAlpha = 0;
+damageAmount = obj_larry_monster.attack;
+step = irandom_range(50, 60);
+bulDir = 0;
+bulSpeed = 0;
+vspeed = 1;
+gravity = 0.25;

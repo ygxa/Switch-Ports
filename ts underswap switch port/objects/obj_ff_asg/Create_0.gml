@@ -1,0 +1,10 @@
+horzSpeed = -5;
+state = 0;
+face = -1;
+pose = -1;
+image_xscale = 2;
+image_yscale = 2;
+image_blend = global.flavor_sprites ? make_color_rgb(211, 142, 232) : c_white;
+currentTalkTarget = true;
+xstart = -1;
+shakeValue = 0;

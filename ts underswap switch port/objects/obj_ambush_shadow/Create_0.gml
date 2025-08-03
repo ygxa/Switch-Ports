@@ -1,0 +1,10 @@
+event_inherited();
+canHurt = false;
+damageAmount = 8;
+image_alpha = 0;
+shake = true;
+image_speed = 0.2;
+state = 0;
+flashCount = 0;
+sfx_play(snd_speargrow);
+gateDestroyer = false;

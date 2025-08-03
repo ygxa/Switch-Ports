@@ -1,0 +1,17 @@
+pose = false;
+resetHands = true;
+x = initX;
+y = initY;
+path_start(pth_mtcbody, 1, path_action_continue, false);
+rightHand.image_angle = 0;
+rightHand.image_index = 0;
+rightHand.destX = rightHand.initX;
+rightHand.destY = rightHand.initY;
+rightHand.sprite_index = spr_mett_hand_microphone;
+rightHand.depth = depth - 1;
+leftHand.image_angle = 0;
+leftHand.image_index = 0;
+leftHand.destX = leftHand.initX;
+leftHand.destY = leftHand.initY;
+leftHand.sprite_index = spr_mett_hand_wave;
+leftHand.depth = depth + 1;

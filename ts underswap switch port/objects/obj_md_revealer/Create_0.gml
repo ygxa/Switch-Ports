@@ -1,0 +1,14 @@
+obj_gamemanager.customViewMode = true;
+state = 0;
+actionFrame = 0;
+actionSizer = 0;
+actionRot = 0;
+dio = false;
+internalEnd = false;
+music_kill_current();
+sfx_play(snd_dummysurprise);
+alarm[2] = 90;
+alarm[0] = 16;
+var cam = view_get_camera(0);
+camera_set_view_pos(cam, 64, 18);
+camera_set_view_size(cam, 512, 384);

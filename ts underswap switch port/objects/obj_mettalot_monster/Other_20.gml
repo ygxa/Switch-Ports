@@ -1,0 +1,13 @@
+pose = true;
+path_end();
+face = spr_metfaceb_happy_closedeyes;
+rightHand.image_angle = 0;
+rightHand.destX = initX + 26;
+rightHand.destY = initY + 20;
+rightHand.sprite_index = spr_mett_hand_heartr;
+rightHand.depth = obj_mettalot_monster.depth - 1;
+leftHand.image_angle = 0;
+leftHand.destX = initX + 28;
+leftHand.destY = initY + 20;
+leftHand.sprite_index = spr_mett_hand_heartl;
+leftHand.depth = obj_mettalot_monster.depth - 1;

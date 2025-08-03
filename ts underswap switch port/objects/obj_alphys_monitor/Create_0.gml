@@ -1,0 +1,14 @@
+image_speed = 0;
+depth = -10010;
+smokeEmitSpeed = 0;
+wallHugs = 0;
+prevPlayerDir = 4;
+contentIndex = 0;
+followPlayer = false;
+moveSound = sfx_loop(snd_chain_extend, 7, true);
+audio_pause_sound(moveSound);
+screenPose = -1;
+staticMode = false;
+counter = 0;
+staticIndex = 0;
+beamY = 0;

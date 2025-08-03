@@ -1,0 +1,10 @@
+event_inherited();
+sfx_play(snd_aaxelwind);
+image_speed = 1;
+depth = -999;
+image_xscale = 2;
+image_yscale = 2;
+image_blend = obj_aaxel_monster.image_blend;
+startBlend = image_blend;
+blender = 0;
+targetX = x + irandom_range(-30, 40);

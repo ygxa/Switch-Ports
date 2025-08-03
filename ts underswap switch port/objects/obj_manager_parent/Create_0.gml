@@ -1,0 +1,1 @@
+monsterIndex = -1;

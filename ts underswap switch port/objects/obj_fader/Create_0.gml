@@ -1,0 +1,11 @@
+depth = -10010;
+event_inherited();
+alpha = 0;
+color = 0;
+toSolid = true;
+fadeMusic = false;
+maxMusicVolume = 1;
+fadeBorders = false;
+borderFadeSpeed = false;
+extraFrames = false;
+targetAlpha = -1;

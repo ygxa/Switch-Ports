@@ -1,0 +1,10 @@
+event_inherited();
+blender = 0;
+image_blend = obj_koffink_monster.image_blend;
+image_speed = 0;
+image_xscale = 2;
+image_yscale = 2;
+state = 0;
+timer = 0;
+wantSound = true;
+special = false;

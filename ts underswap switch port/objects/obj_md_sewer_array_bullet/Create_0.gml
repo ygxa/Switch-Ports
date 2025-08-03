@@ -1,0 +1,10 @@
+event_inherited();
+damageAmount = 4.5;
+dir = 4;
+began = false;
+creepX = 0;
+creepY = 0;
+depth = -2100;
+alarm[0] = 1;
+image_speed = 0;
+image_alpha = 0;

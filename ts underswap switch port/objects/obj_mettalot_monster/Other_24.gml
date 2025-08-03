@@ -1,0 +1,11 @@
+pose = true;
+path_end();
+rightHand.image_angle = 30;
+rightHand.destX = rightHand.initX - 5;
+rightHand.destY = rightHand.y + 5;
+rightHand.sprite_index = spr_mett_hand_flatl;
+leftHand.image_angle = 60;
+leftHand.destX = initX + 8;
+leftHand.destY = initY - 32;
+leftHand.sprite_index = spr_mett_hand_wave;
+leftHand.depth = depth - 1;

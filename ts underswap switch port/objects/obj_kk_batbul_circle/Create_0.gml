@@ -1,0 +1,15 @@
+event_inherited();
+image_speed = 0.5;
+image_blend = c_dkgray;
+image_xscale = 1;
+image_yscale = 1;
+image_alpha = 0;
+gravity = 0.1;
+speed = 1.5;
+circleY = 0;
+swoopTime = 90;
+ybob = ystart;
+pitch = 0.7;
+siner = 0;
+timer = 0;
+state = 0;

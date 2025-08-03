@@ -1,0 +1,12 @@
+counter = 0;
+growing = false;
+image_xscale = 2;
+image_yscale = 2;
+depth = obj_battleheart.depth - 1;
+visible = false;
+harryBlend = obj_harry_monster.image_blend;
+larryBlend = obj_larry_monster.image_blend;
+shakeIntensity = global.lowvfx ? 0.7 : 0.9;
+shakeIntensityMin = global.lowvfx ? 0.4 : 0.6;
+fadeToWhite = false;
+sfx = -1;

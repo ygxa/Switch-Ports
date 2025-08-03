@@ -1,0 +1,11 @@
+event_inherited();
+sprite_index = spr_cb_crossbonebul;
+image_angle = 45;
+image_blend = c_lime;
+siner = 0;
+bounceAmplitude = 0;
+bounceSpeed = 0.15;
+largeHitbox = false;
+cutoff = false;
+hittable = true;
+smallHitbox = false;

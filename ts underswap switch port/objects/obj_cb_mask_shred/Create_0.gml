@@ -1,0 +1,9 @@
+gravity = 0.2;
+gravity_direction = 270;
+hspeed = random_range(3, 4);
+vspeed = 1;
+alarm[0] = 6;
+rotSpeed = random_range(5, 8);
+image_index = irandom(1);
+image_xscale = 2;
+image_yscale = 2;

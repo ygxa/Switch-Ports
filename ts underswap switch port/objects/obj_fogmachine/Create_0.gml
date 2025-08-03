@@ -1,0 +1,10 @@
+event_inherited();
+_depthUpdate = false;
+solidBottomHalf = false;
+sceneName = "stars.cb_fogmachine";
+broken = false;
+startedBreak = false;
+silent = false;
+stopped = false;
+breakSfxLoop = -1;
+timer = 0;

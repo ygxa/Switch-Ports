@@ -1,0 +1,10 @@
+var i = instance_create_xy(x - 30, y - 5, obj_md_textfloat);
+i.hspeed = -1;
+i.vspeed = 0.5;
+i = instance_create_xy(x, y + 20, obj_md_textfloat);
+i.image_index = 1;
+i.vspeed = 0.5;
+i = instance_create_xy(x + 30, y - 5, obj_md_textfloat);
+i.image_index = 2;
+i.hspeed = 1;
+i.vspeed = 0.5;
