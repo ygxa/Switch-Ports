@@ -9,6 +9,6 @@ if (ds_list_find_index(global.SaveRoom, id) == -1)
 	repeat (rep)
 		create_debris(random_range(bbox_left, bbox_right), random_range(bbox_top, bbox_bottom), spr_blockdebris)
 	
-	event_play_multiple("event:/SFX/player/break", x, y)
+	event_play_multiple(sfx_enginesoundskid, x, y)
 	ds_list_add(global.SaveRoom, id)
 }

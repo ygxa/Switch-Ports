@@ -1,10 +1,10 @@
 {
   "resourceType": "GMSound",
   "resourceVersion": "1.0",
-  "name": "mu_hub1",
+  "name": "pz_mach2",
   "conversionMode": 0,
   "compression": 0,
-  "volume": 0.4,
+  "volume": 1.0,
   "preload": false,
   "bitRate": 128,
   "sampleRate": 44100,
@@ -14,8 +14,8 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "mu_hub1.ogg",
-  "duration": 80.86,
+  "soundFile": "pz_mach2.wav",
+  "duration": 2.4555,
   "parent": {
     "name": "Sounds",
     "path": "folders/Sounds.yy",

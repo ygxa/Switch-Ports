@@ -1,3 +1,9 @@
+if global.playerCharacter = Characters.Pizzano
+	global.EscapeMusicInst = mu_pizzanoescape
+	
+if global.playerCharacter = Characters.Pizzelle
+	global.EscapeMusicInst = mu_escape
+	
 var sfxreverb_rooms = [hub_mindpalace, hub_mindvault]
 fmod_studio_system_set_parameter_by_name("sfxReverb", array_contains(sfxreverb_rooms, room), false)
 if (!global.panic)
@@ -15,8 +21,8 @@ if (!global.panic)
 				exit;
 
 			//show_message(target_room_music.musicInst)
-			if target_room_music.musicInst = mu_entryway && room = entryway_1 && global.playerCharacter = Characters.Pizzano
-				exit;
+			//if target_room_music.musicInst = mu_entryway && room = entryway_1 && global.playerCharacter = Characters.Pizzano
+				//exit;
 				
 			fmod_studio_event_instance_start(target_room_music.musicInst, true)
 			fmod_studio_event_instance_set_paused(target_room_music.musicInst, false)
@@ -70,10 +76,23 @@ if (global.RoomIsSecret)
 	
 	if (global.panic)
 	{
-		//fmod_studio_event_instance_set_paused(global.EscapeMusicInst, true)
-		//fmod_studio_event_instance_set_callback(global.EscapeMusicInst, FMOD_STUDIO_EVENT_CALLBACK.NESTED_TIMELINE_BEAT)
+		fmod_studio_event_instance_set_paused(global.EscapeMusicInst, true)
+		fmod_studio_event_instance_set_callback(global.EscapeMusicInst, FMOD_STUDIO_EVENT_CALLBACK.NESTED_TIMELINE_BEAT)
 	}
 }
 
 if (room == rank_room)
 	stop_music()
+
+	
+if audio_is_playing(mu_entryway) && global.playerCharacter = Characters.Pizzano{
+	ds_map_find_value(global.RoomMusicMap, room).musicInst = mu_pizzanoentryway
+	audio_stop_sound(mu_entryway)
+	fmod_studio_event_instance_start(mu_pizzanoentryway, true)
+}
+
+if audio_is_playing(mu_pizzanoentryway) && global.playerCharacter = Characters.Pizzelle{
+	ds_map_find_value(global.RoomMusicMap, room).musicInst = mu_entryway
+	audio_stop_sound(mu_pizzanoentryway)
+	fmod_studio_event_instance_start(mu_entryway, true)
+}

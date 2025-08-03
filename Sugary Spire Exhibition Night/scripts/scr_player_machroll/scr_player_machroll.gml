@@ -190,7 +190,7 @@ function state_player_machroll()
                 }
                 else if (movespeed > 6)
                 {
-                    event_play_oneshot("event:/SFX/player/break", x, y);
+                    event_play_oneshot(sfx_enginesoundskid, x, y);
                     sprite_index = spr_machslidestart;
                     image_index = 0;
                     state = PlayerState.machslide;

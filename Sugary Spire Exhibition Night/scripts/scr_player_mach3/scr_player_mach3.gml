@@ -274,7 +274,7 @@ function state_player_mach3()
                 }
                 else
                 {
-                    event_play_oneshot("event:/SFX/player/break", x, y);
+                    event_play_oneshot(sfx_enginesoundskid, x, y);
                     machSlideAnim = true;
                     windingAnim = false;
                     sprite_index = spr_machslideend;
@@ -286,7 +286,7 @@ function state_player_mach3()
             }
             else
             {
-                event_play_oneshot("event:/SFX/player/break", x, y);
+                event_play_oneshot(sfx_enginesoundskid, x, y);
                 sprite_index = spr_machslidestart;
                 state = PlayerState.machslide;
             }
@@ -296,7 +296,7 @@ function state_player_mach3()
         
         if (move == -xscale)
         {
-            event_play_oneshot("event:/SFX/player/machslideboost", x, y);
+            event_play_oneshot(pz_machdrift, x, y);
             
             if (global.blastmode)
                 sprite_index = spr_machslidestart;

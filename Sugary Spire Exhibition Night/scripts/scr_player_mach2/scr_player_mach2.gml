@@ -187,7 +187,7 @@ function state_player_mach2()
         {
             if (!key_attack)
             {
-                event_play_oneshot("event:/SFX/player/break", x, y);
+                event_play_oneshot(sfx_enginesoundskid, x, y);
                 sprite_index = spr_machslidestart;
                 image_index = 0;
                 state = PlayerState.machslide;
@@ -195,7 +195,7 @@ function state_player_mach2()
             
             if (move == -xscale)
             {
-                event_play_oneshot("event:/SFX/player/machslideboost", x, y);
+                event_play_oneshot(pz_machdrift, x, y);
                 sprite_index = spr_machslideboost;
                 image_index = 0;
                 state = PlayerState.machslide;

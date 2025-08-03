@@ -1,16 +1,20 @@
 function scr_playersounds_init()
 {
 	sndMach              = undefined;
+	sndMach1              = pz_mach1;
+	sndMach2              = pz_mach2;
+	sndMach3              = pz_mach3;
+	sndMach4              = pz_mach4;
 	sndMachStart         = undefined;
 	sndGalloping         = undefined;
 	sndSpinning          = undefined;
 	spinSoundBuffer      = undefined;
-	sndSuplex            = undefined;
+	sndSuplex            = sfx_suplexdash;
 	sndKungFu            = undefined;
 	sndJump              = sfx_jump;
 	sndFlip              = undefined;
-	sndWallkick          = undefined;
-	sndWallkickCancel    = undefined;
+	sndWallkick          = sfx_wallkick;
+	sndWallkickCancel    = sfx_wallkickcancel;
 	sndWallkickStart     = undefined;
 	sndWallkickLand      = undefined;
 	sndFreefall          = undefined;
@@ -89,12 +93,12 @@ function scr_playersounds()
 	
 	if (saved_state == PlayerState.wallkick && (sprite_index == spr_wallJumpIntro || sprite_index == spr_wallJump))
 	{
-		if (!event_instance_isplaying(sndWallkick))
-			fmod_studio_event_instance_start(sndWallkick)
+		if !audio_is_playing(sndWallkick)
+			fmod_studio_event_instance_start(sndWallkick);
 	}
 	else
 	{
-		fmod_studio_event_instance_stop(sndWallkick, false)
+		audio_stop_sound(sndWallkick)
 	}
 	
 	if (saved_state == PlayerState.minecart && grounded && vsp > 0 && sprite_index != spr_player_PZ_minecart_spinOut)
@@ -193,10 +197,7 @@ function scr_playersounds()
 		fmod_studio_event_instance_stop(sndSuperjumpRelease, true)
 	
 	if (saved_state == PlayerState.mach2 || saved_state == PlayerState.run || saved_state == PlayerState.mach3 || saved_state == PlayerState.climbwall)
-	{
-		if (!event_instance_isplaying(sndMach))
-			fmod_studio_event_instance_start(sndMach)
-		
+	{	
 		var machsnd = 0
 		
 		if ((saved_state == PlayerState.mach2 && sprite_index == spr_mach1) || (saved_state == PlayerState.run && sprite_index == spr_mach1))
@@ -208,12 +209,29 @@ function scr_playersounds()
 		else if (sprite_index == spr_crazyrun)
 			machsnd = 4
 		
-		fmod_studio_event_instance_set_paused(sndMach, false)
-		fmod_studio_event_instance_set_parameter_by_name(sndMach, "state", machsnd, true)
+		if (!audio_is_playing(asset_get_index("pz_mach" + string(machsnd))))
+			fmod_studio_event_instance_start(asset_get_index("pz_mach" + string(machsnd)));
+			
+		fmod_studio_event_instance_set_paused(string(sndMach) + string(machsnd) , false)
+		
+		if audio_is_playing(pz_mach1) && machsnd != 1
+			audio_stop_sound(pz_mach1)
+			
+		if audio_is_playing(pz_mach2) && machsnd != 2
+			audio_stop_sound(pz_mach2)
+			
+		if audio_is_playing(pz_mach3) && machsnd != 3
+			audio_stop_sound(pz_mach3)
+
+		if audio_is_playing(pz_mach4) && machsnd != 4
+			audio_stop_sound(pz_mach4)
 	}
 	else
 	{
-		fmod_studio_event_instance_stop(sndMach, true)
+		audio_stop_sound(pz_mach4)
+		audio_stop_sound(pz_mach3)
+		audio_stop_sound(pz_mach2)
+		audio_stop_sound(pz_mach1)
 	}
 	
 	for (var i = 0; i < array_length(mySoundArray); i++)

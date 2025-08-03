@@ -1,7 +1,7 @@
 {
   "resourceType": "GMSound",
   "resourceVersion": "1.0",
-  "name": "mu_hub1",
+  "name": "sfx_suplexdash",
   "conversionMode": 0,
   "compression": 0,
   "volume": 0.4,
@@ -14,8 +14,8 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "mu_hub1.ogg",
-  "duration": 80.86,
+  "soundFile": "sfx_suplexdash.wav",
+  "duration": 1.084313,
   "parent": {
     "name": "Sounds",
     "path": "folders/Sounds.yy",

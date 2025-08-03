@@ -1,10 +1,10 @@
 {
   "resourceType": "GMSound",
   "resourceVersion": "1.0",
-  "name": "mu_hub1",
+  "name": "sfx_wallkickcancel",
   "conversionMode": 0,
   "compression": 0,
-  "volume": 0.4,
+  "volume": 0.6,
   "preload": false,
   "bitRate": 128,
   "sampleRate": 44100,
@@ -14,8 +14,8 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "mu_hub1.ogg",
-  "duration": 80.86,
+  "soundFile": "sfx_wallkickcancel.wav",
+  "duration": 1.058812,
   "parent": {
     "name": "Sounds",
     "path": "folders/Sounds.yy",
