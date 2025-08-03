@@ -12,7 +12,7 @@ function scr_roomcheck(arg0 = room)
 
 function is_hub(arg0 = room)
 {
-	var hub_rooms = [hub_soundTest, hub_demohallway, hub_paintstudio, hub_molasses, hub_mindpalace, hub_mindvault, rm_credits]
+	var hub_rooms = [hub_soundTest, hub_demohallway, hub_paintstudio, hub_molasses, hub_paintstudio2, hub_mindpalace, hub_mindvault, rm_credits]
 	return array_contains(hub_rooms, arg0);
 }
 

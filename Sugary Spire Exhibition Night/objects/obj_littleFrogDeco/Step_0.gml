@@ -3,7 +3,7 @@ if (sprite_index == spr_lilfrogdude_taunt)
 	if (obj_parent_player.state != PlayerState.taunt)
 		scr_taunt_setVariables()
 	
-	return
+	exit;
 }
 
 if (sprite_index == spr_lilfrogdude_jump && sprite_animation_end())

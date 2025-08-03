@@ -3,6 +3,7 @@ switch (room)
 	case hub_demohallway:
 	case hub_paintstudio:
 	case hub_molasses:
+	case hub_paintstudio2:
 		self.addLevel("entryway", 0).setIcon(spr_tvdisplay_levels, 0)
 		self.addLevel("steamy", 1).setIcon(spr_tvdisplay_levels, 1)
 		self.addLevel("mineshaft", 2).setIcon(spr_tvdisplay_levels, 2)

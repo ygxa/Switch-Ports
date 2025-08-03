@@ -5,7 +5,7 @@ if (reciever)
 {
 	if (spitting)
 	{
-		sprite_index = spr_teleporterreturn_spit
+		sprite_index = spr_teleporterexit_spit
 		
 		if (prepparticle && image_index > 3)
 		{
@@ -15,6 +15,6 @@ if (reciever)
 	}
 	else
 	{
-		sprite_index = spr_teleporterreturn
+		sprite_index = spr_teleporterexit_spitfx
 	}
 }

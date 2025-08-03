@@ -309,6 +309,7 @@
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_109873","properties":[],"isDnd":false,"objectId":{"name":"obj_slope","path":"objects/obj_slope/obj_slope.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":3.0,"scaleY":2.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":3456.0,"y":1312.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_109874","properties":[],"isDnd":false,"objectId":{"name":"obj_slope","path":"objects/obj_slope/obj_slope.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":6.0,"scaleY":4.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":3360.0,"y":1824.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_109875","properties":[],"isDnd":false,"objectId":{"name":"obj_cultist","path":"objects/obj_cultist/obj_cultist.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":-1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":1006.0,"y":2185.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_6B30D5D3","properties":[],"isDnd":false,"objectId":{"name":"obj_door","path":"objects/obj_door/obj_door.yy",},"inheritCode":false,"hasCreationCode":true,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":1904.0,"y":2016.0,},
       ],"visible":true,"depth":0,"userdefinedDepth":true,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":16,"gridY":16,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],},
     {"resourceType":"GMRTileLayer","resourceVersion":"1.1","name":"Tiles_2","tilesetId":{"name":"ts_mountain2","path":"tilesets/ts_mountain2/ts_mountain2.yy",},"x":0,"y":0,"tiles":{"TileDataFormat":1,"SerialiseWidth":125,"SerialiseHeight":79,"TileCompressedData":[
 -121,0,4,892,893,894,895,-121,0,4,924,925,926,927,-121,0,4,956,957,958,959,-517,0,5,584,585,586,587,588,-10,0,7,1024,1025,1026,1027,1028,1029,1030,-7,0,6,559,560,561,562,563,564,-90,0,5,616,617,618,619,620,-10,0,7,1056,0,0,1059,1060,1061,1062,-7,0,6,591,592,593,594,595,596,-90,0,5,648,649,650,651,652,-10,0,1,1088,-5,0,1,1094,-7,0,6,623,624,625,626,627,628,-90,0,5,680,681,682,683,684,-10,0,1,1120,-5,0,1,1126,-7,0,6,655,656,657,658,659,660,
@@ -587,6 +588,7 @@
     {"name":"inst_109873","path":"rooms/mountain_escape1/mountain_escape1.yy",},
     {"name":"inst_109874","path":"rooms/mountain_escape1/mountain_escape1.yy",},
     {"name":"inst_109875","path":"rooms/mountain_escape1/mountain_escape1.yy",},
+    {"name":"inst_6B30D5D3","path":"rooms/mountain_escape1/mountain_escape1.yy",},
   ],
   "inheritCreationOrder": false,
   "sequenceId": null,

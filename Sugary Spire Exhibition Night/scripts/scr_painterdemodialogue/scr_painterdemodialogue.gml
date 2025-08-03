@@ -23,7 +23,7 @@ function scr_painterdemodialogue()
 	talk_sound = "event:/SFX/hub/painterThink"
 	var dialogue_key
 	
-	if (room == hub_molasses)
+	if (room == hub_molasses or room == hub_paintstudio2)
 	{
 		if (scr_check_completion())
 		{
@@ -116,7 +116,7 @@ function scr_painterdemodialogue()
 		dialogue_key = "demopainter_invalidsecrets"
 	}
 	
-	if (dialogue_key != "demopainter_newfile" && dialogue_key != "demopainter_invalidsecrets" && global.UseOfftopic && irandom(2) == 0 && room != hub_molasses)
+	if (dialogue_key != "demopainter_newfile" && dialogue_key != "demopainter_invalidsecrets" && global.UseOfftopic && irandom(2) == 0 && room != hub_molasses && room != hub_paintstudio2)
 	{
 		if (global.SaveMinutes >= 60)
 		{

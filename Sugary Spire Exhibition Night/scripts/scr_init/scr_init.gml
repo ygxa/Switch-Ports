@@ -218,4 +218,8 @@ function scr_gameInit()
 	global.doorindex = 0
 	global.swapmode = false
 	global.SecretsFound = []
+	global.randomroom = false
+	global.fudgetopcafe = true
+	global.betterw2 = true
+	global.basement = true
 }

@@ -179,11 +179,23 @@ switch (optionMenu)
 		backMenu = OptionMenu.Base
 		backOption = 4
 		alignCenter = false
-		options = [toMainPage, new option_normal("swapmode", onOffToggle, function(arg0)
+		options = [toMainPage, new option_normal("Swap Mode", onOffToggle, function(arg0)
 		{
 			quick_write_option("Settings", "swapmode", arg0)
 			global.swapmode = arg0
-		}, global.swapmode)]
+		}, global.swapmode), new option_normal("Better Molasses Room", onOffToggle, function(arg0)
+		{
+			quick_write_option("Settings", "molassroom", arg0)
+			global.betterw2 = arg0
+		}, global.betterw2), new option_normal("Fudgetop And Cafe", onOffToggle, function(arg0)
+		{
+			quick_write_option("Settings", "fudge&cafe", arg0)
+			global.fudgetopcafe = arg0
+		}, global.fudgetopcafe), new option_normal("Basement", onOffToggle, function(arg0)
+		{
+			quick_write_option("Settings", "basement", arg0)
+			global.basement = arg0
+		}, global.basement)]
 		
 		break
 	

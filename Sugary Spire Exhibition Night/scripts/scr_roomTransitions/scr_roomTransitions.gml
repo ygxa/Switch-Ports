@@ -3,6 +3,11 @@ function scr_roomStart_SetPosition_player(arg0 = obj_player1)
 	if (instance_exists(obj_cutsceneManager) && obj_cutsceneManager.returnLevelCustcene)
 		exit
 	
+	if global.randomroom = true{
+		alarm[9] = 1
+		exit;
+	}
+	
 	with (arg0)
 	{
 		var target_door = obj_parent_doortrigger

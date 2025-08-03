@@ -26,6 +26,7 @@ function scr_defineLevel(arg0, arg1, arg2, arg3, arg4 = [], arg5 = 20000, arg6 =
 
 scr_defineLevel(0, "demohub", "Demo 2 Hub", hub_demohallway)
 scr_defineLevel(0, "tutorial", "Tutorial", tutorial_1)
+scr_defineLevel(0, "random", "Random", random_entrance)
 scr_defineLevel(0, "entryway", "Crunchy Construction", entryway_1, ["Entryway"], 16500, new scr_defineTitleCard(0, mu_titlecard_entryway, 37, 42))
 scr_defineLevel(0, "steamy", "Cottontown", steamy_1, ["Cottontown"], 22500, new scr_defineTitleCard(1, mu_titlecard_steamy, 37, 498))
 scr_defineLevel(0, "mineshaft", "Sugarshack Mines", mineshaft_1, ["Mines"], 21500, new scr_defineTitleCard(2, mu_titlecard_mines, 37, 498))

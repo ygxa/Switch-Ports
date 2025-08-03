@@ -134,6 +134,7 @@
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_102867","properties":[],"isDnd":false,"objectId":{"name":"obj_destroyable","path":"objects/obj_destroyable/obj_destroyable.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":832.0,"y":1632.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_102868","properties":[],"isDnd":false,"objectId":{"name":"obj_cottoncreator","path":"objects/obj_cottoncreator/obj_cottoncreator.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":-1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":2529.0,"y":1969.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_102869","properties":[],"isDnd":false,"objectId":{"name":"obj_bigcollect","path":"objects/obj_bigcollect/obj_bigcollect.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":2240.0,"y":480.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_11B84515","properties":[],"isDnd":false,"objectId":{"name":"obj_door","path":"objects/obj_door/obj_door.yy",},"inheritCode":false,"hasCreationCode":true,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":576.0,"y":1920.0,},
       ],"visible":true,"depth":0,"userdefinedDepth":true,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":16,"gridY":16,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],},
     {"resourceType":"GMRTileLayer","resourceVersion":"1.1","name":"Tiles_Secret1","tilesetId":{"name":"ts_clock2","path":"tilesets/ts_clock2/ts_clock2.yy",},"x":0,"y":0,"tiles":{"TileDataFormat":1,"SerialiseWidth":100,"SerialiseHeight":75,"TileCompressedData":[
 -2705,0,-10,292,-90,0,-10,292,-90,0,-10,292,-90,0,-4,292,2,1100,1101,-4,292,1,259,-89,0,-4,292,2,1132,1133,-4,292,2,262,39,-88,0,-4,292,2,1164,1165,-4,292,3,294,71,72,-87,0,-7,292,6,1001,1002,292,326,101,102,-87,0,-7,292,6,1033,1034,292,262,103,104,-87,0,-7,292,7,1065,1066,292,294,66,37,38,-86,0,-10,292,1,326,-89,0,-10,292,1,323,-3784,0,],},"visible":true,"depth":100,"userdefinedDepth":true,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":16,"gridY":16,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],},
@@ -332,6 +333,7 @@
     {"name":"inst_102871","path":"rooms/steamy_9/steamy_9.yy",},
     {"name":"inst_102872","path":"rooms/steamy_9/steamy_9.yy",},
     {"name":"inst_102873","path":"rooms/steamy_9/steamy_9.yy",},
+    {"name":"inst_11B84515","path":"rooms/steamy_9/steamy_9.yy",},
   ],
   "inheritCreationOrder": false,
   "sequenceId": null,
