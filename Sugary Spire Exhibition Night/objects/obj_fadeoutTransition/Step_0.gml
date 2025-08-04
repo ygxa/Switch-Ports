@@ -24,7 +24,7 @@ if (fadealpha > 1 && load_finished && !fadein)
 			molasses_1, molasses_2, molasses_3, molasses_3b, molasses_4, molasses_5, molasses_6, molasses_7, molasses_7b, molasses_7c, molasses_7d, molasses_8, molasses_9, molasses_9b, molasses_10, molasses_11, molasses_12, //molasses
 			mountain_intro, mountain_1, mountain_2, mountain_3, mountain_3b, mountain_4, mountain_escape1, mountain_5, mountain_6, mountain_7, mountain_8, mountain_9, mountain_10, mountain_11, //fudgetop
 			cafe_1, cafe_2, cafe_3, cafe_4, cafe_5, cafe_6, cafe_7, cafe_8, cafe_9, cafe_10, cafe_4B, cafe_4C, cafe_7B, cafe_8B, cafe_8C, cafe_8D, //cafe
-			tutorial_1, tutorial_2, tutorial_3, tutorial_4, tutorial_5, tutorial_2b //tutorial
+			tutorial_1, tutorial_2, tutorial_3, tutorial_4, tutorial_5 //tutorial
 			)
 		}
 		if (room_exists(target_room))
