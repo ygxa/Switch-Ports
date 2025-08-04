@@ -415,7 +415,7 @@ function cutscene_backtohub_start()
 		{
 			scale = 0
 			sprite_index = spr_player_PZ_geyser
-			event_play_oneshot("event:/SFX/general/paintingreturn")
+			event_play_oneshot(sfx_paintignexitttt)
 		}
 	}
 	

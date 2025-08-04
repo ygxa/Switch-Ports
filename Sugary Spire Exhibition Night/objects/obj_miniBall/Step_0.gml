@@ -4,7 +4,8 @@ if (grounded)
 {
 	if (vsp > 1)
 	{
-		event_play_oneshot("event:/SFX/general/paperballhit")
+		if !audio_is_playing(sfx_paperball)
+			event_play_oneshot(sfx_paperball)
 		vsp /= -2
 	}
 	

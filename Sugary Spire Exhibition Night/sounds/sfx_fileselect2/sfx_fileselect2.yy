@@ -1,10 +1,10 @@
 {
   "resourceType": "GMSound",
   "resourceVersion": "1.0",
-  "name": "mu_titlescreen",
+  "name": "sfx_fileselect2",
   "conversionMode": 0,
   "compression": 0,
-  "volume": 0.25,
+  "volume": 1.0,
   "preload": false,
   "bitRate": 128,
   "sampleRate": 44100,
@@ -14,8 +14,8 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "mu_titlescreen.wav",
-  "duration": 134.664,
+  "soundFile": "sfx_fileselect2.wav",
+  "duration": 5.329333,
   "parent": {
     "name": "Sounds",
     "path": "folders/Sounds.yy",

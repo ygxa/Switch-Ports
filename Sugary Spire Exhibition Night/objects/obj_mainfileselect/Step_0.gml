@@ -128,7 +128,7 @@ if (abletomove && !blockedInputs && !activated)
         
         if (key_right2 || -key_left2)
         {
-            event_play_oneshot("event:/SFX/general/paperballhit");
+            event_play_oneshot(sfx_paperball);
             fileDisplayPercent = 0;
         }
         
@@ -143,8 +143,13 @@ if (abletomove && !blockedInputs && !activated)
                 }
             }
             
-            event_play_oneshot("event:/SFX/general/collectbig");
-            event_play_oneshot("event:/SFX/fileselect/fileselect");
+            event_play_oneshot(sfx_bigcollectget);
+			if selectedFile = 0
+				event_play_oneshot(sfx_fileselect1);
+			if selectedFile = 1
+				event_play_oneshot(sfx_fileselect2);
+			if selectedFile = 2
+				event_play_oneshot(sfx_fileselect3);
             blockedInputs = true;
             alarm[2] = 250;
             activated = true;
