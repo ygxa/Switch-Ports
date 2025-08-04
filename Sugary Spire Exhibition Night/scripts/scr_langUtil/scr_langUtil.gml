@@ -825,7 +825,7 @@ function lang_get(arg0, arg1 = undefined)
 		}
 	}
 	*/
-	return 1;
+	return arg0;
 }
 
 function lang_group_replace(arg0, arg1 = ["{", "}"], arg2 = global.lang_values)
