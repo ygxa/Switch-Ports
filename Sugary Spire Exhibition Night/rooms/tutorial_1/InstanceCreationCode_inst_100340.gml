@@ -1,1 +1,0 @@
-text = "Ho ho! Hello there, kiddo, I'm your Ice-Pop! I'm here to teach you some new things you should know! Before that though, I just want you to try making it through this room real quick. No sweat, right?"
