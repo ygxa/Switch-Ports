@@ -1,0 +1,1 @@
+targetRoom = castletown_west

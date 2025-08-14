@@ -1,0 +1,1 @@
+text1 = "(The door is locked.)"
