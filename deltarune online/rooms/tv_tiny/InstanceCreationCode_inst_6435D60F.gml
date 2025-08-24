@@ -1,1 +1,0 @@
-targetRoom = tv_tiny

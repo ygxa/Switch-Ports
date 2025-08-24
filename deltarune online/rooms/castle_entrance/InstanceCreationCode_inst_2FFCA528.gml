@@ -1,1 +1,0 @@
-text1 = "(BF : LIVING QUARTERS FOR BAD GUYS)"

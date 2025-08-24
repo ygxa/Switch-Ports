@@ -10,10 +10,10 @@
   "visible": true,
   "managed": true,
   "spriteMaskId": {
-    "name": "spr_krislightdown",
-    "path": "sprites/spr_krislightdown/spr_krislightdown.yy",
+    "name": "spr_krisdown",
+    "path": "sprites/spr_krisdown/spr_krisdown.yy",
   },
-  "persistent": true,
+  "persistent": false,
   "parentObjectId": null,
   "physicsObject": false,
   "physicsSensor": false,
