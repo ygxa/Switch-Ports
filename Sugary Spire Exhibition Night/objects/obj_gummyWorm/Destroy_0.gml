@@ -17,7 +17,7 @@ if (ds_list_find_index(global.SaveRoom, id) == -1)
 	create_particle(random_range(bbox_left, bbox_right), random_range(bbox_top, bbox_bottom), spr_bangEffect)
 	event_play_oneshot("event:/SFX/player/punch", x, y)
 	event_play_oneshot("event:/SFX/general/wormKill", x, y)
-	event_play_oneshot("event:/SFX/enemies/kill", x, y)
+	event_play_oneshot(snd_kill, x, y)
 	global.ComboTime = 60
 	camera_shake_add(3, 3)
 	obj_parent_player.superTauntBuffer++

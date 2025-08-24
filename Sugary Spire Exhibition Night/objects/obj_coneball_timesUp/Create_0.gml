@@ -1,5 +1,5 @@
 depth = -151
-sndMoving = fmod_createEventInstance("event:/SFX/coneball/moving")
+sndMoving = fmod_createEventInstance(snd_blotchmove)
 mySoundArray = [sndMoving]
 image_speed = 0.35
 image_alpha = 0
@@ -19,4 +19,4 @@ noConeballRoom = false
 savedCamY = y
 savedCamX = x
 sprite_index = spr_blotchsplotch
-event_play_oneshot("event:/SFX/coneball/blotchlaugh")
+event_play_oneshot(snd_blotchlaugh)

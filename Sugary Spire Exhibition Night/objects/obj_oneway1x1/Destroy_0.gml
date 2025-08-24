@@ -10,7 +10,7 @@ if (ds_list_find_index(global.SaveRoom, id) == -1)
 	}
 	
 	create_particle(random_range(bbox_left, bbox_right), random_range(bbox_top, bbox_bottom), spr_bangEffect)
-	event_play_oneshot("event:/SFX/enemies/kill")
+	event_play_oneshot(snd_kill)
 	ds_list_add(global.SaveRoom, id)
 }
 

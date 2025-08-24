@@ -1,6 +1,6 @@
 function scr_enemySounds_init()
 {
-	sndCharge = fmod_createEventInstance("event:/SFX/enemies/charge")
+	sndCharge = fmod_createEventInstance(snd_charge)
 	sndChargeElite = fmod_createEventInstance("event:/SFX/enemies/chargeelite")
 	sndBeamAttack = fmod_createEventInstance("event:/SFX/enemies/beamAttack")
 	sndSluggyDig = fmod_createEventInstance("event:/SFX/enemies/sluggyDig")

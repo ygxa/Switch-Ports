@@ -4,6 +4,6 @@ if (ds_list_find_index(global.SaveRoom, id) == -1)
 		sprite_index = spr_milkblock_dead
 	
 	camera_shake_add(20, 40)
-	event_play_oneshot("event:/SFX/enemies/killingblow", x, y)
+	event_play_oneshot(snd_killingblow, x, y)
 	ds_list_add(global.SaveRoom, id)
 }

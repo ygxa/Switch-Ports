@@ -45,7 +45,7 @@ if (round(image_index) == 9 && sprite_index == spr_dartFrog_shooting && !firedDa
 	}))
 	{
 		velocity = other.dartVelocity
-		event_play_oneshot("event:/SFX/enemies/dartfrog", x, y)
+		event_play_oneshot(snd_dartfrog, x, y)
 	}
 	
 	firedDart = true

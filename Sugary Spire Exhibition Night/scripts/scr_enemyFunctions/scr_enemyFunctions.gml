@@ -190,7 +190,7 @@ function scr_scareenemy()
 			sprite_index = baddieSpriteScared
 			
 			if (chance(5))
-				event_play_oneshot("event:/SFX/enemies/enemyrarescream", x, y)
+				event_play_oneshot(snd_enemyrarescream, x, y)
 			
 			if (x != player_object.x)
 				image_xscale = getFacingDirection(x, player_object.x)

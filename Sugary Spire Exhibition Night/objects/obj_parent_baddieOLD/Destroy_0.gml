@@ -18,7 +18,7 @@ if (global.InternalLevelName == "dance")
 	instance_create(x, y, obj_enemyFirework)
 
 event_play_oneshot("event:/SFX/player/punch", x, y)
-event_play_oneshot("event:/SFX/enemies/kill", x, y)
+event_play_oneshot(snd_kill, x, y)
 global.ComboTime = 60
 
 if (importantEnemy)

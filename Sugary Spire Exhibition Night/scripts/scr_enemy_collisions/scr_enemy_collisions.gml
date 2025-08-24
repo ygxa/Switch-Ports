@@ -224,7 +224,7 @@ function baddieOnPlayerCollisions()
         if (baddieInvincibilityBuffer <= 0 && player_object.state == 47 && player_object.sprite_index == spr_player_PZ_werecotton_drill_h)
         {
             event_play_oneshot("event:/SFX/player/punch", x, y);
-            event_play_oneshot("event:/SFX/enemies/killingblow", x, y);
+            event_play_oneshot(snd_killingblow, x, y);
             camera_shake_add(5, 20);
             scr_finishingBlow(id, player_object);
             exit;
@@ -232,7 +232,7 @@ function baddieOnPlayerCollisions()
         
         if (canBeStomped && vsp >= 0 && (player_object.state == 24 || player_object.state == 17) && player_object.vsp > 0 && player_object.y < y && player_object.sprite_index != player_object.spr_stompprep && player_object.sprite_index != spr_player_PN_wallBounce && player_object.sprite_index != spr_player_PN_superJump_cancel)
         {
-            event_play_oneshot("event:/SFX/enemies/stomp", x, y);
+            event_play_oneshot(snd_stomp, x, y);
             hasSquashedX = true;
             squashValueX = 0;
             
@@ -274,7 +274,7 @@ function baddieOnPlayerCollisions()
             
             with (player_object)
             {
-                event_play_oneshot("event:/SFX/enemies/grabbed");
+                event_play_oneshot(snd_grabbed);
                 baddieGrabbedID = other.id;
                 image_index = 0;
                 create_particle(x, y, spr_grabRing);

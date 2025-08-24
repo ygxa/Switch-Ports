@@ -53,5 +53,5 @@ else
 	event_play_oneshot("event:/SFX/general/breakglass", x, y)
 }
 
-event_play_oneshot("event:/SFX/enemies/kill")
+event_play_oneshot(snd_kill)
 instance_destroy()

@@ -48,7 +48,7 @@ function fmod_studio_event_instance_set_paused(music, value){
 }
 
 function fmod_createEventInstance(sound){
-
+	return sound
 }
 
 function fmod_studio_system_set_parameter_by_name(sound, reverb = false, noidea = false, noidea2 = false){

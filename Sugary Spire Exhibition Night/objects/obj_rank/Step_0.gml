@@ -73,7 +73,7 @@ switch (event)
 			combo_shown = true
 			event_buffer = 60
 			event++
-			event_play_oneshot("event:/SFX/enemies/killingblow")
+			event_play_oneshot(snd_killingblow)
 		}
 	
 	case 3:
@@ -85,7 +85,7 @@ switch (event)
 			damage_shown = true
 			event_buffer = 90
 			event++
-			event_play_oneshot("event:/SFX/enemies/killingblow")
+			event_play_oneshot(snd_killingblow)
 		}
 	
 	case 4:
