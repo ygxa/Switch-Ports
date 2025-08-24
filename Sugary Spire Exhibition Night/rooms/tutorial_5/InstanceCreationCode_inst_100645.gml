@@ -1,0 +1,1 @@
+text = "That big gummy guy over there is /1 Harry. If you smack him, the door you came in from will open again! Once that happens, you had better scoot your way back quickly. If you're fast enough, you can pay a visit to /2 Polka and go 'round again, /3 ya silly sprat!"
