@@ -14,7 +14,7 @@ if (ds_list_find_index(global.SaveRoom, id) == -1)
 	}
 	
 	if (room != hub_mindpalace)
-		event_play_multiple("event:/SFX/general/breakblock", (x - sprite_xoffset) + (sprite_width / 2), (y - sprite_yoffset) + (sprite_height / 2))
+		event_play_multiple(snd_breakblock, (x - sprite_xoffset) + (sprite_width / 2), (y - sprite_yoffset) + (sprite_height / 2))
 	else
 		event_play_multiple("event:/SFX/general/wormKill", (x - sprite_xoffset) + (sprite_width / 2), (y - sprite_yoffset) + (sprite_height / 2))
 	

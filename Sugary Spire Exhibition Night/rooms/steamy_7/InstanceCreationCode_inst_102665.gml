@@ -44,7 +44,7 @@ output = function()
 		create_debris((x - sprite_xoffset) + (sprite_width / 2) + random_range(-10, 10), y + random_range(-10, 10), spr_gclocktowerdebris)
 	
 	camera_shake_add(20, 40)
-	event_play_oneshot("event:/SFX/general/breakmetal")
+	event_play_oneshot(snd_breakmetal)
 	var lay_id = layer_get_id("Assets_1")
 	var sprite_id = layer_sprite_get_id(lay_id, "graphic_5748A7F1")
 	layer_sprite_change(sprite_id, spr_clocktowerexterior_broken)

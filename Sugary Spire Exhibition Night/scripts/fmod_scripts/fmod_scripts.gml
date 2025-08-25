@@ -94,8 +94,13 @@ function TIMELINE_BEAT(){
 	
 }
 
-function event_play_multiple(sound, _x = x, _y = y){
-	
+function event_play_multiple(sound, _x = x, _y = y, loop = false){	
+	if !is_undefined(sound){
+		if is_string(sound)
+			audio_play_sound_at(asset_get_index(sound), _x, _y, 0, 100, 300, 1, loop, 1)
+		else
+			audio_play_sound_at(sound, _x, _y, 0, 100, 300, 1, loop, 1)
+	}
 }
 
 function NESTED_TIMELINE_BEAT(){

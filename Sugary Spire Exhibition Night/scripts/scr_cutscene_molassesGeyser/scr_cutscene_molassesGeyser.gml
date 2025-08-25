@@ -52,7 +52,7 @@ function cutscene_geyser_middle()
 				if ((t % 6) == 0)
 				{
 					camera_shake_add(irandom(2), 1)
-					event_play_multiple("event:/SFX/general/breakblock", x, y)
+					event_play_multiple(snd_breakblock, x, y)
 				}
 				
 				if (sprite_animation_end(2) && sprite_index == spr_geyserCutscene_Activated)

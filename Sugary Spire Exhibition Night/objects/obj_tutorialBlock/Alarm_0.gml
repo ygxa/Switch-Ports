@@ -8,7 +8,7 @@ repeat (6)
 
 instance_create(random_range(bbox_left, bbox_right), random_range(bbox_top, bbox_bottom), obj_tutorialIcePopFly)
 create_destroyable_smoke(random_range(bbox_left, bbox_right), random_range(bbox_top, bbox_bottom), 16080)
-event_play_multiple("event:/SFX/general/breakblock", x, y)
+event_play_multiple(snd_breakblock, x, y)
 eas_ini_open(global.SaveFileName)
 ini_write_string("Misc", "TutorialBlock", "1")
 eas_ini_close()

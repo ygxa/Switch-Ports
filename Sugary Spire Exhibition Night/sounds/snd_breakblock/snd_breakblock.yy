@@ -1,10 +1,10 @@
 {
   "resourceType": "GMSound",
   "resourceVersion": "1.0",
-  "name": "snd_grabbed",
+  "name": "snd_breakblock",
   "conversionMode": 0,
   "compression": 0,
-  "volume": 0.37,
+  "volume": 0.63,
   "preload": false,
   "bitRate": 128,
   "sampleRate": 44100,
@@ -14,8 +14,8 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "snd_grabbed.wav",
-  "duration": 0.244,
+  "soundFile": "snd_breakblock.wav",
+  "duration": 0.764,
   "parent": {
     "name": "Sounds",
     "path": "folders/Sounds.yy",
