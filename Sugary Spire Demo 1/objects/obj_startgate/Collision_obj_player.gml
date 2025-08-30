@@ -8,7 +8,7 @@ if (sprite_index != spr_exitgateclosed)
             scr_levelstart(global.levelname);
             ini_open("saveData.ini");
             var ranks = ini_read_string("Ranks", string(global.levelname), "none");
-            ini_close();
+            ini_close_fixed();
             global.showplaytimer = ranks != "none";
             mach2 = 0;
             obj_camera.chargecamera = 0;

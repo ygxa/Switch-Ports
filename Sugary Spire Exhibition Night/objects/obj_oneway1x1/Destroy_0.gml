@@ -20,7 +20,7 @@ if (instance_exists(solidid))
 		instance_destroy()
 }
 
-eas_ini_open(global.SaveFileName)
+ini_open(global.SaveFileName)
 ini_write_string("PlantBlocks", "Block" + string(onewayRank), 1)
-eas_ini_close()
+fixed_ini_close()
 //eas_save(scr_easyasync_callback)

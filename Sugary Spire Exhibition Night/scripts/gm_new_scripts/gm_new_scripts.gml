@@ -100,3 +100,16 @@ function variable_clone(src) {
         return src;
     }
 }
+
+function struct_get(_s, _k) {
+	return variable_struct_get(_s, _k);
+}
+
+function array_foreach(arr, cb)
+{
+	var _len = array_length(arr);
+	for (var i = 0; i < _len; i++)
+	{
+		cb(arr[i], i);
+	}
+}

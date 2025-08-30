@@ -61,5 +61,5 @@ function scr_savelevelDetails()
     if (rank_checker(global.rank) > rank_checker(ini_read_string("Ranks", string(global.levelname), "none")))
         ini_write_string("Ranks", string(global.levelname), global.rank);
     
-    ini_close();
+    ini_close_fixed();
 }

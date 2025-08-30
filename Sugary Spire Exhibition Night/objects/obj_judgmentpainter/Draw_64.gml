@@ -1,5 +1,5 @@
 if (!active)
-	return
+	exit
 
 dialogAlpha = approach(dialogAlpha, (progression == 1) ? 1 : 0, 0.05)
 
@@ -14,15 +14,22 @@ draw_set_color(c_white)
 draw_sprite(spr_dialobox_temp, 0, 0, 0)
 
 if (!chatty && dialogAlpha >= 1)
-	continueIcon.draw(870, 160).update()
+	draw_sprite(spr_dialogbox_next, ass, 870,160)
 
-if (array_length(dialogEvents) > 0)
-{
-	var text = dialogEvents[dialogCurrent]
-	text.align(0, 0)
-	text.blend(0, dialogAlpha)
-	text.draw(40, 40, typist)
-}
+draw_set_halign(fa_left)
+draw_set_valign(fa_top)
+draw_set_alpha(dialogAlpha)
+draw_set_font(global.npcfont)
+
+var sep = 32
+var wrap_w = 800
+
+var text = dialogEvents[dialogCurrent]
+var newtext = string_replace_all(text, " ", "        ");
+
+var fuck = clamp(floor(textletter),0,string_length(newtext));
+draw_text_ext(40,40,string_copy(newtext,1,fuck),sep,wrap_w)
+
 
 draw_set_color(c_white)
 draw_set_alpha(1)

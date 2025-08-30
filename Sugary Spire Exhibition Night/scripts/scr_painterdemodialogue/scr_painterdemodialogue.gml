@@ -3,7 +3,7 @@ function scr_painterdemodialogue()
 	var secret_count = 0
 	var levels = ["entryway", "steamy", "mineshaft", "molasses"]
 	var molasses_secrets = 0
-	eas_ini_open(global.SaveFileName)
+	ini_open(global.SaveFileName)
 	
 	for (var i = 0; i < array_length(levels); i++)
 	{
@@ -17,13 +17,13 @@ function scr_painterdemodialogue()
 		}
 	}
 	
-	eas_ini_close()
+	fixed_ini_close()
 	//eas_save(scr_easyasync_callback)
 	var info_arr = []
 	talk_sound = "event:/SFX/hub/painterThink"
 	var dialogue_key
 	
-	if (room == hub_molasses or room == hub_paintstudio2)
+	if (room == hub_molasses)
 	{
 		if (scr_check_completion())
 		{
@@ -106,7 +106,7 @@ function scr_painterdemodialogue()
 	}
 	else if (secret_count == 12)
 	{
-		dialogue_key = "Hmm... Finally, you've recovered all of my /1 INK! Please, mademoiselle, enjoy the show."
+		dialogue_key = "Hmm... Finally, you've recovered all of my # INK! Please, mademoiselle, enjoy the show."
 		idle = spr_painteridle5
 		speak = spr_painteridle5
 		array_push(info_arr, scr_getDialogIcon("INK"))
@@ -116,7 +116,7 @@ function scr_painterdemodialogue()
 		dialogue_key = "Hmm... There is something to be said for the strange connection which any interactive art has to its host medium. Even the most well-preserved copy of Madden NFL 2001 is only as good as the PlayStation 2 upon which it runs, or as pure as the intentions of one who runs it... You understand, right?"
 	}
 	
-	if (dialogue_key != "Hmm... You are the one who scattered my precious /1 INK! The Critics are already en route... you had better bring my INK back to me before they arrive." && dialogue_key != "Hmm... There is something to be said for the strange connection which any interactive art has to its host medium. Even the most well-preserved copy of Madden NFL 2001 is only as good as the PlayStation 2 upon which it runs, or as pure as the intentions of one who runs it... You understand, right?" && global.UseOfftopic && irandom(2) == 0 && room != hub_molasses && room != hub_paintstudio2)
+	if (dialogue_key != "Hmm... You are the one who scattered my precious /1 INK! The Critics are already en route... you had better bring my INK back to me before they arrive." && dialogue_key != "Hmm... There is something to be said for the strange connection which any interactive art has to its host medium. Even the most well-preserved copy of Madden NFL 2001 is only as good as the PlayStation 2 upon which it runs, or as pure as the intentions of one who runs it... You understand, right?" && global.UseOfftopic && irandom(2) == 0 && room != hub_molasses)
 	{
 		if (global.SaveMinutes >= 60)
 		{

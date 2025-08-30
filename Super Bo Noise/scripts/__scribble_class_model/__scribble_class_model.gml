@@ -1,16 +1,16 @@
-function __scribble_class_model(argument0, argument1) constructor
+function __scribble_class_model(arg0, arg1) constructor
 {
-    static __scribble_state = __scribble_get_state();
-    static __mcache_dict = __scribble_get_cache_state().__mcache_dict;
-    static __mcache_name_array = __scribble_get_cache_state().__mcache_name_array;
+    static __scribble_state = __scribble_initialize().__state;
+    static __mcache_dict = __scribble_initialize().__cache_state.__mcache_dict;
+    static __mcache_name_array = __scribble_initialize().__cache_state.__mcache_name_array;
     
-    static __submit = function(argument0, argument1)
+    static __submit = function(arg0, arg1)
     {
         if (__flushed)
             return undefined;
         
         __last_drawn = __scribble_state.__frames;
-        __pages_array[argument0].__submit((false || __has_arabic || __has_thai) && argument1);
+        __pages_array[arg0].__submit((false || __has_arabic || __has_thai) && arg1);
     };
     
     static __freeze = function()
@@ -61,19 +61,19 @@ function __scribble_class_model(argument0, argument1) constructor
         __pages_array = [];
     };
     
-    static __get_bbox = function(argument0, argument1, argument2, argument3, argument4)
+    static __get_bbox = function(arg0, arg1, arg2, arg3, arg4)
     {
         var _left, _right, _top, _bottom;
         
-        if (argument0 != undefined)
+        if (arg0 != undefined)
         {
-            if (argument0 < 0)
-                __scribble_error("Page index ", argument0, " doesn't exist. Minimum page index is 0");
+            if (arg0 < 0)
+                __scribble_error("Page index ", arg0, " doesn't exist. Minimum page index is 0");
             
-            if (argument0 >= __pages)
-                __scribble_error("Page index ", argument0, " doesn't exist. Maximum page index is ", __pages - 1);
+            if (arg0 >= __pages)
+                __scribble_error("Page index ", arg0, " doesn't exist. Maximum page index is ", __pages - 1);
             
-            var _page_data = __pages_array[argument0];
+            var _page_data = __pages_array[arg0];
             _left = _page_data.__min_x;
             _top = _page_data.__min_y;
             _right = _page_data.__max_x;
@@ -88,24 +88,24 @@ function __scribble_class_model(argument0, argument1) constructor
         }
         
         if (__pad_bbox_l)
-            _left -= argument1;
+            _left -= arg1;
         else
-            _right += argument1;
+            _right += arg1;
         
         if (__pad_bbox_t)
-            _top -= argument2;
+            _top -= arg2;
         else
-            _bottom += argument2;
+            _bottom += arg2;
         
         if (__pad_bbox_r)
-            _right += argument3;
+            _right += arg3;
         else
-            _left -= argument3;
+            _left -= arg3;
         
         if (__pad_bbox_b)
-            _bottom += argument4;
+            _bottom += arg4;
         else
-            _top -= argument4;
+            _top -= arg4;
         
         return 
         {
@@ -116,48 +116,48 @@ function __scribble_class_model(argument0, argument1) constructor
         };
     };
     
-    static __get_bbox_revealed = function(argument0, argument1, argument2, argument3, argument4, argument5, argument6)
+    static __get_bbox_revealed = function(arg0, arg1, arg2, arg3, arg4, arg5, arg6)
     {
         __scribble_error("Getting the revealed glyph bounding box requires SCRIBBLE_ALLOW_GLYPH_DATA_GETTER to be set to <true>");
-        var _glyph_grid = __get_glyph_data_grid(argument0);
-        var _start = argument1 - 1;
-        var _end = argument2 - 1;
+        var _glyph_grid = __get_glyph_data_grid(arg0);
+        var _start = arg1 - 1;
+        var _end = arg2 - 1;
         var _left, _right, _top, _bottom;
         
         if (_end < 0)
         {
-            _left = ds_grid_get(_glyph_grid, 0, 1);
-            _top = ds_grid_get(_glyph_grid, 0, 2);
-            _right = ds_grid_get(_glyph_grid, 0, 1);
-            _bottom = ds_grid_get(_glyph_grid, 0, 4);
+            _left = ds_grid_get(_glyph_grid, 0, (1 << 0));
+            _top = ds_grid_get(_glyph_grid, 0, (2 << 0));
+            _right = ds_grid_get(_glyph_grid, 0, (1 << 0));
+            _bottom = ds_grid_get(_glyph_grid, 0, (4 << 0));
         }
         else
         {
-            _left = ds_grid_get_min(_glyph_grid, _start, 1, _end, 1);
-            _top = ds_grid_get_min(_glyph_grid, _start, 2, _end, 2);
-            _right = ds_grid_get_max(_glyph_grid, _start, 3, _end, 3);
-            _bottom = ds_grid_get_max(_glyph_grid, _start, 4, _end, 4);
+            _left = ds_grid_get_min(_glyph_grid, _start, (1 << 0), _end, (1 << 0));
+            _top = ds_grid_get_min(_glyph_grid, _start, (2 << 0), _end, (2 << 0));
+            _right = ds_grid_get_max(_glyph_grid, _start, (3 << 0), _end, (3 << 0));
+            _bottom = ds_grid_get_max(_glyph_grid, _start, (4 << 0), _end, (4 << 0));
         }
         
         if (__pad_bbox_l)
-            _left -= argument3;
+            _left -= arg3;
         else
-            _right += argument3;
+            _right += arg3;
         
         if (__pad_bbox_t)
-            _top -= argument4;
+            _top -= arg4;
         else
-            _bottom += argument4;
+            _bottom += arg4;
         
         if (__pad_bbox_r)
-            _right += argument5;
+            _right += arg5;
         else
-            _left -= argument5;
+            _left -= arg5;
         
         if (__pad_bbox_b)
-            _bottom += argument6;
+            _bottom += arg6;
         else
-            _bottom -= argument6;
+            _bottom -= arg6;
         
         return 
         {
@@ -168,12 +168,12 @@ function __scribble_class_model(argument0, argument1) constructor
         };
     };
     
-    static __get_width = function(argument0)
+    static __get_width = function(arg0)
     {
         return __fit_scale * __width;
     };
     
-    static __get_height = function(argument0)
+    static __get_height = function(arg0)
     {
         return __fit_scale * __height;
     };
@@ -188,27 +188,27 @@ function __scribble_class_model(argument0, argument1) constructor
         return __pages;
     };
     
-    static __get_text = function(argument0)
+    static __get_text = function(arg0)
     {
-        if (argument0 < 0)
-            __scribble_error("Page index ", argument0, " doesn't exist. Minimum page index is 0");
+        if (arg0 < 0)
+            __scribble_error("Page index ", arg0, " doesn't exist. Minimum page index is 0");
         
-        if (argument0 >= __pages)
-            __scribble_error("Page index ", argument0, " doesn't exist. Maximum page index is ", __pages - 1);
+        if (arg0 >= __pages)
+            __scribble_error("Page index ", arg0, " doesn't exist. Maximum page index is ", __pages - 1);
         
         __scribble_error("Cannot get text, SCRIBBLE_ALLOW_TEXT_GETTER = <false>\nPlease set SCRIBBLE_ALLOW_TEXT_GETTER to <true> to get text");
-        return __pages_array[argument0].__text;
+        return __pages_array[arg0].__text;
     };
     
-    static __get_glyph_data = function(argument0, argument1)
+    static __get_glyph_data = function(arg0, arg1)
     {
-        if (argument1 < 0)
-            __scribble_error("Page index ", argument1, " doesn't exist. Minimum page index is 0");
+        if (arg1 < 0)
+            __scribble_error("Page index ", arg1, " doesn't exist. Minimum page index is 0");
         
-        if (argument1 >= __pages)
-            __scribble_error("Page index ", argument1, " doesn't exist. Maximum page index is ", __pages - 1);
+        if (arg1 >= __pages)
+            __scribble_error("Page index ", arg1, " doesn't exist. Maximum page index is ", __pages - 1);
         
-        return __pages_array[argument1].__get_glyph_data(argument0);
+        return __pages_array[arg1].__get_glyph_data(arg0);
     };
     
     static __get_wrapped = function()
@@ -216,38 +216,38 @@ function __scribble_class_model(argument0, argument1) constructor
         return __wrapped;
     };
     
-    static __get_line_count = function(argument0)
+    static __get_line_count = function(arg0)
     {
-        if (argument0 < 0)
-            __scribble_error("Page index ", argument0, " doesn't exist. Minimum page index is 0");
+        if (arg0 < 0)
+            __scribble_error("Page index ", arg0, " doesn't exist. Minimum page index is 0");
         
-        if (argument0 >= __pages)
-            __scribble_error("Page index ", argument0, " doesn't exist. Maximum page index is ", __pages - 1);
+        if (arg0 >= __pages)
+            __scribble_error("Page index ", arg0, " doesn't exist. Maximum page index is ", __pages - 1);
         
-        return __pages_array[argument0].__line_count;
+        return __pages_array[arg0].__line_count;
     };
     
-    static __get_glyph_count = function(argument0)
+    static __get_glyph_count = function(arg0)
     {
-        if (argument0 < 0)
-            __scribble_error("Page index ", argument0, " doesn't exist. Minimum page index is 0");
+        if (arg0 < 0)
+            __scribble_error("Page index ", arg0, " doesn't exist. Minimum page index is 0");
         
-        if (argument0 >= __pages)
-            __scribble_error("Page index ", argument0, " doesn't exist. Maximum page index is ", __pages - 1);
+        if (arg0 >= __pages)
+            __scribble_error("Page index ", arg0, " doesn't exist. Maximum page index is ", __pages - 1);
         
-        return __pages_array[argument0].__glyph_count - 1;
+        return __pages_array[arg0].__glyph_count - 1;
     };
     
-    static __get_glyph_data_grid = function(argument0)
+    static __get_glyph_data_grid = function(arg0)
     {
-        if (argument0 < 0)
-            __scribble_error("Page index ", argument0, " doesn't exist. Minimum page index is 0");
+        if (arg0 < 0)
+            __scribble_error("Page index ", arg0, " doesn't exist. Minimum page index is 0");
         
-        if (argument0 >= __pages)
-            __scribble_error("Page index ", argument0, " doesn't exist. Maximum page index is ", __pages - 1);
+        if (arg0 >= __pages)
+            __scribble_error("Page index ", arg0, " doesn't exist. Maximum page index is ", __pages - 1);
         
         __scribble_error("Getting glyph data requires SCRIBBLE_ALLOW_GLYPH_DATA_GETTER to be set to <true>");
-        return __pages_array[argument0].__glyph_grid;
+        return __pages_array[arg0].__glyph_grid;
     };
     
     static __new_page = function()
@@ -258,20 +258,20 @@ function __scribble_class_model(argument0, argument1) constructor
         return _page_data;
     };
     
-    static __finalize_vertex_buffers = function(argument0)
+    static __finalize_vertex_buffers = function(arg0)
     {
         var _i = 0;
         
         repeat (array_length(__pages_array))
         {
-            __pages_array[_i].__finalize_vertex_buffers(argument0);
+            __pages_array[_i].__finalize_vertex_buffers(arg0);
             _i++;
         }
     };
     
-    static _generator_state = __scribble_get_generator_state();
+    static _generator_state = __scribble_initialize().__generator_state;
     
-    __cache_name = argument1;
+    __cache_name = arg1;
     var _weak = variable_struct_get(__mcache_dict, __cache_name);
     
     if (_weak != undefined && weak_ref_alive(_weak) && !_weak.ref.__flushed)
@@ -310,8 +310,8 @@ function __scribble_class_model(argument0, argument1) constructor
     with (_generator_state)
     {
         __Reset();
-        __element = argument0;
-        __overall_bidi = argument0.__bidi_hint;
+        __element = arg0;
+        __overall_bidi = arg0.__bidi_hint;
     }
     
     __scribble_gen_1_model_limits_and_bezier_curves();

@@ -4,10 +4,9 @@ myrope = spr_npcropepainter
 bubblesubimg = -1
 bubblesubimg2 = -1
 ropetype = RopeType.bottom
-eas_ini_open(global.SaveFileName)
+ini_open(global.SaveFileName)
 var has_judgment = ini_read_string("Game", "Judgment", "none") != "none"
-eas_ini_close()
-//eas_save(scr_easyasync_callback)
+fixed_ini_close()
 
 if (scr_check_completion() && !has_judgment)
 	instance_destroy()

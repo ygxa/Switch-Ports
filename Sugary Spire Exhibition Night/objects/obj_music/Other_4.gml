@@ -66,18 +66,18 @@ if (global.RoomIsSecret)
 	if (!is_undefined(global.RoomMusic) && !is_undefined(global.RoomMusic.secretMusicInst))
 	{
 		fmod_studio_event_instance_start(global.RoomMusic.secretMusicInst)
-		var music_timeline_percent = fmod_studio_event_instance_get_timeline_position(global.RoomMusic.musicInst) / fmod_getEventLength(global.RoomMusic.eventName)
-		var secret_pos = music_timeline_percent * fmod_getEventLength(global.RoomMusic.secretEventName)
-		fmod_studio_event_instance_set_timeline_position(global.RoomMusic.secretMusicInst, secret_pos)
-		fmod_studio_event_instance_set_paused(global.RoomMusic.musicInst, true)
-		fmod_studio_event_instance_set_paused(global.RoomMusic.secretMusicInst, false)
-		fmod_studio_event_instance_set_callback(global.RoomMusic.secretMusicInst, FMOD_STUDIO_EVENT_CALLBACK.TIMELINE_BEAT)
+		//var music_timeline_percent = fmod_studio_event_instance_get_timeline_position(global.RoomMusic.musicInst) / fmod_getEventLength(global.RoomMusic.eventName)
+		//var secret_pos = music_timeline_percent * fmod_getEventLength(global.RoomMusic.secretEventName)
+		//fmod_studio_event_instance_set_timeline_position(global.RoomMusic.secretMusicInst, secret_pos)
+		//fmod_studio_event_instance_set_paused(global.RoomMusic.musicInst, true)
+		//fmod_studio_event_instance_set_paused(global.RoomMusic.secretMusicInst, false)
+		//fmod_studio_event_instance_set_callback(global.RoomMusic.secretMusicInst, FMOD_STUDIO_EVENT_CALLBACK.TIMELINE_BEAT)
 	}
 	
 	if (global.panic)
 	{
 		fmod_studio_event_instance_set_paused(global.EscapeMusicInst, true)
-		fmod_studio_event_instance_set_callback(global.EscapeMusicInst, FMOD_STUDIO_EVENT_CALLBACK.NESTED_TIMELINE_BEAT)
+		//fmod_studio_event_instance_set_callback(global.EscapeMusicInst, FMOD_STUDIO_EVENT_CALLBACK.NESTED_TIMELINE_BEAT)
 	}
 }
 
@@ -96,3 +96,6 @@ if audio_is_playing(mu_pizzanoentryway) && global.playerCharacter = Characters.P
 	audio_stop_sound(mu_pizzanoentryway)
 	fmod_studio_event_instance_start(mu_entryway, true)
 }
+
+audio_sound_gain(mu_hub1,0.35,0)
+audio_sound_gain(global.EscapeMusicInst,0.5,0)

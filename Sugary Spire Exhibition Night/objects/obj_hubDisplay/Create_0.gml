@@ -106,7 +106,7 @@ addLevel = function(arg0, arg1, arg2 = true, arg3 = true, arg4 = true, arg5 = tr
 		gotScore: 0
 	}
 	var p = l.properties
-	eas_ini_open(global.SaveFileName)
+	ini_open(global.SaveFileName)
 	
 	if (arg2)
 	{
@@ -130,7 +130,7 @@ addLevel = function(arg0, arg1, arg2 = true, arg3 = true, arg4 = true, arg5 = tr
 		p.gotScore = ini_read_real("Highscore", arg0, 0)
 	}
 	
-	eas_ini_close()
+	fixed_ini_close()
 	//eas_save(scr_easyasync_callback)
 	array_push(pg.contentArr, l)
 	return l;

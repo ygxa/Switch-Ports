@@ -249,7 +249,42 @@ else if (event_instance_isplaying(sndEmpty))
     fmod_studio_event_instance_stop(sndEmpty, true);
 }
 
-var _move_v = key_down2 - key_up2;
+if global.panpizzano
+	var _move_v = key_down2 - key_up2;
+else{
+	var _move_v = 0
+	prevselected = 0;
+	char_select = 1;
+	prevcharselect = 1;
+	charicon = spr_menu_pizzelle;
+	charindex = 0;
+	arrowicon = spr_menu_pizzelle_arrow;	
+    savePath = ["saveData1_EN.ini", "saveData2_EN.ini", "saveData3_EN.ini"];
+    
+    for (var i = 0; i < 3; i++)
+    {
+        if (file_exists(savePath[i]))
+        {
+            ini_open(savePath[i]);
+            filePalette[i] = ini_read_real("Misc", "playerPaletteIndex_" + string(scr_getCharacterPrefix(global.playerCharacter)), 2);
+            fileOpened[i] = ini_read_real("Game", "seconds", 0) != 0 || ini_read_real("Game", "minutes", 0) != 0;
+            ini_close();
+            filePercentage[i] = scr_completion_percent(savePath[i]);
+            filePresent[i] = true;
+            fileJudgment[i] = scr_judgment_read(savePath[i]);
+        }
+        else
+        {
+            filePalette[i] = 2;
+            filePercentage[i] = 0;
+            filePresent[i] = false;
+            fileJudgment[i] = scr_judgment_get("none");
+            fileOpened[i] = false;
+        }
+        
+        doonce = 0;
+    }
+}
 
 if (!obj_mainfileselect.abletomove)
     _move_v = 0;

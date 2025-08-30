@@ -4,7 +4,7 @@ var rowTotal = array_length(levelArr)
 var ylen = (taskPadY * (rowTotal - 1) * (outfitRows - 1)) + 32
 draw_sprite_stretched_ext(spr_achmenu_body, 0, 0, scrollFactor, 960, ylen, c_ltgray, 1)
 draw_set_color((selectH == 0 && selectV == -1) ? c_white : c_dkgray)
-draw_text(128, 128 + scrollFactor, lang_get("opt_back"))
+draw_text(128, 128 + scrollFactor, lang_get("BACK"))
 var textArr = []
 var by = (rowTotal * taskPadY) + (camera_get_view_height(view_camera[0]) / 2) + scrollFactor
 var _final_scroll = 0
@@ -25,7 +25,7 @@ for (var i = 0; i < rowTotal; i++)
 	
 	draw_set_font(global.fontDefault)
 	draw_set_color(rowSelected ? c_white : c_dkgray)
-	//draw_text_scribble(camera_get_view_width(view_camera[0]) / 2, rowY - string_height("A") - 32, string("[fa_bottom][fa_center]" + nm))
+	draw_text(camera_get_view_width(view_camera[0]) / 2, rowY - string_height("A") - 32,string(nm))
 	var len = array_length(taskArr)
 	
 	for (var j = 0; j < len; j++)
@@ -75,8 +75,8 @@ for (var i = 1; i <= array_length(outfitArr); i++)
 	var rowY = by + (currentRow * taskPadY)
 	draw_set_font(global.fontDefault)
 	
-	//if (i == 1)
-		//draw_text_scribble(camera_get_view_width(view_camera[0]) / 2, rowY - string_height("A") - 24, string("[fa_bottom][fa_center]" + lang_get("menutask_clothes")))
+	if (i == 1)
+		draw_text(camera_get_view_width(view_camera[0]) / 2, rowY - string_height("A") - 24, lang_get("CLOTHES"))
 	
 	var rowSelected = (currentRow + rowTotal) == selectV
 	draw_set_color(rowSelected ? c_white : c_dkgray)
@@ -117,57 +117,57 @@ for (var i = 1; i <= array_length(outfitArr); i++)
 	
 	switch (task.get("taskKey"))
 	{
-		case "palette_PZ_exhibitionred":
+		case "Painter Red":
 			ind = 5
 			palind = 1
 			break
 		
-		case "palette_PZ_exhibitionblack":
+		case "Painter Black":
 			ind = 6
 			palind = 2
 			break
 		
-		case "palette_PZ_exhibitionpurple":
+		case "Painter Purple":
 			ind = 5
 			palind = 3
 			break
 		
-		case "palette_PZ_noise":
+		case "Noise":
 			ind = 6
 			palind = 4
 			break
 		
-		case "palette_PZ_exhibitionbrain":
+		case "Brainy Duds":
 			ind = 4
 			palind = 9
 			break
 		
-		case "palette_PZ_exhibitionbraingold":
+		case "Golden Brainy Duds":
 			ind = 4
 			palind = 10
 			break
 		
-		case "palette_PZ_exhibitionpaper":
+		case "Notebook":
 			ind = 7
 			palind = 12
 			break
 		
-		case "palette_PZ_exhibitionentryway":
+		case "Hazardous":
 			ind = 0
 			palind = 5
 			break
 		
-		case "palette_PZ_exhibitionsteamy":
+		case "exhibitionsteamy":
 			ind = 1
 			palind = 6
 			break
 		
-		case "palette_PZ_exhibitionmineshaft":
+		case "Fred's Choice":
 			ind = 2
 			palind = 7
 			break
 		
-		case "palette_PZ_exhibitionmolasses":
+		case "Frog Pajamas":
 			ind = 3
 			palind = 8
 			break
@@ -186,7 +186,7 @@ for (var i = 1; i <= array_length(outfitArr); i++)
 		}
 		else
 		{
-			array_push(textArr, lang_get("menutask_unknown"))
+			array_push(textArr, lang_get("???"))
 			array_push(textArr, lang_get(string(task.get("taskKey") + "_hint")))
 		}
 	}
@@ -203,7 +203,5 @@ if (array_length(textArr) > 0)
 	for (var i = 0; i < array_length(textArr); i++)
 		txt += string(textArr[i] + "\n")
 	
-	//var scrib = scribble(txt)
-	//scrib.wrap(camera_get_view_width(view_camera[0]) - 200)
-	//scrib.draw(camera_get_view_width(view_camera[0]) / 2, camera_get_view_height(view_camera[0]) * 0.85)
+	draw_text(camera_get_view_width(view_camera[0]) / 2, camera_get_view_height(view_camera[0]) * 0.85, "NOOOOO")
 }

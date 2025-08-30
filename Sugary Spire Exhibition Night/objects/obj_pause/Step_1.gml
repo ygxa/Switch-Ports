@@ -1,3 +1,24 @@
+if global.gamePauseState = false{
+	audio_stop_sound(mu_pause)
+	audio_stop_sound(mu_pausestart)	
+	playpausemusic = false
+}
+else{
+	if !audio_is_playing(mu_pausestart){
+		playpausemusic = true	
+	}
+	if playpausemusic && !audio_is_playing(mu_pause){
+		audio_play_sound(mu_pause,1,1)
+	}
+	if instance_exists(obj_option){
+		audio_pause_sound(mu_pause)	
+		audio_pause_sound(mu_pausestart)	
+	}
+	else{
+		audio_resume_sound(mu_pause)	
+		audio_resume_sound(mu_pausestart)				
+	}
+}
 scr_getinput_menu()
 inputBufferUp = key_up2 ? 2 : max(inputBufferUp - 1, 0)
 inputBufferDown = key_down2 ? 2 : max(inputBufferDown - 1, 0)

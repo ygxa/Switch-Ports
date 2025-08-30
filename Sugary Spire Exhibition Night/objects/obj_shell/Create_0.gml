@@ -403,7 +403,6 @@ function _update_positions() {
 }
 
 function _save_history() {
-	/*
 	var truncated_history = [];
 	var truncated_output = [];
 	
@@ -417,24 +416,21 @@ function _save_history() {
 		history: truncated_history,
 		output: truncated_output
 	}
-	var open_file = eas_file_text_open_write(savedHistoryFilePath);
-	eas_file_text_write_string(open_file, json_stringify(to_save));
-	eas_file_text_close(open_file);
-	*/
+	var open_file = file_text_open_write(savedHistoryFilePath);
+	file_text_write_string(open_file, json_stringify(to_save));
+	file_text_close(open_file);
 }
 
 function _load_history() {
-	/*
-	var save_data_file = eas_file_find_first(savedHistoryFilePath, fa_directory);
+	var save_data_file = file_find_first(savedHistoryFilePath, fa_directory);
 	if (save_data_file != "") {
-		var open_file = eas_file_text_open_read(savedHistoryFilePath);
-		var temp_data = json_parse(eas_file_text_read_string(open_file));
-		eas_file_text_close(open_file);
+		var open_file = file_text_open_read(savedHistoryFilePath);
+		var temp_data = json_parse(file_text_read_string(open_file));
+		file_text_close(open_file);
 		history = temp_data.history;
 		output = temp_data.output;
 		historyPos = array_length(history);
 	}
-	*/
 }
 
 /// @function _input_string_split(_input)

@@ -51,7 +51,7 @@ if (canmove == true)
                 window_set_fullscreen(optionsaved_fullscreen);
                 ini_open("optionData.ini");
                 ini_write_real("Settings", "fullscrn", optionsaved_fullscreen);
-                ini_close();
+                ini_close_fixed();
                 global.fullscreen = optionsaved_fullscreen;
             }
             
@@ -84,7 +84,7 @@ if (canmove == true)
                 
                 ini_open("optionData.ini");
                 ini_write_real("Settings", "resolution", optionsaved_resolution);
-                ini_close();
+                ini_close_fixed();
                 global.selectedResolution = optionsaved_resolution;
             }
             
@@ -101,7 +101,7 @@ if (canmove == true)
                 scr_sound(42);
                 ini_open("optionData.ini");
                 ini_write_real("Settings", "smthcam", optionsaved_smoothcam);
-                ini_close();
+                ini_close_fixed();
                 global.smoothcam = optionsaved_smoothcam;
             }
             
@@ -118,7 +118,7 @@ if (canmove == true)
                 scr_sound(42);
                 ini_open("optionData.ini");
                 ini_write_real("Settings", "screenmelt", optionsaved_screenmelt);
-                ini_close();
+                ini_close_fixed();
                 global.screenmelt = optionsaved_screenmelt;
             }
             
@@ -135,7 +135,7 @@ if (canmove == true)
                 scr_sound(42);
                 ini_open("optionData.ini");
                 ini_write_real("Settings", "scrntilt", optionsaved_screentilt);
-                ini_close();
+                ini_close_fixed();
                 global.screentilt = optionsaved_screentilt;
             }
             

@@ -4,4 +4,5 @@ with (obj_soundTest)
 {
 	currentSelection++
 	currentSelection = wrap(currentSelection, 0, array_length(musicArray) - 1)
+	//show_message("next song")
 }

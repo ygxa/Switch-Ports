@@ -42,7 +42,7 @@ function scr_playerreset()
     global.candyfollow = false;
     ini_open("saveData.ini");
     var ranks = ini_read_string("Ranks", string(global.levelname), "none");
-    ini_close();
+    ini_close_fixed();
     global.showplaytimer = ranks != "none";
     
     with (obj_camera)

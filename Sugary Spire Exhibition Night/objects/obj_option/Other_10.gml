@@ -101,16 +101,18 @@ switch (optionMenu)
 		backOption = 1
 		alignCenter = false
 		var res = []
-		
-		var letterbox_option = ["OFF", "SIMPLE", "DOODLE", "DYNAMIC"]
-		options = [toMainPage, new option_normal("LETTERBOX", letterbox_option, function(arg0)
+		/*
+, new option_normal("LETTERBOX", letterbox_option, function(arg0)
 		{
 			quick_write_option("Settings", "letterbox", arg0)
 			global.Letterbox = arg0
 			
 			with (obj_screen)
 				event_user(1)
-		}, global.Letterbox), new option_normal("opt_vid_vsync", onOffToggle, function(arg0)
+		}, global.Letterbox)
+		*/
+		var letterbox_option = ["OFF", "SIMPLE", "DOODLE", "DYNAMIC"]
+		options = [toMainPage, new option_normal("opt_vid_vsync", onOffToggle, function(arg0)
 		{
 			quick_write_option("Settings", "vsync", arg0)
 			//display_reset(0, global.Vsync)
@@ -183,11 +185,7 @@ switch (optionMenu)
 		{
 			quick_write_option("Settings", "swapmode", arg0)
 			global.swapmode = arg0
-		}, global.swapmode), new option_normal("Better Molasses Room", onOffToggle, function(arg0)
-		{
-			quick_write_option("Settings", "molassroom", arg0)
-			global.betterw2 = arg0
-		}, global.betterw2), new option_normal("Fudgetop And Cafe", onOffToggle, function(arg0)
+		}, global.swapmode), new option_normal("Fudgetop And Cafe", onOffToggle, function(arg0)
 		{
 			quick_write_option("Settings", "fudge&cafe", arg0)
 			global.fudgetopcafe = arg0
@@ -195,7 +193,11 @@ switch (optionMenu)
 		{
 			quick_write_option("Settings", "basement", arg0)
 			global.basement = arg0
-		}, global.basement)]
+		}, global.basement), new option_normal("PAN Pizzano", onOffToggle, function(arg0)
+		{
+			quick_write_option("Settings", "panpizzano", arg0)
+			global.panpizzano = arg0
+		}, global.panpizzano)]
 		
 		break
 	

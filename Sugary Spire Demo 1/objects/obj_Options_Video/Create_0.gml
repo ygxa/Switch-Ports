@@ -7,7 +7,7 @@ global.hitstunEnabled = ini_read_real("Settings", "hitstun", 1);
 global.screentilt = ini_read_real("Settings", "scrntilt", 1);
 global.playerrotate = ini_read_real("Settings", "playrot", 1);
 global.screenmelt = ini_read_real("Settings", "screenmelt", 1);
-ini_close();
+ini_close_fixed();
 optionsaved_fullscreen = global.fullscreen;
 optionsaved_resolution = global.selectedResolution;
 optionsaved_smoothcam = global.smoothcam;

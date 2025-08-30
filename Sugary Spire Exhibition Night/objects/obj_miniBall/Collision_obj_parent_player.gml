@@ -1,5 +1,5 @@
 if (tossCooldown > 0)
-	return
+	exit;
 
 if !audio_is_playing(sfx_paperball)
 	event_play_oneshot(sfx_paperball)

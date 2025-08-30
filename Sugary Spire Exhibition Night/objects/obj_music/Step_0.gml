@@ -1,3 +1,6 @@
+if audio_sound_get_gain(mu_hub1) = 0
+	audio_stop_sound(mu_hub1)
+
 if (global.gamePauseState)
 	exit
 
@@ -9,7 +12,7 @@ if (global.panic)
 	if (!panicStart)
 	{
 		panicStart = true
-		audio_stop_all()
+		audio_stop_sound(global.RoomMusic.musicInst)
 		fmod_studio_event_instance_start(global.EscapeMusicInst, true)
 		//show_message("played music")
 		//fmod_studio_event_instance_set_paused(global.EscapeMusicInst, false)

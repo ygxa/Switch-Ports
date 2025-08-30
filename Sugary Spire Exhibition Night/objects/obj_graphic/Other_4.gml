@@ -1,4 +1,4 @@
 if (is_undefined(onRoomStart))
-	return
+	exit;
 
 onRoomStart()

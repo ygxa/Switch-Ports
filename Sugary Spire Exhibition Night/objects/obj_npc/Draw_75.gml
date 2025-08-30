@@ -1,10 +1,15 @@
+var sep = 32
+var wrap_w = 800
+
 var old = draw_get_font()
 var wave_x = wave(-5, 5, 5, 20)
 draw_set_font(global.npcfont)
-var msg = text
-var textheight = string_height(text)
-var total_lines = round(textheight / 32)
-var my_height = (total_lines + 1) * 32
+var newtext = string_replace_all(text, "/1", "#");
+var newtext2 = string_replace_all(newtext, " ", "        ");
+
+var textheight = string_height_ext(newtext2, sep, wrap_w)
+var total_lines = ceil(textheight / sep)
+var my_height = (total_lines + 0) * sep
 var tgty = 1
 
 if (total_lines == 1)
@@ -25,7 +30,6 @@ switch (ropetype)
 	case RopeType.bottom:
 		if (!(boxy <= -tgty))
 			draw_sprite_ext(myrope, propdex, wave_x + 432, boxy + tgty, 1, 1, 0, c_white, 1)
-		
 		break
 }
 
@@ -66,7 +70,7 @@ else
 if (!drawing)
 {
 	event_perform(ev_cleanup, 0)
-	return
+	exit
 }
 
 if (!surface_exists(mysurf))
@@ -101,8 +105,8 @@ if (surface_exists(mysurf))
 
 draw_set_halign(fa_left)
 draw_set_valign(fa_top)
-//scribble(string("[pNPC][wave]" + text)).starting_format(font_get_name(global.npcfont), 0).align(0, 0).wrap(800).draw(wave_x + 80, boxy + 16)
 draw_set_font(global.npcfont)
-draw_set_color(c_black)
-draw_text(wave_x + 80, boxy + 16, string(text))
 draw_set_color(c_white)
+
+draw_text_ext(wave_x + 80, boxy + 5, string(newtext2), sep, wrap_w)
+

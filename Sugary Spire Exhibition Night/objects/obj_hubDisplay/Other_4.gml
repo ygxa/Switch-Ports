@@ -3,7 +3,6 @@ switch (room)
 	case hub_demohallway:
 	case hub_paintstudio:
 	case hub_molasses:
-	case hub_paintstudio2:
 		self.addLevel("entryway", 0).setIcon(spr_tvdisplay_levels, 0)
 		self.addLevel("steamy", 1).setIcon(spr_tvdisplay_levels, 1)
 		self.addLevel("mineshaft", 2).setIcon(spr_tvdisplay_levels, 2)
@@ -29,7 +28,7 @@ e.properties =
 }
 var realLevels = ["entryway", "steamy", "mineshaft", "molasses"]
 var p = e.properties
-eas_ini_open(global.SaveFileName)
+ini_open(global.SaveFileName)
 
 for (var i = 0; i < array_length(realLevels); i++)
 {
@@ -62,9 +61,9 @@ for (var i = 0; i < array_length(taskedAreas); i++)
 	}
 }
 
-eas_ini_close()
+fixed_ini_close()
 //eas_save(scr_easyasync_callback)
-eas_ini_open("optionData.ini")
+ini_open("optionData.ini")
 var pal = scr_get_palettes(false)
 
 for (var i = 0; i < array_length(pal); i++)
@@ -73,7 +72,7 @@ for (var i = 0; i < array_length(pal); i++)
 	p.palMax++
 }
 
-eas_ini_close()
+fixed_ini_close()
 //eas_save(scr_easyasync_callback)
 array_push(pg.contentArr, e)
 lastPage = array_length(displayPages) - 1

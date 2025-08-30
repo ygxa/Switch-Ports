@@ -1,4 +1,6 @@
-
+if !global.panpizzano && global.playerCharacter = Characters.Pizzano{
+	scr_player_changeCharacter(obj_player1, Characters.Pizzelle)	
+}
 if global.InternalLevelName = "random"
 	global.randomroom = true
 else

@@ -58,9 +58,13 @@ draw_control_sprite("menudelete", 136, 444);
 draw_control_sprite("start", 600, 470);
 charindex += 0.35;
 
-if (charicon == spr_menu_pizzelle || charicon == spr_menu_pizzano)
-    draw_player_sprite_ext(arrowicon, charindex, 0, 0, 1, 1, 0, 16777215, 1, !global.playerCharacter, filePalette[selectedFile]);
+if global.panpizzano{
+	if (charicon == spr_menu_pizzelle || charicon == spr_menu_pizzano)
+	    draw_player_sprite_ext(arrowicon, charindex, 0, 0, 1, 1, 0, 16777215, 1, !global.playerCharacter, filePalette[selectedFile]);
 
-draw_player_sprite_ext(charicon, charindex, 0, 0, 1, 1, 0, 16777215, 1, global.playerCharacter, filePalette[selectedFile]);
+
+	draw_player_sprite_ext(charicon, charindex, 0, 0, 1, 1, 0, 16777215, 1, global.playerCharacter, filePalette[selectedFile]);
+}
+
 draw_set_alpha(image_alpha);
 draw_self();

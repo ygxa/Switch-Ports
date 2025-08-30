@@ -7,7 +7,7 @@ with (playerID)
 		xscale = sign(move)
 }
 
-eas_ini_open(global.SaveFileName)
+ini_open(global.SaveFileName)
 var secretActivated = true
 var level_array = ["entryway", "steamy", "mineshaft", "molasses"]
 
@@ -33,7 +33,7 @@ ini_write_string("Treasure", "mindpalace", "1")
 if (secretActivated)
 	ini_write_real("Game", "mixtape_prompt", true)
 
-eas_ini_close()
+fixed_ini_close()
 //eas_save(scr_easyasync_callback)
 obj_hudManager.saveAlpha = 10
 var prompt = secretActivated ? lang_get("prompt_mixtape_soundtest") : lang_get("prompt_mixtape_nosoundtest", [scr_getDialogIcon("INK", "c_white", "c_white")])

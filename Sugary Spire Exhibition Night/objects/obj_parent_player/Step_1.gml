@@ -45,7 +45,7 @@ scr_setTransfoTip(_state)
 if (oldPromptText != global.TransfoPrompt)
 {
 	oldPromptText = global.TransfoPrompt
-	eas_ini_open(global.SaveFileName)
+	ini_open(global.SaveFileName)
 	var _seen_prompt = ini_read_real("Tip", global.TransfoPrompt, false)
 	
 	if (global.TransfoPrompt != "" && !_seen_prompt)
@@ -54,7 +54,7 @@ if (oldPromptText != global.TransfoPrompt)
 		ini_write_real("Tip", global.TransfoPrompt, true)
 	}
 	
-	eas_ini_close()
+	fixed_ini_close()
 	//eas_save(scr_easyasync_callback)
 }
 

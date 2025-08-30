@@ -20,5 +20,5 @@ if (showtext)
             draw_sprite_ext(confecti_sprs[i].sprite, confecti_sprs[i].image, x + x_pos, y - 200, 1, 1, 0, c_white, 1);
     }
     
-    ini_close();
+    ini_close_fixed();
 }

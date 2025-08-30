@@ -290,13 +290,13 @@ function define_player_palette(argument0 = Characters.Pizzelle, argument1, argum
     array_push(global.CharacterPalette[argument0].palettes, struct);
 }
 
-function index_from_paletteName(argument0, argument1)
+function index_from_paletteName(arg0, arg1)
 {
-    var array = global.CharacterPalette[argument0].palettes;
+    var array = global.CharacterPalette[arg0].palettes;
     
     for (var i = 0; i < array_length(array); i++)
     {
-        if (array[i].palName == argument1)
+        if (array[i].palName == arg1)
             return i;
     }
     
@@ -317,35 +317,35 @@ function define_palette_sprite(argument0, argument1 = [1, 2])
 }
 
 define_palette_sprite(Characters.Pizzelle, [0, 1]);
-define_player_palette(Characters.Pizzelle, "palette_PZ_default", 4259839, 3979494, 2631776, undefined, 13773959, 3736096, 9988216, 8628991, 14496);
-define_player_palette(Characters.Pizzelle, "palette_PZ_classic", 16777215, 13150344, 13150344, undefined);
-define_player_palette(Characters.Pizzelle, "palette_PZ_exhibitionnight", 12105936, 6907567, 2631776, undefined);
-define_player_palette(Characters.Pizzelle, "palette_PZ_exhibitionred", 12512, 88, 88, undefined);
-define_player_palette(Characters.Pizzelle, "palette_PZ_exhibitionblack", 4800062, 2629656, 2629656, undefined);
-define_player_palette(Characters.Pizzelle, "palette_PZ_exhibitionpurple", 11230063, 7220541, 7220541, undefined, 9437384, 4194448, 12105936);
-define_player_palette(Characters.Pizzelle, "palette_PZ_noise", 8446200, 1607896, 1607896, undefined, 1607896, 14496, 14496);
-define_player_palette(Characters.Pizzelle, "palette_PZ_exhibitionbrain", undefined, 0, 4528756, spr_demopattern_brain, 6301864, 3670136, 3670136);
-define_player_palette(Characters.Pizzelle, "palette_PZ_exhibitionbraingold", undefined, 0, 88, spr_demopattern_brainGold, 12436, 2106960, 2106960);
-define_player_palette(Characters.Pizzelle, "palette_PZ_exhibitionpaper", undefined, 0, 16296056, spr_demopattern_paper, 16298128, 13660176, 13660176);
-define_player_palette(Characters.Pizzelle, "palette_PZ_exhibitionentryway", undefined, 0, 37088, spr_demopattern_entryway, 3160248, 2631776, 2631776);
-define_player_palette(Characters.Pizzelle, "palette_PZ_exhibitionsteamy", undefined, 0, 16375551, spr_demopattern_steamy, 11042984, 15743104, 9461864);
-define_player_palette(Characters.Pizzelle, "palette_PZ_exhibitionmineshaft", undefined, 0, 8340489, spr_demopattern_mineshaft, 4771936, 5793792, 5793792);
-define_player_palette(Characters.Pizzelle, "palette_PZ_exhibitionmolasses", undefined, 0, 5793792, spr_demopattern_molasses, 1601784, 12464, 12464);
+define_player_palette(Characters.Pizzelle, "palette_PZ_default", 4259839, 3979494, 2631776, undefined, 13773959, 3736096, 9988216, 8628991, 14496); //0
+define_player_palette(Characters.Pizzelle, "Classic Duds", 16777215, 13150344, 13150344, undefined); //1
+define_player_palette(Characters.Pizzelle, "Exhibition Duds", 12105936, 6907567, 2631776, undefined); //2
+define_player_palette(Characters.Pizzelle, "Painter Red", 12512, 88, 88, undefined); //3
+define_player_palette(Characters.Pizzelle, "Painter Black", 4800062, 2629656, 2629656, undefined); //4
+define_player_palette(Characters.Pizzelle, "Painter Purple", 11230063, 7220541, 7220541, undefined, 9437384, 4194448, 12105936); //5
+define_player_palette(Characters.Pizzelle, "Noise", 8446200, 1607896, 1607896, undefined, 1607896, 14496, 14496); //6
+define_player_palette(Characters.Pizzelle, "Brainy Duds", undefined, 0, 4528756, spr_demopattern_brain, 6301864, 3670136, 3670136); //7
+define_player_palette(Characters.Pizzelle, "Golden Brainy Duds", undefined, 0, 88, spr_demopattern_brainGold, 12436, 2106960, 2106960); //8
+define_player_palette(Characters.Pizzelle, "Notebook", undefined, 0, 16296056, spr_demopattern_paper, 16298128, 13660176, 13660176); //9
+define_player_palette(Characters.Pizzelle, "Hazardous", undefined, 0, 37088, spr_demopattern_entryway, 3160248, 2631776, 2631776); //10
+define_player_palette(Characters.Pizzelle, "Cotton Candy", undefined, 0, 16375551, spr_demopattern_steamy, 11042984, 15743104, 9461864); //11
+define_player_palette(Characters.Pizzelle, "Fred's Choice", undefined, 0, 8340489, spr_demopattern_mineshaft, 4771936, 5793792, 5793792); //12
+define_player_palette(Characters.Pizzelle, "Frog Pajamas", undefined, 0, 5793792, spr_demopattern_molasses, 1601784, 12464, 12464); //13
 define_palette_sprite(Characters.Pizzano, [0, 1]);
 define_player_palette(Characters.Pizzano, "palette_PZ_default", 15634481, 15619377, 2631776, undefined, 13773959, 3736096, 9988216, 8628991, 14496, 4259839, 3979494, 47871, 548054);
-define_player_palette(Characters.Pizzano, "palette_PZ_classic", 15634481, 15619377, 47871, undefined, 13773959, 3736096, 9988216, 8628991, 14496, 15634481, 15619377, 47871, 548054);
-define_player_palette(Characters.Pizzano, "palette_PZ_exhibitionnight", 12228149, 10316822, 47871, undefined, 13773959, 3736096, 9988216, 8628991, 14496, 12228149, 10316822, 47871, 548054);
-define_player_palette(Characters.Pizzano, "palette_PZ_exhibitionred", 12512, 88, 47871, undefined, 13773959, 3736096, 9988216, 8628991, 14496, 12512, 88, 47871, 548054);
-define_player_palette(Characters.Pizzano, "palette_PZ_exhibitionblack", 4800062, 2629656, 47871, undefined, 13773959, 3736096, 9988216, 8628991, 14496, 4800062, 2629656, 47871, 548054);
-define_player_palette(Characters.Pizzano, "palette_PZ_exhibitionpurple", 11230063, 7220541, 47871, undefined, 9437384, 4194448, 12105936, 8628991, 14496, 11230063, 7220541, 47871, 548054);
-define_player_palette(Characters.Pizzano, "palette_PZ_noise", 8446200, 1607896, 1607896, undefined, 1607896, 14496, 14496, 8628991, 14496, 8446200, 1607896, 1607896, 548054);
-define_player_palette(Characters.Pizzano, "palette_PZ_exhibitionbrain", undefined, 0, 4528756, spr_demopattern_brain, 6301864, 3670136, 3670136, 8628991, 14496, 9982184, 5971102, 47871, 548054);
-define_player_palette(Characters.Pizzano, "palette_PZ_exhibitionbraingold", undefined, 0, 88, spr_demopattern_brainGold, 12436, 2106960, 2106960, 8628991, 14496, 3188984, 22185, 47871, 548054);
-define_player_palette(Characters.Pizzano, "palette_PZ_exhibitionpaper", undefined, 0, 16296056, spr_demopattern_paper, 16298128, 13660176, 13660176, 8628991, 14496, 16296056, 11952171, 47871, 548054);
-define_player_palette(Characters.Pizzano, "palette_PZ_exhibitionentryway", undefined, 0, 37088, spr_demopattern_entryway, 3160248, 2631776, 2631776, 8628991, 14496, 37088, 20405, 47871, 548054);
-define_player_palette(Characters.Pizzano, "palette_PZ_exhibitionsteamy", undefined, 0, 16375551, spr_demopattern_steamy, 11042984, 15743104, 9461864, 8628991, 14496, 15634481, 15619377, 47871, 548054);
-define_player_palette(Characters.Pizzano, "palette_PZ_exhibitionmineshaft", undefined, 0, 8340489, spr_demopattern_mineshaft, 4771936, 5793792, 5793792, 8628991, 14496, 4771936, 758050, 47871, 548054);
-define_player_palette(Characters.Pizzano, "palette_PZ_exhibitionmolasses", undefined, 0, 5793792, spr_demopattern_molasses, 1601784, 12464, 12464, 8628991, 14496, 5793792, 2962688, 47871, 548054);
+define_player_palette(Characters.Pizzano, "Classic Duds", 15634481, 15619377, 47871, undefined, 13773959, 3736096, 9988216, 8628991, 14496, 15634481, 15619377, 47871, 548054);
+define_player_palette(Characters.Pizzano, "Exhibition Duds", 12228149, 10316822, 47871, undefined, 13773959, 3736096, 9988216, 8628991, 14496, 12228149, 10316822, 47871, 548054);
+define_player_palette(Characters.Pizzano, "Painter Red", 12512, 88, 47871, undefined, 13773959, 3736096, 9988216, 8628991, 14496, 12512, 88, 47871, 548054);
+define_player_palette(Characters.Pizzano, "Painter Black", 4800062, 2629656, 47871, undefined, 13773959, 3736096, 9988216, 8628991, 14496, 4800062, 2629656, 47871, 548054);
+define_player_palette(Characters.Pizzano, "Painter Purple", 11230063, 7220541, 47871, undefined, 9437384, 4194448, 12105936, 8628991, 14496, 11230063, 7220541, 47871, 548054);
+define_player_palette(Characters.Pizzano, "Noise", 8446200, 1607896, 1607896, undefined, 1607896, 14496, 14496, 8628991, 14496, 8446200, 1607896, 1607896, 548054);
+define_player_palette(Characters.Pizzano, "Brainy Duds", undefined, 0, 4528756, spr_demopattern_brain, 6301864, 3670136, 3670136, 8628991, 14496, 9982184, 5971102, 47871, 548054);
+define_player_palette(Characters.Pizzano, "Golden Brainy Duds", undefined, 0, 88, spr_demopattern_brainGold, 12436, 2106960, 2106960, 8628991, 14496, 3188984, 22185, 47871, 548054);
+define_player_palette(Characters.Pizzano, "Notebook", undefined, 0, 16296056, spr_demopattern_paper, 16298128, 13660176, 13660176, 8628991, 14496, 16296056, 11952171, 47871, 548054);
+define_player_palette(Characters.Pizzano, "Hazardous", undefined, 0, 37088, spr_demopattern_entryway, 3160248, 2631776, 2631776, 8628991, 14496, 37088, 20405, 47871, 548054);
+define_player_palette(Characters.Pizzano, "Cotton Candy", undefined, 0, 16375551, spr_demopattern_steamy, 11042984, 15743104, 9461864, 8628991, 14496, 15634481, 15619377, 47871, 548054);
+define_player_palette(Characters.Pizzano, "Fred's Choice", undefined, 0, 8340489, spr_demopattern_mineshaft, 4771936, 5793792, 5793792, 8628991, 14496, 4771936, 758050, 47871, 548054);
+define_player_palette(Characters.Pizzano, "Frog Pajamas", undefined, 0, 5793792, spr_demopattern_molasses, 1601784, 12464, 12464, 8628991, 14496, 5793792, 2962688, 47871, 548054);
 var palette_surface = surface_create(1, 1);
 
 for (var i = 0; i < array_length(global.CharacterPalette); i++)

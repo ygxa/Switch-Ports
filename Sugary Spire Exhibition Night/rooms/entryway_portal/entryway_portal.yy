@@ -52,7 +52,7 @@
 99,1,133,-36,0,1,129,-7,99,1,69,-36,0,1,65,-7,99,1,101,-31,0,2,700,701,-3,0,1,97,-3,99,5,164,162,163,164,165,-11,0,14,33,36,34,35,36,34,
 35,36,34,35,36,34,35,37,-6,0,2,732,733,-3,0,1,129,-3,99,-7,0,10,816,817,818,819,820,821,822,823,0,97,-12,99,1,101,-6,0,2,764,765,-3,0,1,65,
 -3,99,-7,0,10,848,849,850,851,852,853,854,855,0,97,-12,99,1,101,-6,0,2,796,797,-3,0,1,97,-3,99,17,34,35,36,34,35,36,34,35,36,34,35,36,34,35,
-36,34,132,-12,99,13,130,35,36,34,35,36,34,35,36,34,35,36,132,-93,99,],},"visible":true,"depth":299,"userdefinedDepth":true,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":16,"gridY":16,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],},
+36,34,132,-12,99,13,130,35,36,34,35,36,34,35,36,34,35,36,132,-93,99,],},"visible":true,"depth":299,"userdefinedDepth":true,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":16,"gridY":16,"layers":[],"hierarchyFrozen":true,"effectEnabled":true,"effectType":null,"properties":[],},
     {"resourceType":"GMRTileLayer","resourceVersion":"1.1","name":"Tiles_BG","tilesetId":{"name":"ts_entryway1","path":"tilesets/ts_entryway1/ts_entryway1.yy",},"x":0,"y":0,"tiles":{"TileDataFormat":1,"SerialiseWidth":45,"SerialiseHeight":17,"TileCompressedData":[
 -3,0,42,47,48,49,47,47,48,49,48,49,47,47,48,49,48,49,47,47,48,49,48,49,47,48,49,47,48,49,47,48,49,47,48,49,47,48,49,47,48,49,47,48,49,
 -3,0,42,79,80,81,79,79,80,81,80,81,79,79,80,81,80,81,79,79,80,81,80,81,79,80,81,79,80,81,79,80,81,79,80,81,79,80,81,79,80,81,79,80,81,

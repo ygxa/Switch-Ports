@@ -1,4 +1,6 @@
 active = false
+textletter = 0
+textspeed = 0.5
 visible = false
 image_speed = 0
 xstart = x
@@ -40,20 +42,19 @@ dialogEvents = []
 dialogCurrent = 0
 targetPlayer = undefined
 sounded = 0
+ass = 0
 flickpwr = 0
-flickspr = new subSprite(spr_brainpainterhandidle, 0, 0.15, false)
-flickspr.visible = false
 continueIcon = new subSprite(spr_dialogbox_next, 0, 0.08, true)
-//scribble_typists_add_event("j_painter_pose", function(arg0, arg1, arg2)
-//{
-	//with (obj_judgmentpainter)
-	//{
-		//var _mood = string(arg1[0])
-		//painterMood = _mood
-	//}
-//})
+scribble_typists_add_event("j_painter_pose", function(arg0, arg1, arg2)
+{
+	with (obj_judgmentpainter)
+	{
+		var _mood = string(arg1[0])
+		painterMood = _mood
+	}
+})
 current_talk_inst = -4
-//typist = scribble_typist()
+typist = scribble_typist()
 typist.pause()
 typist.in(1, 0)
 typist.function_per_char(function()

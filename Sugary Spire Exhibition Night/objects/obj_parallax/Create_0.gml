@@ -71,6 +71,7 @@ set_layer_depths = function()
 
 createLapDeco = function(arg0 = false)
 {
+	/*
 	if (array_length(lapDecoBag) <= 0)
 	{
 		lapDecoBag = [bg_lappingdeco1, bg_lappingdeco2, bg_lappingdeco3]
@@ -93,6 +94,7 @@ createLapDeco = function(arg0 = false)
 				break
 		}
 	}
+	*/
 }
 
 subLayerArray = []

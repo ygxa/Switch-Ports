@@ -125,10 +125,13 @@ function update_option_format(arg0, arg1)
 
 function init_option()
 {
-	eas_ini_open("optionData.ini")
-	//show_message("mario!")
+	ini_open("optionData.ini")
+	global.swapmode = ini_read_real("Settings", "swapmode", 0)
+	global.fudgetopcafe = ini_read_real("Settings", "fudge&cafe", 0)
+	global.basement = ini_read_real("Settings", "basement", 0)
+	global.panpizzano = ini_read_real("Settings", "panpizzano", 0)
+
 	global.fullscreen = ini_read_real("Settings", "fullscrn", 0)
-	//show_message("luigi!")
 	global.selectedResolution = ini_read_real("Settings", "opt_resolution", 2)
 	global.Letterbox = ini_read_real("Settings", "letterbox", 0)
 	global.smoothcam = false
@@ -170,7 +173,7 @@ function init_option()
 		//ini_write_real("FileFormat", "version", 1)
 		//update_option_format(cur_version, 1)
 	//}
-	eas_ini_close()
+	fixed_ini_close()
 	//eas_save(scr_easyasync_callback)
 	scr_setinput_init()
 	scr_input_create()
@@ -188,14 +191,14 @@ function init_option()
 
 function quick_write_option(arg0, arg1, arg2)
 {
-	eas_ini_open("optionData.ini")
+	ini_open("optionData.ini")
 	
 	if (is_string(arg2))
 		ini_write_string(arg0, arg1, arg2)
 	else
 		ini_write_real(arg0, arg1, arg2)
 	
-	eas_ini_close()
+	fixed_ini_close()
 	//eas_save(scr_easyasync_callback)
 	with (obj_option)
 		changedAnyOption = true

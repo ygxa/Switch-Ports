@@ -1,6 +1,6 @@
 if (laughing == false)
 {
-	fmod_studio_event_instance_start(snd_bearLaugh, (x - sprite_xoffset) + (sprite_width / 2), (y - sprite_yoffset) + (sprite_height / 2))
+	fmod_studio_event_instance_start(snd_bearLaugh, false)
 	fmod_studio_event_instance_start(sfx_bigcollectget)
 	scr_queueTVAnimation(global.TvSprPlayer_Happy, 150)
 	var val = 50

@@ -56,7 +56,7 @@ if (canmove == true)
                 scr_sound(42);
                 ini_open("optionData.ini");
                 ini_write_real("Settings", "mastervol", optionsaved_masterVolume);
-                ini_close();
+                ini_close_fixed();
                 global.masterVolume = optionsaved_masterVolume;
                 audio_master_gain(global.masterVolume);
             }
@@ -76,7 +76,7 @@ if (canmove == true)
                 scr_sound(42);
                 ini_open("optionData.ini");
                 ini_write_real("Settings", "musicvol", optionsaved_musicVolume);
-                ini_close();
+                ini_close_fixed();
                 global.musicVolume = optionsaved_musicVolume;
                 audio_sound_gain(global.music, global.musicVolume, 0);
                 audio_sound_gain(obj_Options_Main.PauseMusic, global.musicVolume, 0);
@@ -98,7 +98,7 @@ if (canmove == true)
                 scr_sound(42);
                 ini_open("optionData.ini");
                 ini_write_real("Settings", "soundvol", optionsaved_soundVolume);
-                ini_close();
+                ini_close_fixed();
                 global.soundVolume = optionsaved_soundVolume;
             }
             
@@ -118,7 +118,7 @@ if (canmove == true)
                 scr_sound(42);
                 ini_open("optionData.ini");
                 ini_write_real("Settings", "dialoguevol", optionsaved_dialogueVolume);
-                ini_close();
+                ini_close_fixed();
                 global.dialogueVolume = optionsaved_dialogueVolume;
             }
             

@@ -134,9 +134,9 @@ function scr_levelSet()
 	
 	var ass = scr_check_completion()
 	
-	eas_ini_open(global.SaveFileName)
+	ini_open(global.SaveFileName)
 	var pre_check = ini_read_string("Game", "Judgment", "none") == "none" && ass
-	eas_ini_close()
+	fixed_ini_close()
 	//eas_save(scr_easyasync_callback)
 	
 	with (obj_parent_player)
@@ -297,7 +297,6 @@ function scr_levelSet()
 		}
 	}
 	
-	//stop_music(true)
 	fmod_studio_system_set_parameter_by_name("transfo", false, true)
 	fmod_studio_system_set_parameter_by_name("musicFade", 0, true)
 	global.MenuNoteArraySelect = 0

@@ -1,8 +1,8 @@
 function scr_completion_percent(arg0)
 {
-	if (eas_file_exists(arg0))
+	if (file_exists(arg0))
 	{
-		eas_ini_open(arg0)
+		ini_open(arg0)
 		var levels = ["entryway", "steamy", "mineshaft", "molasses"]
 		var ranks = ["d", "c", "b", "a", "s"]
 		var levels_count = 0
@@ -52,8 +52,7 @@ function scr_completion_percent(arg0)
 			}
 		}
 		
-		eas_ini_close()
-		//eas_save(scr_easyasync_callback)
+		fixed_ini_close()
 		var completion = 0
 		completion += (1 * completed_tutorial)
 		completion += ((9 * levels_count) / 4)
@@ -63,24 +62,6 @@ function scr_completion_percent(arg0)
 		completion += ((20 * treasure_count) / 4)
 		completion += ((10 * task_count) / 12)
 		completion += ((1 * p_rank_count) / 4)
-		//show_debug_message(string("File: {0}", filename_name(arg0)))
-		//show_debug_message(string("Completion of tutorial: {0}", completed_tutorial))
-		//show_debug_message(string("Number of levels: {0}", levels_count))
-		//show_debug_message(string("Completion of levels: {0}", levels_count / 4))
-		//show_debug_message(string("Number of ranks: {0}", rank_count))
-		//show_debug_message(string("Completion of ranks: {0}", rank_count / 16))
-		//show_debug_message(string("Number of confecti: {0}", confecti_count))
-		//show_debug_message(string("Completion of confecti: {0}", confecti_count / 20))
-		//show_debug_message(string("Number of secrets: {0}", secret_count))
-		//show_debug_message(string("Completion of secrets: {0}", secret_count / 12))
-		//show_debug_message(string("Number of treasures: {0}", treasure_count))
-		//show_debug_message(string("Completion of treasures: {0}", treasure_count / 4))
-		//show_debug_message(string("Number of tasks: {0}", task_count))
-		//show_debug_message(string("Completion of tasks: {0}", task_count / 12))
-		//show_debug_message(string("Number of p-ranks: {0}", p_rank_count))
-		//show_debug_message(string("Completion of p-ranks: {0}", p_rank_count / 4))
-		//show_debug_message(string("Completion: {0}", completion))
-		//show_debug_message(string("Completion Floored: {0}", floor(completion)))
 		return floor(completion);
 	}
 	else
@@ -94,7 +75,7 @@ function scr_check_completion(arg0 = global.SaveFileName)
 {
 	var levels = ["entryway", "steamy", "mineshaft", "molasses"]
 	var count = 0
-	eas_ini_open(arg0)
+	ini_open(arg0)
 	
 	for (var i = 0; i < array_length(levels); i++)
 	{
@@ -104,7 +85,6 @@ function scr_check_completion(arg0 = global.SaveFileName)
 			count++
 	}
 	
-	eas_ini_close()
-	//eas_save(scr_easyasync_callback)
+	fixed_ini_close()
 	return count >= array_length(levels);
 }

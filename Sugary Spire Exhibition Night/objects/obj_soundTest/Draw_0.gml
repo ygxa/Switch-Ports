@@ -5,13 +5,16 @@ draw_set_font(global.SoundTestFont)
 draw_set_halign(fa_center)
 draw_set_valign(fa_middle)
 var c = 0
-var npspr = lang_get_sprite(spr_nowplaying)
+var npspr = spr_nowplaying
 
 if (array_contains(bonus, music_desc))
 {
+	draw_set_color(c_white)
 	c = 16777215
-	npspr = lang_get_sprite(spr_nowplayingbonus)
+	npspr = spr_nowplayingbonus
 }
+else
+	draw_set_color(c_black)
 
 var final_text = string_concat(music_desc, " - ", music_composer)
 
@@ -20,3 +23,5 @@ if (musicArray[currentSelection].hasSpecial && specialToggle)
 
 draw_sprite(npspr, image_index, room_width / 2, 0)
 //scribble(final_text).starting_format(font_get_name(global.SoundTestFont), c).align(1, 1).draw(room_width / 2, 62)
+draw_set_font(global.SoundTestFont)
+draw_text(room_width / 2, 62, music_desc + "     -     " + music_composer)

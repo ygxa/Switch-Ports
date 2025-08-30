@@ -78,7 +78,7 @@ function cutscene_lapPortal_middle()
 		{
 			if (!instance_exists(portal))
 			{
-				portal = instance_create(x, y + 14, obj_lapPortalreturn)
+				portal = instance_create(x, y + 14, obj_lapPortalexit)
 			}
 			else if (floor(portal.image_index) >= 4)
 			{

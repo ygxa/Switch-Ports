@@ -1,5 +1,5 @@
 taskIcons = {}
-eas_ini_open(global.SaveFileName)
+ini_open(global.SaveFileName)
 
 for (var i = 0; i < array_length(levelArr); i++)
 {
@@ -17,9 +17,9 @@ for (var i = 0; i < array_length(levelArr); i++)
 		selectV = 0
 }
 
-eas_ini_close()
+fixed_ini_close()
 //eas_save(scr_easyasync_callback)
-eas_ini_open("optionData.ini")
+ini_open("optionData.ini")
 var palArr = scr_get_palettes(false)
 
 for (var i = 0; i < array_length(palArr); i++)
@@ -29,6 +29,6 @@ for (var i = 0; i < array_length(palArr); i++)
 	addOutfit(new taskIcon(p, unlocked_outfit))
 }
 
-eas_ini_close()
+fixed_ini_close()
 //eas_save(scr_easyasync_callback)
 outfitRows = ceil(array_length(outfitArr) / 3)

@@ -1,6 +1,5 @@
 global.gamePauseState = 1
 selected = 0
-
 switch (global.playerCharacter)
 {
 	case Characters.Pizzelle:
@@ -38,3 +37,4 @@ else
 
 pause_options = opt_arr
 pausecount = 29
+audio_play_sound(mu_pausestart,1,0)

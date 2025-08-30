@@ -2,9 +2,9 @@ depth = 7
 bobsin = 0
 time = 0
 collectedTreasure = false
-eas_ini_open(global.SaveFileName)
+ini_open(global.SaveFileName)
 collectedTreasure = ini_read_string("Treasure", level, 0) != "0"
-eas_ini_close()
+fixed_ini_close()
 //eas_save(scr_easyasync_callback)
 treasureSprite = spr_treasure_entryway
 var sprite_name = string("spr_treasure_" + level)

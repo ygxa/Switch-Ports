@@ -72,11 +72,11 @@ livesplitInit = function()
 
 saveTime = function(arg0 = global.SaveFileName)
 {
-	eas_ini_open(arg0)
+	ini_open(arg0)
 	ini_write_real("Game", "frames", global.SaveFrames)
 	ini_write_real("Game", "seconds", global.SaveSeconds)
 	ini_write_real("Game", "minutes", global.SaveMinutes)
-	eas_ini_close()
+	fixed_ini_close()
 	//eas_save(scr_easyasync_callback)
 }
 

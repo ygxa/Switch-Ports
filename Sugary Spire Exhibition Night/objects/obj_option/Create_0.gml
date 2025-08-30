@@ -10,6 +10,10 @@ optionBG[OptionMenu.Gamepad] = 4
 optionBG[OptionMenu.Deadzones] = 4
 optionBG[OptionMenu.Modded] = 5
 
+if room != rm_mainmenu{
+	audio_play_sound(mu_options,1,1)	
+}
+
 handle_savedoption = function()
 {
 	if (!is_struct(savedSliderOption))

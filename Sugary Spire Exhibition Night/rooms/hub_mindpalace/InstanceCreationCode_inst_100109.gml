@@ -1,7 +1,7 @@
 flags.do_once = false
-eas_ini_open(global.SaveFileName)
+ini_open(global.SaveFileName)
 flags.saved_info = ini_read_string("Game", "Judgment", "none")
-eas_ini_close()
+fixed_ini_close()
 //eas_save(scr_easyasync_callback)
 condition = function()
 {

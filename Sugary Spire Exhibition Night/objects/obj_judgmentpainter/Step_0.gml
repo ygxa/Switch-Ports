@@ -1,9 +1,62 @@
-if (!active)
-	return
-
+if (!active){
+	textletter = 0
+	exit;
+}
+	
 input_speed = input_check("jump") || input_check("up")
 input_advance = input_check_pressed("jump") || input_check_pressed("up")
+ass += 0.05
 var painter_sprites = ds_map_find_value(painterExpressionMap, painterMood)
+var text = dialogEvents[dialogCurrent]
+
+//disappointing
+if text = "Honestly, I'm not sure why you bothered showing up in the first place..."
+	painterMood = "upset"
+
+//fine
+if text = "It was... adequate, je suppose"
+	painterMood = "normal"
+if text = "But did you not also sense something more to my paintings? It saddens me that you failed to fully appreciate their depth."
+	painterMood = "upset"
+if text = "Regardless, confiseur, you performed acceptably..."
+	painterMood = "devious"
+
+//perfect
+if text = "Not only have you returned all of my precious INK, but you did it with such showmanship too!"
+	painterMood = "devious"
+if text = "I'm sure you're quite happy too, no?  Don't think I didn't see you lining your pockets while you were busy \"admiring\" my paintings!"
+	painterMood = "normal"
+if text = "Ha! I jest. You earned it, confiseur. Your performance tonight was beyond reproach!"
+	painterMood = "devious"
+
+//fast
+if text = "You haven't given me enough time to think about it! I feel that-"
+	painterMood = "devious"
+if text = "Quit looking at your timepiece, you blasted thing!"
+	painterMood = "upset"
+if text = "You ought to slow down a little now and then, it might do you some good."
+	painterMood = "normal"
+
+//holyshit
+if text = "Mon Dieu, my expectations for you have been completely and utterly surpassed!"
+	painterMood = "surprised"
+if text = "Magnifique! Fantastique! Confiseur, for you I have no more words!"
+	painterMood = "devious"
+if text = "If only the others could appreciate my art the way you do. C'est la vie..."
+	painterMood = "upset"
+
+var newtext = string_replace_all(text, " ", "        ");
+
+if (textletter < string_length(newtext)) {
+	textletter = min(textletter + textspeed, string_length(newtext))
+	while (textletter < string_length(newtext) && string_char_at(newtext, textletter) == " ") {
+		textletter++
+	}
+	chatty = true
+}
+else
+	chatty = false
+
 
 if (is_struct(painter_sprites))
 {
@@ -38,6 +91,7 @@ switch (progression)
 		{
 			progression = 1
 			chatty = true
+			textletter = 0
 		}
 		
 		break
@@ -46,27 +100,29 @@ switch (progression)
 		typist.in(1, 0)
 		targetpos.x = xstart + (60 * sin(global.CurrentTime / 1000))
 		targetpos.y = ((camera_get_view_y(view_camera[0]) + camera_get_view_height(view_camera[0])) - sprite_height) + 4
-		var _end_of_text = typist.get_state() >= 1
 		
-		if (input_advance && _end_of_text)
+		if (input_advance && chatty = false)
 			event_user(0)
-		else if (!_end_of_text && input_speed)
-			typist.in(4, 0)
-		
-		chatty = !_end_of_text
+			
+		if (input_speed && chatty = true)
+			textspeed = 1
+		else
+			textspeed = 0.5
+
 		break
 	
 	case 2:
 		sprite_index = spr_brainpainteridle
-		
-		if (!flickspr.visible)
+		textletter = 0
+		if (!obj_painterhand.visible)
 		{
-			flickspr.setPosition(targetPlayer.bbox_right, camera_get_view_y(view_camera[0]) + camera_get_view_height(view_camera[0]) + 32)
-			flickspr.visible = true
+			obj_painterhand.x = targetPlayer.bbox_right
+			obj_painterhand.y = camera_get_view_y(view_camera[0]) + camera_get_view_height(view_camera[0]) + 32
+			obj_painterhand.visible = true
 		}
-		else if (flickspr.y > (targetPlayer.y - 32))
+		else if (obj_painterhand.y > (targetPlayer.y - 32))
 		{
-			flickspr.y -= 3
+			obj_painterhand.y -= 3
 		}
 		else if (flickpwr < 10)
 		{
@@ -77,20 +133,20 @@ switch (progression)
 			}
 			
 			flickpwr += 0.5
-			flickspr.x = lerp(flickspr.x, targetPlayer.bbox_right - 55, 0.3) + random_range(-flickpwr, flickpwr)
-			flickspr.y = (targetPlayer.y - 32) + random_range(-flickpwr, flickpwr)
+			obj_painterhand.x = lerp(obj_painterhand.x, targetPlayer.bbox_right - 55, 0.3) + random_range(-flickpwr, flickpwr)
+			obj_painterhand.y = (targetPlayer.y - 32) + random_range(-flickpwr, flickpwr)
 		}
 		else
 		{
 			event_play_oneshot("event:/SFX/player/punch", targetPlayer.x, targetPlayer.y)
 			event_play_oneshot("event:/SFX/general/painterflickflying")
 			instance_create(targetPlayer.x, targetPlayer.y, obj_bangEffect)
-			flickspr.sprite_index = spr_brainpainterhandflick
+			obj_painterhand.sprite_index = spr_brainpainterhandflick
 			finished = true
 			targetPlayer.ystart = targetPlayer.y
 			progression = 3
-			scr_task_notify("palette_PZ_exhibitionbrain")
-			scr_task_notify("palette_PZ_exhibitionbraingold")
+			scr_task_notify("Brainy Duds")
+			scr_task_notify("Golden Brainy Duds")
 			
 			with (obj_music)
 			{
@@ -100,8 +156,7 @@ switch (progression)
 					fmod_studio_event_instance_stop(global.RoomMusic.secretMusicInst, true)
 				}
 			}
-		}
-		
+		}		
 		break
 }
 

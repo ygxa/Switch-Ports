@@ -1,3 +1,4 @@
+playpausemusic = false
 canmove = true
 pausedInstances = ds_list_create()
 secretIconScale = [2, 2, 2]

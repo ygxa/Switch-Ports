@@ -135,7 +135,7 @@ function scr_gameInit()
 	global.DebugMode = dbg_mode
 	surface_depth_disable(true)
 	global.coopGame = false
-	global.SaveFileName = "saveData1.ini"
+	global.SaveFileName = "saveData1_EN.ini"
 	global.NewFile = false
 	global.PainterTopperIndex = irandom_range(0, sprite_get_number(spr_paintertopper) - 1)
 	global.PreviousRoom = rm_missing
@@ -216,10 +216,6 @@ function scr_gameInit()
 	global.doorsave = ds_list_create()
 	global.afterimage_list = ds_list_create()
 	global.doorindex = 0
-	global.swapmode = false
 	global.SecretsFound = []
 	global.randomroom = false
-	global.fudgetopcafe = true
-	global.betterw2 = true
-	global.basement = true
 }

@@ -70,8 +70,9 @@ function fmod_studio_event_instance_stop(sound, nofade){
 		if is_string(sound){
 			if nofade
 				audio_stop_sound(asset_get_index(sound))
-			else
+			else{
 				audio_sound_gain(asset_get_index(sound), 0, 500);
+			}
 		}
 		else{
 			if nofade
@@ -146,3 +147,4 @@ function kill_sounds(sound){
 function fmod_quick3D(sound, _x = x, _y = y){
 	
 }
+

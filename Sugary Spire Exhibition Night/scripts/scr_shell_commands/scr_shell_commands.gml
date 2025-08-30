@@ -20,7 +20,7 @@ function scr_parseBool(arg0, arg1)
 	}
 	else
 	{
-		show_debug_message(string("SHELL WARNING: Couldn't parse {0} as a string, using default value"))
+		//show_debug_message(string("SHELL WARNING: Couldn't parse {0} as a string, using default value"))
 		return arg1;
 	}
 }
@@ -128,7 +128,7 @@ function sh_unlock(arg0)
 	if (type == "all" || type == "levels")
 	{
 		var levels = ["tutorial", "entryway", "steamy", "mineshaft", "molasses"]
-		eas_ini_open(global.SaveFileName)
+		ini_open(global.SaveFileName)
 		
 		for (var i = 0; i < array_length(levels); i++)
 		{
@@ -161,26 +161,26 @@ function sh_unlock(arg0)
 			ini_write_string("Ranks", string(int_level), "p")
 		}
 		
-		eas_ini_close()
+		fixed_ini_close()
 		//eas_save(scr_easyasync_callback)
 	}
 	
 	if (type == "all" || type == "clothes")
 	{
-		eas_ini_open("optionData.ini")
+		ini_open("optionData.ini")
 		var clothes_info = scr_get_palettes(false)
 		
 		for (var i = 0; i < array_length(clothes_info); i++)
 			ini_write_real("Palettes", clothes_info[i].taskKey, true)
 		
-		eas_ini_close()
+		fixed_ini_close()
 		//eas_save(scr_easyasync_callback)
 	}
 	
 	if (type == "all" || type == "achievements")
 	{
 		var levels = ["demoEN", "entryway", "steamy", "mineshaft", "molasses"]
-		eas_ini_open(global.SaveFileName)
+		ini_open(global.SaveFileName)
 		
 		for (var z = 0; z < array_length(levels); z++)
 		{
@@ -190,7 +190,7 @@ function sh_unlock(arg0)
 				ini_write_real("ChefTasks", cheftask_info[i].taskKey, true)
 		}
 		
-		eas_ini_close()
+		fixed_ini_close()
 		//eas_save(scr_easyasync_callback)
 	}
 }

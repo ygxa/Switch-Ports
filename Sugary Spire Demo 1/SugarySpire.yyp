@@ -858,6 +858,7 @@
     {"id":{"name":"spr_player_ladderup","path":"sprites/spr_player_ladderup/spr_player_ladderup.yy",},"order":852,},
     {"id":{"name":"spr_player_land2","path":"sprites/spr_player_land2/spr_player_land2.yy",},"order":853,},
     {"id":{"name":"spr_bombpep_run","path":"sprites/spr_bombpep_run/spr_bombpep_run.yy",},"order":854,},
+    {"id":{"name":"ini_close_fixed","path":"scripts/ini_close_fixed/ini_close_fixed.yy",},"order":693,},
     {"id":{"name":"spr_pizzytvangry","path":"sprites/spr_pizzytvangry/spr_pizzytvangry.yy",},"order":855,},
     {"id":{"name":"spr_player_machfreefall","path":"sprites/spr_player_machfreefall/spr_player_machfreefall.yy",},"order":856,},
     {"id":{"name":"spr_pizzelleselectpal","path":"sprites/spr_pizzelleselectpal/spr_pizzelleselectpal.yy",},"order":857,},

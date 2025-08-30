@@ -1,6 +1,6 @@
 ini_open("saveData.ini");
 levelrank = ini_read_string("Ranks", string(levelsign), "none");
-ini_close();
+ini_close_fixed();
 
 if (levelrank == "none")
     visible = false;

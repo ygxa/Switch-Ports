@@ -22,3 +22,4 @@ mycut = -4
 ispainter = false
 propdex = 0
 ropetype = RopeType.top
+

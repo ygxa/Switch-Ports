@@ -2,13 +2,13 @@ function subSprite(arg0, arg1 = 0, arg2 = 0.35, arg3 = true) constructor
 {
 	static update = function(arg0 = image_speed)
 	{
-		image_number = sprite_get_number(sprite_index)
+		//1 = sprite_get_number(sprite_index)
 		image_index += arg0
 		
 		if (doWrap)
-			image_index = wrap(image_index, 0, image_number)
+			image_index = wrap(image_index, 0, 1)
 		else
-			image_index = clamp(image_index, 0, image_number)
+			image_index = clamp(image_index, 0, 1)
 		
 		return image_index;
 	}
@@ -58,8 +58,8 @@ function subSprite(arg0, arg1 = 0, arg2 = 0.35, arg3 = true) constructor
 	y = 0
 	xstart = 0
 	ystart = 0
-	image_number = sprite_get_number(sprite_index)
-	finalFrame = image_number
+	//1 = sprite_get_number(sprite_index)
+	finalFrame = 1
 	custom_func = -4
 	return self;
 }

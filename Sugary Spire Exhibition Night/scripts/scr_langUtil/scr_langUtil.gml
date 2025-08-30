@@ -1,7 +1,8 @@
 global.fontDefault = font_add_sprite_ext(spr_font, "AÁÀÂÃBCÇDEÉÊFGHIÍJKLMNÑOÓÔÕPQRSTUÚVWXYZ!¡.,1234567890:?¿_-�", 1, 0)
 global.promptfont = font_add_sprite_ext(spr_promptfont, "AÁÀÂÃBCÇDEÉÊFGHIÍJKLMNÑOÓÔÕPQRSTUÚVWXYZaáàâãbcçdeéêfghiíjklmnñoóôõpqrstuúvwxyz.,:!¡0123456789?¿'\"\\�_-[]▼()&#风雨廊桥전태양*яиБжидГзвбнль", 1, 0)
 global.smallfont = font_add_sprite_ext(spr_smallfont, "AÁÀÂÃBCÇDEÉÊFGHIÍJKLMNÑOÓÔÕPQRSTUÚVWXYZ.?!¡1234567890\"-:_�", 1, 0)
-global.npcfont = font_add_sprite_ext(spr_npcfont, "AÁÀÂÃBCÇDEÉÊFGHIÍJKLMNÑOÓÔÕPQRSTUÚVWXYZaáàâãbcçdeéêfghiíjklmnñoóôõpqrstuúvwxyz!¡,.:0123456789'?¿-()\"_/�", 1, 2)
+global.npcfont = font_add_sprite_ext(spr_npcfont, "AÁÀÂÃBCÇDEÉÊFGHIÍJKLMNÑOÓÔÕPQRSTUÚVWXYZaáàâãbcçdeéêfghiíjklmnñoóôõpqrstuúvwxyz!¡,.:0123456789'?¿-()\"_/�# ", 1, 2)
+
 global.npcsmallfont = font_add_sprite_ext(spr_npcsmallfont, "AÁÀÂÃBCÇDEÉÊFGHIÍJKLMNÑOÓÔÕPQRSTUÚVWXYZaáàâãbcçdeéêfghiíjklmnñoóôõpqrstuúvwxyz!¡.,:0123456789'?¿-\"()/_�", true, 1)
 global.SoundTestFont = global.npcfont
 global.smalltimerfont = font_add_sprite_ext(spr_smalltimerfont, ".1234567890:", 1, 0)
@@ -23,35 +24,8 @@ global.keyDrawFont = font_add_sprite_ext(spr_keyDrawFont, "ABCDEFGHIJKLMNOPQRSTU
 global.MoneyFont = font_add_sprite_ext(spr_moneyFont, "0123456789$-", true, 0)
 global.smallnumberfont = font_add_sprite_ext(spr_smallnumber, "1234567890-+", true, 0)
 global.captionfont = font_tahoma
+global.icondialog = font_add_sprite_ext(spr_icon_dialog, "PHJI", 1, 2)
 
-/*
-global.fontDefault = font_dialog
-global.promptfont = font_dialog
-global.smallfont = font_dialog
-global.npcfont = font_dialog
-global.npcsmallfont = font_dialog
-global.SoundTestFont = font_dialog
-global.smalltimerfont = font_dialog
-global.creditsfont = font_dialog
-global.collectfont = font_dialog
-global.candlefont = font_dialog
-global.candleBigFont = font_dialog
-global.rankcombofont = font_dialog
-global.bubblefont = font_dialog
-global.timerfont = font_dialog
-global.combofont = font_dialog
-global.lapfont = font_dialog
-global.dialogfont = font_dialog
-global.percentageFont = font_dialog
-global.buttonfont = font_dialog
-global.cafefont = font_dialog
-global.cafefontsmall = font_dialog
-global.keyDrawFont = font_dialog
-global.MoneyFont = font_dialog
-global.smallnumberfont = font_dialog
-global.captionfont = font_tahoma
-
-*/
 //function directory_get_files(arg0, arg1)
 //{
    // var fileArr = [];
@@ -705,9 +679,9 @@ function scr_lang_init()
 		global.langDefault = {}
 	
 	scr_lang_initvals()
-	eas_ini_open("optionData.ini")
+	ini_open("optionData.ini")
 	global.langName = ini_read_string("Settings", "lang", "none")
-	eas_ini_close()
+	fixed_ini_close()
 	//eas_save(scr_easyasync_callback)
 	
 	if (global.langName == "none")
@@ -765,7 +739,7 @@ function lang_key_exists(arg0)
 	//if (is_undefined(global.langDefault) || !variable_struct_exists(global.langDefault, arg0))
 		//return false;
 	
-	return false; // make this true when fixing later
+	return true; // make this true when fixing later
 }
 
 function lang_get(arg0, arg1 = undefined)

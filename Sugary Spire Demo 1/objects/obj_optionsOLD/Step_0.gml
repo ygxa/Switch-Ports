@@ -118,7 +118,7 @@ switch (menu)
                     ini_write_real("Settings", "smthcam", global.smoothcam);
                     ini_write_real("Settings", "scrntilt", global.screentilt);
                     ini_write_real("Settings", "playrot", global.playerrotate);
-                    ini_close();
+                    ini_close_fixed();
                     break;
             }
         }

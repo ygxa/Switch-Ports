@@ -37,7 +37,7 @@
   ],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "sugary spire switch port en",
+    "path": "sugary spire switch port en.yyp",
   },
 }

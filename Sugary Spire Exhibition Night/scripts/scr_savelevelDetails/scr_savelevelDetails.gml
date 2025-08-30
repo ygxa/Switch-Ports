@@ -33,7 +33,7 @@ function scr_savelevelDetails(arg0 = true)
 		level_sec = self.addTime([global.LevelFrames], [global.LevelSeconds], [global.LevelMinutes])
 	}
 	
-	eas_ini_open(global.SaveFileName)
+	ini_open(global.SaveFileName)
 	ini_update_stat("Game", string("damage_" + scr_getCharacterPrefix(global.playerCharacter)), global.HurtCounter)
 	global.HurtMilestone = global.HurtCounter
 	ini_update_stat("Time", string(global.InternalLevelName), level_sec, true)
@@ -71,7 +71,7 @@ function scr_savelevelDetails(arg0 = true)
 	if (rank_checker(global.rank) > rank_checker(ini_read_string("Ranks", string(global.InternalLevelName), "none")))
 		ini_write_string("Ranks", string(global.InternalLevelName), global.rank)
 	
-	eas_ini_close()
+	fixed_ini_close()
 	//eas_save(scr_easyasync_callback)
 	obj_hudManager.saveAlpha = 10
 	
@@ -106,7 +106,7 @@ function ini_update_stat(arg0, arg1, arg2, arg3 = false)
 function confecti_count_level(arg0)
 {
 	var confecti_count = 0
-	eas_ini_open(global.SaveFileName)
+	ini_open(global.SaveFileName)
 	
 	for (var i = 1; i < 6; i++)
 	{
@@ -116,7 +116,7 @@ function confecti_count_level(arg0)
 			confecti_count++
 	}
 	
-	eas_ini_close()
+	fixed_ini_close()
 	//eas_save(scr_easyasync_callback)
 	return confecti_count;
 }
