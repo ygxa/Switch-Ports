@@ -9,7 +9,7 @@ baddieSpriteDead = spr_juicedead
 
 enemyDeath_SpawnBody = function()
 {
-	event_play_oneshot("event:/SFX/general/breakglass", x, y)
+	event_play_oneshot(snd_glass, x, y)
 	var i = 0
 	
 	repeat (10)

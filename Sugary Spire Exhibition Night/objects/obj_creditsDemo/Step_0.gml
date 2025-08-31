@@ -10,7 +10,8 @@ switch (creditPhase)
         obj_pizzelleflick.x -= 24
         if (obj_pizzelleflick.x <= -400)
         {
-            event_play_oneshot("event:/SFX/general/creditssplat");
+			audio_play_sound(snd_pizzelleCrashingout, 1, 0)
+            //event_play_oneshot("event:/SFX/general/creditssplat");
             creditPhase = -1;
             phaseBuffer = 120;
         }
@@ -35,6 +36,8 @@ switch (creditPhase)
             else
             {
                 creditPhase = 1;
+				audio_sound_gain(mu_credits, 0.68,1)
+				audio_play_sound(mu_credits,1,1)
                 showLogo = false;
             }
         }
@@ -65,8 +68,10 @@ switch (creditPhase)
     
     case 2:
         obj_endscreencard.visible = true;
+		fmod_studio_event_instance_stop(mu_credits, false)
         phaseBuffer--;
-        
+        if audio_sound_get_gain(mu_credits) = 0
+			audio_stop_sound(mu_credits)
         if (skip && phaseBuffer <= 0)
             creditPhase = 3;
         
@@ -75,8 +80,10 @@ switch (creditPhase)
     case 3:
         obj_curtain_exhibclose.image_speed = 0.35;
 		obj_curtain_exhibclose.visible = true
-        if (obj_curtain_exhibclose.image_index >= 14)
+        if (obj_curtain_exhibclose.image_index >= 14){
             room_goto_fixed(rm_mainmenu);
+			audio_stop_sound(mu_credits)	
+		}
         
         break;
 }

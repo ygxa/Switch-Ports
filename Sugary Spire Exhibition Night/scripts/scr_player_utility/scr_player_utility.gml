@@ -76,7 +76,7 @@ function do_taunt(arg0 = state)
 				global.ExitGateTaunt++
 				create_small_number(x, y, string(val))
 				create_collect_effect(x, y, spr_taunteffect, val)
-				event_play_multiple("event:/SFX/general/collect", x, y)
+				event_play_multiple(snd_collect, x, y)
 			}
 			
 			sprite_index = spr_taunt

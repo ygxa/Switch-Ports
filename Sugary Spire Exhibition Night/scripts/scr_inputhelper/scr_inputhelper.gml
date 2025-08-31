@@ -216,4 +216,10 @@ function draw_control_sprite(arg0, arg1, arg2)
 	
 	return base;
 	*/
+	if arg0 = "start"
+		draw_sprite(spr_key_controller, 17, arg1, arg2)
+	if arg0 = "menuback"
+		draw_sprite(spr_key_controller, 9, arg1, arg2)
+	if arg0 = "menudelete"
+		draw_sprite(spr_key_controller, 10, arg1, arg2)
 }

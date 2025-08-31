@@ -47,7 +47,7 @@ defineMusic("event:/music/Soundtest/credits", "Toodle-oo!", "PaperKitty")
 ini_open(global.SaveFileName)
 
 if (ini_read_string("Game", "Judgment", "none") != "none")
-	defineMusic("event:/music/Soundtest/painterBrain", "Painter's Brain", "Stewart Keller")
+	defineMusic(mu_painterbrain, "Painter's Brain", "Stewart Keller")
 
 if (ini_read_string("Treasure", "mindpalace", "0") != "0")
 {

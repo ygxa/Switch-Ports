@@ -36,7 +36,7 @@ with (obj_parent_player)
 				sprite_index: other.spriteDoorLock
 			})
 			state = PlayerState.victory
-			event_play_oneshot("event:/SFX/general/cheers", x, y)
+			event_play_oneshot(snd_cheers, x, y)
 			event_play_oneshot("event:/SFX/general/keyunlock", x, y)
 			fmod_studio_event_instance_start(obj_parent_player.voiceCollect)
 			

@@ -1,2 +1,2 @@
-event_play_oneshot("event:/SFX/general/clutterhitmetal", x, y)
+event_play_oneshot(snd_clutterhitmetal, x, y)
 event_inherited()

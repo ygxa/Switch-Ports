@@ -11,7 +11,7 @@ with (obj_parent_player)
 				depth = -30
 			}
 			
-			event_play_oneshot("event:/SFX/general/box", x, y)
+			event_play_oneshot(snd_box)
 			obj_parent_player.box = true
 			image_index = 0
 			image_speed = 0.35
@@ -29,7 +29,7 @@ with (obj_parent_player)
 	{
 		if ((((key_up || state == PlayerState.Sjump || state == PlayerState.climbwall) && !place_meeting(x, y - 1, obj_destructibles) && place_meeting(x, y - 1, other.id) && (state == PlayerState.jump || state == PlayerState.climbwall || state == PlayerState.wallkick || state == PlayerState.uppercut || state == PlayerState.Sjump || state == PlayerState.mach2 || state == PlayerState.mach3)) && !place_meeting(x, y - 1, obj_destructibles) && place_meeting(x, y - 1, other.id)) && !instance_exists(obj_fadeoutTransition))
 		{
-			event_play_oneshot("event:/SFX/general/box")
+			event_play_oneshot(snd_box)
 			
 			with (other)
 			{
@@ -37,8 +37,6 @@ with (obj_parent_player)
 				sprite_index = spr_pizzabox_front
 				depth = -30
 			}
-			
-			event_play_oneshot("event:/SFX/general/box", x, y)
 			obj_parent_player.box = true
 			image_index = 0
 			image_speed = 0.35

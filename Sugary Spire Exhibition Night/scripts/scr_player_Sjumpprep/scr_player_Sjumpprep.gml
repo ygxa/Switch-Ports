@@ -54,6 +54,7 @@ function state_player_Sjumpprep()
 		instance_create(x, y, obj_mushroomCloudEffect)
 		sprite_index = spr_superjump
 		state = PlayerState.Sjump
+		audio_play_sound(snd_superjumprelease,1,0)
 		vsp = -12
 		verticalMovespeed = vsp
 		sJumpCanDoubleJump = false

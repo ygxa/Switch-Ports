@@ -2,7 +2,10 @@
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
   "name": "obj_option_clothes",
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_fileDelete",
+    "path": "sprites/spr_fileDelete/spr_fileDelete.yy",
+  },
   "solid": false,
   "visible": true,
   "managed": true,

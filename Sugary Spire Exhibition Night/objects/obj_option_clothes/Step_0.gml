@@ -1,3 +1,4 @@
+ass += 0.35
 scr_getinput_menu()
 
 if (inputBuffer > 0)

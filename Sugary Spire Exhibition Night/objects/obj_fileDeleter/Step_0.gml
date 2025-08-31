@@ -1,3 +1,4 @@
+ass += 0.35
 scr_getinput_menu()
 var old_selection = optionSelection
 optionSelection += (key_right2 + key_left2)
@@ -18,7 +19,7 @@ if (deleteFileBuffer >= deleteFileBufferMax)
 	
 	with (obj_mainfileselect)
 	{
-		//eas_file_delete(savePath[other.selectedFile])
+		file_delete(savePath[other.selectedFile])
 		fileOpened[other.selectedFile] = false
 		filePalette[other.selectedFile] = 2
 		filePresent[other.selectedFile] = false
@@ -26,6 +27,8 @@ if (deleteFileBuffer >= deleteFileBufferMax)
 		fileJudgment[other.selectedFile] = scr_judgment_get("none")
 		flashshake[other.selectedFile] = 5
 		flashbuffer = 10
+		if os_type = os_switch
+			switch_save_data_commit();
 	}
 	
 	instance_destroy()

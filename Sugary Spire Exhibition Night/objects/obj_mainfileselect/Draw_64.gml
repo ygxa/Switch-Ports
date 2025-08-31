@@ -8,6 +8,7 @@ else
     draw_set_valign(fa_bottom);
     draw_set_color(c_white);
     draw_set_font(global.smallfont);
-    draw_text(952, 532, "V4.0.0.0 \"4.0.1.1\"");
-    draw_text(952, 512, "PAN RE V0.7.0");
+    draw_text(952, 532, "V4.0.1.1");
+	if global.panpizzano
+		draw_text(952, 512, "PAN RE V0.7.0");
 }

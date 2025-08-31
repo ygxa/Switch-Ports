@@ -5,37 +5,37 @@ function scr_playersounds_init()
 	sndMach2              = pz_mach2;
 	sndMach3              = pz_mach3;
 	sndMach4              = pz_mach4;
-	sndMachStart         = undefined;
-	sndGalloping         = undefined;
-	sndSpinning          = undefined;
-	spinSoundBuffer      = undefined;
+    sndMachStart = "event:/SFX/player/machStart"
+    sndGalloping = "event:/SFX/general/galloping"
+    sndSpinning = "event:/SFX/player/spin"
+	spinSoundBuffer      = 0;
 	sndSuplex            = sfx_suplexdash;
-	sndKungFu            = undefined;
+	sndKungFu = "event:/SFX/player/kungfu"
 	sndJump              = sfx_jump;
-	sndFlip              = undefined;
+	sndFlip = "event:/SFX/player/flip"
 	sndWallkick          = sfx_wallkick;
 	sndWallkickCancel    = sfx_wallkickcancel;
-	sndWallkickStart     = undefined;
-	sndWallkickLand      = undefined;
-	sndFreefall          = undefined;
-	sndSuperjump         = undefined;
-	sndSuperjumpRelease  = undefined;
-	sndCottonDigging     = undefined;
-	sndTumble            = undefined;
-	sndRoll              = undefined;
-	sndGrind             = undefined;
-	sndFireass           = undefined;
-	sndCrouchslide       = undefined;
-	sndRollGetUp         = undefined;
-	sndDive              = undefined;
-	sndMinecart          = undefined;
-	sndMinecartJump      = undefined;
-	voiceScream          = undefined;
-	voiceCollect         = undefined;
-	voiceTransfo         = undefined;
-	voiceDetransfo       = undefined;
-	voiceIdle            = undefined;
-	voiceHurt            = undefined;
+    sndWallkickStart = "event:/SFX/player/wallKickIntro"
+    sndWallkickLand = "event:/SFX/player/wallKickLand"
+    sndFreefall = "event:/SFX/player/freefall"
+    sndSuperjump = snd_superjumphold
+    sndSuperjumpRelease = snd_superjumprelease
+    sndCottonDigging = "event:/SFX/cotton/digging"
+    sndTumble = "event:/SFX/player/tumble"
+    sndRoll = "event:/SFX/player/machroll"
+    sndGrind = "event:/SFX/player/grind"
+    sndFireass = "event:/SFX/player/fireass"
+    sndCrouchslide = "event:/SFX/player/crouchslide"
+    sndRollGetUp = "event:/SFX/player/rollgetup"
+    sndDive = "event:/SFX/player/dive"
+    sndMinecart = "event:/SFX/minecart/minecart"
+    sndMinecartJump = "event:/SFX/minecart/jump"
+    voiceScream = "event:/SFX/player/voice/scream"
+    voiceCollect = "event:/SFX/player/voice/collect"
+    voiceTransfo = "event:/SFX/player/voice/transfo"
+    voiceDetransfo = "event:/SFX/player/voice/outtransfo"
+    voiceIdle = "event:/SFX/player/voice/idle"
+    voiceHurt = "event:/SFX/player/voice/hurt"
 	transfoSound = undefined
 	oldTransfoSound = undefined
 	mySoundArray = [sndMach, sndMachStart, sndSuplex, sndKungFu, sndGalloping, sndJump, sndFlip, sndWallkick, sndWallkickCancel, sndWallkickStart, sndWallkickLand, sndFreefall, sndSuperjump, sndSuperjumpRelease, sndCottonDigging, sndMinecart, sndTumble, sndRoll, sndGrind, sndFireass, sndCrouchslide, sndRollGetUp, sndDive, sndMinecart, sndMinecartJump, voiceScream, voiceCollect, voiceTransfo, voiceDetransfo, voiceIdle, voiceHurt]
@@ -43,6 +43,9 @@ function scr_playersounds_init()
 
 function scr_playersounds()
 {
+	if state != PlayerState.Sjumpprep
+		audio_stop_sound(sndSuperjump)
+
 	var saved_state = global.freezeframe ? frozenState : state
 	
 	if (saved_state != PlayerState.actor)
@@ -184,17 +187,16 @@ function scr_playersounds()
 	
 	if (saved_state == PlayerState.Sjumpprep)
 	{
-		if (!event_instance_isplaying(sndSuperjump))
-			fmod_studio_event_instance_start(sndSuperjump)
+		if !audio_is_playing(sndSuperjump)
+			fmod_studio_event_instance_start(sndSuperjump, true)
 	}
 	else if (event_instance_isplaying(sndSuperjump))
 	{
-		fmod_studio_event_instance_stop(sndSuperjump, true)
-		fmod_studio_event_instance_start(sndSuperjumpRelease)
+		audio_stop_sound(sndSuperjump)
 	}
 	
-	if ((saved_state != PlayerState.Sjump || sprite_index == spr_superjumpCancelIntro) && event_instance_isplaying(sndSuperjumpRelease))
-		fmod_studio_event_instance_stop(sndSuperjumpRelease, true)
+	//if ((saved_state != PlayerState.Sjump || sprite_index == spr_superjumpCancelIntro) && event_instance_isplaying(sndSuperjumpRelease))
+		//fmod_studio_event_instance_stop(sndSuperjumpRelease, true)
 	
 	if (saved_state == PlayerState.mach2 || saved_state == PlayerState.run || saved_state == PlayerState.mach3 || saved_state == PlayerState.climbwall)
 	{	

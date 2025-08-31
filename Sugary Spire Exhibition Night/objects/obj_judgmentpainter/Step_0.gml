@@ -52,6 +52,20 @@ if (textletter < string_length(newtext)) {
 	while (textletter < string_length(newtext) && string_char_at(newtext, textletter) == " ") {
 		textletter++
 	}
+	
+	var voices = [snd_brainter1, snd_brainter2, snd_brainter3, snd_brainter4, snd_brainter5, snd_brainter6, snd_brainter7, snd_brainter8]
+	var talk = irandom(array_length(voices) - 1);
+	var fuck = false
+	for (var i = 0; i < array_length(voices); i++) {
+		if (audio_is_playing(voices[i])){
+			fuck = true;
+			break;
+		}
+	}
+
+	if fuck = false && chatty
+		audio_play_sound(array_get(voices, talk), 1,0)
+
 	chatty = true
 }
 else

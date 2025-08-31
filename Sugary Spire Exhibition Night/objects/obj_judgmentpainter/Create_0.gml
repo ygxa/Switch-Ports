@@ -12,6 +12,7 @@ targetpos =
 x = room_width
 painterExpressionMap = ds_map_create()
 painterMood = "normal"
+talkspr = spr_brainpaintertalk
 ds_map_add(painterExpressionMap, "normal", 
 {
 	idlespr: spr_brainpainteridle,

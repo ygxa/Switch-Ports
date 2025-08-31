@@ -50,7 +50,7 @@ else
 		i++
 	}
 	
-	event_play_oneshot("event:/SFX/general/breakglass", x, y)
+	event_play_oneshot(snd_glass, x, y)
 }
 
 event_play_oneshot(snd_kill)

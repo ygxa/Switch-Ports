@@ -52,8 +52,7 @@ else
 draw_set_alpha(hudAlpha);
 draw_set_halign(fa_center);
 draw_set_valign(fa_middle);
-draw_sprite(lang_get_sprite(spr_exit_exhib), 0, 16, 32);
-draw_control_sprite("menuback", 126, 60);
+//draw_sprite(lang_get_sprite(spr_exit_exhib), 0, 16, 32);
 draw_control_sprite("menudelete", 136, 444);
 draw_control_sprite("start", 600, 470);
 charindex += 0.35;

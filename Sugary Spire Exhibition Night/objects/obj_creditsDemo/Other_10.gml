@@ -18,7 +18,7 @@ var catPlaytest = addCategory("Playtesting");
 var catSpecial = addCategory("Special Thanks");
 var catPizza = addCategory("Tour de Pizza");
 var catYou = addCategory("And...");
-addCredit(ralcactus, "Ralcactus", [spr_ralcactus, spr_candysona_dead6]);
+addCredit(ralcactus, "Ralcactus", [spr_ralcactus, spr_ralcactus_killed]);
 addCredit(catSoda, "Sodamang", [spr_candysona_idle6, spr_candysona_dead6]);
 addCredit(catDirectors, "Fishibi", [spr_candysona_idle1, spr_candysona_dead1]);
 addCredit(catDirectors, "Glub", [spr_candysona_idle27, spr_candysona_dead27]);
