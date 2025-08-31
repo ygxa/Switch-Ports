@@ -2,7 +2,6 @@ global.fontDefault = font_add_sprite_ext(spr_font, "AÁÀÂÃBCÇDEÉÊFGHIÍJKL
 global.promptfont = font_add_sprite_ext(spr_promptfont, "AÁÀÂÃBCÇDEÉÊFGHIÍJKLMNÑOÓÔÕPQRSTUÚVWXYZaáàâãbcçdeéêfghiíjklmnñoóôõpqrstuúvwxyz.,:!¡0123456789?¿'\"\\�_-[]▼()&#风雨廊桥전태양*яиБжидГзвбнль", 1, 0)
 global.smallfont = font_add_sprite_ext(spr_smallfont, "AÁÀÂÃBCÇDEÉÊFGHIÍJKLMNÑOÓÔÕPQRSTUÚVWXYZ.?!¡1234567890\"-:_�", 1, 0)
 global.npcfont = font_add_sprite_ext(spr_npcfont, "AÁÀÂÃBCÇDEÉÊFGHIÍJKLMNÑOÓÔÕPQRSTUÚVWXYZaáàâãbcçdeéêfghiíjklmnñoóôõpqrstuúvwxyz!¡,.:0123456789'?¿-()\"_/�# ", 1, 2)
-
 global.npcsmallfont = font_add_sprite_ext(spr_npcsmallfont, "AÁÀÂÃBCÇDEÉÊFGHIÍJKLMNÑOÓÔÕPQRSTUÚVWXYZaáàâãbcçdeéêfghiíjklmnñoóôõpqrstuúvwxyz!¡.,:0123456789'?¿-\"()/_�", true, 1)
 global.SoundTestFont = global.npcfont
 global.smalltimerfont = font_add_sprite_ext(spr_smalltimerfont, ".1234567890:", 1, 0)

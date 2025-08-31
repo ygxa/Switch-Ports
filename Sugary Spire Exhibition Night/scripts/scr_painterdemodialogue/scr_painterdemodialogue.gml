@@ -45,7 +45,7 @@ function scr_painterdemodialogue()
 				dialogue_key = "Hmm... I'm impressed to see such refinement to your tastes, confiseur. You know, this piece is my Magnum Oculus, so I'm not surprised that you gravitated towards it so strongly."
 				idle = spr_painteridle5
 				speak = spr_painteridle5
-				talk_sound = "event:/SFX/hub/painterThinkHappy"
+				talk_sound = snd_painterhappy
 			}
 		}
 		else
@@ -54,7 +54,7 @@ function scr_painterdemodialogue()
 			idle = spr_painteridle6
 			speak = spr_painteridle6
 			array_push(info_arr, scr_getDialogIcon("INK"))
-			talk_sound = "event:/SFX/hub/painterThinkSad"
+			talk_sound = snd_paintersad
 		}
 	}
 	else if (secret_count == 0)
@@ -65,7 +65,7 @@ function scr_painterdemodialogue()
 			idle = spr_painteridle1
 			speak = spr_painteridle1
 			array_push(info_arr, scr_getDialogIcon("INK"))
-			talk_sound = "event:/SFX/hub/painterThinkAngry"
+			talk_sound = snd_painterangry
 		}
 		else
 		{
@@ -73,7 +73,7 @@ function scr_painterdemodialogue()
 			idle = spr_painteridle1
 			speak = spr_painteridle1
 			array_push(info_arr, scr_getDialogIcon("INK"))
-			talk_sound = "event:/SFX/hub/painterThinkAngry"
+			talk_sound = snd_painterangry
 		}
 	}
 	else if (secret_count > 0 && secret_count < 3)
@@ -81,7 +81,7 @@ function scr_painterdemodialogue()
 		dialogue_key = "Hmm... I see you have started to return some of my /1 INK, but there is still more left. There is little time for us to chit the chat, I'm afraid, I'm much too busy preparing the show..."
 		idle = spr_painteridle1
 		speak = spr_painteridle1
-		talk_sound = "event:/SFX/hub/painterThinkAngry"
+		talk_sound = snd_painterangry
 		array_push(info_arr, scr_getDialogIcon("INK"))
 	}
 	else if (secret_count < 6)
@@ -89,7 +89,7 @@ function scr_painterdemodialogue()
 		dialogue_key = "Hmm... Did you see them? Look at their beady little eyes... They think they can critique me? MOI? Hmph."
 		idle = spr_painteridle2
 		speak = spr_painteridle3
-		talk_sound = "event:/SFX/hub/painterThinkAngry"
+		talk_sound = snd_painterangry
 		array_push(info_arr, scr_getDialogIcon("INK"))
 	}
 	else if (secret_count < 9)
@@ -125,14 +125,14 @@ function scr_painterdemodialogue()
 				dialogue_key = "Hmm... You may have bought a ticket, Confiseur, but you are only owed 60 short minutes from moi. Your unhelpful behind had better make itself scarce before someone notices that your time is up..."
 				idle = spr_painteridle5
 				speak = spr_painteridle5
-				talk_sound = "event:/SFX/hub/painterThinkHappy"
+				talk_sound = snd_painterhappy
 			}
 			else
 			{
 				dialogue_key = "Hmm... Your time at the exhibition may have expired, Confiseur, but I implore you to enjoy the art for as long as you wish! You have done me a great service, and it is no shellac off my back if you wish to stay a little longer."
 				idle = spr_painteridle2
 				speak = spr_painteridle3
-				talk_sound = "event:/SFX/hub/painterThinkAngry"
+				talk_sound = snd_painterangry
 				array_push(info_arr, scr_getDialogIcon("INK"))
 			}
 		}
@@ -142,14 +142,14 @@ function scr_painterdemodialogue()
 			dialogue_key = "Hmm... I don't really understand what all the fuss is about. I can hardly see anything through these glasses..."
 			idle = spr_painteridle_newyears
 			speak = spr_painteridle_newyears
-			talk_sound = "event:/SFX/hub/painterThinkAngry"
+			talk_sound = snd_painterangry
 		}
 		else if (current_month == 2 && current_day == 14)
 		{
 			dialogue_key = "Hmm... All the cards at the store say things like \"I love you\" and \"You're special.\" Where's the card that says \"I admire your original compositions and appreciate their deeper subtextual meaning?\" I wish someone would get me one of those instead..."
 			idle = spr_painteridle2
 			speak = spr_painteridle3
-			talk_sound = "event:/SFX/hub/painterThinkSad"
+			talk_sound = snd_paintersad
 		}
 	}
 	
