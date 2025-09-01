@@ -20,3 +20,6 @@ for (var i = 0; i < array_length(timer_arr); i++)
 	draw_text(944, 532 - ty, timer_arr[i])
 	ty += (string_height("1") + 4)
 }
+
+if global.FPS
+	draw_text(global.CameraViewWidth/2, 50, string(fps));

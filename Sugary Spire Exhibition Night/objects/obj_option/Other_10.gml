@@ -148,28 +148,32 @@ switch (optionMenu)
 		backMenu = OptionMenu.Base
 		backOption = 2
 		alignCenter = false
-		var timer_options = ["opt_off", "opt_game_timer_type_level", "opt_game_timer_type_save", "opt_game_timer_type_both"]
-		options = [toMainPage, new option_normal("opt_game_vibrate", onOffToggle, function(arg0)
+		var timer_options = ["OFF", "PER LEVEL", "PER SAVE", "BOTH"]
+		options = [toMainPage, new option_normal("VIBRATION", onOffToggle, function(arg0)
 		{
 			quick_write_option("Settings", "vibration", arg0)
 			global.controllerVibration = arg0
-		}, global.controllerVibration), new option_normal("opt_game_screenshake", onOffToggle, function(arg0)
+		}, global.controllerVibration), new option_normal("SCREEN SHAKE", onOffToggle, function(arg0)
 		{
 			quick_write_option("Settings", "screenshake", arg0)
 			global.ScreenShake = arg0
-		}, global.ScreenShake), new option_normal("opt_game_timer_type", timer_options, function(arg0)
+		}, global.ScreenShake), new option_normal("TIMER", timer_options, function(arg0)
 		{
 			quick_write_option("Settings", "opt_timerType", arg0)
 			global.option_timer_type = arg0
-		}, global.option_timer_type), new option_normal("opt_game_timerspeedrun", onOffToggle, function(arg0)
+		}, global.option_timer_type), new option_normal("SPEEDRUN TIMER", onOffToggle, function(arg0)
 		{
 			quick_write_option("Settings", "timerspeedrun", arg0)
 			global.option_speedrun_timer = arg0
-		}, global.option_speedrun_timer)]
+		}, global.option_speedrun_timer), new option_normal("FPS COUNTER", onOffToggle, function(arg0)
+		{
+			quick_write_option("Settings", "fps", arg0)
+			global.FPS = arg0
+		}, global.FPS)]
 		
 		if (room == rm_mainmenu)
 		{
-			array_push(options, new option_button("opt_game_reset_clothes", function()
+			array_push(options, new option_button("RESET CLOTHES PROGRESS", function()
 			{
 				instance_create(0, 0, obj_option_clothes)
 			}))
