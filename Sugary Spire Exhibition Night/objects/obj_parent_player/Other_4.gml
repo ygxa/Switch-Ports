@@ -1,3 +1,17 @@
+if global.aspectratio{
+	room_width += 240
+	obj_camera.Cam_x += 100000
+	with all
+		x += 120
+
+	var tiles = ["Tiles_1", "Tiles_2", "Tiles_3", "Tiles_4", "Tiles_5", "Tiles_BG"];
+	for (var i = 0; i < array_length(tiles); i++) {
+		var tilemap_id = layer_tilemap_get_id(tiles[i]);
+		var current_x = tilemap_get_x(tilemap_id);
+		tilemap_x(tilemap_id, current_x + 120);
+	}
+}
+
 scr_roomStart_SetPosition_player(id)
 
 if (global.Combo <= 0 && room != global.LevelFirstRoom && !instance_exists(obj_exitgate) && !instance_exists(obj_lapPortal))

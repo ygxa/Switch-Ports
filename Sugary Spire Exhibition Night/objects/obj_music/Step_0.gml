@@ -2,7 +2,7 @@ if audio_sound_get_gain(mu_hub1) = 0
 	audio_stop_sound(mu_hub1)
 
 if (global.gamePauseState)
-	exit
+	exit;
 
 if (event_instance_isplaying(global.RankMusicInst) && room != rank_room && !instance_exists(obj_endlevelfade) && !instance_exists(obj_rank))
 	fmod_studio_event_instance_stop(global.RankMusicInst, true)

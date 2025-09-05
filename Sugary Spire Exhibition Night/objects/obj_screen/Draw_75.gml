@@ -56,4 +56,9 @@ gpu_set_blendenable(true)
 gpu_set_blendmode(bm_normal)
 gpu_set_texfilter(false)
 shader_reset()
-
+if !global.aspectratio
+	exit;
+draw_set_color(c_black)
+var shit = 120
+draw_rectangle(0,0,shit,3000,false)
+draw_rectangle(960-shit,0,1000,3000,false)
