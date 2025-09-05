@@ -29,6 +29,7 @@
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_578517E2","properties":[
             {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"level","path":"objects/obj_startGate/obj_startGate.yy",},"objectId":{"name":"obj_startGate","path":"objects/obj_startGate/obj_startGate.yy",},"value":"\"steamy\"",},
           ],"isDnd":false,"objectId":{"name":"obj_startGate","path":"objects/obj_startGate/obj_startGate.yy",},"inheritCode":false,"hasCreationCode":true,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":576.0,"y":448.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_5FFF4350","properties":[],"isDnd":false,"objectId":{"name":"obj_startGate","path":"objects/obj_startGate/obj_startGate.yy",},"inheritCode":false,"hasCreationCode":true,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":832.0,"y":448.0,},
       ],"visible":true,"depth":0,"userdefinedDepth":true,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],},
     {"resourceType":"GMRBackgroundLayer","resourceVersion":"1.0","name":"Backgrounds_1","spriteId":{"name":"bg_painterhubmolasses","path":"sprites/bg_painterhubmolasses/bg_painterhubmolasses.yy",},"colour":4294967295,"x":0,"y":0,"htiled":true,"vtiled":true,"hspeed":0.0,"vspeed":0.0,"stretch":false,"animationFPS":0.35,"animationSpeedType":1,"userdefinedAnimFPS":true,"visible":true,"depth":500,"userdefinedDepth":true,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":16,"gridY":16,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],},
   ],
@@ -43,6 +44,7 @@
     {"name":"inst_112610_1","path":"rooms/hub_basement/hub_basement.yy",},
     {"name":"inst_7C2B10FB","path":"rooms/hub_basement/hub_basement.yy",},
     {"name":"inst_578517E2","path":"rooms/hub_basement/hub_basement.yy",},
+    {"name":"inst_5FFF4350","path":"rooms/hub_basement/hub_basement.yy",},
   ],
   "inheritCreationOrder": false,
   "sequenceId": null,

@@ -1,3 +1,4 @@
+randomsecretdone = false
 image_speed = 0.35
 hurtpoints = 0
 escapetimepoints = 0

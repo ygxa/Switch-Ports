@@ -1,3 +1,5 @@
+if instance_exists(obj_randomsecret)
+	exit;
 if (ds_list_find_index(global.SaveRoom, id) == -1)
 {
 	var room_name = room_get_name(room)

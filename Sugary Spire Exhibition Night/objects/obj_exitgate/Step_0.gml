@@ -1,7 +1,13 @@
-if (global.panic)
+if instance_exists(obj_randomsecret){
+	if (array_length_1d(obj_randomsecret.levels) == 0)
+		randomsecretdone = true
+}
+
+if (global.panic || randomsecretdone)
 	sprite_index = openSpr
 
-if (place_meeting(x, y, obj_parent_player) && obj_parent_player.state != PlayerState.comingoutdoor && sprite_index == openSpr && global.panic == 0 && obj_parent_player.sprite_index != obj_parent_player.spr_lookdoor && sprite_index != closedspr)
+
+if (place_meeting(x, y, obj_parent_player) && obj_parent_player.state != PlayerState.comingoutdoor && sprite_index == openSpr && global.panic == 0 && !randomsecretdone && obj_parent_player.sprite_index != obj_parent_player.spr_lookdoor && sprite_index != closedspr)
 {
 	ds_list_add(global.SaveRoom, id)
 	sprite_index = closingSpr

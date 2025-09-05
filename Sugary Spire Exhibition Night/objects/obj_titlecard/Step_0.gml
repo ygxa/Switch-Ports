@@ -7,7 +7,7 @@ if (fadein)
 		doneJingle = true
 		
 		if (info.music != -4)
-			event_play_oneshot(info.music)
+			fmod_studio_event_instance_start(info.music)
 	}
 }
 else

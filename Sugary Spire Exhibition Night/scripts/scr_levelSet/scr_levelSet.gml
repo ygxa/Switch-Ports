@@ -46,6 +46,8 @@ function scr_levelSet()
 		instance_destroy(obj_cutsceneManager)
 	
 	global.ExitGateTaunt = 0
+	instance_destroy(obj_randomsecret);
+	global.randomroom = false
 	global.TransfoPrompt = ""
 	global.TransfoState = PlayerState.normal
 	global.freezeframe = false

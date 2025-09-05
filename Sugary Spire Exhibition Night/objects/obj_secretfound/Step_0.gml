@@ -1,3 +1,5 @@
+if instance_exists(obj_randomsecret)
+	exit;
 for (var i = 0; i < ds_list_size(collectSecretList); i++)
 {
 	var b = ds_list_find_value(collectSecretList, i)

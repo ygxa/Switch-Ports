@@ -1,0 +1,2 @@
+level = "secrets"
+targetDoor = "A"

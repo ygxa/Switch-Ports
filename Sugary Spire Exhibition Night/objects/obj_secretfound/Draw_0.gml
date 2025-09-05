@@ -1,3 +1,5 @@
+if instance_exists(obj_randomsecret)
+	exit;
 draw_set_color(c_white)
 
 for (var i = 0; i < ds_list_size(collectSecretList); i++)

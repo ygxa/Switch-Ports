@@ -1,10 +1,10 @@
 {
   "resourceType": "GMSound",
   "resourceVersion": "1.0",
-  "name": "sfx_fileselect2",
+  "name": "mu_secrets",
   "conversionMode": 0,
   "compression": 0,
-  "volume": 0.71,
+  "volume": 0.62,
   "preload": false,
   "bitRate": 128,
   "sampleRate": 44100,
@@ -14,8 +14,8 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "sfx_fileselect2.wav",
-  "duration": 5.329333,
+  "soundFile": "mu_secrets.mp3",
+  "duration": 176.222,
   "parent": {
     "name": "Sounds",
     "path": "folders/Sounds.yy",

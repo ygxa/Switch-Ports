@@ -145,11 +145,11 @@ if (abletomove && !blockedInputs && !activated)
             
             event_play_oneshot(sfx_bigcollectget);
 			if selectedFile = 0
-				event_play_oneshot(sfx_fileselect1);
+				fmod_studio_event_instance_start(sfx_fileselect1);
 			if selectedFile = 1
-				event_play_oneshot(sfx_fileselect2);
+				fmod_studio_event_instance_start(sfx_fileselect2);
 			if selectedFile = 2
-				event_play_oneshot(sfx_fileselect3);
+				fmod_studio_event_instance_start(sfx_fileselect3);
             blockedInputs = true;
             alarm[2] = 250;
             activated = true;
