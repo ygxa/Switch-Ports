@@ -1,3 +1,9 @@
+with HUDObject_TV{
+	if global.aspectratio
+		x = xstart - 130
+	else
+		x = xstart	
+}
 var coneballtimesup = spr_bartimer_showtime
 coneballtimesup = spr_bartimer_blotchspotshowtime
 

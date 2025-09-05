@@ -112,7 +112,12 @@ switch (optionMenu)
 		}, global.Letterbox)
 		*/
 		var letterbox_option = ["OFF", "SIMPLE", "DOODLE", "DYNAMIC"]
-		options = [toMainPage, new option_normal("opt_vid_vsync", onOffToggle, function(arg0)
+		options = [toMainPage, new option_normal("ASPECT RATIO", ["16:9","4:3"], function(arg0)
+		{
+			quick_write_option("Settings", "ratio", arg0)
+			//display_reset(0, global.Vsync)
+			global.aspectratio = arg0
+		}, global.aspectratio), new option_normal("opt_vid_vsync", onOffToggle, function(arg0)
 		{
 			quick_write_option("Settings", "vsync", arg0)
 			//display_reset(0, global.Vsync)

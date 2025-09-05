@@ -1,10 +1,12 @@
 if global.aspectratio{
 	room_width += 240
 	obj_camera.Cam_x += 100000
-	with all
+	with all{
 		x += 120
-
-	var tiles = ["Tiles_1", "Tiles_2", "Tiles_3", "Tiles_4", "Tiles_5", "Tiles_BG"];
+		xstart = x
+	}
+	
+	var tiles = ["Tiles_1", "Tiles_2", "Tiles_3", "Tiles_4", "Tiles_5", "Tiles_BG", "Tiles_BG1", "Tiles_BG2", "Tiles_BG3", "Tiles_Secret", "Tiles_Secret1", "Tiles_Secret2", "Tiles_Secret3", "Tiles_Secret4", "Tiles_BG1_1"];
 	for (var i = 0; i < array_length(tiles); i++) {
 		var tilemap_id = layer_tilemap_get_id(tiles[i]);
 		var current_x = tilemap_get_x(tilemap_id);

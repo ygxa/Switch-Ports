@@ -38,6 +38,9 @@ if (!(is_hub() || is_tutorial() || !scr_roomcheck() || room == mineshaft_elevato
 	{
 		var _x = round(x)
 		var _y = round(y)
+		
+		if global.aspectratio
+			_x = x - 130
 		draw_sprite_ext(spr_tvHUD_comboMeter_back, 0, _x, _y, 1, 1, 0, c_white, 1)
 		var border_sprite = sprite_get_info(spr_tvHUD_comboMeter_back)
 		var meter_sprite = sprite_get_info(elm_meterFill.sprite_index)

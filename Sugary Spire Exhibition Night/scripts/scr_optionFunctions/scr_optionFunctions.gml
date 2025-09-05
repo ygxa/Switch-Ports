@@ -130,7 +130,7 @@ function init_option()
 	global.fudgetopcafe = ini_read_real("Settings", "fudge&cafe", 0)
 	global.basement = ini_read_real("Settings", "basement", 0)
 	global.panpizzano = ini_read_real("Settings", "panpizzano", 0)
-
+	global.aspectratio = ini_read_real("Settings", "ratio", 0)
 	global.fullscreen = ini_read_real("Settings", "fullscrn", 0)
 	global.selectedResolution = ini_read_real("Settings", "opt_resolution", 2)
 	global.Letterbox = ini_read_real("Settings", "letterbox", 0)

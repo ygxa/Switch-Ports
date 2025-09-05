@@ -39,6 +39,6 @@ if (start && room != secrets_intro)
     draw_set_halign(fa_center);
     draw_set_valign(fa_middle);
     draw_set_font(global.MoneyFont);
-    draw_sprite(spr_secretsleft, 0, 64, 480);
-    draw_text_color(64, 480, string(array_length(levels)), c_white, c_white, c_white, c_white, 1);
+    draw_sprite(spr_secretsleft, 0, 64 + 130, 480);
+    draw_text_color(64 + 130, 480, string(array_length(levels)), c_white, c_white, c_white, c_white, 1);
 }

@@ -1,3 +1,10 @@
+with cakeHud{
+	if global.aspectratio
+		xstart = 121 + 130
+	else
+		xstart = 121	
+}
+
 DrawHUD = true
 
 if (room == timesuproom || room == rank_room || room == rm_credits || room == rm_titlecard || room == hub_demohallway || room == hub_paintstudio || room == mineshaft_elevator || is_hub() || is_tutorial())
