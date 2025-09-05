@@ -1,16 +1,15 @@
 if (!currentSecretStatus)
 	exit;
 
-if (!is_undefined(global.RoomMusic))
-{
 	fmod_studio_event_instance_stop(global.RoomMusic.secretMusicInst, true)
 	
 	if (!global.panic)
 	{
-		fmod_studio_event_instance_set_paused(global.RoomMusic.musicInst, false)
-		fmod_studio_event_instance_set_callback(global.RoomMusic.musicInst, 0)
+		audio_resume_sound(global.RoomMusic.musicInst)
+		//fmod_studio_event_instance_set_callback(global.RoomMusic.musicInst, 0)
 	}
-}
+	else
+		audio_resume_sound(global.EscapeMusicInst)
 
 if (global.panic)
 {

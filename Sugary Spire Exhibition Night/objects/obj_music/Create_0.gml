@@ -23,9 +23,9 @@ addRoomMusic = function(arg0, arg1, arg2, arg3)
 		
 		if !is_undefined(eventName)
 			musicInst = eventName
-		
-		if (!is_undefined(secretEventName) && is_string(secretEventName))
-			secretMusicInst = fmod_createEventInstance(secretEventName)
+	
+		if !is_undefined(secretEventName)
+			secretMusicInst = secretEventName
 		
 		if (!is_undefined(arg3) && is_callable(arg3))
 			musicFunc = method(self, arg3)
@@ -63,8 +63,8 @@ addRoomMusic(hub_molasses, mu_hub1,  undefined, undefined)
 addRoomMusic(hub_soundTest, undefined, undefined, undefined)
 addRoomMusic(hub_mindpalace, mu_painterbrain, undefined, undefined)
 addRoomMusic(hub_mindvault, "event:/music/harry", undefined, undefined)
-addRoomMusic(entryway_1, mu_entryway, "event:/music/w1/entryway_secret", undefined)
-addRoomMusic(steamy_1, mu_steamy, "event:/music/w1/cottontown_secret", function(arg0, arg1, arg2)
+addRoomMusic(entryway_1, mu_entryway, mu_entryway_secret, undefined)
+addRoomMusic(steamy_1, mu_steamy, mu_steamy_secret, function(arg0, arg1, arg2)
 {
 	var event_state = undefined
 	
@@ -87,7 +87,7 @@ addRoomMusic(steamy_1, mu_steamy, "event:/music/w1/cottontown_secret", function(
 	if (!is_undefined(event_state))
 		fmod_studio_event_instance_set_parameter_by_name(arg1, "state", event_state, true)
 })
-addRoomMusic(molasses_1, mu_molasses, "event:/music/w2/molasses_secret", function(arg0, arg1, arg2)
+addRoomMusic(molasses_1, mu_molasses, mu_molasses_secret, function(arg0, arg1, arg2)
 {
 	var event_state = undefined
 	
@@ -124,7 +124,7 @@ addRoomMusic(molasses_1, mu_molasses, "event:/music/w2/molasses_secret", functio
 	
 	fmod_studio_event_instance_set_parameter_by_name(arg1, "frog", frog, false)
 })
-addRoomMusic(mineshaft_1, mu_mineshaft1, "event:/music/w1/mines_secret", function(arg0, arg1, arg2)
+addRoomMusic(mineshaft_1, mu_mineshaft1, mu_mines_secret, function(arg0, arg1, arg2)
 {
 	var event_state = global.minesProgress
 	

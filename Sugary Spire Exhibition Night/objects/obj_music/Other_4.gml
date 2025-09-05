@@ -61,23 +61,19 @@ if (!global.panic)
 
 if (global.RoomIsSecret)
 {
+	if (!is_undefined(global.RoomMusic.secretMusicInst)) && !is_string(global.RoomMusic.secretMusicInst){
 	currentSecretStatus = true
-	
-	if (!is_undefined(global.RoomMusic) && !is_undefined(global.RoomMusic.secretMusicInst))
-	{
-		fmod_studio_event_instance_start(global.RoomMusic.secretMusicInst)
+	audio_play_sound(global.RoomMusic.secretMusicInst,1,1)
+	audio_pause_sound(global.RoomMusic.musicInst)
+	audio_pause_sound(global.EscapeMusicInst)
+	var wario2 = audio_sound_get_track_position(global.RoomMusic.musicInst)
+	audio_sound_set_track_position(global.RoomMusic.secretMusicInst,wario2)
 		//var music_timeline_percent = fmod_studio_event_instance_get_timeline_position(global.RoomMusic.musicInst) / fmod_getEventLength(global.RoomMusic.eventName)
 		//var secret_pos = music_timeline_percent * fmod_getEventLength(global.RoomMusic.secretEventName)
 		//fmod_studio_event_instance_set_timeline_position(global.RoomMusic.secretMusicInst, secret_pos)
 		//fmod_studio_event_instance_set_paused(global.RoomMusic.musicInst, true)
 		//fmod_studio_event_instance_set_paused(global.RoomMusic.secretMusicInst, false)
 		//fmod_studio_event_instance_set_callback(global.RoomMusic.secretMusicInst, FMOD_STUDIO_EVENT_CALLBACK.TIMELINE_BEAT)
-	}
-	
-	if (global.panic)
-	{
-		fmod_studio_event_instance_set_paused(global.EscapeMusicInst, true)
-		//fmod_studio_event_instance_set_callback(global.EscapeMusicInst, FMOD_STUDIO_EVENT_CALLBACK.NESTED_TIMELINE_BEAT)
 	}
 }
 

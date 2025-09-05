@@ -17,7 +17,7 @@ if (fadealpha > 1 && load_finished && !fadein)
 			obj_parent_player.hubTransition = true
 			_hub_exit = !global.CompletedLevel
 		}
-		if global.randomroom = true && room != hub_basement{
+		if global.randomroom = true && room != hub_basement && target_room != hub_basement{
 			randomize()
 			target_room = choose(entryway_1, entryway_2, entryway_3, entryway_4, entryway_5, entryway_6,entryway_7, entryway_8, entryway_9, entryway_10, entryway_11, entryway_portal, //entryway
 			steamy_1, steamy_2, steamy_3, steamy_4, steamy_5, steamy_6, steamy_7, steamy_8, steamy_9, steamy_9B, steamy_10, steamy_11, steamy_12, steamy_13, steamy_14, steamy_sideroom, //steamy

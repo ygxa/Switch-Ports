@@ -1,5 +1,6 @@
 function scr_levelSet()
 {
+	global.randomroom = false
 	randomize()
 	global.RandomSeed = random_get_seed()
 	
@@ -47,7 +48,6 @@ function scr_levelSet()
 	
 	global.ExitGateTaunt = 0
 	instance_destroy(obj_randomsecret);
-	global.randomroom = false
 	global.TransfoPrompt = ""
 	global.TransfoState = PlayerState.normal
 	global.freezeframe = false
