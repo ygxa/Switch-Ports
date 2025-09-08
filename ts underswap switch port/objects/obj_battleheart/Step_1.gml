@@ -1,2 +1,0 @@
-beforeX = x;
-beforeY = y;

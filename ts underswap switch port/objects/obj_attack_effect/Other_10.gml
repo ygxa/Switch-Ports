@@ -1,1 +1,0 @@
-criticalHit = true;

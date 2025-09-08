@@ -1,2 +1,0 @@
-state++;
-setState(state);

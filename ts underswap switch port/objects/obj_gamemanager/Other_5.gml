@@ -1,1 +1,0 @@
-customViewMode = false;

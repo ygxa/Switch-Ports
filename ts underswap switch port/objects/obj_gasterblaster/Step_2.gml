@@ -1,1 +1,0 @@
-handledDamageThisFrame = false;

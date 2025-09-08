@@ -1,9 +1,0 @@
-x = obj_koffink_monster.x + 30 + irandom(obj_koffink_monster.sprite_width - 60);
-y = obj_koffink_monster.y + 50 + irandom(obj_koffink_monster.sprite_height - 100);
-direction = choose(0, 180);
-direction += random_range(-30, 30);
-gravity_direction = 90;
-gravity = 0.2;
-speed = random_range(6, 8);
-friction = 0.05;
-depth = -500;

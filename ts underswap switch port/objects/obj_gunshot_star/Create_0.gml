@@ -1,9 +1,0 @@
-depth = -4000;
-siner = 0;
-size = 0.5;
-sinerDelta = 0;
-sinerSpeed = 16;
-sinerGrav = -2;
-angle = 20;
-type = 0;
-image_speed = 0.5;

@@ -1,1 +1,0 @@
-obj_battlemanager.battleTriggerEnd();

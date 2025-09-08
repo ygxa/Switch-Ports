@@ -1,2 +1,0 @@
-setImageSpeed = false;
-criticalHit = false;

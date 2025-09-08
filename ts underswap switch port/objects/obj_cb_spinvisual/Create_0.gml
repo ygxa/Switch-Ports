@@ -1,1 +1,0 @@
-rotateSpeed = 4;

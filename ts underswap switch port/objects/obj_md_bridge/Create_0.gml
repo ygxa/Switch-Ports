@@ -1,9 +1,0 @@
-revealed = false;
-siner = 0;
-origXView = 0;
-origYView = 0;
-shadowFade = 0;
-bounceAmount = 0;
-targetY = 169;
-depth = -5;
-freeze = false;

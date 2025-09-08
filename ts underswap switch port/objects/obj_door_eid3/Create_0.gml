@@ -1,1 +1,0 @@
-targetEntrance = 3;
