@@ -2,16 +2,16 @@ if (live_call())
     return global.live_result;
 
 inst_number = instance_number(-3);
-var drawer_object = 829;
+var drawer_object = obj_shadow_drawer;
 
 switch (object_index)
 {
     case obj_light_master:
-        drawer_object = 452;
+        drawer_object = obj_light_drawer;
         break;
     
     default:
-        drawer_object = 829;
+        drawer_object = obj_shadow_drawer;
         break;
 }
 
@@ -89,7 +89,7 @@ if (inst_number != inst_number_last)
 
 if (instance_exists(obj_savefl) && save_flowey_noloop == false)
 {
-    shadow_actor = 1192;
+    shadow_actor = obj_savefl;
     var shadow_drawer = instance_create_depth(obj_savefl.x, obj_savefl.y, obj_savefl.depth, drawer_object);
     save_flowey_noloop = true;
 }

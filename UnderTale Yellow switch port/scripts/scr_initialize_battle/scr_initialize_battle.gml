@@ -17,9 +17,9 @@ function scr_initialize_battle()
     global.player_1_control_gamepad_down = gp_padd;
     global.player_1_control_gamepad_right = gp_padr;
     global.player_1_control_gamepad_left = gp_padl;
-    global.player_1_control_gamepad_button_1 = gp_face1;
-    global.player_1_control_gamepad_button_2 = gp_face2;
-    global.player_1_control_gamepad_button_3 = gp_face3;
+    global.player_1_control_gamepad_button_1 = gp_face2;
+    global.player_1_control_gamepad_button_2 = gp_face3;
+    global.player_1_control_gamepad_button_3 = gp_face1;
     global.player_1_control_gamepad_button_4 = gp_face4;
     global.player_1_control_gamepad_button_5 = gp_select;
     global.player_1_control_gamepad_button_6 = gp_start;
