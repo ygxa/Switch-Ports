@@ -17,7 +17,9 @@ A repository containing ports of GameMaker games for the Nintendo Switch.
 
 ## Compiling
 Don't worry! no nintendo sdk nor illegal content is required!
+
 also all of this took me 5 months to figure out so i hope you find it useful :D
+
 
 ### Step 1. Gather required files
 Before we start, here's what you need to download
