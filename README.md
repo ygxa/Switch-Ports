@@ -23,4 +23,4 @@ Before we start, heres what you need to download
 
 [RussellNX](https://dlhb.gamebrew.org/switchhomebrews/russellnx.7z) -- Compile the switch games (more info on how this works [here]([https://dlhb.gamebrew.org/switchhomebrews/russellnx.7z](https://gbatemp.net/threads/play-port-your-gamemaker-games-on-nintendoswitch.519660/))
 
-[Brain]([https://dlhb.gamebrew.org/switchhomebrews/russellnx.7z](https://static.wikia.nocookie.net/nicos-nextbots-fanmade/images/c/c7/Dance.gif.gif/revision/latest?cb=20230512180735)) -- Heavily required for thinking
+[Brain](https://static.wikia.nocookie.net/nicos-nextbots-fanmade/images/c/c7/Dance.gif.gif/revision/latest?cb=20230512180735) -- Heavily required for thinking
