@@ -24,7 +24,7 @@ also all of this took me 5 months to figure out so i hope you find it useful :D
 ### Step 1. Gather required files
 Before we start, here's what you need to download
 
-[GameMaker 2022.8.1.37](https://gms.yoyogames.com/GameMaker-Installer-2022.8.1.37.exe) — Latest editor that uses the 2022.8.1.53 runtim
+[GameMaker 2022.8.1.37](https://gms.yoyogames.com/GameMaker-Installer-2022.8.1.37.exe) — Latest editor that uses the 2022.8.1.53 runtime
 
 [RussellNX](https://dlhb.gamebrew.org/switchhomebrews/russellnx.7z) — Tool to compile games for Switch ([more info here](https://gbatemp.net/threads/play-port-your-gamemaker-games-on-nintendoswitch.519660/))
 
@@ -35,7 +35,7 @@ First install (or i recommend extracting the installer with 7zip) and open GameM
 
 <pre> ```json { "active": "2022.8.1.53", "2022.8.1.53": "C:\\ProgramData/GameMakerStudio2/Cache/runtimes\\runtime-2022.8.1.53&https://gms.yoyogames.com/Zeus-Runtime.rss" } ``` </pre>
 
-this tricks gamemaker into using the correct runtime for compiling in the editor. we’re not done yet though! head back to gamemaker and click File -> Preferences -> click the arrow next to runtime feeeds -> then Master. click the refresh button below the "Clean Runtimes Now" Button. if the running text has disappeared,  scroll down and check if the 2022.8.1.53 says running rather then the download system. if the latest runtime still displays running, double check you have saved the json, close and reopen it and make sure all of the json editing is done while gamemaker is open on the project window. to test this make a new project, do not open an existing project, doing so could corrupt the it making it unusable. once youve made a new project place a simple sprite in the screen and test the project. if it runs we are in the home stretch. if the output displays no text at all, double check the previous steps are done correctly.
+this tricks gamemaker into using the correct runtime for compiling in the editor. we’re not done yet though! head back to gamemaker and click File -> Preferences -> click the arrow next to runtime feeds -> then Master. click the refresh button below the "Clean Runtimes Now" Button. if the running text has disappeared,  scroll down and check if the 2022.8.1.53 says running rather then the download icon. if the latest runtime still displays running, double check you have saved the json, close and reopen it and make sure all of the json editing is done while gamemaker is open on the project window. to test this make a new project, do not open an existing project, doing so could corrupt the it making it unusable. once youve made a new project place a simple sprite in the screen and test the project. if it runs we are in the home stretch. if the output displays no text at all, double check the previous steps are done correctly.
 
 you must edit the runtime json each time gamemaker is opened! don't forget!
 
