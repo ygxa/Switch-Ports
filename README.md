@@ -46,7 +46,9 @@ quick note: once you use a title id, trying to change any setting besides projec
 you wanna help! good golly thank you!
 
 stuff:
+
 Mods can not be added unless approved by me and the creator of the mod.
+
 its recomened to fix issues in the read me's Current Progress table, although fixes or additions of any kind are allowed.
 
 ## Suggestions
