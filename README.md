@@ -30,8 +30,8 @@ Before we start, here's what you need to download
 First install (or i recommend extracting the installer with 7zip) and open GameMaker. Wait until you receive an error about the runtime not being able to be fully installed (which is a lie, it has) then click retry, it will the latest runtime available which can't compile in the 2022.8.1.37 editor. to fix this wait until your at the project selection then go to C:\ProgramData\GameMakerStudio2, here is the runtime.json which we need to change to the 2022 runtime gamemaker "failed to install". open the json and replace the whole file with: 
 
 {
-    "active": "2022.8.1.53",
-    "2022.8.1.53": "C:\\ProgramData/GameMakerStudio2/Cache/runtimes\\runtime-2022.8.1.53&https://gms.yoyogames.com/Zeus-Runtime.rss"
+  "active": "2022.8.1.53",
+  "2022.8.1.53": "C:\\ProgramData/GameMakerStudio2/Cache/runtimes\\runtime-2022.8.1.53&https://gms.yoyogames.com/Zeus-Runtime.rss"
 }
 
 this tricks gamemaker into using the correct runtime for compiling in the editor. we’re not done yet though! head back to gamemaker and click File -> Preferences -> click the arrow next to runtime feeeds -> then Master. click the refresh button below the "Clean Runtimes Now" Button. if the running text has dissapeared,  scroll down and check if the 2022.8.1.53 says running rather then the download system. if the latest runtime still displays running, double check you have saved the json, close and reopen it and make sure all of the json editing is done while gamemaker is open on the project window. to test this make a new project, do not open an existing project, doing so could corrupt the it making it unusable. once youve made a new project place a simple sprite in the screen and test the project. if it runs we are in the home stretch. if the output displays no text at all, double check the previous steps are done correctly.
