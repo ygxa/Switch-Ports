@@ -12,3 +12,12 @@ a repo for holding several ports of gamemaker games ported to the nintendo switc
 | Pizza Tower Fighters | 75% done. 60fps 100% of the time, cpu battles work, 2p mode controller pairings are buggy (only use half joy-con)|
 | Undertale Yellow | ?% done. 60fps, unknown whats working due to the second lava ball puzzle broken due to broken collisions with the moving platforms leading to a softlock. All of ruins and the battle system works however.|
 | Super Bo Noise | 75% done. 60fps - 30fps, text system fully works, no known crashes due to a lack of testing, no sound or saving.|
+
+## Compiling
+Don't worry! no nintendo sdk nor illegal content is required!
+
+###Step 1 -- Gather required files
+Before we start, heres what you need to download
+
+[Gamemaker 2022.8.1.37]([https://pages.github.com/](https://gms.yoyogames.com/GameMaker-Installer-2022.8.1.37.exe)).
+
