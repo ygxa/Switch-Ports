@@ -1,5 +1,7 @@
 # Gamemaker switch ports
 
+Discord:
+
 a repo for holding several ports of gamemaker games ported to the nintendo switch
 
 ## Current Progress
@@ -39,3 +41,14 @@ you must edit the runtime json each time gamemaker is opened! don't forget!
 now extract the RussellNX 7z and open the exe. once opened for the first time it will complain about the runtime, ignore it and click ok. then click your prod.keys file (which can be obtained from lockpick rcm or you can venture the seven seas to find them). once done you will be greeted with a menu which is fairly simple so i wont provide that in depth instructions. click the 3 dots next to "No Project!" and select the new project we made earlier. then click the drop down menu next to the runtime version text and select the 2022.8.1.53 runtime, no other runtime will work. then click "Build .NSP!" once complete it should output an nsp and show you in a new window. install it on your switch and it should work!
 
 quick note: once you use a title id, trying to change any setting besides project settings will show the same on switch from the first install. if you wanna change the title id, make sure no other game is using it. just google the title id and if no switch games appear your good! (some title ids examples: 01dfc1683e460000, 01b8b181f4bb0000, 016c7bbe06c00000)
+
+## Contributions 
+you wanna help! good golly thank you!
+
+stuff:
+Mods can not be added unless approved by me and the creator of the mod.
+its recomened to fix issues in the read me's Current Progress table, although fixes or additions of any kind are allowed.
+
+## Suggestions
+On the discord you can suggest games to add in the sugestion thread as long as they are made in gamemaker and are compiled in vm or have the source code public. ycc compiled projects without source code will be rejected.
+
