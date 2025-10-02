@@ -19,5 +19,4 @@ Don't worry! no nintendo sdk nor illegal content is required!
 ###Step 1 -- Gather required files
 Before we start, heres what you need to download
 
-[Gamemaker 2022.8.1.37]([https://pages.github.com/](https://gms.yoyogames.com/GameMaker-Installer-2022.8.1.37.exe)).
-
+[Gamemaker-2022.8.1.37]([https://pages.github.com/](https://gms.yoyogames.com/GameMaker-Installer-2022.8.1.37.exe)).
