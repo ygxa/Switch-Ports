@@ -1,8 +1,8 @@
 # Gamemaker switch ports
 
-Discord:
+Discord: https://discord.gg/cc2YA2pChU
 
-a repo for holding several ports of gamemaker games ported to the nintendo switch
+A repository containing ports of GameMaker games for the Nintendo Switch.
 
 ## Current Progress
 | Game | Progress info |
