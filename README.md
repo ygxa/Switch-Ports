@@ -7,7 +7,7 @@ a repo for holding several ports of gamemaker games ported to the nintendo switc
 ## Current Progress
 | Game | Progress info |
 | ------------- | ------------- |
-| Sugary Spire Exhibition Night | 80% done. 60 fps 75% of the time. Needs more optimizsation for v1 switches, more sounds implemented, and achievement menu text fixed up. Besides that fully playable and can be completed to 100%|
+| Sugary Spire Exhibition Night | 80% done. 60 fps 75% of the time. Needs more optimization for v1 switches, more sounds implemented, and achievement menu text fixed up. Besides that fully playable and can be completed to 100%|
 | Sugary Spire Demo 1 | 97% done. Runs 60fps all the time, only issues are no saving and a crash in mines when exiting the dark section (both easy fixes)|
 | Sugary Spire P rank build (also known as the march build) | 30% done. Runs 60fps most of the time, crashes constantly, no levels beatable besides crunchy construction and no saving (savings an easy fix)|
 | Pizza Tower Sage 19 Plus | 5% done. boots, runs around 20fps on the mainmenu crashing after leaving on switch and crashes after the tutorial on pc|
@@ -33,7 +33,7 @@ First install (or i recommend extracting the installer with 7zip) and open GameM
 
 <pre> ```json { "active": "2022.8.1.53", "2022.8.1.53": "C:\\ProgramData/GameMakerStudio2/Cache/runtimes\\runtime-2022.8.1.53&https://gms.yoyogames.com/Zeus-Runtime.rss" } ``` </pre>
 
-this tricks gamemaker into using the correct runtime for compiling in the editor. we’re not done yet though! head back to gamemaker and click File -> Preferences -> click the arrow next to runtime feeeds -> then Master. click the refresh button below the "Clean Runtimes Now" Button. if the running text has dissapeared,  scroll down and check if the 2022.8.1.53 says running rather then the download system. if the latest runtime still displays running, double check you have saved the json, close and reopen it and make sure all of the json editing is done while gamemaker is open on the project window. to test this make a new project, do not open an existing project, doing so could corrupt the it making it unusable. once youve made a new project place a simple sprite in the screen and test the project. if it runs we are in the home stretch. if the output displays no text at all, double check the previous steps are done correctly.
+this tricks gamemaker into using the correct runtime for compiling in the editor. we’re not done yet though! head back to gamemaker and click File -> Preferences -> click the arrow next to runtime feeeds -> then Master. click the refresh button below the "Clean Runtimes Now" Button. if the running text has disappeared,  scroll down and check if the 2022.8.1.53 says running rather then the download system. if the latest runtime still displays running, double check you have saved the json, close and reopen it and make sure all of the json editing is done while gamemaker is open on the project window. to test this make a new project, do not open an existing project, doing so could corrupt the it making it unusable. once youve made a new project place a simple sprite in the screen and test the project. if it runs we are in the home stretch. if the output displays no text at all, double check the previous steps are done correctly.
 
 you must edit the runtime json each time gamemaker is opened! don't forget!
 
@@ -49,7 +49,7 @@ stuff:
 
 Mods can not be added unless approved by me and the creator of the mod.
 
-its recomened to fix issues in the read me's Current Progress table, although fixes or additions of any kind are allowed.
+its recommended to fix issues in the read me's Current Progress table, although fixes or additions of any kind are allowed.
 
 ## Suggestions
 On the discord you can suggest games to add in the sugestion thread as long as they are made in gamemaker and are compiled in vm or have the source code public. ycc compiled projects without source code will be rejected.
