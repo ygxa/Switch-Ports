@@ -19,4 +19,6 @@ Don't worry! no nintendo sdk nor illegal content is required!
 ###Step 1 -- Gather required files
 Before we start, heres what you need to download
 
-[GameMaker 2022.8.1.37](https://gms.yoyogames.com/GameMaker-Installer-2022.8.1.37.exe)
+[GameMaker 2022.8.1.37](https://gms.yoyogames.com/GameMaker-Installer-2022.8.1.37.exe) -- Latest version editor with the runtime "2022.8.1.53"
+[RussellNX](https://dlhb.gamebrew.org/switchhomebrews/russellnx.7z) -- Compile the switch games (more info on how this works [here]([https://dlhb.gamebrew.org/switchhomebrews/russellnx.7z](https://gbatemp.net/threads/play-port-your-gamemaker-games-on-nintendoswitch.519660/))
+[Brain]([https://dlhb.gamebrew.org/switchhomebrews/russellnx.7z](https://static.wikia.nocookie.net/nicos-nextbots-fanmade/images/c/c7/Dance.gif.gif/revision/latest?cb=20230512180735)) -- Heavily required for thinking
