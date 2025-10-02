@@ -16,7 +16,7 @@ a repo for holding several ports of gamemaker games ported to the nintendo switc
 ## Compiling
 Don't worry! no nintendo sdk nor illegal content is required!
 
-###Step 1 -- Gather required files
+### Step 1 -- Gather required files
 Before we start, heres what you need to download
 
 [GameMaker 2022.8.1.37](https://gms.yoyogames.com/GameMaker-Installer-2022.8.1.37.exe) -- Latest version editor with the runtime "2022.8.1.53"
