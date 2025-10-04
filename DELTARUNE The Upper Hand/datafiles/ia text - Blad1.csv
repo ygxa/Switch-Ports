@@ -1,0 +1,657 @@
+lang,ENGLISH
+,
+cred_1,A game by:
+,The Winterer
+,Sad Bread
+,
+cred_2,Sockswald voiceactor:
+,IndoBones
+,
+cred_3,Playtesting:
+,"Ember, SeekStuff"
+,and Alex
+,
+cred_4,Classic 2023 boss theme by:
+,Creepa-Bot Inc
+,Local H00ligan
+,
+cred_5,Special thanks:
+,L1zard
+,Ramiyoru
+,
+cred_t,DELTARUNE (C) Toby Fox
+,
+,
+,
+start_text,Controls
+,[ARROW KEYS]
+, - Move
+,[Z or ENTER]
+, - Confirm
+,[X or SHIFT]
+, - Cancel
+,[C or CTRL]
+, - Skip Text
+,[F4]
+, - Fullscreen
+,[Hold EXC]
+, - Quit
+,This game has controller support
+,
+gameOver,Retry battle
+,Return to title screen
+,
+m_1,Start
+,Config
+,Credits
+,Extras
+,End Program
+,
+m_1e,OFF
+,ON
+,
+m_2,Language
+,Music Volume
+,Sound Volume
+,Controls
+,Simplify VFX
+,Fullscreen
+,Keystrokes
+,Speedrun Timer
+,No-Hit
+,Back_sd
+,
+m_2e,CONFIG
+,ENG
+,
+m_3,DOWN
+,RIGHT
+,UP
+,LEFT
+,CONFIRM
+,CANCEL
+,MENU
+,Reset to default
+,Finish_sd
+,
+m_3e,Function
+,Key
+,
+m_4,Inventory
+,Music Style
+,Debug Room
+,Erase Save
+,Challenge Mode
+,Back_sd
+,
+m_4e,Page 
+,Press 
+, to View and Move the image.
+,Press 
+, to return to page select.
+,
+m_4e2,Page:
+,
+m_4e3,(Default)
+,(Classic 2023)
+,(ON)
+,(OFF)
+,
+m_5,Start
+,Skip intro
+,
+m_6,A
+,B
+,Back_sd
+,
+m_6e,???
+,FluffGlove
+,AstralCane
+,If you equip this the (triple jump) will always be enabled.
+,If you equip this the (ground pound) will always be enabled.
+,
+1_1,* As you make your way further through the city€€€€€€ you gaze far into the horizon.
+,* The earth is painted raw€€€€€€ and black.
+,* Smokestacks of Blac-INC factories coat the air in dark clouds.
+,* Enveloping into weird€€€€€€ and twisted shapes.
+,* An industrial dystopolis towers in the distance.€€€€€€ £* A place of progress.
+,* Welcome€€€€€€ to @_cpThe World of Tomorrow
+,
+1_2,"* The air flows humid,€€€€€€ and it's hard to breathe."
+,"* It stings in your lungs,€€€€€€ your eyes begin to squint."
+,* You have to cover your mouth...€€€€€€ £* The smell makes you nauseous...
+,
+1_3,"* Somewhere€€€€€€ in the darkness,€€€€€€ a collective voice calls out:"
+,* ¤Shatter the blinding shadow¤
+,* ¤And restore the life of this land¤
+,
+1_4,* Is that an egg?
+,* I could use an omelette right about now.
+,
+,
+,
+2_1,* Wait up Kris.€€€€€€ £* Something's up ahead...
+,
+2_2,"* What,€€€€€€ the boxes?"
+,
+2_3,"* LOOK,€€€€€€ it's moving!"
+,
+2_4,* .€€€.€€€.€€€€€€What?
+,AND€€€€€€ THEY ALL LIVED€€€€€€ HAPPILY€€€€€€ EVAH€€€€€€ AFTUH!
+,* Erm...€€€€€€ Is someone there?
+,
+2_5,WELL DOLLY WEE JILLICKERS!
+,WHAT DO WE THPY€€€€€€ WITH OUR BUTTON EYE!
+,
+2_6,COMPANY!
+,WE ALWAYS ENJOY THEEING THOME NEW FACETH.
+,
+2_7,"* I'm sorry,€€€€€€ did you say ¤we¤?"
+,DOOHOHOH!€€€€€€ OF COURTHE!
+,THE NAME'S SOCKSWALD€€€€€€ £IN'T THAT RIGHT £LIL' BUDDY?
+,* ...
+,* ...
+,* ...
+,OH HEY€€€€€€ WE JUST REMEMBERED!!!
+,YOU GUYS SHOULD COME OVAH TO OUR PLACE!
+,IT'S FULLA NEAT STUFF WE CAN SHOW YA!
+,"* Oh well,€€€€€€ sure thing Sockswald!€€€€€€ £* We'd love to."
+,YIPPEE!€€€€€€ WE'LL BE RIGHT UP AHEAD!
+,
+2_8,* ...
+,
+,
+,
+3_1,I WON'T FORGET WHAT I SAW!
+3_2,I WISH £I WISH £I WISH
+3_3,"THE STARS SAY IT ALL, WHEN THEY COME BACK I WILL KNOW IT ALL."
+3_4,"THE STARS ARE ALL GONE, EVERY THING CHANGED SO FATHT..."
+3_5,YOU NEVER FORGET
+,IT JUST€€€€€€€€€ TAKES A WHILE TO REMEMBER...
+3_6,I AM SOCKSWALD€€€€€€ YOUR NAME IS SOCKSWALD
+3_7,WHAT DID THE SOCK SAY TO THE OTHER SOCK?
+,YOU'RE MY€€€€€€ SOLE€€€€€€-MATE!
+,* The signs above read jokes of similar caliber.
+3_8,* It's some kind of upwards Hall-of-Tallys.
+,
+,
+,
+4_1,* Hold on Kris.
+,
+4_2,* I don't know about this.€€€€€€ £* I have a weird feeling @in my gut...
+,"* Susie,€€€€€€ I'll bake all the omelets you want as soon as we get home."
+,* Really?
+,* I mean-€€€€€€ NO. €€€€€€It's not that.
+,* It's just that this guy is definitely insane!
+,* Talking to themselves...€€€€€€ £* Digging in the trash...
+,
+4_3,* We've met€€€€€€ enough weirdos that try to kill us.
+,"* Oh Susie,€€€€€€ don't think of it like that,€€€€€€ they seem friendly!"
+,* They're an odd fellow for sure...
+,* But Kris never misses the opportunity to make a new friend.
+,* ...€€€€€€Like when they met you!
+,
+4_4,* ...
+,"* Alright,€€€€€€ fine."
+,* This ¤Neat Stuff¤€€€€€€ better be worth it.
+,* That's the spirit!
+,* I'm sure whatever they got will come in€€€€€€ ¤Handy¤
+,
+,
+,
+5_1,* It's a box of blank signs just begging to be scrawled on.
+,"THEIR LIDDLE SIGN VOICETH ARE CUTE, AIN'T THEY?"
+,
+5_2,* How this humble glass beaker can hold the destructive force of molten rock is a mystery.
+,
+5_3,* Family of One - 202X
+,* You don't recognise anyone in this photo.
+,
+5_4,* This awkwardly shaped lamp seems...€€€€€€ Inconvenient.
+,* Where do you even get all this stuff?
+,"THAME ATH ANYBUDDY ELTH,"
+,THAT DIGNY WINGY'TH DUMPING GROUND!
+,* The more this guy speaks the less I understand...
+,
+5_5,"THAT'TH OUR ROOMIE,€€€€€€ SANDY!"
+,WE DON'T ALWAYTH GET ALONG€€€€€€ BUT WE APPRECIATE THE COMPANY!
+,
+5_6,* It's a large home-made star.
+,"* Actually,€€€€€€ it's quite small for star standards."
+,"WELL GEE,€€€€€€ THITH ITH EMBARRATHING..."
+,"WE HAVEN'T GOTTEN TO PUTTING THAT ONE UP YET,"
+,IT'TH WAY HEAVIUH THAN WE THOUGHT...
+,"* Well,€€€€€€ Susie's strong,€€€€€€ maybe she could put it up for you!"
+,"* (Their head is literally a giant arm,€€€€€€ they can do it themselves...)"
+,
+5_7,* This space is designated to the arts of the crafty-kind.
+,DON'T€€€€€€ TOUCH€€€€€€ ANYTHIJG!
+,WE'RE STILL PREPARING THOME PROPTH€€€€€€ FOR OUR PLAY! €€€€€€DOOHOHOH!
+,
+5_8,"* When you look out through it,€€€€€€ it looks back in through you."
+,
+5_9,HELLO
+,
+5_10,COME COME SEE OUR WEARS!
+,
+,
+,
+6_1_1,About Yourselves
+,
+6_2_1,Stars
+,
+6_3_1,Dark Fountain
+,
+6_4_1,What happened here?
+6_4_2,Play?
+6_4_3,Let us help!
+,
+6_5,Exit
+,
+7_0,Yolkshire Pudding
+,Sockage Roll
+,Starfruit
+,Play Ticket
+,Exit
+,
+7_1,ITEM
+,A bowl of
+,eggy delight.
+,Å10HP
+,
+7_2,ITEM
+,A well baked
+,sock.
+,Å50HP
+,
+7_3,ITEM
+,A tropical
+,fruit-shaped
+,star.
+,Å100HP
+,
+7_4,KEYITEM
+,Redeem for
+,natural
+,backstory.
+,
+7_5,Space: 
+,
+8_1,SOCKSWALD'TH THE NAME!€€€€€€ £AND PLAYTH ARE THE GAME!
+,WAIT€€€€€€ THAT DIDN'T THOUND RIGHT...
+,WE MEAN WE DO STAGEPLAYTH!€€€€€€ £OR THAT'TH HOW WE PATH THE TIME AT LEATHT.
+,"THE PROPTH,€€€€€€ THE THTORY,€€€€€€ THE€€€€€€ THEATRICTH,€€€€€€ IT'S ALL SO €€€€€€TH-FREEING! €€€€€€DOOHOHOH!"
+,"IF WE REMEMBER,€€€€€€ IT'LL BE THE FIRTHT TIME WE HAVE AN AUDIENTH!"
+,"OTHERWITHE,€€€€€€ WE DOODLE,€€€€€€ THCRIBBLE,€€€€€€ THCRAWL,€€€€€€€€€€€€ AND GATHE UP AT WHERE THE STARS UTHED TO BE..."
+,
+8_2,PRETTY LIL' THINGIETH €€€€€€AREN'T THEY?
+,"THOME TIME AGO, €€€€€€THE SOCKS WOULD WHISPER THEIR WISHES TO THE STARS IN THE SKY."
+,"IF YA HOPED WITH ALL YOUR HEART, €€€€€€YOUR WISH WOULD COME TRUE!"
+,BUT NOW... €€€€€€ONLY TAKE FORM OF €€€€€€DIM €€€€€€CEILING DECORATIONTH...
+,
+8_3,YOU MEAN THAT TOWERING BLACK GOOP?
+,THE THING THAT EGGHEAD DINGA-WING THPRINTED OVER 'ERE FOR??
+,OUR HOME €€€€€€COMPLETELEY DETHIMATED FOR RICH-MONEYTH TO MOVE IN €€€€€€AND THEE WHAT ALL THE HUBBLE-BUBBLE WATH ABOUT???
+,...
+,* one could say we're not quite fond of it.
+,
+8_4,YOU'RE GUNNA HAVE TA BE MORE THPETHPI-
+,THPEF- €€€€€€£THEPIPIPTTHHPHPTH-
+,MMM...
+,SPECIFIC!
+,"IF BY€€€€€€ ¤HERE¤€€€€€€ YOU MEAN OUR HUMBLE ABODE,"
+,WE'VE BEEN COLLECTING ANY JUNK WE COULD FIND €€€€€€TO FILL THITH PLATHE UP FOR AS LONG AS WE CAN REMEMBUH.
+,"WHICH€€€€€€ ADMITTEDLY,€€€€€€ AIN'T THAT FAR..."
+,"IF BY€€€€€€ ¤HERE¤€€€€€€ YOU MEAN... EVERYWHERE, €€€€€€WELL..."
+,WE DO RECALL A €€€€€€SIMPLUH TIME €€€€€€WHEN THITH LAND WAS LUSH AND LIVELY.
+,SOCKS LIKE US LIVED IN PEATHE €€€€€€AND-
+,€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€...?
+,AHH... €€€€€€OF COURTHE. €€€€€€WE CAN'T TELL YA YET!
+,"YOU DON'T WANNA BE TH-POILED FOR OUR €€€€€€_cyPLAY_cw, €€€€€€DO YA?"
+,
+8_5,"DOOHOHOH! €€€€€€THAT'TH NOT HOW THINGTH WORK AROUND HERE, €€€€€€THILLY!"
+,NOT WITHOUT A €€€€€€_cyTICKET _cw€€€€€€THAT IS!
+,
+8_6,AHA!!! €€€€€€£WE THEE YOUR READY FOR A SHOW!
+,WE HOPE YOU BOUGHT THOME THNACKS!
+,PLACETH €€€€€€EVERYBUDDY!!!
+,
+8_7,*AHEM*
+,"ONTHE UPON A TIME... €€€€€€£IN THE HUMBLE LAND OF CALCIA, €€€€€€€€€£AN EVEN HUMBLER LINEAGE OF SOCK-DARKNUH MADE THEMTHELVETH AT HOME."
+,"FOR GENERATIONTH THEY WANDERED, €€€€€€GATHERED, €€€€€€AND TOLD STORIETH OF THEIR TRAVELTH."
+,BUT MOTHT OF ALL... €€€€€€£THEY GAZED AT THE STARS!
+,"WHEN THEY GOT LOST, €€€€€€THE STARS WERE THERE TO SHOW THE WAY! "
+,"WHEN THEY GOT BORED, €€€€€€THE STARS WERE THEIR INTHPIRATION!"
+,IT WAS €€€€€€THEIR WAY OF LIFE!
+,THO IMAGINE THEIR SURPRITHE€€€€€€€€€ WHEN THOME TINY MAN SHOWTH UP WITH HIS BIG MACHINE!!
+,HIS NAME €€€€€€WAS THOMETHING LIKE... €€€€€€DINGWINGTH?
+,"¤I, €€€€€€WINGNUT OR WHATEVUH, €€€€€€€€€DECLARE THITH LAND MY HOME! €€€€€€€€€€AND IT'TH PEOPLE €€€€€€MY PROPERTY !!!¤"
+,"FROM THE FOUNTAIN OUTWARDTH, €€€€€€£HIS TROOPTH€€€€€€ CONSTRUCTED,"
+,"AUTOMATED, €€€€€€EXPLORED €€€€€€AND EXPLOITED..."
+,THE SOCKS WERE COMPLETELY OVAHWHELMED!
+,"DRIVEN OUT OF THEIR HOMETH, €€€€€€THEY WERE FORTHED TO COMPLY WITH THEIR NEW RULER €€€€€€AND BE ENLITHTED €€€€€€AS HIS FOOTSOLDIERTH!"
+,YOU'VE PROBABLY FATHED A FEW ON YA WAY HERE...
+,"ALL THEEMED HOPELETH, €€€€€€€€€BUT ONE €€€LONE €€€THOLE €€€€€€MANAGED TO THLIP BY UNDETECTED."
+,BUT WHAT WATH A THINGLE SOCK TO DO? €€€€€€THEPARATED FROM THEIR LOVED ONETH...
+,AND WITHOUT A STAR IN THE SKY...
+,THEY WERE TERRIFIED...
+,UNTIL...
+,"THOMEONE VERY WONDUHFUL, €€€€€€€€€APEARED."
+,THOMEONE WHO KNEW HOW TO HELP
+,WHO HAD JUTHT THE THING TO THOLVE ALL PROBLEMTH
+,"A TICKET, €€€€€€€€€TO FREEDOM..."
+,BUT BEFORE THE SOCK COULD EVEN PARTAKE...
+,OUR HERO WAS ALONE €€€€€€ONTHE AGAIN...
+,"WITH NO MEMORY OF WHAT THEY WERE TOLD, €€€€€€OR WHAT THE THRANGER €€€€€€HAD GIVEN THEM."
+,"EMPTY-HANDED, €€€€€€THEY WERE BACK TO WHERE THEY THARTED."
+,EXCEPT NOW €€€€€€THEY THAW A GLIMMER IN THE DITHTANCE...
+,"A LIGHTHOUTHE WAS BUILT ON THE HIGHETHT MOUTAIN, €€€€€€AND THE SOCK LEARNED... €€€€€€€€€THAT'S €€€€€€WHERE THEIR THOLUTION LAY."
+,"ALATH... €€€€€€THE TREK TO THE TWINKLING TOWER WAS TOO LONG €€€€€€€€€AND THE MOUNTAIN, €€€€€€TOO DANGEROUTH!"
+,"HERE OUR ¤HERO¤ €€€€€€STARED OFF AT THEIR ONLY STAR LEFT, €€€€€€WISHING THAT HELP WOULD COME. €€€€€€£AND FREE THEM ALL €€€€€€FROM THE MACHINE..."
+,
+9_1,YOU €€€€€€WANNA €€€€€€HUH?
+,"SORRY, €€€€€€WE'RE AFRAID WE CAN'T AFORD THAT..."
+,UNLETH YOU TAKE SPARE BUTTONTH AND LINT!
+9_2,BUH-BYE NOW!!!
+9_3,THANKTH FOR YOUR PATRONAGE!
+9_4,THALUTATIONTH!
+9_5,THTAY FER ATH LONG ATH YA WANT!
+9_6,THEE THUMTHIN' YA LIKE!
+9_7,"DAWW, WHY NOT?"
+9_8,YOU'RE BROKE!
+9_9,ALL UTTA TICKET!
+9_10,WE LOVE TALKING!
+9_11,TALKING IS FUN!
+,
+,
+,
+10_1,WELL? €€€€€€WADAYA THINK?
+,"* Jeez, €€€€€€that's a hell of a story..."
+,* I already hated that pompous egghead.
+,* NOW I REALLY WANNA HARD-BOIL HIS ASS!!!
+,YER THAYIN' YOU'VE MET HIM?
+,* Indeed! €€€€€€Dingwing's sure made himself known.
+,* You weren't lying when you said he's taken over everything.
+,* But €€€€€€I think we can help change that!
+,* ...€€€€€€We can?
+,* I mean... €€€€€€YEAH! €€€Of course we can!
+,* A lighthouse that size can't be good for a darkworld.
+,"* But if we turn it off, €€€€€€@it could save everyone!"
+,* ...€€€Is the lighthouse €€€€€€dangerous?
+,"* Well you see, €€€€€€Darkners shouldn't be exposed to LIGHT."
+,* When a fountain clouds the world in darkness-
+,* Us darkeners €€€€€€spring to life!
+,* Lightness €€€€€€however...
+,* Disrupts €€€€€€a darkener's physical €€€€€€and mental capabilities.
+,"* If exposed to light, €€€€€€a darkener could suffer dizziness, €€€€€€paralysis..."
+,AND MEMORY LOSS...
+,THAT'S WHY €€€€€€THE SOCKS DON'T REBELL.
+,THEY CAN'T REMEMBER €€€€€€WHO THEY USED TO BE.
+,AND €€€€€€€€€€€€ME AND £LIL' BUDDY...
+,CAN'T €€€€€€€€€REMEMBER WHO WE WERE €€€€€€€EITHER.
+,"OUR FRIENDS, €€€€€€€€O-€€€€OUR MIND, €€€€OUR LIFE?"
+,WE CAN'T REMEMBER ANY OF IT.
+,ALL BECAUSE OF THE LIGHT...
+,WONDER WHAT IT WAS LIKE...
+,* Then it sounds like we've got work to do.
+,"* If that lighthouse is such a problem, €€€€€€we'll SMASH IT TO BITS!"
+,* Sounds like a plan.
+,"* And, €€€€€€call it a hunch..."
+,* But if we can release all that energy back into the world-
+,* You €€€€€€and your people could get your memories back.
+,Y-€€€€YOU REALLY THINK THAT COULD WORK?
+,"* It's worth a shot, €€€€€€right?"
+,* We'll show that eggface who's REALLY in charge!!!
+,Y-€€€YEAH! €€€€€€€YEAH!!!
+,TOGETHUH €€€€€€WE'LL BRAVE THAT MOUNTAIN €€€€€€AND RETHTORE THE WORLD!!!
+,"READY YOURTHELVETH HEROETH, €€€€€€CAUTHE ADVENTUH €€€€€€ITH AFOOT!"
+,
+11_1,"* Well, €€€€€€here we are. €€€€€€£* The bottom of the mountain."
+,LET THE CLIMBING €€€€€€COMMENCE!
+11_2,GEE... THAT WATH A CLOTHE ONE!
+,THANKTH THOOTHIE! WE WERE ALMOTHT PANCAKE'D!
+,"* That was really brave of you, €€€€€€Susie!"
+,* Yeaaaah... €€€€€€don't mention it.
+,* Let's just try not to get crushed from now on.
+,
+12_1,"* Dang, €€€€€€dead end."
+,* Guess we have to find another way.
+,* It didn't look like there were any other paths we could've gone.
+,"* Kris, €€€€€€what do you suggest we do?"
+,WE'VE GOT AN IDEA!
+,LOOK!
+,WE'RE HIGH ENOUGH TO SEE THE BRIGHTER STARS THROUGH THE SMOG.
+,"IF YA REALLY NEED IT, €€€€€€AND USE AAALLLL OF YOUR HEART..."
+,A STAR €€€€€€COULD GRANT YOU A WISH!
+,"* Erm, €€€well, €€€€€€go on Kris! €€€€€€£* Make a wish!"
+,"* (As you look up at the stars, €€€€€€you felt something strange.)"
+,* (It was as if...)
+,* (Your very SOUL €€€€€€€€€€€€was glowing...)
+,* ...
+,* Well that was a bust.
+,"* WAIT, €€€€€€it actually worked?"
+,DOOHOHOH! €€€€€€IT THEEMTH YOUR WISH HATH BEEN BLETHHED!
+,THAT GAP SHOULD BE A EATHY NOW!
+,* Okay my turn! €€€€€€€€€
+,"HOLD UP THOOTHIE, €€€€€€WE HAVE DIFFERENT IDEA."
+,"* HELL YEAH, €€€€€€ride like the wind!"
+,* YEEEEHAAAAAW!!!!!!!!!
+,"* Well, €€€€€€I'll see you up ahead, €€€€€€€€€€€€Kris."
+,
+12_2,I WISH FOR 500 HOTCAKES!!!
+,
+13_1,"C'MON KRIS, €€€€€€WE JUST KNOW YOU CAN MAKE IT!"
+,WE'RE ALMOST THERE!
+,
+14_1,* Glad everyone made it up safely!
+,"* THAT WAS AWESOME, €€€€€€LET'S DO IT AGAIN!"
+,"* Remember our task at hand, €€€€€€Susie."
+,"* We're here to free Sockswald's people, €€€€€€remember?"
+,AND GET OUR MEMORIETH BACK!
+,* Oh... €€€right.
+,OH IT'TH OKAY €€€€€€THOOTHIE!
+,IT'TH NOT LIKE YOU'LL NEVAH SEE UTH AGAIN AFTER WE'RE DONE!
+,* Well what're we waiting for?
+,* It's a straight road to the finish line now.
+,* Let's smash this thing!!!
+,"HOLD YOUR HORTHETH THERE, €€€€€€PARTNER."
+,WE NEED TO DO THIS LATHT BIT €€€€€€€€€€€€ALONE.
+,* ...€€€€€€€€€Alone?
+,* You're joking right?
+,* We're not leaving you all by yourself! €€€€€€£* That's insane!
+,* Right Kris?
+,* ...€€€€€€€€€Ralsei?
+,"* What's the matter,€€€€€€ Sockswald?"
+,* We're a team. €€€€€€Why do this alone?
+,WELL...
+,"WE ALWAYTH WANTED TO COME HERE ON OUR OWN, €€€€€€BUT..."
+,WE WERE TOO MUCH OF A COWARD BACK THEN...
+,"BUT THEN YOU THREE CAME ALONG, €€€€€€AND GAVE US THTRENGTH!"
+,"YOUR COURAGE €€€€€€BECAME OURS, €€€€€€WE CAN TOP ANYTHING TOGETHUH!"
+,BUT WE STILL WANNA PROVE OURTHELVETH...
+,"THAT WE CAN DO THIS ON OUR OWN, €€€€€€TOO!"
+,THAT WE'VE REALLY GAINED COURAGE.
+,"* I think they're right, €€€€€€Susie... €€€€€€£* Let's sit this one out."
+,* For them!
+,* ...€€€€€€I guess.
+,* But...
+,"* Just be careful, €€€€€€alright?"
+,* Being alone €€€€€€€€€sucks.
+,DON'T WORRY THOOTHIE!
+,WE'RE NEVER ALONE!
+,* ...
+,* ...!
+,
+15_0,Hope so
+,Don't care
+,Sure
+,Really don't care
+,
+15_1,* ...
+,"* It sure has been a while, €€€€€€hasn't it?"
+,"* Kris, €€€€€€do you think Sockswald's doing alright up there?"
+,
+15_2,* Well then... €€€€€€why don't we close our eyes...
+,* ...And think about what they're doing now?
+,
+15_3,* ...Oh... €€€€€€€€€really?
+,"* They could be in danger, €€€€€€or maybe already on their way back!"
+,* Don't you want to think about it?
+,
+15_4,"* Well... €€€€€€if you REALLY don't want to, €€€€€€that's okay!"
+,* It probably isn't that interesting anyway.
+,* I'm sure our pal is doing just fine!
+,
+,
+,
+16_1,* HOLY-
+,* Sockswald!
+,* What €€€€€€€€€€€€happened?
+,* Did you find what you were looking for?
+,* Did... €€€€€€Did you get your memories back?
+,* ha... €€€€€€€€€ha€€€ha...
+,* i... €€€€€€remem...€€€ber...
+,"GREAT MEMORIETH, €€€€€€HUH?"
+,THEEMTH LIKE IT WAS ONLY YETHTERDAY...
+,* when this cruel world split us in two.
+,DOO€€€HO€€€HOH...
+,* Quit it! €€€€€€£* You're freaking me out.
+,"* If you're hurt, €€€€€€then Ralsei can-"
+,"* oh dear, €€€€€€€€€€€€dear €€€€€€€€€€€€susie..."
+,* allow me €€€€€€€€€€€€€€€€€€to ask you something...
+,* ...
+,* what is a star?
+,* (no...)
+,* can you touch it?
+,* Knock it off!
+,* can you eat it?
+,* I'm serious!
+,* can you €€€€€€€€€€€€€€€KILL €€€€€€€€€it?
+,* Just who the hell do you think you are?
+,* And what have you done to my friend!
+,* oh €€€€€€your friend never left...
+,"* i was always there, €€€€€€restricted and debilitated."
+,"* but now it's time to shine, €€€€€€like the illustrious star that liberated me."
+,I-... €€€€€€€€€IT'TH €€€€€€€€SO €€€€€€€€COLD...
+,SU€€€€€€€€€€...SIE... £€€€€€€€€€€K€€€€€€€€€€RIS... £€€€€€€€€€€€€HELP€€€€€€€€€€€€€€€€€ M€€€€€E...
+,
+16_2,* Is everyone okay???
+,* Argh... €€€€€€I think so?
+,* i've got to hand it to you three.
+,"* because of you, €€€€€€i am but an arm's length away from ascension."
+,"* with celestial vigour at my fingertips, €€€€€€retribution will be wrought across the land..."
+,* i only need... €€€€€€€€€€€€€€€one... €€€€€€€€€€€€€€€more...
+,* that light inside you...
+,* are you a star?
+,
+,
+,
+s_1,Press 
+, in the air to double jump.
+s_2,* Press 
+, to fall faster!
+s_3,CONFIRM
+,CANCEL
+,MENU
+s_4,* Lasts 3 turns.
+,
+,
+,
+b_check,* HANDROMEDA €€€€€€£* They're in there somewhere. €€€€€€€€€@If you can get them out...
+b_pacify,* Ralsei cast PACIFY! €€€€€€€€€£* But the enemy wasn't _cbTIRED_cw...
+b_healPrayer,* Ralsei cast HEAL PRAYER!
+b_rudeBuster,* Susie used RUDE BUSTER!
+b_ultimateHeal,* Susie cast ULTIMATEHEAL!
+,
+b_flavourText,* are you a star?
+,* You feel the weight of the universe on your back
+,* the lighthouse shines in the distance
+,* the sky twinkles with freedom.
+,"* the ceiling stars, i wish upon you."
+,* memories of home
+,* HANDROMEDA raises it's fist in anger
+,* memories of greed
+,* the world of tomorrow ends today.
+,* memories of a stolen world
+,* Hesitation glimmers in HANDROMEDA's eye
+,* memories of someone wanting to do the right thing
+,
+b_flavourText2,* Something terrible is coming...
+, 
+b_gp,* Susie wished for the safety @of her friends! £
+b_dj,* Ralsei wished for the safety @of his friends! £* You can now perform 2 air jumps!
+b_w2,* Kris wished for the safety @of their friends!
+,
+b_w1,* Everyone wished for their@friends' safe return!£€€€€€€
+,* HANDROMEDA is confused...
+,* HANDROMEDA thinks about this...
+,* HANDROMEDA trembles...
+,* HANDROMEDA starts to remember...
+,* But nothing happened...
+,* But nothing ever happens.
+,
+b_w3,* Everyone wished upon a star!€€€€€€£* Makes no difference who you are...
+,
+b_actionTextKris,Check
+,Wish
+,_cgInduce£Å5% Spare£_co50% TP
+,_sb_scWishAll
+,_cgInduce£Å11% Spare£_co100% TP
+,_scHarmonize
+,_cgCalm down£Susie£_co100% TP
+,
+b_actionTextSusie,GroundPound
+,_cgFall£Faster£_co25% TP
+,Rude Buster
+,_cgRude£Damage£_co50% TP
+,UltimatHeal
+,_cgBest£Healing£_co100% TP
+,
+b_actionTextRalsei,TripleJump
+,_cgJump£Higher£_co25% TP
+,Pacify
+,_cgSpare£TIRED foe£_co16% TP
+,Heal Prayer
+,_cgHeal£Ally£_co32% TP
+,
+b_susieSnap1,"* Susie, €€€€€€you have to calm down!"
+,* You can't do this by yourself...
+,
+b_susieSnap2,* I don't know what's happening...
+,* But if we want to get through this...
+,* We have to work as a team!
+,
+b_susieSnap3,* I know you're scared...
+,* I know you care for them €€€€€€@a lot...
+,"* But, €€€€€€they're our friend too!"
+,* ...
+,* We can save them together.
+,"* ...€€€€€€You're right, €€€€€€@you're right..."
+,"* Hang in there buddy, €€€€€€@we're coming for you!"
+,
+end_good,* I think...
+,* I finally understand.
+,* Do you remember who you were?
+,"* No, €€€€€€no..."
+,* What you three have shown me was...
+,* Much €€€€€€€€€more valuable...
+,* I'll never have my old memories back...
+,* But the new memories I made with you?
+,"* ...I've never felt more like myself, €€€€€€then during our time spent together."
+,* If you can promise me you'll stick together...
+,* You'll never forget who you are.
+,* Here... €€€€€€with my last memories...
+,* Allow me to strengthen your bond.
+,* (You got FluffGlove.)
+,* (You got ShadowCrystal.)
+,
+end_bad,"* Well, €€€€€€it's come to this..."
+,"* So close, €€€€€€and all for naught..."
+,* Sorry it had to turn out this way...
+,* Something tells me it didn't matter anyway.
+,* Our time spent together was the most free I've felt.
+,* And you three will shine brightly all the same.
+,* Here... €€€€€€with my last memories...
+,* Allow me to strengthen your bond.
+,* (You got AstralCane.)
+,* (You got ShadowCrystal.)
