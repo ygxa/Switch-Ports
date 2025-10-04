@@ -14,6 +14,10 @@ A repository containing ports of GameMaker games for the Nintendo Switch.
 | Pizza Tower Fighters | 75% done. 60fps 100% of the time, cpu battles work, 2p mode controller pairings are buggy (only use half joy-con)|
 | Undertale Yellow | ?% done. 60fps, unknown whats working due to the second lava ball puzzle broken due to broken collisions with the moving platforms leading to a softlock. All of ruins and the battle system works however.|
 | Super Bo Noise | 75% done. 60fps - 30fps, text system fully works, no known crashes due to a lack of testing, no sound or saving.|
+| Deltarune The Upper Hand | 80% done. 60fps - 10fps, fully works, no crashes, laggy in menus and in the somtimes fight. besides that fully working|
+
+currently being thought of:
+Scampton The Great -- i have "ported" it, which i mean the menu works on switch but no controller support which i have to add manually
 
 ## Compiling
 Don't worry! no nintendo sdk nor illegal content is required!
