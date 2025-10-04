@@ -1,1 +1,0 @@
-targetRoom = castletown_west
