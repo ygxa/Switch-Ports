@@ -61,7 +61,7 @@ for (var i = 0; i < array_length(taskedAreas); i++)
 	}
 }
 
-ini_close()
+fixed_ini_close()
 ini_open("optionData.ini")
 var pal = scr_get_palettes(false)
 
@@ -71,6 +71,6 @@ for (var i = 0; i < array_length(pal); i++)
 	p.palMax++
 }
 
-ini_close()
+fixed_ini_close()
 array_push(pg.contentArr, e)
 lastPage = array_length(displayPages) - 1

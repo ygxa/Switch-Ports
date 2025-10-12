@@ -52,7 +52,7 @@ function scr_completion_percent(arg0)
 			}
 		}
 		
-		ini_close()
+		fixed_ini_close()
 		var completion = 0
 		completion += (1 * completed_tutorial)
 		completion += ((9 * levels_count) / 4)
@@ -102,6 +102,6 @@ function scr_check_completion(arg0 = global.SaveFileName)
 			count++
 	}
 	
-	ini_close()
+	fixed_ini_close()
 	return count >= array_length(levels);
 }

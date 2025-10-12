@@ -77,4 +77,4 @@ with (gateRankBubble)
 	}
 }
 
-ini_close()
+fixed_ini_close()

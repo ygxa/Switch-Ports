@@ -14,7 +14,7 @@ ini_open(global.SaveFileName)
 if (ini_read_string("Ranks", string(global.InternalLevelName), "none") == "none" && !ini_read_real("Misc", "lapunlockall", false))
 	sprite_index = spr_lappingportal_inactive
 
-ini_close()
+fixed_ini_close()
 
 if (global.panic && sprite_index != spr_lappingportal_inactive)
 {

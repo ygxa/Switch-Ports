@@ -71,7 +71,7 @@ function scr_savelevelDetails(arg0 = true)
 	if (rank_checker(global.rank) > rank_checker(ini_read_string("Ranks", string(global.InternalLevelName), "none")))
 		ini_write_string("Ranks", string(global.InternalLevelName), global.rank)
 	
-	ini_close()
+	fixed_ini_close()
 	obj_hudManager.saveAlpha = 10
 	
 	if (arg0)
@@ -112,6 +112,6 @@ function confecti_count_level(arg0)
 			confecti_count++
 	}
 	
-	ini_close()
+	fixed_ini_close()
 	return confecti_count;
 }

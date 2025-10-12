@@ -8,7 +8,7 @@ var locked_palettes = array_filter(scr_get_palettes(false), function(arg0, arg1)
 {
 	return !ini_read_real("Palettes", arg0.taskKey, false);
 })
-ini_close()
+fixed_ini_close()
 script_UpArrow = -4
 
 for (var i = 0; i < array_length(locked_palettes); i++)

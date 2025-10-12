@@ -54,7 +54,7 @@ if (oldPromptText != global.TransfoPrompt)
 		ini_write_real("Tip", global.TransfoPrompt, true)
 	}
 	
-	ini_close()
+	fixed_ini_close()
 }
 
 scr_playersounds()

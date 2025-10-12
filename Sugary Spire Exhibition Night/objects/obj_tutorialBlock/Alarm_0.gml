@@ -11,4 +11,4 @@ create_destroyable_smoke(random_range(bbox_left, bbox_right), random_range(bbox_
 event_play_multiple("event:/SFX/general/breakblock", x, y)
 ini_open(global.SaveFileName)
 ini_write_string("Misc", "TutorialBlock", "1")
-ini_close()
+fixed_ini_close()

@@ -104,17 +104,7 @@ switch (optionMenu)
 		options = [toMainPage, new option_button("opt_vid_windowmode", function()
 		{
 			option_goto(OptionMenu.Window)
-		}), new option_normal("opt_vid_resolution", res, function(arg0)
-		{
-			quick_write_option("Settings", "opt_resolution", arg0)
-			global.selectedResolution = arg0
-			
-			if (!global.fullscreen)
-			{
-				set_resolution_option(global.selectedResolution)
-				gameframe_restore()
-			}
-		}, global.selectedResolution, false), new option_normal("opt_vid_letterbox", letterbox_option, function(arg0)
+		}), new option_normal("opt_vid_letterbox", letterbox_option, function(arg0)
 		{
 			quick_write_option("Settings", "letterbox", arg0)
 			global.Letterbox = arg0

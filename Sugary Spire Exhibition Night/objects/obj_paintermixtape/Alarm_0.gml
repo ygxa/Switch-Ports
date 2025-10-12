@@ -33,7 +33,7 @@ ini_write_string("Treasure", "mindpalace", "1")
 if (secretActivated)
 	ini_write_real("Game", "mixtape_prompt", true)
 
-ini_close()
+fixed_ini_close()
 obj_hudManager.saveAlpha = 10
 var prompt = secretActivated ? lang_get("prompt_mixtape_soundtest") : lang_get("prompt_mixtape_nosoundtest", [scr_getDialogIcon("INK", "c_white", "c_white")])
 scr_queueToolTipPrompt(prompt)

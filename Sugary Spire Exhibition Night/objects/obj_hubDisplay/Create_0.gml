@@ -129,7 +129,7 @@ addLevel = function(arg0, arg1, arg2 = true, arg3 = true, arg4 = true, arg5 = tr
 		p.gotScore = ini_read_real("Highscore", arg0, 0)
 	}
 	
-	ini_close()
+	fixed_ini_close()
 	array_push(pg.contentArr, l)
 	return l;
 }

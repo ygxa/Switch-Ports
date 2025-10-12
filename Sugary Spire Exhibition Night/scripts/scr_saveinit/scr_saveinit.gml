@@ -26,7 +26,7 @@ function scr_saveinit()
 		ini_write_real("SaveFormat", "version", 1)
 	}
 	
-	ini_close()
+	fixed_ini_close()
 	
 	with (obj_achievementTracker)
 		event_user(0)

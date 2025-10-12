@@ -32,11 +32,11 @@ if (global.TextureFiltering && !do_letterbox && ((res_w % 960) > 0 || (res_h % 5
 draw_clear_alpha(c_black, 1)
 draw_sprite_tiled_ext(bgSprite.sprite_index, bgSprite.image_index, screen_x, screen_y, scale, scale, c_white, 1)
 
-for (var i = 0; i < ds_list_size(bgSpriteOld); i++)
-{
-	var bg = ds_list_find_value(bgSpriteOld, i)
-	draw_sprite_tiled_ext(bg.sprite_index, bg.image_index, screen_x, screen_y, scale, scale, c_white, bg.image_alpha)
-}
+//for (var i = 0; i < ds_list_size(bgSpriteOld); i++)
+//{
+	//var bg = ds_list_find_value(bgSpriteOld, i)
+	//draw_sprite_tiled_ext(bg.sprite_index, bg.image_index, screen_x, screen_y, scale, scale, c_white, bg.image_alpha)
+//}
 
 if (global.Letterbox)
 {
@@ -56,4 +56,3 @@ gpu_set_blendenable(true)
 gpu_set_blendmode(bm_normal)
 gpu_set_texfilter(false)
 shader_reset()
-gameframe_draw()

@@ -22,7 +22,7 @@ if (deleteFileBuffer >= deleteFileBufferMax)
 	event_play_oneshot("event:/SFX/general/explosion", 480, 270)
 	ini_open("optionData.ini")
 	ini_section_delete("Palettes")
-	ini_close()
+	fixed_ini_close()
 	
 	with (obj_option)
 		changedAnyOption = true
@@ -35,7 +35,7 @@ if (deleteFileBuffer >= deleteFileBufferMax)
 		{
 			ini_open(save_path[i])
 			ini_key_delete("Misc", string("playerPaletteIndex_{0}", scr_getCharacterPrefix(Characters.Pizzelle)))
-			ini_close()
+			fixed_ini_close()
 			
 			with (obj_mainfileselect)
 				filePalette[i] = 2

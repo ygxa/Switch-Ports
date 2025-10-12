@@ -168,7 +168,7 @@ function init_option()
 		update_option_format(cur_version, 1)
 	}
 	
-	ini_close()
+	fixed_ini_close()
 	scr_setinput_init()
 	scr_input_create()
 	scr_lang_init()
@@ -190,7 +190,7 @@ function quick_write_option(arg0, arg1, arg2)
 	else
 		ini_write_real(arg0, arg1, arg2)
 	
-	ini_close()
+	fixed_ini_close()
 	
 	with (obj_option)
 		changedAnyOption = true

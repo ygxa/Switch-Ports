@@ -157,7 +157,7 @@ function sh_unlock(arg0)
 			ini_write_string("Ranks", string(int_level), "p")
 		}
 		
-		ini_close()
+		fixed_ini_close()
 	}
 	
 	if (type == "all" || type == "clothes")
@@ -168,7 +168,7 @@ function sh_unlock(arg0)
 		for (var i = 0; i < array_length(clothes_info); i++)
 			ini_write_real("Palettes", clothes_info[i].taskKey, true)
 		
-		ini_close()
+		fixed_ini_close()
 	}
 	
 	if (type == "all" || type == "achievements")
@@ -184,7 +184,7 @@ function sh_unlock(arg0)
 				ini_write_real("ChefTasks", cheftask_info[i].taskKey, true)
 		}
 		
-		ini_close()
+		fixed_ini_close()
 	}
 }
 

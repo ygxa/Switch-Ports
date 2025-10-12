@@ -133,7 +133,7 @@ function scr_levelSet()
 	
 	ini_open(global.SaveFileName)
 	var pre_check = ini_read_string("Game", "Judgment", "none") == "none" && scr_check_completion()
-	ini_close()
+	fixed_ini_close()
 	
 	with (obj_parent_player)
 	{

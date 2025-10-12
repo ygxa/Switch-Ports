@@ -26,4 +26,4 @@ if (secretActivated && ini_read_string("Treasure", "mindpalace", "0") == "1" && 
 	ini_write_real("Game", "mixtape_prompt", true)
 }
 
-ini_close()
+fixed_ini_close()

@@ -20,7 +20,7 @@ function scr_judgment_assign()
 		j = "holyshit"
 	
 	ini_write_string("Game", "Judgment", j)
-	ini_close()
+	fixed_ini_close()
 	trace(string("Save File Judgment: {0}", j))
 	return scr_judgment_get(j);
 }
@@ -38,7 +38,7 @@ function scr_judgment_read(arg0)
 	
 	ini_open(arg0)
 	var p = ini_read_string("Game", "Judgment", "none")
-	ini_close()
+	fixed_ini_close()
 	return scr_judgment_get(p);
 }
 

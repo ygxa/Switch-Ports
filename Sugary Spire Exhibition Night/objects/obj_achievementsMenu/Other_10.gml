@@ -17,7 +17,7 @@ for (var i = 0; i < array_length(levelArr); i++)
 		selectV = 0
 }
 
-ini_close()
+fixed_ini_close()
 ini_open("optionData.ini")
 var palArr = scr_get_palettes(false)
 
@@ -28,5 +28,5 @@ for (var i = 0; i < array_length(palArr); i++)
 	addOutfit(new taskIcon(p, unlocked_outfit))
 }
 
-ini_close()
+fixed_ini_close()
 outfitRows = ceil(array_length(outfitArr) / 3)

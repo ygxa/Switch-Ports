@@ -698,7 +698,7 @@ function scr_lang_init()
 	scr_lang_initvals()
 	ini_open("optionData.ini")
 	global.langName = ini_read_string("Settings", "lang", "none")
-	ini_close()
+	fixed_ini_close()
 	
 	if (global.langName == "none")
 	{

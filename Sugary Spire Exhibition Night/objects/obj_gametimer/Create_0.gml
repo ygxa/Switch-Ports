@@ -76,7 +76,7 @@ saveTime = function(arg0 = global.SaveFileName)
 	ini_write_real("Game", "frames", global.SaveFrames)
 	ini_write_real("Game", "seconds", global.SaveSeconds)
 	ini_write_real("Game", "minutes", global.SaveMinutes)
-	ini_close()
+	fixed_ini_close()
 }
 
 makeString = function(arg0, arg1, arg2)

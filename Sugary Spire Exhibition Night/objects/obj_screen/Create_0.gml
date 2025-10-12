@@ -1,11 +1,4 @@
 depth = -99
-gameframe_init()
-__display_set_gui_size_hook(960, 540)
-global.gameframe_caption_text = "Sugary Spire"
-global.gameframe_caption_font = global.captionfont
-global.gameframe_caption_icon = spr_gameframe_icon
-global.gameframe_caption_margin = 6
-global.gameframe_border_width = 2
 bgSprite = new subSprite(spr_letterboxBg_simple, 0, 0, false)
 bgSpriteOld = ds_list_create()
 

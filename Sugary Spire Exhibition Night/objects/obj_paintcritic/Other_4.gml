@@ -30,7 +30,7 @@ with (instance_nearest(x, y, obj_startGate))
 
 ini_open(global.SaveFileName)
 var found_rank = string_lower(ini_read_string("Ranks", lv, ""))
-ini_close()
+fixed_ini_close()
 
 if (found_rank == "" || instance_exists(obj_tutorialBlock))
 	instance_destroy()

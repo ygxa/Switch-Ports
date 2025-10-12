@@ -1,11 +1,11 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "gameframe_macros",
+  "name": "fixed_ini_close",
   "isCompatibility": false,
   "isDnD": false,
   "parent": {
-    "name": "Gameframe",
-    "path": "folders/Scripts/Systems/Gameframe.yy",
+    "name": "Scripts",
+    "path": "folders/Scripts.yy",
   },
 }

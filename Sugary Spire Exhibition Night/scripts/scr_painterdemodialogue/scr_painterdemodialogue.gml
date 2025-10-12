@@ -17,7 +17,7 @@ function scr_painterdemodialogue()
 		}
 	}
 	
-	ini_close()
+	fixed_ini_close()
 	var info_arr = []
 	talk_sound = "event:/SFX/hub/painterThink"
 	var dialogue_key

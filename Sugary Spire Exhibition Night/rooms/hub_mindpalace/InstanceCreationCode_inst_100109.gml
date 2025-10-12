@@ -1,7 +1,7 @@
 flags.do_once = false
 ini_open(global.SaveFileName)
 flags.saved_info = ini_read_string("Game", "Judgment", "none")
-ini_close()
+fixed_ini_close()
 
 condition = function()
 {
