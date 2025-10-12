@@ -13,7 +13,7 @@ function scr_enemySounds_release()
 	
 	for (var i = 0; i < array_length(sound_array); i++)
 	{
-		fmod_studio_event_instance_stop(sound_array[i], FMOD_STUDIO_STOP_MODE.IMMEDIATE)
+		fmod_studio_event_instance_stop(sound_array[i], FMOD_STUDIO_STOP_MODE)
 		fmod_studio_event_instance_release(sound_array[i])
 	}
 }

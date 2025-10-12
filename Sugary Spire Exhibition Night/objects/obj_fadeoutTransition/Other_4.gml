@@ -1,3 +1,4 @@
+/*
 if (!instance_exists(obj_parent_player))
 	exit
 
