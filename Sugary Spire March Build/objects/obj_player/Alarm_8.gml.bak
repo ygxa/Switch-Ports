@@ -1,8 +1,0 @@
-<<<<<<< HEAD
-state = states.normal;
-=======
-staticdraw = true;
-statictimer = 20;
-state = 0;
->>>>>>> (marioket-2)-super-freddy-fazbear-4
-movespeed = 0;

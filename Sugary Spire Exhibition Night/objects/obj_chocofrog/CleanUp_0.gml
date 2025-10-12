@@ -1,2 +1,0 @@
-fmod_studio_event_instance_stop(croakingNoise,true)
-fmod_studio_event_instance_release(croakingNoise)

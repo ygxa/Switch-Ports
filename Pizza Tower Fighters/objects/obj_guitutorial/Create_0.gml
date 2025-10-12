@@ -1,7 +1,0 @@
-continuetext = function()
-{
-};
-
-canceltext = function()
-{
-};

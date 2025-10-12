@@ -1,1 +1,0 @@
-fogAlpha = 0;

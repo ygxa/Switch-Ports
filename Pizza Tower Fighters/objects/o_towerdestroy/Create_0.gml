@@ -1,9 +1,0 @@
-y -= 470;
-yspeed = 2.5;
-audio_play_sound(su_towercrumble, 50, false);
-hoverSpeed = 1;
-hoverHeight = 15;
-original_x = x;
-time = 0;
-dusttimer = 10;
-timebeforestartcrumble = 30;

@@ -1,9 +1,0 @@
-sprite = s_ms_pizzascape;
-map = R_Pizzascape;
-alpha = 0;
-drawy = 20;
-mapsprite = s_stage_big_scape;
-appearbuffertimer = 0;
-alarm[0] = 1;
-tox = 500;
-tox2 = 1000;

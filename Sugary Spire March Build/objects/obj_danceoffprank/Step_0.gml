@@ -1,1 +1,0 @@
-//video_set_volume(global.musicVolume);

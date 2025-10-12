@@ -1,2 +1,0 @@
-audio_stop_sound(mu_optionstart)
-audio_stop_sound(mu_options)

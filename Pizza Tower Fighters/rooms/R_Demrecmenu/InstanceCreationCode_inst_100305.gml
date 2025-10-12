@@ -1,2 +1,0 @@
-text = "           Demrec";
-name = "";

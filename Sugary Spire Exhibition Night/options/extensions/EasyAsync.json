@@ -1,9 +1,0 @@
-{
-  "extensionId": {
-    "name": "EasyAsync",
-    "path": "extensions/EasyAsync/EasyAsync.yy"
-  },
-  "resourceVersion": "1.0",
-  "resourceType": "GMExtensionConfigSet",
-  "configurables": null
-}

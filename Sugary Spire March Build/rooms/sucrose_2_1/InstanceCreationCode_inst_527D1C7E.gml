@@ -1,2 +1,0 @@
-_message_array[0][0] = "Hello, Playtesters. Welcome to the first level of World 2: Mt. Fudgetop."
-_message_array[1][0] = "Since us devs want this level to be perfect, be sure to report every last bug you find in this level, so we don't have to. It's kinda your job you know."

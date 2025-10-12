@@ -1,2 +1,0 @@
-
-activetimer = 100

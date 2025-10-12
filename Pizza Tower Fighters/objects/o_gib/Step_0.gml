@@ -1,2 +1,0 @@
-vsp += grv;
-y += vsp;

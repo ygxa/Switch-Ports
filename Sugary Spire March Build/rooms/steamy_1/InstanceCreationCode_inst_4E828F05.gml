@@ -1,3 +1,0 @@
-//scr_queue_message("We are proud to announce that today's broadcast is sponsored by Gummy Industries. Lucky Pizzelle. He just stormed inside without paying anything. Why can't I live like a candy man??", spr_pizzytvrain)
-//scr_queue_message("Want to take a nice trip to the fabled Cottontown? Well, you can now! For only a cheap price of 600,000 chocolate chips.")
-//scr_queue_message("Lucky Pizzelle. He just stormed inside without paying anything. Why can't I live like a candy man??")

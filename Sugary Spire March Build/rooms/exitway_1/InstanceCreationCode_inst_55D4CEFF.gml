@@ -1,1 +1,0 @@
-msg[0] = ["erm, [PLAYER CHARACTER] I did not ask you to be here, jump off that pit pls. :nerd:", spr_ching, sfx_dialogue1, "right"]
