@@ -901,7 +901,6 @@
     {"amount":1,"first":123,"second":74,},
   ],
   "last": 9647,
-  "lineHeight": 22,
   "maintainGms1Font": false,
   "parent": {
     "name": "Fonts",
@@ -914,7 +913,6 @@
   ],
   "regenerateBitmap": false,
   "sampleText": "No such command",
-  "sdfSpread": 2,
   "size": 12.0,
   "styleName": "Regular",
   "textureGroupId": {
@@ -922,5 +920,4 @@
     "path": "texturegroups/HUD",
   },
   "TTFName": null,
-  "usesSDF": false,
 }

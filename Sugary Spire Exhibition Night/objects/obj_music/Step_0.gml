@@ -21,7 +21,7 @@ if (global.panic)
 			fmod_studio_event_instance_stop(global.RoomMusic.secretMusicInst, true)
 		}
 		
-		fmod_studio_event_instance_set_callback(global.EscapeMusicInst, FMOD_STUDIO_EVENT_CALLBACK.NESTED_TIMELINE_BEAT)
+		fmod_studio_event_instance_set_callback(global.EscapeMusicInst, FMOD_STUDIO_EVENT_CALLBACK)
 	}
 	else if (event_instance_isplaying(global.EscapeMusicInst))
 	{

@@ -349,7 +349,7 @@ for (var i = 0; i < array_length(global.CharacterPalette); i++)
 	
 	surface_reset_target()
 	global.CharacterPalette[i].sprite = sprite_create_from_surface(palette_surface, 0, 0, surface_get_width(palette_surface), surface_get_height(palette_surface), false, false, 0, 0)
-	global.CharacterPalette[i].debug = ref_create(global.CharacterPalette[i], "sprite")
+	//global.CharacterPalette[i].debug = ref_create(global.CharacterPalette[i], "sprite")
 }
 
 surface_free(palette_surface)

@@ -4,10 +4,7 @@
 
 function scribble_add_macro(_name, _function)
 {
-    static _system                = __scribble_initialize();
-    static _effects_map           = _system.__effects_map;
-    static _macros_map            = _system.__macros_map;
-    static _typewriter_events_map = _system.__typewriter_events_map;
+    __scribble_initialize();
     
     if (!is_string(_name))
     {
@@ -27,18 +24,19 @@ function scribble_add_macro(_name, _function)
         exit;
     }
     
-    if (ds_map_exists(_effects_map, _name))
+    if (ds_map_exists(__scribble_get_effects_map(), _name))
     {
         __scribble_trace("Warning! Macro name \"" + _name + "\" has already been defined as an effect");
         exit;
     }
     
-    if (ds_map_exists(_typewriter_events_map, _name))
+    if (ds_map_exists(__scribble_get_typewriter_events_map(), _name))
     {
         __scribble_trace("Warning! Macro name \"" + _name + "\" has already been defined as a typist event");
         exit;
     }
     
+    var _macros_map = __scribble_get_macros_map();
     var _old_function = _macros_map[? _name];
     if (!is_undefined(_old_function))
     {

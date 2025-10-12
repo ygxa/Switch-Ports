@@ -15,9 +15,9 @@ function ChefTask(arg0, arg1, arg2, arg3, arg4) constructor
 	return self;
 }
 
-function OutfitTask(arg0, arg1, arg2, arg3) : ChefTask(arg0, arg2, lang_get_sprite(spr_paletteUnlock), 0, arg3) constructor
+function OutfitTask(char_id, task_arg2, spr_unlock, extra) : ChefTask(char_id, task_arg2, spr_unlock, 0, extra) constructor
 {
-	taskCharacter = arg1
+	taskCharacter = char_id;
 }
 
 function ExhibitionNightSecretTask(arg0, arg1, arg2) : OutfitTask(arg0, arg1, ConditionType.EndLevel, -4) constructor
@@ -38,13 +38,13 @@ function ExhibitionNightSecretTask(arg0, arg1, arg2) : OutfitTask(arg0, arg1, Co
 				
 				if (_secrets >= neededSecrets)
 				{
-					ini_close()
+					fixed_ini_close()
 					return true;
 				}
 			}
 		}
 		
-		ini_close()
+		fixed_ini_close()
 		return false;
 	}
 }
@@ -54,7 +54,7 @@ function scr_award_chef_task(arg0, arg1, arg2)
 	ini_open(global.SaveFileName)
 	var prevUnlocked = ini_read_real("ChefTasks", arg0, false)
 	ini_write_real("ChefTasks", arg0, 1)
-	ini_close()
+	fixed_ini_close()
 	obj_hudManager.saveAlpha = 10
 	
 	if (!prevUnlocked)
@@ -68,7 +68,7 @@ function scr_award_palette(arg0, arg1)
 	ini_open("optionData.ini")
 	var prevUnlocked = ini_read_real("Palettes", arg0, false)
 	ini_write_real("Palettes", arg0, 1)
-	ini_close()
+	fixed_ini_close()
 	obj_hudManager.saveAlpha = 10
 	
 	if (!prevUnlocked)
@@ -179,13 +179,13 @@ function scr_get_palettes(arg0 = true)
 	{
 		ini_open(global.SaveFileName)
 		var judge = ini_read_string("Game", "Judgment", "none")
-		ini_close()
+		fixed_ini_close()
 		return judge != "none";
 	}), new OutfitTask("palette_PZ_exhibitionbraingold", Characters.Pizzelle, ConditionType.OnCheck, function()
 	{
 		ini_open(global.SaveFileName)
 		var judge = ini_read_string("Game", "Judgment", "none")
-		ini_close()
+		fixed_ini_close()
 		return judge == "perfect" || judge == "holyshit";
 	}), new OutfitTask("palette_PZ_exhibitionpaper", Characters.Pizzelle, ConditionType.InLevel, function()
 	{
@@ -243,7 +243,7 @@ function scr_get_palettes(arg0 = true)
 		{
 			return !ini_read_real("Palettes", arg0.taskKey, false);
 		})
-		ini_close()
+		fixed_ini_close()
 		obj_achievementTracker.activeExhibitionNightSecretTasks = _palettes
 	}
 	
@@ -464,7 +464,7 @@ function scr_get_chef_tasks(arg0, arg1 = true)
 					}
 				}
 				
-				ini_close()
+				fixed_ini_close()
 				return res;
 			}).setPersistent(true)
 			tasks[1] = new ChefTask("task_en_all_p", ConditionType.EndLevel, spr_bakertasks_en_ranks, 1, function()
@@ -485,7 +485,7 @@ function scr_get_chef_tasks(arg0, arg1 = true)
 					}
 				}
 				
-				ini_close()
+				fixed_ini_close()
 				return res;
 			}).setPersistent(true)
 			break
@@ -506,7 +506,7 @@ function scr_get_chef_tasks(arg0, arg1 = true)
 			}
 		}
 		
-		ini_close()
+		fixed_ini_close()
 	}
 	
 	return tasks;

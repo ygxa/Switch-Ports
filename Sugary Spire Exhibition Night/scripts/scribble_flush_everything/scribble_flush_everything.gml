@@ -7,7 +7,7 @@ function scribble_flush_everything()
 {
     if (__SCRIBBLE_DEBUG) __scribble_trace("Flushing everything");
     
-    with(__scribble_initialize().__cache_state)
+    with(__scribble_get_cache_state())
     {
         //Flush elements
         var _i = 0;
@@ -27,6 +27,7 @@ function scribble_flush_everything()
             vertex_delete_buffer(__gc_vbuff_ids[_i]);
             ++_i;
         }
+        
         if (__SCRIBBLE_DEBUG) __scribble_trace("Clearing vertex buffer cache");
         array_resize(__gc_vbuff_refs, 0);
         array_resize(__gc_vbuff_ids,  0);
