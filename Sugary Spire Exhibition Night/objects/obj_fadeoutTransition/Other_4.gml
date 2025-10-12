@@ -10,3 +10,4 @@ if (obj_parent_player.state == PlayerState.titlescreen)
 	obj_parent_player.state = PlayerState.taunt
 	obj_parent_player.sprite_index = spr_player_PZ_freeFallSpin
 }
+

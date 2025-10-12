@@ -63,4 +63,4 @@ if (load_finished)
 }
 
 if (!load_finished && titleCard && !fadein)
-	fadealpha = 0
+	fadealpha = 0 

@@ -25,4 +25,3 @@ else
 alarm[0] = 5
 alarm[2] = 2
 depth = -998
-
