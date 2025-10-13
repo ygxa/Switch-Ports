@@ -8,6 +8,8 @@ A repository containing ports of GameMaker games for the Nintendo Switch.
 | Game | Progress info |
 | ------------- | ------------- |
 | Sugary Spire Exhibition Night | 50% done. 60 fps (maybe) 90% of the time, slows down after fadeouts. needs sounds implemented. Besides that fully playable|
+| Pizza Tower Sage 19 Plus | 30% done. 20 fps on hardware, needs sounds implemented, screen size broken|
+| Sugary Spire United | 40% done. 60 fps, crashes after titlescreen and on 3rd menu option on switch|
 
 
 currently being thought of:
@@ -26,7 +28,7 @@ Before we start, here's what you need to download
 
 [RussellNX](https://download1590.mediafire.com/hmkhiqsh3gmgGQ2mU_BBWDSPGK1J-KjgHppkmEJAt8CBQCy1_dSemVw8TKuOfxSoO7TS3cs461k6NwA7zohTWNaI3Tk-J6ARZNGfmmMWW2SrAMpCC8VX2u0JjExY6pyu_u4RS79QShUbXGoMRvK7qd6ZAUbh-TFbm5cIAuJ9F03ZRA/14u0aabz3oligjk/RussellNX.zip) — Tool to compile games for Switch ([more info here](https://gbatemp.net/threads/play-port-your-gamemaker-games-on-nintendoswitch.519660/))
 
-[Brain](https://static.wikia.nocookie.net/nicos-nextbots-fanmade/images/c/c7/Dance.gif.gif/revision/latest?cb=20230512180735) — Heavily required for thinking
+[Brain](https://i.ytimg.com/vi/WtO3AHMBePY/mqdefault.jpg) — Heavily required for thinking
 
 ### Step 2. gamemaker
 First install (or i recommend extracting the installer with 7zip) and open GameMaker. to test if GameMakers working, make a new project and place a simple sprite in the screen and test the project. if it works, congrats! move on to the next step. else if the output stays gray, check you are using the right runtime.
