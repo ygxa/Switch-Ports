@@ -7,7 +7,7 @@ A repository containing ports of GameMaker games for the Nintendo Switch.
 ## Current Progress
 | Game | Progress info |
 | ------------- | ------------- |
-| Sugary Spire Exhibition Night | 80% done. 60 fps 75% of the time. Needs more optimization for v1 switches, more sounds implemented, and achievement menu text fixed up. Besides that fully playable and can be completed to 100%|
+| Sugary Spire Exhibition Night | 50% done. 60 fps (maybe) 90% of the time, slows down after fadeouts. needs sounds implemented. Besides that fully playable|
 
 
 currently being thought of:
