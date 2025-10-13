@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"distance_to_pos",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"distance_to_pos",
+  "parent":{
+    "name":"Utilities",
+    "path":"folders/Scripts/Utilities.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

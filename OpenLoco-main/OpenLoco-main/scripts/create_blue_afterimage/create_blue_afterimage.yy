@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"create_blue_afterimage",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"create_blue_afterimage",
+  "parent":{
+    "name":"Visual",
+    "path":"folders/Scripts/Utilities/Visual.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

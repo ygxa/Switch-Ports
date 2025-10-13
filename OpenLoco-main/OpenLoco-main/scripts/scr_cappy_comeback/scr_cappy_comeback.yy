@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_cappy_comeback",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_cappy_comeback",
+  "parent":{
+    "name":"Cappy",
+    "path":"folders/Scripts/Player/Cappy.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

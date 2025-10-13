@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"baddie_pummel",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"baddie_pummel",
+  "parent":{
+    "name":"Enemies",
+    "path":"folders/Scripts/Enemies.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

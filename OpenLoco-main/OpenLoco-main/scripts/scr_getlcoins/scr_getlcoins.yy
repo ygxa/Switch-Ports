@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_getlcoins",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_getlcoins",
+  "parent":{
+    "name":"Saving",
+    "path":"folders/Scripts/Utilities/Saving.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

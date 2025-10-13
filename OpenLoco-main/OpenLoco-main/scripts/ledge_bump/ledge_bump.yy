@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"ledge_bump",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"ledge_bump",
+  "parent":{
+    "name":"Collision",
+    "path":"folders/Scripts/Collision.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

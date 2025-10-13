@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"reset_blendmode",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"reset_blendmode",
+  "parent":{
+    "name":"Visual",
+    "path":"folders/Scripts/Utilities/Visual.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

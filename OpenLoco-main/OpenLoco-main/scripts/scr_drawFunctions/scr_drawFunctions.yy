@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_drawFunctions",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_drawFunctions",
+  "parent":{
+    "name":"Visual",
+    "path":"folders/Scripts/Utilities/Visual.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

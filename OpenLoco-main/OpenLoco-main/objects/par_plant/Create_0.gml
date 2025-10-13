@@ -1,0 +1,15 @@
+image_speed = 0.35;
+scr_collision_init();
+grav = 0.3;
+state = states.normal;
+substate = states.normal;
+grabber = noone;
+xscale_mult = 1;
+yscale_mult = 1;
+longRangeDistance = 400;
+shortRangeDistance = 100;
+attack_func = noone;
+step_func = noone;
+attack_cooldown = 0;
+zombie_inst = noone;
+grabbable = true;

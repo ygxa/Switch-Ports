@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"bbox_in_camera",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"bbox_in_camera",
+  "parent":{
+    "name":"Visual",
+    "path":"folders/Scripts/Utilities/Visual.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
