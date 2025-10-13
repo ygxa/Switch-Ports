@@ -1,0 +1,1 @@
+scr_sound(sfx_thunderstruck)

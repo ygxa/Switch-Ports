@@ -1,0 +1,1 @@
+audio_stop_sound(obj_player.sfx_lapbell)
