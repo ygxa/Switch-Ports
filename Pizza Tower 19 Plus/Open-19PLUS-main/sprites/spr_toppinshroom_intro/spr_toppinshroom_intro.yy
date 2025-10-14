@@ -60,7 +60,7 @@
   "origin": 4,
   "parent": {
     "name": "Mushroom",
-    "path": "folders/Sprites/Level Structure/Collectibles/Toppins/Mushroom.yy",
+    "path": "folders/Sprites/Backgrounds & Decorations/Level Structure/Collectibles/Toppins/Mushroom.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

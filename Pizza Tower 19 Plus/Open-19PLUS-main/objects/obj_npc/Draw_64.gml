@@ -26,7 +26,7 @@ if (!surface_exists(nameboxsurf))
 
 surface_set_target(nameboxsurf);
 draw_clear_alpha(c_black, 0);
-draw_sprite_ext(spr_npcnamebox, 0, surface_get_width(nameboxsurf) / 2, surface_get_height(nameboxsurf) / 2, _nameboxscale, _nameboxscale, nameboxrot, _char[1], 1);
+draw_sprite_ext(spr_npcnamebox, 0, surface_get_width(nameboxsurf) / 2, surface_get_height(nameboxsurf) / 2, _nameboxscale, _nameboxscale, nameboxrot, #786898, 1);
 surface_reset_target();
 var _yoff = (get_game_height() - 540) / 2;
 var _bubblex = 480;
@@ -64,8 +64,8 @@ draw_set_valign(fa_middle);
 draw_set_halign(fa_left);
 draw_set_font(global.npcnamefont);
 draw_set_colour(c_white);
-var _charnamex = tween(-string_width(_char[0]), _nameboxx - 85, nameslideanim, EASE_OUT_BACK);
-__draw_text_hook(_charnamex, _nameboxy, _char[0]);
+var _charnamex = tween(-string_width("Peppino"), _nameboxx - 85, nameslideanim, EASE_OUT_BACK);
+__draw_text_hook(_charnamex, _nameboxy, "Peppino");
 draw_set_font(font_dialogue);
 var _str = string_wordwrap_width(scenario.lines[currentline].dialogue, 636, "\n", false);
 
@@ -73,7 +73,7 @@ if (ceil(currentchar) >= string_length(_str) && 2)
 {
     nextbuttonind += 0.035;
     nextbuttonind %= sprite_get_number(spr_npcnextbutton);
-    draw_sprite_ext(spr_npcnextbg, 0, 822, _yoff + 501, 1, 1, 0, _char[1], 1);
+    draw_sprite_ext(spr_npcnextbg, 0, 822, _yoff + 501, 1, 1, 0, #786898, 1);
     draw_sprite_ext(spr_npcnextbutton, nextbuttonind, 822, _yoff + 501, 1, 1, 0, c_white, 1);
 }
 else

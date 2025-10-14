@@ -50,7 +50,7 @@
   "origin": 0,
   "parent": {
     "name": "Doors",
-    "path": "folders/Sprites/Level Structure/Doors.yy",
+    "path": "folders/Sprites/Backgrounds & Decorations/Level Structure/Doors.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

@@ -51,7 +51,7 @@
   "origin": 4,
   "parent": {
     "name": "Ancient Cheese",
-    "path": "folders/Sprites/Level Structure/Hub Gates/Ancient Cheese.yy",
+    "path": "folders/Sprites/Backgrounds & Decorations/Level Structure/Hub Gates/Ancient Cheese.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

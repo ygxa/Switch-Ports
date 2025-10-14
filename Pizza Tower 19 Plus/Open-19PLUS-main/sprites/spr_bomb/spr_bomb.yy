@@ -60,7 +60,7 @@
   "origin": 4,
   "parent": {
     "name": "Misc.",
-    "path": "folders/Sprites/Level Structure/Misc..yy",
+    "path": "folders/Sprites/Backgrounds & Decorations/Level Structure/Misc..yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

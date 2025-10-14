@@ -51,7 +51,7 @@
   "origin": 0,
   "parent": {
     "name": "BloodSauce Dungeon",
-    "path": "folders/Sprites/Level Structure/Cowboy Tasks/BloodSauce Dungeon.yy",
+    "path": "folders/Sprites/Backgrounds & Decorations/Level Structure/Cowboy Tasks/BloodSauce Dungeon.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

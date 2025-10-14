@@ -55,7 +55,7 @@
   "origin": 4,
   "parent": {
     "name": "Treasure",
-    "path": "folders/Sprites/Level Structure/Treasure.yy",
+    "path": "folders/Sprites/Backgrounds & Decorations/Level Structure/Treasure.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

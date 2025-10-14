@@ -61,7 +61,7 @@
   "origin": 4,
   "parent": {
     "name": "Pineapple",
-    "path": "folders/Sprites/Level Structure/Collectibles/Toppins/Pineapple.yy",
+    "path": "folders/Sprites/Backgrounds & Decorations/Level Structure/Collectibles/Toppins/Pineapple.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

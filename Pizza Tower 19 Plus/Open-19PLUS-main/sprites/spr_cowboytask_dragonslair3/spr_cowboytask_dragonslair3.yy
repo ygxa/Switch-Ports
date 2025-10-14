@@ -51,7 +51,7 @@
   "origin": 0,
   "parent": {
     "name": "Dragon's Lair",
-    "path": "folders/Sprites/Level Structure/Cowboy Tasks/Dragon's Lair.yy",
+    "path": "folders/Sprites/Backgrounds & Decorations/Level Structure/Cowboy Tasks/Dragon's Lair.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

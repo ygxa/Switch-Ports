@@ -50,7 +50,7 @@
   "origin": 0,
   "parent": {
     "name": "Pillar John",
-    "path": "folders/Sprites/Level Structure/Pillar John.yy",
+    "path": "folders/Sprites/Backgrounds & Decorations/Level Structure/Pillar John.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

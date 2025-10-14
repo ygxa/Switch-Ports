@@ -66,7 +66,7 @@
   "origin": 0,
   "parent": {
     "name": "Time Trial",
-    "path": "folders/Sprites/Level Structure/Time Trial.yy",
+    "path": "folders/Sprites/Backgrounds & Decorations/Level Structure/Time Trial.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

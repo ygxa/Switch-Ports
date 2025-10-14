@@ -5,7 +5,7 @@ if (!soundsetup)
     for (var i = 0; i < array_length(scenario.characters); i++)
     {
         var _charid = scenario.characters[i];
-        var _charev = array_get(self.get_char(_charid), 2);
+        var _charev = "event:/sfx/npc/peppino"
         sounds[? _charid] = event_instance(_charev);
     }
 }

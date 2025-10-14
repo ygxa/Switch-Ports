@@ -59,7 +59,7 @@
   "origin": 4,
   "parent": {
     "name": "Priest",
-    "path": "folders/Sprites/Level Structure/Priest.yy",
+    "path": "folders/Sprites/Backgrounds & Decorations/Level Structure/Priest.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

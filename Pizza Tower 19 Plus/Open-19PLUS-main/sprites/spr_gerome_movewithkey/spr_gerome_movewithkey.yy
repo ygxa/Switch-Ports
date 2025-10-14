@@ -52,7 +52,7 @@
   "origin": 4,
   "parent": {
     "name": "Gerome",
-    "path": "folders/Sprites/Level Structure/Gerome.yy",
+    "path": "folders/Sprites/Backgrounds & Decorations/Level Structure/Gerome.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

@@ -51,7 +51,7 @@
   "origin": 4,
   "parent": {
     "name": "Dragon's Lair",
-    "path": "folders/Sprites/Level Structure/Hub Gates/Dragon's Lair.yy",
+    "path": "folders/Sprites/Backgrounds & Decorations/Level Structure/Hub Gates/Dragon's Lair.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

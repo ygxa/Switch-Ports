@@ -59,7 +59,7 @@
   "origin": 4,
   "parent": {
     "name": "Secret Portals",
-    "path": "folders/Sprites/Level Structure/Secret Portals.yy",
+    "path": "folders/Sprites/Backgrounds & Decorations/Level Structure/Secret Portals.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

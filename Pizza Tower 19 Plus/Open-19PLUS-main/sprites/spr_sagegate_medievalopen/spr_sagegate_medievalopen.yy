@@ -50,7 +50,7 @@
   "origin": 4,
   "parent": {
     "name": "Pizzascape",
-    "path": "folders/Sprites/Level Structure/Hub Gates/Pizzascape.yy",
+    "path": "folders/Sprites/Backgrounds & Decorations/Level Structure/Hub Gates/Pizzascape.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

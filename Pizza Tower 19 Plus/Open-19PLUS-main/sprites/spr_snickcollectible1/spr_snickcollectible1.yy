@@ -52,7 +52,7 @@
   "origin": 0,
   "parent": {
     "name": "Snick",
-    "path": "folders/Sprites/Level Structure/Collectibles/Snick.yy",
+    "path": "folders/Sprites/Backgrounds & Decorations/Level Structure/Collectibles/Snick.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

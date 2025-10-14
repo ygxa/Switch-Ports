@@ -50,7 +50,7 @@
   "origin": 9,
   "parent": {
     "name": "Key",
-    "path": "folders/Sprites/Level Structure/Key.yy",
+    "path": "folders/Sprites/Backgrounds & Decorations/Level Structure/Key.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

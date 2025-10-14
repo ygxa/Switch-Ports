@@ -60,7 +60,7 @@
   "origin": 4,
   "parent": {
     "name": "Tomato",
-    "path": "folders/Sprites/Level Structure/Collectibles/Toppins/Tomato.yy",
+    "path": "folders/Sprites/Backgrounds & Decorations/Level Structure/Collectibles/Toppins/Tomato.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

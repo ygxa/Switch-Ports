@@ -65,7 +65,7 @@
   "origin": 4,
   "parent": {
     "name": "Collectibles",
-    "path": "folders/Sprites/Level Structure/Collectibles.yy",
+    "path": "folders/Sprites/Backgrounds & Decorations/Level Structure/Collectibles.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

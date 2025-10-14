@@ -50,7 +50,7 @@
   "origin": 4,
   "parent": {
     "name": "BloodSauce Dungeon",
-    "path": "folders/Sprites/Level Structure/Hub Gates/BloodSauce Dungeon.yy",
+    "path": "folders/Sprites/Backgrounds & Decorations/Level Structure/Hub Gates/BloodSauce Dungeon.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

@@ -51,7 +51,7 @@
   "origin": 0,
   "parent": {
     "name": "PizzaScape",
-    "path": "folders/Sprites/Level Structure/Cowboy Tasks/PizzaScape.yy",
+    "path": "folders/Sprites/Backgrounds & Decorations/Level Structure/Cowboy Tasks/PizzaScape.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

@@ -52,7 +52,7 @@
   "origin": 9,
   "parent": {
     "name": "Launch Presentbox",
-    "path": "folders/Sprites/Level Structure/Launch Presentbox.yy",
+    "path": "folders/Sprites/Backgrounds & Decorations/Level Structure/Launch Presentbox.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

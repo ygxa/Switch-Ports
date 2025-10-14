@@ -61,7 +61,7 @@
   "origin": 4,
   "parent": {
     "name": "Sausage",
-    "path": "folders/Sprites/Level Structure/Collectibles/Toppins/Sausage.yy",
+    "path": "folders/Sprites/Backgrounds & Decorations/Level Structure/Collectibles/Toppins/Sausage.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

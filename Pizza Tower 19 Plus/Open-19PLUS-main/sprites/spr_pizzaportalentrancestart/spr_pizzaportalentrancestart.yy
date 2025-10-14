@@ -61,7 +61,7 @@
   "origin": 4,
   "parent": {
     "name": "Lap 2 Portal",
-    "path": "folders/Sprites/Level Structure/Lap 2 Portal.yy",
+    "path": "folders/Sprites/Backgrounds & Decorations/Level Structure/Lap 2 Portal.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

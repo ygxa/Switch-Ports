@@ -50,7 +50,7 @@
   "origin": 4,
   "parent": {
     "name": "Pizzacutter",
-    "path": "folders/Sprites/Level Structure/Pizzacutter.yy",
+    "path": "folders/Sprites/Backgrounds & Decorations/Level Structure/Pizzacutter.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

@@ -51,7 +51,7 @@
   "origin": 0,
   "parent": {
     "name": "Cowboy Tasks",
-    "path": "folders/Sprites/Level Structure/Cowboy Tasks.yy",
+    "path": "folders/Sprites/Backgrounds & Decorations/Level Structure/Cowboy Tasks.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

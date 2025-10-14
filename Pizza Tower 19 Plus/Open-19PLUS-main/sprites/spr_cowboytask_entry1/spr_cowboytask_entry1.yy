@@ -51,7 +51,7 @@
   "origin": 0,
   "parent": {
     "name": "Archaic Entry",
-    "path": "folders/Sprites/Level Structure/Cowboy Tasks/Archaic Entry.yy",
+    "path": "folders/Sprites/Backgrounds & Decorations/Level Structure/Cowboy Tasks/Archaic Entry.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

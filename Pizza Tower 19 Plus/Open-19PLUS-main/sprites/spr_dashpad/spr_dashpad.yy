@@ -52,7 +52,7 @@
   "origin": 4,
   "parent": {
     "name": "Level Structure",
-    "path": "folders/Sprites/Level Structure.yy",
+    "path": "folders/Sprites/Backgrounds & Decorations/Level Structure.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

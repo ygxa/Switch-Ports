@@ -50,7 +50,7 @@
   "origin": 0,
   "parent": {
     "name": "Pizzamart",
-    "path": "folders/Sprites/Level Structure/Pizzamart.yy",
+    "path": "folders/Sprites/Backgrounds & Decorations/Level Structure/Pizzamart.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

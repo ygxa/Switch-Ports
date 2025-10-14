@@ -59,7 +59,7 @@
   "origin": 9,
   "parent": {
     "name": "Destroyables",
-    "path": "folders/Sprites/Level Structure/Destroyables.yy",
+    "path": "folders/Sprites/Backgrounds & Decorations/Level Structure/Destroyables.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

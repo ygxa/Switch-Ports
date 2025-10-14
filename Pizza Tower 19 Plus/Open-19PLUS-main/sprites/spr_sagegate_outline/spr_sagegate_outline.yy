@@ -50,7 +50,7 @@
   "origin": 4,
   "parent": {
     "name": "Hub Gates",
-    "path": "folders/Sprites/Level Structure/Hub Gates.yy",
+    "path": "folders/Sprites/Backgrounds & Decorations/Level Structure/Hub Gates.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

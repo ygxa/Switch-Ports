@@ -52,7 +52,7 @@
   "origin": 0,
   "parent": {
     "name": "Rat Block",
-    "path": "folders/Sprites/Level Structure/Destroyables/Rat Block.yy",
+    "path": "folders/Sprites/Backgrounds & Decorations/Level Structure/Destroyables/Rat Block.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

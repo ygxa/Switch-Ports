@@ -56,7 +56,7 @@
   "origin": 9,
   "parent": {
     "name": "Cheese Blocks",
-    "path": "folders/Sprites/Level Structure/Cheese Blocks.yy",
+    "path": "folders/Sprites/Backgrounds & Decorations/Level Structure/Cheese Blocks.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {
