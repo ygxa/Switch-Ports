@@ -20,13 +20,6 @@ var _viewx = (windowwidth / 2) - ((global.currentres[0] * appscalex) / 2);
 var _viewy = (windowheight / 2) - ((global.currentres[1] * appscaley) / 2);
 var _vieww = surface_get_width(finalsurf) * appscalex;
 var _viewh = surface_get_height(finalsurf) * appscaley;
-var _borderspr = global.borders[global.border];
-
-if (_borderspr != -1)
-{
-    draw_sprite_tiled(_borderspr, 0, 0, 0);
-    draw_sprite_stretched_ext(spr_1x1, 0, _viewx - 2, _viewy - 2, _vieww + 4, _viewh + 4, c_black, 1);
-}
 
 if ((frac(appscalex) > 0 || frac(appscaley) > 0) && global.antialiasing)
     gpu_set_texfilter(true);

@@ -122,11 +122,8 @@ function reset_aspectratio()
     camera_set_view_size(view_camera[1], _width3, _height3);
     surface_resize(application_surface, _width2, _height2);
     
-    if (global.fullscreen == 0)
-    {
-        window_set_size(_width2, _height2);
-        window_center();
-    }
+    window_set_size(_width2, _height2);
+    window_center();
     
     display_reset(0, global.vsync);
 }

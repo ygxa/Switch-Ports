@@ -41,29 +41,12 @@ if (file_exists("optionsData.json"))
 #endregion
 #region Set Config Values
 
-global.borders = 
-[
-	-1, 
-	bg_entry4, 
-	bg_medievallibrairy1, 
-	bg_ruinmerged, 
-	bg_dungeontomato, 
-	bg_90s, 
-	bg_genesis, 
-	bg_steam
-];
-
 // is needed cuz yeah
 global.maxscreenwidth = 1280;
 global.maxscreenheight = 720;
 
 global.currentres = [1280, 720];// perfect resolution for switch
 global.currentinternalres = [960, 540];// internal res, so dont change
-
-// settings that will probably be removed
-global.scalemode = config_get_option("Video", "scalemode", scaletype.fit);
-global.fullscreen = config_get_option("Video", "fullscreen", false);
-global.border = config_get_option("Video", "border", 0);
 
 global.antialiasing = config_get_option("Video", "antialiasing", false);
 global.vsync = config_get_option("Video", "vsync", false);
