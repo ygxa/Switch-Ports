@@ -33,20 +33,41 @@ Before we start, here's what you need to download
 ### Step 2. gamemaker
 First install (or i recommend extracting the installer with 7zip) and open GameMaker. to test if GameMakers working, make a new project and place a simple sprite in the screen and test the project. if it works, congrats! move on to the next step. else if the output stays gray, check you are using the right runtime.
 
-### Step 2. Compile the switch nsp
+### Step 3. Compile the switch nsp
 now extract the RussellNX file we downloaded and open the exe. once opened for the first time it will complain about the runtime, ignore it and click ok. then click your prod.keys file (which can be obtained from lockpick rcm or you can venture the seven seas to find them). once done you will be greeted with a menu which is fairly simple so i wont provide that in depth instructions. click the 3 dots next to "No Project!" and select the new project we made earlier. then click the drop down menu next to the runtime version text and select the 2023.2.0.87 runtime, no other runtime will work. then click "Build .NSP!" once complete it should output an nsp and show you in a new window. install it on your switch and it should work!
 
 quick note: once you use a title id, trying to change any setting besides project settings will show the same on switch from the first install. if you wanna change the title id, make sure no other game is using it. just google the title id and if no switch games appear your good! (some title ids examples: 01dfc1683e460000, 01b8b181f4bb0000, 016c7bbe06c00000)
 
-## Contributions 
-you wanna help! good golly thank you!
+## Issues!!!!!
 
-stuff:
+### ** My Game Isn't saving**
+Add this:
+```gml
+function fixed_ini_close(){
+	ini_close();
+	
+	if os_type = os_switch
+		switch_save_data_commit();
+}
+```
+and replace all ini_close() with fixed_ini_close()
 
-Mods can not be added unless approved by me and the creator of the mod.
 
-its recommended to fix issues in the read me's Current Progress table, although fixes or additions of any kind are allowed.
+### **Switch crashes but pc doesn't**
+look for extentions like gameframe, and nekopressence/discord rich pressence. those two cause crashes on pc.
 
-## Suggestions
+
+### **My Fmod doesn't work!**
+As of right now, fmod can't work with the current runtime so your out of luck
+
+
+### **[[Blank]] Gamemaker function doesn't exist?**
+unsurprisingly, older versions don't have some features. crazy i know. you have to reimplement these by hand with your own custom functions that do the same thing.
+
+
+### **My video isn't working!**
+I'll write this up later, but it is possble through some shader stuff
+
+## **Suggestions**
 On the discord you can suggest games to add in the sugestion thread as long as they are made in gamemaker and are compiled in vm or have the source code public. ycc compiled projects without source code will be rejected.
 
