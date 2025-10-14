@@ -39,7 +39,7 @@ if (countdown < 50)
 
 var _destructibles = [obj_bombblock, obj_ratblock];
 
-if (countdown == 0 || place_meeting(x + 1, y, _destructibles) || place_meeting(x - 1, y, _destructibles) || place_meeting(x, y - 1, _destructibles) || place_meeting(x, y + 1, _destructibles))
+if (countdown == 0 || place_meeting(x + 1, y, obj_bombblock) || place_meeting(x - 1, y, obj_bombblock) || place_meeting(x, y - 1, obj_bombblock) || place_meeting(x, y + 1, obj_bombblock) || place_meeting(x + 1, y, obj_ratblock) || place_meeting(x - 1, y, obj_ratblock) || place_meeting(x, y - 1, obj_ratblock) || place_meeting(x, y + 1, obj_ratblock))
 {
     with (instance_create_depth(x, y, 0, obj_bombexplosion))
         bygoblin = other.goblinbomb;
