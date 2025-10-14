@@ -1,6 +1,6 @@
 # ![Super Bo Noise](https://files.catbox.moe/hwr9hi.png)
 
-This project is a **decompilation of Super Bo Noise v1.1.1.1.1.1.1.1.1.1** created by **ygxa**.  
+This project is a **decompilation of Super Bo Noise v1.1.1.1.1.1.1.1.1.1**.  
 
 This version has been adapted for a **port to the Nintendo Switch**.  
 
