@@ -49,8 +49,8 @@
   },
   "origin": 0,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Unused",
+    "path": "folders/Tilesets/Unused.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

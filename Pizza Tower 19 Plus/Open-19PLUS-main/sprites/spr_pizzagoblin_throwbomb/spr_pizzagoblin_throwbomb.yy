@@ -67,8 +67,8 @@
   },
   "origin": 9,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Pizza Box Goblin",
+    "path": "folders/Sprites/Baddies/Enemies/Pizza Box Goblin.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

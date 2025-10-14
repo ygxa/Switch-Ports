@@ -49,8 +49,8 @@
   },
   "origin": 4,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Empty",
+    "path": "folders/Sprites/Player/Peppino/Transformations/Knight/Empty.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

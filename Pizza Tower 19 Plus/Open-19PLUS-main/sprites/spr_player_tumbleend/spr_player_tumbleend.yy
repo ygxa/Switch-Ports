@@ -58,8 +58,8 @@
   },
   "origin": 4,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Ball",
+    "path": "folders/Sprites/Player/Peppino/Transformations/Ball.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

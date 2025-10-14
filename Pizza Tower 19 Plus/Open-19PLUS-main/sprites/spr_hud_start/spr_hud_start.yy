@@ -64,8 +64,8 @@
   },
   "origin": 4,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "TV",
+    "path": "folders/Sprites/HUD/TV.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

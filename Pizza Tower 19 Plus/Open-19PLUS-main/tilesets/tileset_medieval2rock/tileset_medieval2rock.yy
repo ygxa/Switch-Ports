@@ -12,8 +12,8 @@
   "out_tilehborder": 2,
   "out_tilevborder": 2,
   "parent": {
-    "name": "Tile Sets",
-    "path": "folders/Tile Sets.yy",
+    "name": "Pizzascape",
+    "path": "folders/Tilesets/Levels/Pizzascape.yy",
   },
   "spriteId": {
     "name": "_decompiled_tileset_medieval2rock",

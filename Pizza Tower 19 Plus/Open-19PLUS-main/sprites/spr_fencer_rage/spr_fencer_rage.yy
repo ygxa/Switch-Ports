@@ -62,8 +62,8 @@
   },
   "origin": 9,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Pencer",
+    "path": "folders/Sprites/Baddies/Enemies/Pencer.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

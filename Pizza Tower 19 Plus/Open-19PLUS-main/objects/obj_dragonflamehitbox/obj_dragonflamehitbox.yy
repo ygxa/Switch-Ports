@@ -6,8 +6,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "Dragon's Lair",
+    "path": "folders/Objects/Baddie/Dragon's Lair.yy",
   },
   "parentObjectId": null,
   "persistent": false,

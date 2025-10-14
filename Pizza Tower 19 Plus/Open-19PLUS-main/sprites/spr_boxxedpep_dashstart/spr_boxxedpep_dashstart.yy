@@ -53,8 +53,8 @@
   },
   "origin": 4,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Boxxed (Unused)",
+    "path": "folders/Sprites/Player/Peppino/Transformations/Boxxed (Unused).yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

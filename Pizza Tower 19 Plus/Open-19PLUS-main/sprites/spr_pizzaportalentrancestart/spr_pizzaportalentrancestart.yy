@@ -60,8 +60,8 @@
   },
   "origin": 4,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Lap 2 Portal",
+    "path": "folders/Sprites/Level Structure/Lap 2 Portal.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

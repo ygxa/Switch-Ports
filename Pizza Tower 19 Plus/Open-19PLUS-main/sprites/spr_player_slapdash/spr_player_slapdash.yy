@@ -56,8 +56,8 @@
   },
   "origin": 4,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Slap (Unused)",
+    "path": "folders/Sprites/Player/Peppino/Slap (Unused).yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

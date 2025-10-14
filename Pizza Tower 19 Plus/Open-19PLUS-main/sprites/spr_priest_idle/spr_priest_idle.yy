@@ -58,8 +58,8 @@
   },
   "origin": 4,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Priest",
+    "path": "folders/Sprites/Level Structure/Priest.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

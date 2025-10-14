@@ -49,8 +49,8 @@
   },
   "origin": 0,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Bloodsauce Dungeon",
+    "path": "folders/Sprites/Backgrounds & Decorations/Bloodsauce Dungeon.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

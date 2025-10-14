@@ -56,8 +56,8 @@
   },
   "origin": 4,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Collectibles",
+    "path": "folders/Sprites/Level Structure/Collectibles.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

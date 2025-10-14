@@ -10,8 +10,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "(System)",
+    "path": "folders/Scripts/Input/(System).yy",
   },
   "parentObjectId": null,
   "persistent": true,

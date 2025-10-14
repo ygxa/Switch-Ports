@@ -55,8 +55,8 @@
   },
   "origin": 9,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Weenie Squire",
+    "path": "folders/Sprites/Baddies/Enemies/Weenie Squire.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

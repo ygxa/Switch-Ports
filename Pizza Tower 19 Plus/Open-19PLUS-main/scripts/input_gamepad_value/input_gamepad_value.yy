@@ -5,7 +5,7 @@
   "isCompatibility": false,
   "isDnD": false,
   "parent": {
-    "name": "Scripts",
-    "path": "folders/Scripts.yy",
+    "name": "25  Gamepads (Direct)",
+    "path": "folders/Scripts/Input/25  Gamepads (Direct).yy",
   },
 }

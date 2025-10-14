@@ -5,7 +5,7 @@
   "isCompatibility": false,
   "isDnD": false,
   "parent": {
-    "name": "Scripts",
-    "path": "folders/Scripts.yy",
+    "name": "09  Cursor",
+    "path": "folders/Scripts/Input/09  Cursor.yy",
   },
 }

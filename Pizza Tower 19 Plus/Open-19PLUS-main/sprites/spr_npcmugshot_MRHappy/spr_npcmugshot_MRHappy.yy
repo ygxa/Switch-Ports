@@ -50,8 +50,8 @@
   },
   "origin": 4,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Mr Incognito",
+    "path": "folders/Sprites/NPCs/Mr Incognito.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

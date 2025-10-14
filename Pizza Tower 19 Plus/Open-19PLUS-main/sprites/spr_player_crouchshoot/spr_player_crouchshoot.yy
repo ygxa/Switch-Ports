@@ -57,8 +57,8 @@
   },
   "origin": 4,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "GOLF Revolver (Unused)",
+    "path": "folders/Sprites/Player/Peppino/GOLF Revolver (Unused).yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

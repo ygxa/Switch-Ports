@@ -49,8 +49,8 @@
   },
   "origin": 4,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Panic",
+    "path": "folders/Sprites/HUD/Panic.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

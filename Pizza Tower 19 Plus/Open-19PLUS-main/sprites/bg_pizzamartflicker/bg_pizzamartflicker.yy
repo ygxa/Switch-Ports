@@ -54,8 +54,8 @@
   },
   "origin": 0,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "PizzaMart",
+    "path": "folders/Sprites/Backgrounds & Decorations/PizzaMart.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

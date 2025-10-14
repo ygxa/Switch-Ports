@@ -59,8 +59,8 @@
   },
   "origin": 4,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Pineapple",
+    "path": "folders/Sprites/Level Structure/Collectibles/Toppins/Pineapple.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

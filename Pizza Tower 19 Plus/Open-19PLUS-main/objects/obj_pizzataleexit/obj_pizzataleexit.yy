@@ -10,8 +10,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "Warps",
+    "path": "folders/Objects/Level Structure/Doors/Warps.yy",
   },
   "parentObjectId": {
     "name": "obj_verticalhallway",

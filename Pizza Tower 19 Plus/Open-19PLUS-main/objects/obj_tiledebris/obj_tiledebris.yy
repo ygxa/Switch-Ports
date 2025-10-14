@@ -9,8 +9,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "Visual Effects & Particles",
+    "path": "folders/Objects/Visual Effects & Particles.yy",
   },
   "parentObjectId": {
     "name": "obj_debris",

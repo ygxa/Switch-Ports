@@ -10,8 +10,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "General",
+    "path": "folders/Objects/General.yy",
   },
   "parentObjectId": {
     "name": "obj_follower",

@@ -49,8 +49,8 @@
   },
   "origin": 9,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Badge Menu",
+    "path": "folders/Sprites/HUD/Menus/Badge Menu.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

@@ -51,8 +51,8 @@
   },
   "origin": 4,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Swedish Monkey",
+    "path": "folders/Sprites/Baddies/Enemies/Swedish Monkey.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

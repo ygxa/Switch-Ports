@@ -80,8 +80,8 @@
   },
   "origin": 4,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Firemouth",
+    "path": "folders/Sprites/Player/Peppino/Transformations/Firemouth.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

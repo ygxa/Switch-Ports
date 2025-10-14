@@ -59,8 +59,8 @@
   },
   "origin": 4,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Chainsaw (Unused)",
+    "path": "folders/Sprites/Player/Peppino/Chainsaw (Unused).yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

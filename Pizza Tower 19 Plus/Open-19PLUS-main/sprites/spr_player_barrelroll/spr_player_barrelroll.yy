@@ -56,8 +56,8 @@
   },
   "origin": 4,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Barrel (Unused)",
+    "path": "folders/Sprites/Player/Peppino/Transformations/Barrel (Unused).yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

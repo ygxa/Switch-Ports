@@ -51,8 +51,8 @@
   },
   "origin": 4,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Background Pillars",
+    "path": "folders/Sprites/Backgrounds & Decorations/Archaic Entry/Background Pillars.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

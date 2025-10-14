@@ -5,7 +5,7 @@
   "isCompatibility": false,
   "isDnD": false,
   "parent": {
-    "name": "Scripts",
-    "path": "folders/Scripts.yy",
+    "name": "21  Gyro & Motion",
+    "path": "folders/Scripts/Input/21  Gyro & Motion.yy",
   },
 }

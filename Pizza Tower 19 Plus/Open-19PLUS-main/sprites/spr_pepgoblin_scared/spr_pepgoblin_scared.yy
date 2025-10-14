@@ -53,8 +53,8 @@
   },
   "origin": 4,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Pepperoni Goblin",
+    "path": "folders/Sprites/Baddies/Enemies/Pepperoni Goblin.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

@@ -64,8 +64,8 @@
   },
   "origin": 4,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Main Menu",
+    "path": "folders/Sprites/HUD/Menus/Main Menu.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

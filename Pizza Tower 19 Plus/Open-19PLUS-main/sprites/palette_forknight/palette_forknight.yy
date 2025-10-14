@@ -49,8 +49,8 @@
   },
   "origin": 0,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Palettes",
+    "path": "folders/Sprites/Baddies/Palettes.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

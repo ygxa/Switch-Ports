@@ -5,7 +5,7 @@
   "isCompatibility": false,
   "isDnD": false,
   "parent": {
-    "name": "Scripts",
-    "path": "folders/Scripts.yy",
+    "name": "16  Profiles",
+    "path": "folders/Scripts/Input/16  Profiles.yy",
   },
 }

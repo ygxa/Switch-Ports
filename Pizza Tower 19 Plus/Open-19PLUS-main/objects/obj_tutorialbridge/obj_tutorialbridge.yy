@@ -11,8 +11,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "Main Menu",
+    "path": "folders/Objects/Level Structure/Main Menu.yy",
   },
   "parentObjectId": {
     "name": "obj_platform",

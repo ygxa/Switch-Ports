@@ -60,8 +60,8 @@
   },
   "origin": 4,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Sticky Cheese",
+    "path": "folders/Sprites/Player/Peppino/Transformations/Sticky Cheese.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

@@ -72,8 +72,8 @@
   },
   "origin": 9,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Peppino",
+    "path": "folders/Sprites/Player/Peppino.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

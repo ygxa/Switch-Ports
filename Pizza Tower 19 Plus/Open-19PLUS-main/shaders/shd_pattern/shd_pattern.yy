@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "shd_pattern",
   "parent": {
-    "name": "Shaders",
-    "path": "folders/Shaders.yy",
+    "name": "Palette and Pattern",
+    "path": "folders/Shaders/Palette and Pattern.yy",
   },
   "type": 1,
 }

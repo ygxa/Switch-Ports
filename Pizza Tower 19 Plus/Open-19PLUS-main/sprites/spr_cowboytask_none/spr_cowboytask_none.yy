@@ -50,8 +50,8 @@
   },
   "origin": 0,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Cowboy Tasks",
+    "path": "folders/Sprites/Level Structure/Cowboy Tasks.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

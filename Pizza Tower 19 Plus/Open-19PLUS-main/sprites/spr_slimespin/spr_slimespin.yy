@@ -49,8 +49,8 @@
   },
   "origin": 9,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Cheeseslime",
+    "path": "folders/Sprites/Baddies/Enemies/Cheeseslime.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

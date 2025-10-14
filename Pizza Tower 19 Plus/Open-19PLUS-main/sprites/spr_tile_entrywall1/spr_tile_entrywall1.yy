@@ -49,8 +49,8 @@
   },
   "origin": 0,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Fixed Sprites",
+    "path": "folders/Tilesets/Levels/Archaic Entry/Fixed Sprites.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

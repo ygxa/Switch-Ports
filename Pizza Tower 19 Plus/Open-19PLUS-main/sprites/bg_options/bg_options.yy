@@ -49,8 +49,8 @@
   },
   "origin": 0,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Backgrounds",
+    "path": "folders/Sprites/HUD/Menus/Options Menu/Backgrounds.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

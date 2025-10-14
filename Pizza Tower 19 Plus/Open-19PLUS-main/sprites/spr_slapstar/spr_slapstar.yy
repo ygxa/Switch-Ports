@@ -54,8 +54,8 @@
   },
   "origin": 9,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Visual Effects & Particles",
+    "path": "folders/Sprites/Visual Effects & Particles.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

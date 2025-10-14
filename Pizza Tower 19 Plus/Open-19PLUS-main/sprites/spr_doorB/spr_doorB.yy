@@ -49,8 +49,8 @@
   },
   "origin": 0,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Door Warps",
+    "path": "folders/Sprites/Debug/Door Warps.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

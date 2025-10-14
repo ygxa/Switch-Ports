@@ -10,8 +10,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "Toppins & Gerome",
+    "path": "folders/Objects/Level Structure/Toppins & Gerome.yy",
   },
   "parentObjectId": {
     "name": "obj_follower",

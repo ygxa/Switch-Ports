@@ -12,8 +12,8 @@
   "out_tilehborder": 2,
   "out_tilevborder": 2,
   "parent": {
-    "name": "Tile Sets",
-    "path": "folders/Tile Sets.yy",
+    "name": "Archaic Entry",
+    "path": "folders/Tilesets/Levels/Archaic Entry.yy",
   },
   "spriteId": {
     "name": "_decompiled_tileset_entry",

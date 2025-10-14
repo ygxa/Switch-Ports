@@ -49,8 +49,8 @@
   },
   "origin": 9,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Sliders",
+    "path": "folders/Sprites/HUD/Menus/Options Menu/Sliders.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

@@ -58,8 +58,8 @@
   },
   "origin": 9,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Cheese Blocks",
+    "path": "folders/Sprites/Level Structure/Cheese Blocks.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

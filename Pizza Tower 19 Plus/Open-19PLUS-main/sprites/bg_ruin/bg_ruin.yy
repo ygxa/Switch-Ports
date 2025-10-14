@@ -49,8 +49,8 @@
   },
   "origin": 0,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "The Ancient Cheese",
+    "path": "folders/Sprites/Backgrounds & Decorations/The Ancient Cheese.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {
