@@ -34,7 +34,7 @@ function get_file_percentage()
                 }
             }
             
-            ini_close();
+            fixed_ini_close();
             buffer_delete(_walletuncomp);
         }
         
@@ -49,7 +49,7 @@ function get_file_percentage()
         perc = floor(calc_perc());
     
     time = ini_read_real("GameProgress", "saveage", 0);
-    ini_close();
+    fixed_ini_close();
     
     for (var i = 0; i < array_length(global.levels); i++)
     {

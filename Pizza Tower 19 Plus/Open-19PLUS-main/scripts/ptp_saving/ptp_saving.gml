@@ -1,3 +1,12 @@
+// what do you think
+function fixed_ini_close()
+{
+	ini_close();
+	
+	if os_type = os_switch
+		switch_save_data_commit();
+}
+
 function get_savedir()
 {
     return "File1";
@@ -93,7 +102,7 @@ function save_dump(level_name = noone)
             buffer_async_group_begin(get_savedir());
             ini_open_from_string(savestr);
             ini_write_real("GameProgress", "saveage", global.savetime);
-            var _closedini = ini_close();
+            var _closedini = fixed_ini_close();
             savebuff = buffer_create(string_byte_length(_closedini) + 1, buffer_fixed, 1);
             buffer_write(savebuff, buffer_string, _closedini);
             buffer_save_async(savebuff, "saveData.save", 0, buffer_get_size(savebuff));
@@ -187,7 +196,7 @@ function save_open()
 
 function save_close()
 {
-    obj_savesystem.savestr = ini_close();
+    obj_savesystem.savestr = fixed_ini_close();
 }
 
 function get_savestate()
@@ -202,7 +211,7 @@ function wallet_open()
 
 function wallet_close()
 {
-    obj_savesystem.walletstr = ini_close();
+    obj_savesystem.walletstr = fixed_ini_close();
 }
 
 function wallet_writecoins(_level = -3)

@@ -1,10 +1,14 @@
+// GMS 2023.2 doesn't accept arrays like this
 //visible = !place_meeting(x, y, [obj_secretbigblock, obj_secretblock, obj_secretmetalblock]);
 
-if place_meeting(x,y,obj_secretbigblock) || place_meeting(x,y,obj_secretblock) || place_meeting(x,y,obj_secretmetalblock)
-	visible = false;
-	
-if !place_meeting(x,y,obj_secretbigblock) && !place_meeting(x,y,obj_secretblock) || place_meeting(x,y,obj_secretmetalblock)
-	visible = true;
+var isVis = true;
+var obj_arr = [obj_secretbigblock, obj_secretblock, obj_secretmetalblock];
+for (var i = 0; i < array_length(obj_arr); i++)
+{
+	if place_meeting(x, y, obj_arr[i])
+		isVis = false;
+}
+visible = isVis;
 
 if (active && sprite_index == spr_secretportal_close && !touched)
 {

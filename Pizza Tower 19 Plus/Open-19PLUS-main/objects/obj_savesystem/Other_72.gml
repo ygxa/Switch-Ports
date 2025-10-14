@@ -24,7 +24,7 @@ switch (savestate)
             ini_open_from_string(_ini);
             global.tutorialdone = ini_read_real("GameProgress", "tutorialdone", false);
             global.savetime = ini_read_real("GameProgress", "saveage", 0);
-            savestr = ini_close();
+            savestr = fixed_ini_close();
             achievements_load();
             buffer_delete(loadbuff);
             var _walletuncomp = buffer_decompress(walletloadbuff);
@@ -38,7 +38,7 @@ switch (savestate)
                 if (_walletver == 0)
                     wallet_readcoins();
                 
-                walletstr = ini_close();
+                walletstr = fixed_ini_close();
                 buffer_delete(_walletuncomp);
             }
             

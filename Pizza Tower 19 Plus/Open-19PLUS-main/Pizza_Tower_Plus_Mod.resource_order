@@ -2,12 +2,12 @@
   "FolderOrderSettings": [
     {"name":"Bloodsauce Dungeon","order":1,"path":"folders/Sprites/Backgrounds & Decorations/Bloodsauce Dungeon.yy",},
     {"name":"Dragon's Lair","order":2,"path":"folders/Sprites/Backgrounds & Decorations/Dragon's Lair.yy",},
+    {"name":"Level Structure","order":12,"path":"folders/Sprites/Backgrounds & Decorations/Level Structure.yy",},
     {"name":"Main Menu Room & Cutscene","order":3,"path":"folders/Sprites/Backgrounds & Decorations/Main Menu Room & Cutscene.yy",},
     {"name":"PizzaMart","order":4,"path":"folders/Sprites/Backgrounds & Decorations/PizzaMart.yy",},
     {"name":"Pizzascape","order":5,"path":"folders/Sprites/Backgrounds & Decorations/Pizzascape.yy",},
     {"name":"The Ancient Cheese","order":6,"path":"folders/Sprites/Backgrounds & Decorations/The Ancient Cheese.yy",},
     {"name":"Unused","order":7,"path":"folders/Sprites/Backgrounds & Decorations/Unused.yy",},
-    {"name":"Level Structure","order":12,"path":"folders/Sprites/Backgrounds & Decorations/Level Structure.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"input_binding_set_safe","order":322,"path":"scripts/input_binding_set_safe/input_binding_set_safe.yy",},

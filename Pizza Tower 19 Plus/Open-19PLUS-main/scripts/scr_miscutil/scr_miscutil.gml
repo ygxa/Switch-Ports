@@ -275,11 +275,15 @@ function fast_ray(_x1, _y1, _x2, _y2)
     static _il = global.instancelist;
     
     var _y = _y2;
+	
+	// GMS 2023.2 doesn't accept arrays like this
     //var _num = collision_rectangle_list(_x1, _y1, _x2, _y2, [obj_solid, obj_slope, (_y2 > _y1) ? obj_platform : noone], false, true, _il, true);
-    //    for (var _i = 0; _i < _num; _i++)
-    for (var _i = 0; _i < (collision_rectangle_list(_x1, _y1, _x2, _y2, obj_solid, false, true, _il, true) || 
-	collision_rectangle_list(_x1, _y1, _x2, _y2, obj_slope, false, true, _il, true) || 
-	_y2 > _y1 && collision_rectangle_list(_x1, _y1, _x2, _y2, obj_platform, false, true, _il, true) || _y2 <= _y1 && collision_rectangle_list(_x1, _y1, _x2, _y2, noone, false, true, _il, true)); _i++)
+	var _num = 0;
+	var obj_arr = [obj_solid, obj_slope, (_y2 > _y1) ? obj_platform : noone];
+	for (var i = 0; i < array_length(obj_arr); i++)
+		_num += collision_rectangle_list(_x1, _y1, _x2, _y2, obj_arr[i], false, true, _il, true);
+	
+    for (var _i = 0; _i < _num; _i++)
     {
         var _instance = _il[| _i];
         
