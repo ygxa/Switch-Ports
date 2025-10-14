@@ -1,4 +1,10 @@
-visible = !place_meeting(x, y, [obj_secretbigblock, obj_secretblock, obj_secretmetalblock]);
+//visible = !place_meeting(x, y, [obj_secretbigblock, obj_secretblock, obj_secretmetalblock]);
+
+if place_meeting(x,y,obj_secretbigblock) || place_meeting(x,y,obj_secretblock) || place_meeting(x,y,obj_secretmetalblock)
+	visible = false;
+	
+if !place_meeting(x,y,obj_secretbigblock) && !place_meeting(x,y,obj_secretblock) || place_meeting(x,y,obj_secretmetalblock)
+	visible = true;
 
 if (active && sprite_index == spr_secretportal_close && !touched)
 {
