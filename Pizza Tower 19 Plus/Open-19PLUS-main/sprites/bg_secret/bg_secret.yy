@@ -49,8 +49,8 @@
   },
   "origin": 0,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Backgrounds & Decorations",
+    "path": "folders/Sprites/Backgrounds & Decorations.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

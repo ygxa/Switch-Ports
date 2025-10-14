@@ -58,8 +58,8 @@
   },
   "origin": 4,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Time Trial Cutscenes",
+    "path": "folders/Sprites/HUD/Ranks/Time Trial Cutscenes.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

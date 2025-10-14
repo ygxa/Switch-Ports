@@ -11,8 +11,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "Time Trial",
+    "path": "folders/Objects/General/Time Trial.yy",
   },
   "parentObjectId": null,
   "persistent": true,

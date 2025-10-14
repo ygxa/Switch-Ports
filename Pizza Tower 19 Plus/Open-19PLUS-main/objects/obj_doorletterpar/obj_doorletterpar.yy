@@ -8,8 +8,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "Debug Doors",
+    "path": "folders/Objects/Level Structure/Doors/Debug Doors.yy",
   },
   "parentObjectId": null,
   "persistent": false,

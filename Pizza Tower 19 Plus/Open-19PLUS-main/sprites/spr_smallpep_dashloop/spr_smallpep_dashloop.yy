@@ -49,8 +49,8 @@
   },
   "origin": 4,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Small Pep (Blank)",
+    "path": "folders/Sprites/Player/Peppino/Transformations/Small Pep (Blank).yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

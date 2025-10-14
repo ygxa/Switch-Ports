@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "shd_hiddentile",
   "parent": {
-    "name": "Shaders",
-    "path": "folders/Shaders.yy",
+    "name": "Tiles",
+    "path": "folders/Shaders/Tiles.yy",
   },
   "type": 1,
 }

@@ -40,9 +40,6 @@ if (file_exists("optionsData.json"))
 }
 #endregion
 #region Set Config Values
-global.screensizes[0] = [[640, 480], [800, 600], [1024, 768], [1280, 960], [1600, 1200]];
-global.screensizes[1] = [[480, 270], [960, 540], [1280, 720], [1600, 900], [1920, 1080]];
-global.screensizes[2] = [[480, 300], [960, 600], [1366, 854], [1600, 1000], [1920, 1200]];
 
 global.borders = 
 [
@@ -56,25 +53,21 @@ global.borders =
 	bg_steam
 ];
 
-var _highestaspectratio = array_length(global.screensizes) - 1;
-global.maxscreenwidth = global.screensizes[_highestaspectratio][1][0];
-global.maxscreenheight = global.screensizes[_highestaspectratio][1][1];
+// is needed cuz yeah
+global.maxscreenwidth = 1280;
+global.maxscreenheight = 720;
 
-enum aspectratio
-{
-	res16_9 = 1,
-	res16_10 = 2
-}
+global.currentres = [1280, 720];// perfect resolution for switch
+global.currentinternalres = [960, 540];// internal res, so dont change
 
-global.resmode = config_get_option("Video", "resmode", aspectratio.res16_9);
-global.resnumb = config_get_option("Video", "resnumb", 1);
+// settings that will probably be removed
 global.scalemode = config_get_option("Video", "scalemode", scaletype.fit);
 global.fullscreen = config_get_option("Video", "fullscreen", false);
+global.border = config_get_option("Video", "border", 0);
+
 global.antialiasing = config_get_option("Video", "antialiasing", false);
 global.vsync = config_get_option("Video", "vsync", false);
-global.border = config_get_option("Video", "border", 0);
-global.currentres = global.screensizes[global.resmode][global.resnumb];
-global.currentinternalres = global.screensizes[global.resmode][1];
+
 global.mastervolume = config_get_option("Audio", "mastervolume", 1);
 global.musicvolume = config_get_option("Audio", "musicvolume", 1);
 global.sfxvolume = config_get_option("Audio", "sfxvolume", 1);

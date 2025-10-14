@@ -5,7 +5,7 @@
   "isCompatibility": false,
   "isDnD": false,
   "parent": {
-    "name": "Scripts",
-    "path": "folders/Scripts.yy",
+    "name": "06  Binding Access",
+    "path": "folders/Scripts/Input/06  Binding Access.yy",
   },
 }

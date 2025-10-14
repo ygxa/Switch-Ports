@@ -51,8 +51,8 @@
   },
   "origin": 0,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Time Trial",
+    "path": "folders/Sprites/Level Structure/Time Trial.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

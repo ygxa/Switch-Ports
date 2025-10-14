@@ -25,8 +25,8 @@
   "nineSlice": null,
   "origin": 0,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Used Sprites",
+    "path": "folders/Tilesets/Tutorial & Secrets/Used Sprites.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

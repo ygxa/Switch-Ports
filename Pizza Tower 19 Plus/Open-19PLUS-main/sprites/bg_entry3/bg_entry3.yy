@@ -49,8 +49,8 @@
   },
   "origin": 0,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Archaic Entry",
+    "path": "folders/Sprites/Backgrounds & Decorations/Archaic Entry.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

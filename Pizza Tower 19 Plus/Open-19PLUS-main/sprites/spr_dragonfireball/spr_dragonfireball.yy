@@ -56,8 +56,8 @@
   },
   "origin": 4,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Projectiles",
+    "path": "folders/Sprites/Baddies/Projectiles.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

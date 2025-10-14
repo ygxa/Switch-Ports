@@ -49,8 +49,8 @@
   },
   "origin": 4,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Destroyables",
+    "path": "folders/Sprites/Level Structure/Destroyables.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

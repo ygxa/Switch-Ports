@@ -54,8 +54,8 @@
   },
   "origin": 4,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "spr_player_mach",
+    "path": "folders/Sprites/Player/Peppino/spr_player_mach.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

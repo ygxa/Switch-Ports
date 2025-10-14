@@ -49,8 +49,8 @@
   },
   "origin": 4,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Hub Gates",
+    "path": "folders/Sprites/Level Structure/Hub Gates.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

@@ -5,7 +5,7 @@
   "isCompatibility": false,
   "isDnD": false,
   "parent": {
-    "name": "Scripts",
-    "path": "folders/Scripts.yy",
+    "name": "Gamepads and Steam",
+    "path": "folders/Scripts/Input/(System)/Gamepads and Steam.yy",
   },
 }

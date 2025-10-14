@@ -49,8 +49,8 @@
   },
   "origin": 9,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Pure Fat",
+    "path": "folders/Sprites/HUD/Init Cutscene/Pure Fat.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

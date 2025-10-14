@@ -53,8 +53,8 @@
   },
   "origin": 4,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "spr_player_hauling",
+    "path": "folders/Sprites/Player/Peppino/spr_player_hauling.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

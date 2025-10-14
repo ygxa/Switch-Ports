@@ -49,8 +49,8 @@
   },
   "origin": 4,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Init Cutscene",
+    "path": "folders/Sprites/HUD/Init Cutscene.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

@@ -49,8 +49,8 @@
   },
   "origin": 4,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Flying Anchovy",
+    "path": "folders/Sprites/Baddies/Enemies/Flying Anchovy.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

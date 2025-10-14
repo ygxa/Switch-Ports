@@ -49,8 +49,8 @@
   },
   "origin": 0,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Main Menu Room & Cutscene",
+    "path": "folders/Sprites/Backgrounds & Decorations/Main Menu Room & Cutscene.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

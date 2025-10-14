@@ -51,8 +51,8 @@
   },
   "origin": 9,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Launch Presentbox",
+    "path": "folders/Sprites/Level Structure/Launch Presentbox.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

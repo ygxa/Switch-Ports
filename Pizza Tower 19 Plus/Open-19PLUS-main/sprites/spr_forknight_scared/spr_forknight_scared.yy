@@ -53,8 +53,8 @@
   },
   "origin": 4,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Forknight",
+    "path": "folders/Sprites/Baddies/Enemies/Forknight.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

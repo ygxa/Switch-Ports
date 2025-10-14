@@ -50,8 +50,8 @@
   },
   "origin": 4,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Dragon's Lair",
+    "path": "folders/Sprites/Level Structure/Hub Gates/Dragon's Lair.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

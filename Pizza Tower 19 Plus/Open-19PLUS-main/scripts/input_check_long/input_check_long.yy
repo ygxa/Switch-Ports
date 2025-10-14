@@ -5,7 +5,7 @@
   "isCompatibility": false,
   "isDnD": false,
   "parent": {
-    "name": "Scripts",
-    "path": "folders/Scripts.yy",
+    "name": "03  Advanced Checkers",
+    "path": "folders/Scripts/Input/03  Advanced Checkers.yy",
   },
 }

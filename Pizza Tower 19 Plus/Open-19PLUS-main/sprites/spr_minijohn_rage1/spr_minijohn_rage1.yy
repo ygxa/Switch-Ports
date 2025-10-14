@@ -55,8 +55,8 @@
   },
   "origin": 4,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Mini John",
+    "path": "folders/Sprites/Baddies/Enemies/Mini John.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

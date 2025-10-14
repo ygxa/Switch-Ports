@@ -51,8 +51,8 @@
   },
   "origin": 1,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Rat Block",
+    "path": "folders/Sprites/Level Structure/Destroyables/Rat Block.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

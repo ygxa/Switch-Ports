@@ -56,8 +56,8 @@
   },
   "origin": 4,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Combo Bar",
+    "path": "folders/Sprites/HUD/Combo Bar.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

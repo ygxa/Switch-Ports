@@ -52,8 +52,8 @@
   },
   "origin": 0,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Dragon's Lair",
+    "path": "folders/Sprites/Backgrounds & Decorations/Dragon's Lair.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

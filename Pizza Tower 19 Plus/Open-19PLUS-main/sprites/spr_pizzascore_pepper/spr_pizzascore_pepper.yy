@@ -49,8 +49,8 @@
   },
   "origin": 4,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Pizza Score",
+    "path": "folders/Sprites/HUD/Pizza Score.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

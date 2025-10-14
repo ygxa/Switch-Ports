@@ -61,8 +61,8 @@
   },
   "origin": 9,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "spr_player_finishingblow",
+    "path": "folders/Sprites/Player/Peppino/spr_player_finishingblow.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

@@ -60,8 +60,8 @@
   },
   "origin": 4,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Heat Meter",
+    "path": "folders/Sprites/HUD/Heat Meter.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

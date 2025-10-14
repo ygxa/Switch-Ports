@@ -56,8 +56,8 @@
   },
   "origin": 4,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Archaic Entry",
+    "path": "folders/Sprites/Level Structure/Hub Gates/Archaic Entry.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

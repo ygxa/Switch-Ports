@@ -153,14 +153,6 @@ function Selection(_name, _value) : MenuItem(_name) constructor
     forcedwidth = -1;
 }
 
-function VideoSelection(_value) : Selection(-1, _value) constructor
-{
-    static update = function()
-    {
-        name = string("{0}X{1}", global.screensizes[global.resmode][value][0], global.screensizes[global.resmode][value][1]);
-    };
-}
-
 enum sliderval
 {
 	hidden = 0,
@@ -520,6 +512,7 @@ _resetbindspad.jump = function()
 var _baseoptions = new Folder("Base", [new Folder(string_get("menu/options/input/mainname"), [
 	
 	// Input
+	/*
 	// Keyboard Bindings
 	new Folder(string_get("menu/options/input/keyname"), [
 		new KeyFolder(string_get("menu/options/input/bindname"), [
@@ -567,7 +560,7 @@ var _baseoptions = new Folder("Base", [new Folder(string_get("menu/options/input
 				[new Keybinder(0, __input_global().__source_keyboard)])
 			], 	
 		bg_controls), _resetbindskey], 	
-	bg_controls, true), 
+	bg_controls, true), */
 	
 	// Controller Bindings
 	new Folder(string_get("menu/options/input/padname"), [
@@ -629,53 +622,7 @@ var _baseoptions = new Folder("Base", [new Folder(string_get("menu/options/input
 	
 	// Video
 	new Folder(string_get("menu/options/video/name"), [
-		// Fullscreen
-		new SideOption(string_get("menu/options/video/fullscreen/name"), "fullscreen", "Video", [
-			new Selection(string_get("menu/options/video/fullscreen/windowed"), 0), 
-			new Selection(string_get("menu/options/video/fullscreen/exclusive"), 1), 
-			new Selection(string_get("menu/options/video/fullscreen/borderless"), 2)
-			], 
-			apply_videoglobals, false), 
-		
-		// Aspect Ratio (Mode)
-		new SideOption(string_get("menu/options/video/aspectratio"), "resmode", "Video", [
-			new Selection("16:9", aspectratio.res16_9), 
-			new Selection("16:10", aspectratio.res16_10)
-			], 
-			apply_videoglobals, false), 
-		
-		// Aspect Ratio
-		new SideOption(string_get("menu/options/video/resolution"), "resnumb", "Video", [
-			new VideoSelection(0), 
-			new VideoSelection(1), 
-			new VideoSelection(2), 
-			new VideoSelection(3), 
-			new VideoSelection(4)
-			], 
-			apply_videoglobals, false), 
-		
-		// Scale Mode
-		new SideOption(string_get("menu/options/video/scalemode/name"), "scalemode", "Video", [
-			new Selection(string_get("menu/options/video/scalemode/fit"), scaletype.fit), 
-			new Selection(string_get("menu/options/video/scalemode/fill"), scaletype.fill), 
-			new Selection(string_get("menu/options/video/scalemode/perfect"), scaletype.pixelperfect), 
-			new Selection(string_get("menu/options/video/scalemode/exact"), scaletype.exact)
-			], 
-			apply_videoglobals, false), 
-		
-		// Border
-		new SideOption(string_get("menu/options/video/border/name"), "border", "Video", [
-			new Selection(string_get("menu/options/video/border/none"), 0), 
-			new Selection(string_get("menu/options/video/border/entry"), 1), 
-			new Selection(string_get("menu/options/video/border/medieval"), 2), 
-			new Selection(string_get("menu/options/video/border/ruin"), 3), 
-			new Selection(string_get("menu/options/video/border/dungeon"), 4), 
-			new Selection(string_get("menu/options/video/border/90s"), 5), 
-			new Selection(string_get("menu/options/video/border/genesis"), 6), 
-			new Selection(string_get("menu/options/video/border/steam"), 7)
-			], 
-			apply_videoglobals, false), 
-		
+		// Removed all other unneeded entries
 		new SideOption(string_get("menu/options/video/aa"), "antialiasing", "Video", undefined, apply_videoglobals, false), 
 		new SideOption(string_get("menu/options/video/vsync"), "vsync", "Video", undefined, apply_videoglobals, false)
 		],
@@ -733,10 +680,9 @@ var _baseoptions = new Folder("Base", [new Folder(string_get("menu/options/input
 	
 bg_options, true);
 #endregion
-#region Title Screen only Options
+#region "Delete Save" Option
 if (room == TitlescreenRoom)
 {
-	#region Delete Save
     var _datadel = new Folder(string_get("menu/options/savedelete/name"), [
 		// Are you sure you want to delete your save?
 		new StackedOption(string_get("menu/options/savedelete/question"), "", "", [
@@ -771,37 +717,6 @@ if (room == TitlescreenRoom)
     }
     
     array_push(_baseoptions.options, _datadel);
-	#endregion
-	#region Close Game
-    var _closegame = new Folder(string_get("menu/options/closegame/name"), [
-		// Close Game?
-		new StackedOption(string_get("menu/options/closegame/question"), "", "", [
-			new Selection(string_get("menu/options/generic/no"), 0), // No
-			new Selection(string_get("menu/options/generic/yes"), 0) // Yes
-		], noone, false)
-	], bg_close, true);
-    
-	// Selected No
-    with (_closegame.options[0].selections[0])
-    {
-        jump = function(_selected)
-        {
-            with (getfolder())
-                exitfolder(_selected);
-        };
-    }
-    
-	// Selected Yes
-    with (_closegame.options[0].selections[1])
-    {
-        jump = function(_selected)
-        {
-            game_end();
-        };
-    }
-    
-    array_push(_baseoptions.options, _closegame);
-	#endregion
 }
 #endregion
 

@@ -61,8 +61,8 @@
   },
   "origin": 4,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Cheese",
+    "path": "folders/Sprites/Level Structure/Collectibles/Toppins/Cheese.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

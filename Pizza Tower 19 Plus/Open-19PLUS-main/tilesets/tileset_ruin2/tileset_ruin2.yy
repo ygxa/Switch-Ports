@@ -12,8 +12,8 @@
   "out_tilehborder": 2,
   "out_tilevborder": 2,
   "parent": {
-    "name": "Tile Sets",
-    "path": "folders/Tile Sets.yy",
+    "name": "The Ancient Cheese",
+    "path": "folders/Tilesets/Levels/The Ancient Cheese.yy",
   },
   "spriteId": {
     "name": "_decompiled_tileset_ruin2",

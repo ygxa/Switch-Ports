@@ -51,8 +51,8 @@
   },
   "origin": 9,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "ComboGal",
+    "path": "folders/Sprites/HUD/Combo Bar/ComboGal.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

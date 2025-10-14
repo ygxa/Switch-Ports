@@ -50,8 +50,8 @@
   },
   "origin": 0,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Ancient Cheese",
+    "path": "folders/Sprites/Level Structure/Cowboy Tasks/Ancient Cheese.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

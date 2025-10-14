@@ -73,8 +73,8 @@
   },
   "origin": 4,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Fireass",
+    "path": "folders/Sprites/Player/Peppino/Transformations/Fireass.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

@@ -57,8 +57,8 @@
   },
   "origin": 4,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "spr_player_bodyslam",
+    "path": "folders/Sprites/Player/Peppino/spr_player_bodyslam.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

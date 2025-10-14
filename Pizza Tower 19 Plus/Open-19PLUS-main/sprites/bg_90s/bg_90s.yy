@@ -49,8 +49,8 @@
   },
   "origin": 0,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Border Images",
+    "path": "folders/Sprites/Gameframe/Border Images.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

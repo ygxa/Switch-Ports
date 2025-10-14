@@ -133,8 +133,8 @@ function reset_aspectratio()
 
 function apply_videoglobals()
 {
-    global.currentres = global.screensizes[global.resmode][global.resnumb];
-    global.currentinternalres = global.screensizes[global.resmode][1];
+    global.currentres = [1280, 720];
+    global.currentinternalres = [960, 540];
     reset_aspectratio();
 }
 

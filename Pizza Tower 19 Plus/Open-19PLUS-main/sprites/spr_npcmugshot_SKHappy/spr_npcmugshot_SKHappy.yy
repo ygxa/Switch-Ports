@@ -50,8 +50,8 @@
   },
   "origin": 4,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Snick",
+    "path": "folders/Sprites/NPCs/Snick.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

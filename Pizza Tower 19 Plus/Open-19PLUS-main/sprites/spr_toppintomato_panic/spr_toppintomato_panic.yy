@@ -55,8 +55,8 @@
   },
   "origin": 4,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Tomato",
+    "path": "folders/Sprites/Level Structure/Collectibles/Toppins/Tomato.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

@@ -9,8 +9,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "Particles",
+    "path": "folders/Objects/Visual Effects & Particles/Particles.yy",
   },
   "parentObjectId": {
     "name": "obj_parentparticle",

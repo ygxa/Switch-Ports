@@ -49,8 +49,8 @@
   },
   "origin": 0,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Pillar John",
+    "path": "folders/Sprites/Level Structure/Pillar John.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

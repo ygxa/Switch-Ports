@@ -5,7 +5,7 @@
   "isCompatibility": false,
   "isDnD": false,
   "parent": {
-    "name": "Scripts",
-    "path": "folders/Scripts.yy",
+    "name": "14  Virtual Buttons",
+    "path": "folders/Scripts/Input/14  Virtual Buttons.yy",
   },
 }

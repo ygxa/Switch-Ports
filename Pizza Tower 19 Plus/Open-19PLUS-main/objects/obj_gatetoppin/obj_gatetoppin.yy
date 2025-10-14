@@ -9,8 +9,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "Hub",
+    "path": "folders/Objects/Level Structure/Hub.yy",
   },
   "parentObjectId": null,
   "persistent": false,
